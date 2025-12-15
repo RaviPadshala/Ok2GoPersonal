@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="OpenSansHebrew-Regular.ttf">
+            <string>OpenSansHebrew-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AbsenceView" customModule="clock2go2020" customModuleProvider="target">
+            <connections>
+                <outlet property="contentView" destination="iN0-l3-epB" id="8sl-vT-XUk"/>
+                <outlet property="dateTitle" destination="7m3-of-dyu" id="Fof-lj-Dwk"/>
+                <outlet property="reasonTitle" destination="OTw-hd-SdO" id="Rfq-TR-2kD"/>
+                <outlet property="roundView" destination="6QG-wr-Ieh" id="ovv-U6-ZdU"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="512"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6QG-wr-Ieh">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="425.5"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dayoff_icon" translatesAutoresizingMaskIntoConstraints="NO" id="G2D-Bd-ZJl">
+                            <rect key="frame" x="63.5" y="50" width="287.5" height="249.5"/>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7m3-of-dyu">
+                            <rect key="frame" x="185.5" y="339.5" width="43" height="23.5"/>
+                            <fontDescription key="fontDescription" name="OpenSansHebrew-Regular" family="Open Sans Hebrew" pointSize="17"/>
+                            <color key="textColor" red="0.065916486084461212" green="0.28398782014846802" blue="0.46380215883255005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="OTw-hd-SdO">
+                            <rect key="frame" x="10" y="368" width="394" height="27.5"/>
+                            <fontDescription key="fontDescription" name="OpenSansHebrew-Regular" family="Open Sans Hebrew" pointSize="20"/>
+                            <color key="textColor" red="0.065916486084461212" green="0.28398782014846802" blue="0.46380215883255005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" red="0.99314743280410767" green="0.99328964948654175" blue="0.99311631917953491" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstItem="OTw-hd-SdO" firstAttribute="leading" secondItem="6QG-wr-Ieh" secondAttribute="leading" constant="10" id="9mB-nR-rWA"/>
+                        <constraint firstItem="7m3-of-dyu" firstAttribute="top" secondItem="G2D-Bd-ZJl" secondAttribute="bottom" constant="40" id="Efr-i8-Mi6"/>
+                        <constraint firstItem="G2D-Bd-ZJl" firstAttribute="centerX" secondItem="6QG-wr-Ieh" secondAttribute="centerX" id="Mao-GA-qMc"/>
+                        <constraint firstItem="OTw-hd-SdO" firstAttribute="centerX" secondItem="6QG-wr-Ieh" secondAttribute="centerX" id="NSR-Q5-nbc"/>
+                        <constraint firstAttribute="bottom" secondItem="OTw-hd-SdO" secondAttribute="bottom" constant="30" id="QhM-TV-14h"/>
+                        <constraint firstItem="G2D-Bd-ZJl" firstAttribute="top" secondItem="6QG-wr-Ieh" secondAttribute="top" constant="50" id="kpC-S0-2sd"/>
+                        <constraint firstItem="7m3-of-dyu" firstAttribute="centerX" secondItem="6QG-wr-Ieh" secondAttribute="centerX" id="oHo-Rj-ZFH"/>
+                        <constraint firstAttribute="trailing" secondItem="OTw-hd-SdO" secondAttribute="trailing" constant="10" id="wuI-zY-XTX"/>
+                        <constraint firstItem="OTw-hd-SdO" firstAttribute="top" secondItem="7m3-of-dyu" secondAttribute="bottom" constant="5" id="xbu-ZT-2e4"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="6QG-wr-Ieh" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="1VL-NK-fK5"/>
+                <constraint firstItem="6QG-wr-Ieh" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="4M9-Oi-knd"/>
+                <constraint firstItem="6QG-wr-Ieh" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="Qji-jn-uQu"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="131.8840579710145" y="24.776785714285712"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="dayoff_icon" width="287.5" height="249.5"/>
+    </resources>
+</document>

@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="OpenSansHebrew-Regular.ttf">
+            <string>OpenSansHebrew-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RevachaReportView" customModule="clock2go2020" customModuleProvider="target">
+            <connections>
+                <outlet property="clientTitle" destination="ve2-O1-iwn" id="6xc-x3-jw6"/>
+                <outlet property="clientView" destination="3kW-hh-L0i" id="NbS-gR-xgo"/>
+                <outlet property="contentView" destination="iN0-l3-epB" id="HrC-Xs-f7V"/>
+                <outlet property="eventTitle" destination="XEX-Dc-2Ik" id="e0c-bG-SBx"/>
+                <outlet property="eventView" destination="xW1-X0-1wD" id="ANF-dJ-MrK"/>
+                <outlet property="stackView" destination="oDP-Vz-fJd" id="RY4-ov-BRb"/>
+                <outlet property="transactionTypeTitle" destination="woj-iR-LQO" id="dVq-BE-pKi"/>
+                <outlet property="transactionTypeView" destination="DmV-Yg-wyG" id="Ji5-Gy-ZPc"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="917" height="209"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="jvR-aB-ixq">
+                    <rect key="frame" x="0.0" y="0.0" width="917" height="40"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="oDP-Vz-fJd">
+                            <rect key="frame" x="0.0" y="0.0" width="917" height="40"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xW1-X0-1wD">
+                                    <rect key="frame" x="0.0" y="0.0" width="299" height="40"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XEX-Dc-2Ik">
+                                            <rect key="frame" x="134.5" y="12" width="30.5" height="16.5"/>
+                                            <fontDescription key="fontDescription" name="OpenSansHebrew-Regular" family="Open Sans Hebrew" pointSize="12"/>
+                                            <color key="textColor" red="0.08235294118" green="0.28235294119999998" blue="0.46274509800000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstItem="XEX-Dc-2Ik" firstAttribute="centerX" secondItem="xW1-X0-1wD" secondAttribute="centerX" id="cxo-gb-Jsb"/>
+                                        <constraint firstItem="XEX-Dc-2Ik" firstAttribute="centerY" secondItem="xW1-X0-1wD" secondAttribute="centerY" id="oWA-dx-B7P"/>
+                                    </constraints>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3kW-hh-L0i">
+                                    <rect key="frame" x="309" y="0.0" width="299" height="40"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ve2-O1-iwn">
+                                            <rect key="frame" x="134.5" y="12" width="30.5" height="16.5"/>
+                                            <fontDescription key="fontDescription" name="OpenSansHebrew-Regular" family="Open Sans Hebrew" pointSize="12"/>
+                                            <color key="textColor" red="0.08235294118" green="0.28235294119999998" blue="0.46274509800000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstItem="ve2-O1-iwn" firstAttribute="centerX" secondItem="3kW-hh-L0i" secondAttribute="centerX" id="6tq-uq-EDr"/>
+                                        <constraint firstItem="ve2-O1-iwn" firstAttribute="centerY" secondItem="3kW-hh-L0i" secondAttribute="centerY" id="loN-Q9-Zbv"/>
+                                    </constraints>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DmV-Yg-wyG">
+                                    <rect key="frame" x="618" y="0.0" width="299" height="40"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="woj-iR-LQO">
+                                            <rect key="frame" x="134.5" y="12" width="30.5" height="16.5"/>
+                                            <fontDescription key="fontDescription" name="OpenSansHebrew-Regular" family="Open Sans Hebrew" pointSize="12"/>
+                                            <color key="textColor" red="0.08235294118" green="0.28235294119999998" blue="0.46274509800000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstItem="woj-iR-LQO" firstAttribute="centerY" secondItem="DmV-Yg-wyG" secondAttribute="centerY" id="5N1-Dh-RBY"/>
+                                        <constraint firstItem="woj-iR-LQO" firstAttribute="centerX" secondItem="DmV-Yg-wyG" secondAttribute="centerX" id="VUa-F2-w2f"/>
+                                    </constraints>
+                                </view>
+                            </subviews>
+                            <constraints>
+                                <constraint firstItem="DmV-Yg-wyG" firstAttribute="height" secondItem="3kW-hh-L0i" secondAttribute="height" id="BWy-bi-Ont"/>
+                                <constraint firstItem="xW1-X0-1wD" firstAttribute="width" secondItem="3kW-hh-L0i" secondAttribute="width" id="HYC-vD-PqL"/>
+                                <constraint firstItem="3kW-hh-L0i" firstAttribute="height" secondItem="xW1-X0-1wD" secondAttribute="height" id="VIU-PJ-IHt"/>
+                                <constraint firstItem="3kW-hh-L0i" firstAttribute="width" secondItem="DmV-Yg-wyG" secondAttribute="width" id="WZ0-Yw-2GO"/>
+                                <constraint firstAttribute="bottom" secondItem="xW1-X0-1wD" secondAttribute="bottom" id="bn6-8s-q61"/>
+                                <constraint firstAttribute="height" constant="40" id="fPi-gM-7nV"/>
+                                <constraint firstItem="xW1-X0-1wD" firstAttribute="top" secondItem="oDP-Vz-fJd" secondAttribute="top" id="hRG-OT-8M4"/>
+                            </constraints>
+                        </stackView>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="oDP-Vz-fJd" secondAttribute="trailing" id="6TL-KK-8MM"/>
+                        <constraint firstItem="oDP-Vz-fJd" firstAttribute="leading" secondItem="jvR-aB-ixq" secondAttribute="leading" id="qPJ-Qj-zRy"/>
+                    </constraints>
+                </stackView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="jvR-aB-ixq" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="7JG-Xb-92r"/>
+                <constraint firstItem="jvR-aB-ixq" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="quV-EL-JM0"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="jvR-aB-ixq" secondAttribute="trailing" id="xiU-c5-pk6"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="-134.05797101449275" y="120.87053571428571"/>
+        </view>
+    </objects>
+</document>

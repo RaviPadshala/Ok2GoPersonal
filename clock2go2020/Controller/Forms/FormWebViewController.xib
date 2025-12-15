@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FormWebViewController" customModule="clock2go2020" customModuleProvider="target">
+            <connections>
+                <outlet property="accountInfoView" destination="nBZ-JW-ETY" id="wUn-xD-KHo"/>
+                <outlet property="btn_skip" destination="0Vf-nG-VET" id="no2-C0-lFb"/>
+                <outlet property="btn_skipHeightConstraint" destination="1bw-4I-7Gs" id="jHC-Eb-qu0"/>
+                <outlet property="view" destination="O7r-X3-bqZ" id="bnT-1Q-T9o"/>
+                <outlet property="webView" destination="59k-uO-0lE" id="bPU-v3-n9F"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="O7r-X3-bqZ">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dashboard_lines" translatesAutoresizingMaskIntoConstraints="NO" id="tcn-7C-WNA">
+                    <rect key="frame" x="-150" y="707" width="693" height="145"/>
+                </imageView>
+                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="djy-mb-lfy">
+                    <rect key="frame" x="0.0" y="70" width="393" height="748"/>
+                    <subviews>
+                        <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="59k-uO-0lE">
+                            <rect key="frame" x="0.0" y="0.0" width="393" height="698"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <wkWebViewConfiguration key="configuration">
+                                <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                <wkPreferences key="preferences"/>
+                            </wkWebViewConfiguration>
+                        </wkWebView>
+                        <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Vf-nG-VET">
+                            <rect key="frame" x="0.0" y="698" width="393" height="50"/>
+                            <color key="backgroundColor" name="Color104876"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="50" id="1bw-4I-7Gs"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" title="Skip">
+                                <color key="titleColor" name="ColorE7F0F5"/>
+                            </state>
+                            <connections>
+                                <action selector="btn_skip:" destination="-1" eventType="touchUpInside" id="0bA-aF-pR6"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="0Vf-nG-VET" firstAttribute="leading" secondItem="djy-mb-lfy" secondAttribute="leading" id="9RE-oB-8bq"/>
+                        <constraint firstAttribute="trailing" secondItem="0Vf-nG-VET" secondAttribute="trailing" id="EhW-XA-DFv"/>
+                        <constraint firstItem="59k-uO-0lE" firstAttribute="top" secondItem="djy-mb-lfy" secondAttribute="top" id="V3t-fV-B5p"/>
+                        <constraint firstItem="59k-uO-0lE" firstAttribute="leading" secondItem="djy-mb-lfy" secondAttribute="leading" id="a0f-99-S3z"/>
+                        <constraint firstAttribute="trailing" secondItem="59k-uO-0lE" secondAttribute="trailing" id="dEY-Wh-hpt"/>
+                        <constraint firstItem="0Vf-nG-VET" firstAttribute="top" secondItem="59k-uO-0lE" secondAttribute="bottom" id="fji-vK-OyH"/>
+                        <constraint firstAttribute="bottom" secondItem="0Vf-nG-VET" secondAttribute="bottom" id="pLe-L0-wtd"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nBZ-JW-ETY" customClass="HeaderView" customModule="clock2go2020" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="0.0" width="393" height="100"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="100" id="w3Q-vR-tRl"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="D6Y-tp-VeY"/>
+            <color key="backgroundColor" red="0.17357167600000001" green="0.49418878560000001" blue="0.83094662429999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="nBZ-JW-ETY" firstAttribute="leading" secondItem="D6Y-tp-VeY" secondAttribute="leading" id="SFO-y3-uWu"/>
+                <constraint firstItem="djy-mb-lfy" firstAttribute="leading" secondItem="D6Y-tp-VeY" secondAttribute="leading" id="V1y-xo-xME"/>
+                <constraint firstItem="nBZ-JW-ETY" firstAttribute="top" secondItem="O7r-X3-bqZ" secondAttribute="top" id="W5p-9S-6i2"/>
+                <constraint firstAttribute="trailing" secondItem="tcn-7C-WNA" secondAttribute="trailing" constant="-150" id="hdW-Ff-BPi"/>
+                <constraint firstItem="djy-mb-lfy" firstAttribute="trailing" secondItem="D6Y-tp-VeY" secondAttribute="trailing" id="ihm-F1-fpV"/>
+                <constraint firstItem="D6Y-tp-VeY" firstAttribute="bottom" secondItem="djy-mb-lfy" secondAttribute="bottom" id="mSN-mr-YhK"/>
+                <constraint firstAttribute="bottom" secondItem="tcn-7C-WNA" secondAttribute="bottom" id="p8Y-Rw-YYI"/>
+                <constraint firstItem="nBZ-JW-ETY" firstAttribute="trailing" secondItem="D6Y-tp-VeY" secondAttribute="trailing" id="qXs-Lm-nbU"/>
+                <constraint firstItem="djy-mb-lfy" firstAttribute="top" secondItem="nBZ-JW-ETY" secondAttribute="bottom" constant="-30" id="sKp-7W-BdR"/>
+                <constraint firstItem="tcn-7C-WNA" firstAttribute="leading" secondItem="D6Y-tp-VeY" secondAttribute="leading" constant="-150" id="vso-EG-kPD"/>
+            </constraints>
+            <point key="canvasLocation" x="137.68115942028987" y="-524.33035714285711"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="dashboard_lines" width="601" height="145"/>
+        <namedColor name="Color104876">
+            <color red="0.062745098039215685" green="0.28235294117647058" blue="0.46274509803921571" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="ColorE7F0F5">
+            <color red="0.90588235294117647" green="0.94117647058823528" blue="0.96078431372549022" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

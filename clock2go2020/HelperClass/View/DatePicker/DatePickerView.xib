@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="OpenSansHebrew-Regular.ttf">
+            <string>OpenSansHebrew-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DatePickerView" customModule="clock2go2020" customModuleProvider="target">
+            <connections>
+                <outlet property="confirmLabel" destination="Yh2-Lq-hhK" id="W31-vO-YVW"/>
+                <outlet property="confirmView" destination="h0k-nc-xyE" id="Z8V-Nw-jzs"/>
+                <outlet property="contentView" destination="TRQ-46-dSg" id="1nB-BR-PnY"/>
+                <outlet property="datePickerTitle" destination="WJc-Vf-sRk" id="7R2-ZA-wdJ"/>
+                <outlet property="datePickerView" destination="i90-FO-e5C" id="W3x-FF-l3e"/>
+                <outlet property="view" destination="iN0-l3-epB" id="7be-kK-VVJ"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="n6z-ah-LA0">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                    <color key="backgroundColor" red="0.065916486080000003" green="0.28398782010000001" blue="0.46380215879999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </view>
+                <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rso-b0-YS8">
+                    <rect key="frame" x="37" y="245.5" width="82.5" height="82.5"/>
+                    <state key="normal" image="close"/>
+                    <connections>
+                        <action selector="closeAction:" destination="-1" eventType="touchUpInside" id="Wue-Q6-i4N"/>
+                    </connections>
+                </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TRQ-46-dSg">
+                    <rect key="frame" x="57" y="313" width="300" height="270"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="3Ob-uI-KON">
+                            <rect key="frame" x="5" y="5" width="290" height="260"/>
+                            <subviews>
+                                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WJc-Vf-sRk">
+                                    <rect key="frame" x="0.0" y="0.0" width="290" height="0.0"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <fontDescription key="fontDescription" name="OpenSansHebrew-Regular" family="Open Sans Hebrew" pointSize="20"/>
+                                    <color key="textColor" red="0.065916486080000003" green="0.28398782010000001" blue="0.46380215879999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i90-FO-e5C">
+                                    <rect key="frame" x="0.0" y="0.0" width="290" height="200"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="200" id="jS8-YD-XaF"/>
+                                    </constraints>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h0k-nc-xyE">
+                                    <rect key="frame" x="0.0" y="200" width="290" height="60"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yh2-Lq-hhK">
+                                            <rect key="frame" x="120" y="16.5" width="50.5" height="27.5"/>
+                                            <fontDescription key="fontDescription" name="OpenSansHebrew-Regular" family="Open Sans Hebrew" pointSize="20"/>
+                                            <color key="textColor" red="0.065916486080000003" green="0.28398782010000001" blue="0.46380215879999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstItem="Yh2-Lq-hhK" firstAttribute="centerY" secondItem="h0k-nc-xyE" secondAttribute="centerY" id="99m-n0-biF"/>
+                                        <constraint firstItem="Yh2-Lq-hhK" firstAttribute="centerX" secondItem="h0k-nc-xyE" secondAttribute="centerX" id="d19-it-6We"/>
+                                        <constraint firstAttribute="height" constant="60" id="vOe-2b-Fx4"/>
+                                    </constraints>
+                                </view>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="3Ob-uI-KON" secondAttribute="bottom" constant="5" id="1Gy-Q3-NJQ"/>
+                        <constraint firstAttribute="trailing" secondItem="3Ob-uI-KON" secondAttribute="trailing" constant="5" id="Q9X-eq-f6z"/>
+                        <constraint firstItem="3Ob-uI-KON" firstAttribute="top" secondItem="TRQ-46-dSg" secondAttribute="top" constant="5" id="Sbk-uF-Xog"/>
+                        <constraint firstItem="3Ob-uI-KON" firstAttribute="leading" secondItem="TRQ-46-dSg" secondAttribute="leading" constant="5" id="YSE-hg-tvs"/>
+                        <constraint firstAttribute="width" constant="300" id="krk-F8-3J2"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="TRQ-46-dSg" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="7Ir-2R-af4"/>
+                <constraint firstAttribute="trailing" secondItem="n6z-ah-LA0" secondAttribute="trailing" id="SRg-Sn-g1f"/>
+                <constraint firstItem="n6z-ah-LA0" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="aCC-qV-7Dj"/>
+                <constraint firstItem="TRQ-46-dSg" firstAttribute="top" secondItem="rso-b0-YS8" secondAttribute="bottom" constant="-15" id="cQl-DJ-6AY"/>
+                <constraint firstItem="rso-b0-YS8" firstAttribute="leading" secondItem="TRQ-46-dSg" secondAttribute="leading" constant="-20" id="e7Z-AN-pwP"/>
+                <constraint firstItem="TRQ-46-dSg" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="fVz-id-Ygn"/>
+                <constraint firstAttribute="bottom" secondItem="n6z-ah-LA0" secondAttribute="bottom" id="iIk-wM-WbD"/>
+                <constraint firstItem="n6z-ah-LA0" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="wGI-eB-T3z"/>
+            </constraints>
+            <point key="canvasLocation" x="131.8840579710145" y="141.96428571428569"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="close" width="82.5" height="82.5"/>
+    </resources>
+</document>

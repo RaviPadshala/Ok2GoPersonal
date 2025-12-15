@@ -1,0 +1,36 @@
+{
+  "CoordinatorName": "סתיו יעקב",
+  "ProjectId": 0,
+  "TransId": 385750402,
+  "ProjectName": "ארגון",
+  "TaskName": "סיעוד",
+  "datetoday": "2024-10-15",
+  "studentsdata": [
+    {
+      "studentname": "Ravi 111",
+      "presenceConfirmation": 0,
+      "TransId": 385750402,
+      "trnsTime": "2023-04-18 07:42:00",
+      "scoreRYG": {
+        "R": 0,
+        "Y": 0,
+        "G": 0
+      },
+      "comment": "",
+      "WorkScheduleID": 4
+    },
+    {
+      "studentname": "Ravi 222",
+      "presenceConfirmation": 0,
+      "TransId": 385775574,
+      "trnsTime": "2023-04-18 15:00:00",
+      "scoreRYG": {
+        "R": 0,
+        "Y": 0,
+        "G": 0
+      },
+      "comment": "",
+      "WorkScheduleID": 4
+    }
+  ]
+}

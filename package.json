@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "react-native-background-geolocation": "^4.4.4"
+  }
+}

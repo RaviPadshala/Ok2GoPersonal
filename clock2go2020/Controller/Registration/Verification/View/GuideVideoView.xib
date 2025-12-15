@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GuideVideoView" customModule="clock2go2020" customModuleProvider="target">
+            <connections>
+                <outlet property="playerView" destination="t6I-Ky-HXL" id="2mK-PC-vlF"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="t6I-Ky-HXL" customClass="YTPlayerView">
+                    <rect key="frame" x="0.0" y="24" width="414" height="872"/>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="byt-Zt-6fS">
+                    <rect key="frame" x="374" y="-9" width="20" height="25"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="25" id="Vc0-zv-sAC"/>
+                        <constraint firstAttribute="width" constant="20" id="omN-VY-tkK"/>
+                    </constraints>
+                    <state key="normal" image="arrow_white_right"/>
+                    <connections>
+                        <action selector="pushToNextVC:" destination="-1" eventType="touchUpInside" id="zWY-eD-Nfr"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="t6I-Ky-HXL" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="5FK-N1-mlV"/>
+                <constraint firstAttribute="bottom" secondItem="t6I-Ky-HXL" secondAttribute="bottom" id="ROs-og-1TB"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="byt-Zt-6fS" secondAttribute="trailing" constant="20" id="TUS-Pb-ZhP"/>
+                <constraint firstItem="t6I-Ky-HXL" firstAttribute="top" secondItem="byt-Zt-6fS" secondAttribute="bottom" constant="8" id="eAx-y6-WAc"/>
+                <constraint firstItem="byt-Zt-6fS" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="-9" id="iah-gI-93N"/>
+                <constraint firstItem="t6I-Ky-HXL" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="oDo-Pi-Oku"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="131.8840579710145" y="108.48214285714285"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="arrow_white_right" width="128" height="128"/>
+    </resources>
+</document>

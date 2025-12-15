@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="OpenSansHebrew-Regular.ttf">
+            <string>OpenSansHebrew-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SelectEmpsCellView" id="KGk-i7-Jjw" customClass="SelectEmpsCellView" customModule="clock2go2020" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Mj-xz-gNI">
+                        <rect key="frame" x="275" y="12" width="20" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="20" id="Zxs-Cq-Hs5"/>
+                            <constraint firstAttribute="height" constant="20" id="xML-lP-m0q"/>
+                        </constraints>
+                        <state key="normal" image="unchecked_terms">
+                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
+                        </state>
+                        <connections>
+                            <action selector="selectButtonAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="a6a-0J-V3L"/>
+                        </connections>
+                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y98-zp-qk1">
+                        <rect key="frame" x="43" y="11" width="217" height="22.5"/>
+                        <fontDescription key="fontDescription" name="OpenSansHebrew-Regular" family="Open Sans Hebrew" pointSize="19"/>
+                        <color key="textColor" red="0.08268459886" green="0.28099378940000003" blue="0.46375954149999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rqn-cB-5AL">
+                        <rect key="frame" x="25" y="11" width="13" height="22"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="13" id="6V1-yZ-olS"/>
+                        </constraints>
+                        <state key="normal" image="arrow_down"/>
+                    </button>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstItem="y98-zp-qk1" firstAttribute="leading" secondItem="rqn-cB-5AL" secondAttribute="trailing" constant="5" id="38A-3m-Wmc"/>
+                    <constraint firstItem="1Mj-xz-gNI" firstAttribute="leading" secondItem="y98-zp-qk1" secondAttribute="trailing" constant="15" id="42d-jT-LrF"/>
+                    <constraint firstItem="rqn-cB-5AL" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="25" id="AXX-Sb-YpG"/>
+                    <constraint firstAttribute="trailing" secondItem="1Mj-xz-gNI" secondAttribute="trailing" constant="25" id="JOR-VY-qbl"/>
+                    <constraint firstItem="y98-zp-qk1" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="Oy3-Qy-ewF"/>
+                    <constraint firstItem="1Mj-xz-gNI" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="ad7-og-QNV"/>
+                    <constraint firstItem="rqn-cB-5AL" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="hdU-65-QEY"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="nameLabel" destination="y98-zp-qk1" id="UZ5-Jb-wpt"/>
+                <outlet property="selectedButton" destination="1Mj-xz-gNI" id="bWa-jq-dtk"/>
+                <outlet property="usersButton" destination="rqn-cB-5AL" id="meO-Zw-7jb"/>
+            </connections>
+            <point key="canvasLocation" x="132" y="139"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="arrow_down" width="10.5" height="6"/>
+        <image name="unchecked_terms" width="24" height="24.5"/>
+    </resources>
+</document>

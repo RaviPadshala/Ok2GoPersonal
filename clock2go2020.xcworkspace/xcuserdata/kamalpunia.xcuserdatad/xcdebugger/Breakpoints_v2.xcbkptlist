@@ -1,0 +1,962 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "548E0386-EE43-4EBC-AF73-90D8BDBEF2CE"
+   type = "0"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2C14C30E-2A80-43CD-AF80-9D14668A0CBB"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "clock2go2020/Dashboard/DashboardViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "847"
+            endingLineNumber = "847"
+            landmarkName = "DashboardViewModel"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "EE7DEDDB-7A27-4860-A901-6697B24091F6"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "clock2go2020/ManagerApp/Password/SetPasswordManagerViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "91"
+            endingLineNumber = "91"
+            landmarkName = "continueTap()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D16F8408-7898-4A15-8E00-9D35AEF529DE"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "clock2go2020/ManagerApp/Password/SetPasswordManagerViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "43"
+            endingLineNumber = "43"
+            landmarkName = "sendManagerLogin()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "BB4348A7-1311-41BC-B57D-F07C6CF34959"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "clock2go2020/ManagerApp/Password/SetPasswordManagerViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "129"
+            endingLineNumber = "129"
+            landmarkName = "setupWrongPassword()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "7D592BD9-5C09-4F72-876F-401B0336E9A0"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "clock2go2020/Registration/Password/PasswordInputViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "37"
+            endingLineNumber = "37"
+            landmarkName = "sendPassword()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "00668760-EFD4-4312-A89B-A01846671EC8"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "clock2go2020/Registration/Password/PasswordInputViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "25"
+            endingLineNumber = "25"
+            landmarkName = "shouldEnableContinueView()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "DB5A2EF7-19F5-456B-B037-DB24E7D974FD"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "clock2go2020/Registration/Password/PasswordInputViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "86"
+            endingLineNumber = "86"
+            landmarkName = "setupPushToNextVC()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0F0FCB2B-8265-4898-9C91-771092C470B3"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "clock2go2020/AppDelegate.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "174"
+            endingLineNumber = "174"
+            landmarkName = "applicationWillEnterForeground(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F38D79BA-54A0-4375-82A1-711601AD6993"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "clock2go2020/AppDelegate.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "178"
+            endingLineNumber = "178"
+            landmarkName = "applicationDidBecomeActive(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "3ADF116B-95F7-4588-A162-DA98F09B34F2"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "clock2go2020/Registration/Password/PasswordInputViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "41"
+            endingLineNumber = "41"
+            landmarkName = "sendPassword()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "3ADF116B-95F7-4588-A162-DA98F09B34F2 - 91f6c68958113d09"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "clock2go2020.PasswordInputViewModel.sendPassword() -&gt; ()"
+                  moduleName = "clock2go2020"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kamalpunia/Documents/GitHub/clock2go2020-ios/clock2go2020/Registration/Password/PasswordInputViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "41"
+                  endingLineNumber = "41"
+                  offsetFromSymbolStart = "436">
+               </Location>
+               <Location
+                  uuid = "3ADF116B-95F7-4588-A162-DA98F09B34F2 - 19b847389aba14f4"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;clock2go2020.VerifyResult&gt;, Swift.Optional&lt;clock2go2020.ErrorObject&gt;) -&gt; () in clock2go2020.PasswordInputViewModel.sendPassword() -&gt; ()"
+                  moduleName = "clock2go2020"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kamalpunia/Documents/GitHub/clock2go2020-ios/clock2go2020/Registration/Password/PasswordInputViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "42"
+                  endingLineNumber = "42"
+                  offsetFromSymbolStart = "108">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "75B30192-D5E6-4F5D-B944-82981C90A0E8"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "clock2go2020/Dashboard/DashboardViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "1005"
+            endingLineNumber = "1005"
+            landmarkName = "bituachLeumiMadeAction(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "75B30192-D5E6-4F5D-B944-82981C90A0E8 - c4e74b4fbc701ac5"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "clock2go2020.DashboardViewController.bituachLeumiMadeAction(clock2go2020.BituachLeumiAdditionalAction) -&gt; ()"
+                  moduleName = "clock2go2020"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kamalpunia/Documents/GitHub/clock2go2020-ios/clock2go2020/Dashboard/DashboardViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "985"
+                  endingLineNumber = "985"
+                  offsetFromSymbolStart = "156">
+               </Location>
+               <Location
+                  uuid = "75B30192-D5E6-4F5D-B944-82981C90A0E8 - c4e74b4fbc701aa6"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "clock2go2020.DashboardViewController.bituachLeumiMadeAction(clock2go2020.BituachLeumiAdditionalAction) -&gt; ()"
+                  moduleName = "clock2go2020"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kamalpunia/Documents/GitHub/clock2go2020-ios/clock2go2020/Dashboard/DashboardViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "986"
+                  endingLineNumber = "986"
+                  offsetFromSymbolStart = "68">
+               </Location>
+               <Location
+                  uuid = "75B30192-D5E6-4F5D-B944-82981C90A0E8 - c4e74b4fbc701ae4"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "clock2go2020.DashboardViewController.bituachLeumiMadeAction(clock2go2020.BituachLeumiAdditionalAction) -&gt; ()"
+                  moduleName = "clock2go2020"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kamalpunia/Documents/GitHub/clock2go2020-ios/clock2go2020/Dashboard/DashboardViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "984"
+                  endingLineNumber = "984"
+                  offsetFromSymbolStart = "200">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E0C4A7E8-8C61-4A1A-A433-2E6A440272EC"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "clock2go2020/Dashboard/DashboardViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "630"
+            endingLineNumber = "630"
+            landmarkName = "showMultiReportView(type:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "E0C4A7E8-8C61-4A1A-A433-2E6A440272EC - 941e38702785b989"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "clock2go2020.DashboardViewController.showMultiReportView(type: clock2go2020.MultiReportType) -&gt; ()"
+                  moduleName = "clock2go2020"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kamalpunia/Documents/GitHub/clock2go2020-ios/clock2go2020/Dashboard/DashboardViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "612"
+                  endingLineNumber = "612"
+                  offsetFromSymbolStart = "72">
+               </Location>
+               <Location
+                  uuid = "E0C4A7E8-8C61-4A1A-A433-2E6A440272EC - 6a894c65c89a4ff8"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "clock2go2020.DashboardViewController.showHealthDisclaimer(type: clock2go2020.HealthDisclaimerType, message: Swift.Optional&lt;Swift.String&gt;) -&gt; ()"
+                  moduleName = "clock2go2020"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kamalpunia/Documents/GitHub/clock2go2020-ios/clock2go2020/Dashboard/DashboardViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "610"
+                  endingLineNumber = "610"
+                  offsetFromSymbolStart = "456">
+               </Location>
+               <Location
+                  uuid = "E0C4A7E8-8C61-4A1A-A433-2E6A440272EC - 941e38702785b82c"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "clock2go2020.DashboardViewController.showMultiReportView(type: clock2go2020.MultiReportType) -&gt; ()"
+                  moduleName = "clock2go2020"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kamalpunia/Documents/GitHub/clock2go2020-ios/clock2go2020/Dashboard/DashboardViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "609"
+                  endingLineNumber = "609"
+                  offsetFromSymbolStart = "72">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C46DB3FB-4E39-40EE-80F7-ADB8380653F6"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "clock2go2020/Dashboard/DashboardViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "778"
+            endingLineNumber = "778"
+            landmarkName = "userDidCloseList(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "82B533F0-B803-4AF5-A515-AB834C2BD48C"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "clock2go2020/Dashboard/DashboardViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "1071"
+            endingLineNumber = "1071"
+            landmarkName = "showLocationNames(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "82B533F0-B803-4AF5-A515-AB834C2BD48C - 323b7e809a15b8b2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "clock2go2020.DashboardViewController.showLocationNames(Swift.Optional&lt;clock2go2020.ReportActionType&gt;) -&gt; ()"
+                  moduleName = "clock2go2020"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kamalpunia/Documents/GitHub/clock2go2020-ios/clock2go2020/Dashboard/DashboardViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "1047"
+                  endingLineNumber = "1047"
+                  offsetFromSymbolStart = "512">
+               </Location>
+               <Location
+                  uuid = "82B533F0-B803-4AF5-A515-AB834C2BD48C - 323b7e809a15b8cd"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "clock2go2020.DashboardViewController.showLocationNames(Swift.Optional&lt;clock2go2020.ReportActionType&gt;) -&gt; ()"
+                  moduleName = "clock2go2020"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kamalpunia/Documents/GitHub/clock2go2020-ios/clock2go2020/Dashboard/DashboardViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "1048"
+                  endingLineNumber = "1048"
+                  offsetFromSymbolStart = "492">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2CF09436-96CE-4043-89A7-D0BB2D92BFC4"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "clock2go2020/Dashboard/DashboardViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "543"
+            endingLineNumber = "543"
+            landmarkName = "showScannerScreen()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "2CF09436-96CE-4043-89A7-D0BB2D92BFC4 - b0aeed9755ee37c9"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "clock2go2020.DashboardViewController.showChooseEventView() -&gt; ()"
+                  moduleName = "clock2go2020"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kamalpunia/Documents/GitHub/clock2go2020-ios/clock2go2020/Dashboard/DashboardViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "523"
+                  endingLineNumber = "523"
+                  offsetFromSymbolStart = "432">
+               </Location>
+               <Location
+                  uuid = "2CF09436-96CE-4043-89A7-D0BB2D92BFC4 - b0aeed9755ee37c9"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "clock2go2020.DashboardViewController.showChooseEventView() -&gt; ()"
+                  moduleName = "clock2go2020"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kamalpunia/Documents/GitHub/clock2go2020-ios/clock2go2020/Dashboard/DashboardViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "523"
+                  endingLineNumber = "523"
+                  offsetFromSymbolStart = "412">
+               </Location>
+               <Location
+                  uuid = "2CF09436-96CE-4043-89A7-D0BB2D92BFC4 - b2e458ed106195b6"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "clock2go2020.DashboardViewController.showScannerScreen() -&gt; ()"
+                  moduleName = "clock2go2020"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kamalpunia/Documents/GitHub/clock2go2020-ios/clock2go2020/Dashboard/DashboardViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "523"
+                  endingLineNumber = "523"
+                  offsetFromSymbolStart = "48">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "855B6AE1-D61F-412C-BE5C-476D82CF67DE"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "clock2go2020/Navigation/ViewSource.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "203"
+            endingLineNumber = "203"
+            landmarkName = "dashboardWithoutAppAccessScreen()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "BFAD2D4A-F621-4C99-9ED4-86C701954A20"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "clock2go2020/Services/CompaniesDataManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "478"
+            endingLineNumber = "478"
+            landmarkName = "getLocationMames()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "6F3623D9-66FF-4275-B03E-C132257AE3B3"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "clock2go2020/Dashboard/View/Tasks/TaskList/TaskListViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "43"
+            endingLineNumber = "43"
+            landmarkName = "init(showAddTask:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E0895EB2-0C64-4A91-8378-E9564598509A"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "clock2go2020/Dashboard/DashboardViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "1181"
+            endingLineNumber = "1181"
+            landmarkName = "DashboardViewModel"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "6C42E35B-156C-4DDD-851E-F7653EAFA2E5"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "clock2go2020/Services/BackgroundLocationTracking/Tracker.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "23"
+            endingLineNumber = "23"
+            landmarkName = "initLocationTracking(every:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2D80FF41-4C61-47B3-9A2A-DF8FD4EAEE32"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "clock2go2020/Services/BackgroundLocationTracking/Tracker.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "40"
+            endingLineNumber = "40"
+            landmarkName = "location_init()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "69C86A54-E995-40AD-9483-6EC2450970A2"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "clock2go2020/Services/BackgroundLocationTracking/Tracker.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "119"
+            endingLineNumber = "119"
+            landmarkName = "sendTrackingReport()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "92BD7541-41C2-4ACB-A48F-E450DF9D290A"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "clock2go2020/Dashboard/View/MapView/LocationManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "31"
+            endingLineNumber = "31"
+            landmarkName = "startMonitoring()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "6F98F638-A00F-4DEF-A143-07C4362DFDC6"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "clock2go2020/Dashboard/View/MapView/LocationManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "60"
+            endingLineNumber = "60"
+            landmarkName = "requestLocationPermissions()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "82A5F02D-6610-4FFE-BD67-EC235C54C365"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "clock2go2020/Dashboard/DashboardViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "745"
+            endingLineNumber = "745"
+            landmarkName = "userDidSelectTask(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "82A5F02D-6610-4FFE-BD67-EC235C54C365 - ea1fc0e0a1f99073"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "clock2go2020.DashboardViewController.userDidSelectTask(Swift.Optional&lt;clock2go2020.TaskObj&gt;) -&gt; ()"
+                  moduleName = "clock2go2020"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kamalpunia/Documents/GitHub/clock2go2020-ios/clock2go2020/Dashboard/DashboardViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "730"
+                  endingLineNumber = "730"
+                  offsetFromSymbolStart = "354">
+               </Location>
+               <Location
+                  uuid = "82A5F02D-6610-4FFE-BD67-EC235C54C365 - ea1fc0e0a1f99010"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "clock2go2020.DashboardViewController.userDidSelectTask(Swift.Optional&lt;clock2go2020.TaskObj&gt;) -&gt; ()"
+                  moduleName = "clock2go2020"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kamalpunia/Documents/GitHub/clock2go2020-ios/clock2go2020/Dashboard/DashboardViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "729"
+                  endingLineNumber = "729"
+                  offsetFromSymbolStart = "65">
+               </Location>
+               <Location
+                  uuid = "82A5F02D-6610-4FFE-BD67-EC235C54C365 - ea1fc0e0a1f99e60"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "clock2go2020.DashboardViewController.userDidSelectTask(Swift.Optional&lt;clock2go2020.TaskObj&gt;) -&gt; ()"
+                  moduleName = "clock2go2020"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kamalpunia/Documents/GitHub/clock2go2020-ios/clock2go2020/Dashboard/DashboardViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "745"
+                  endingLineNumber = "745"
+                  offsetFromSymbolStart = "65">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A21F73AB-006B-4D79-9F47-A09DFDB674A7"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "clock2go2020/Dashboard/DashboardViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "231"
+            endingLineNumber = "231"
+            landmarkName = "setupActions()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "A21F73AB-006B-4D79-9F47-A09DFDB674A7 - 1b371f8eaf9f4143"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "clock2go2020.DashboardViewController.setupActions() -&gt; ()"
+                  moduleName = "clock2go2020"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kamalpunia/Documents/GitHub/clock2go2020-ios/clock2go2020/Dashboard/DashboardViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "236"
+                  endingLineNumber = "236"
+                  offsetFromSymbolStart = "4247">
+               </Location>
+               <Location
+                  uuid = "A21F73AB-006B-4D79-9F47-A09DFDB674A7 - 568ba8ef5b688164"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #15 () -&gt; () in clock2go2020.DashboardViewController.setupActions() -&gt; ()"
+                  moduleName = "clock2go2020"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kamalpunia/Documents/GitHub/clock2go2020-ios/clock2go2020/Dashboard/DashboardViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "237"
+                  endingLineNumber = "237"
+                  offsetFromSymbolStart = "49">
+               </Location>
+               <Location
+                  uuid = "A21F73AB-006B-4D79-9F47-A09DFDB674A7 - a349226a0e470d24"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #13 () -&gt; () in clock2go2020.DashboardViewController.setupActions() -&gt; ()"
+                  moduleName = "clock2go2020"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kamalpunia/Documents/GitHub/clock2go2020-ios/clock2go2020/Dashboard/DashboardViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "235"
+                  endingLineNumber = "235"
+                  offsetFromSymbolStart = "22">
+               </Location>
+               <Location
+                  uuid = "A21F73AB-006B-4D79-9F47-A09DFDB674A7 - a349226a0e470e58"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #13 () -&gt; () in clock2go2020.DashboardViewController.setupActions() -&gt; ()"
+                  moduleName = "clock2go2020"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kamalpunia/Documents/GitHub/clock2go2020-ios/clock2go2020/Dashboard/DashboardViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "231"
+                  endingLineNumber = "231"
+                  offsetFromSymbolStart = "22">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "6F26FAAE-3FD6-479A-A73E-4BAB7153D607"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "clock2go2020/Dashboard/DashboardViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "1617"
+            endingLineNumber = "1617"
+            landmarkName = "shouldShowCheckOutConfirmationAlert()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "6F26FAAE-3FD6-479A-A73E-4BAB7153D607 - c703b2ec5441eff1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "clock2go2020.DashboardViewModel.showConfirmationAlert(delegate: clock2go2020.CheckInConfirmationViewDelegate, isForCheckIn: Swift.Bool) -&gt; ()"
+                  moduleName = "clock2go2020"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kamalpunia/Documents/GitHub/clock2go2020-ios/clock2go2020/Dashboard/DashboardViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "1625"
+                  endingLineNumber = "1625"
+                  offsetFromSymbolStart = "186">
+               </Location>
+               <Location
+                  uuid = "6F26FAAE-3FD6-479A-A73E-4BAB7153D607 - 5524913d72495ef9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "clock2go2020.DashboardViewModel.shouldShowCheckOutConfirmationAlert() -&gt; Swift.Bool"
+                  moduleName = "clock2go2020"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kamalpunia/Documents/GitHub/clock2go2020-ios/clock2go2020/Dashboard/DashboardViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "1617"
+                  endingLineNumber = "1617"
+                  offsetFromSymbolStart = "111">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "17B0FAB0-2115-4EE0-8AD3-7C814D1AAF2D"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "clock2go2020/Dashboard/DashboardViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "301"
+            endingLineNumber = "301"
+            landmarkName = "showLoginConfirmView()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "3F63D299-D95B-4A3D-81BC-F1779CD99C0C"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "clock2go2020/Dashboard/DashboardViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "266"
+            endingLineNumber = "266"
+            landmarkName = "performCheckIn()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "8506C906-B212-4299-9622-AA2A836DE373"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "clock2go2020/Dashboard/View/BituachLeumiAdditionalView/BituachLeumiAdditionalView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "88"
+            endingLineNumber = "88"
+            landmarkName = "updateUI()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "8506C906-B212-4299-9622-AA2A836DE373 - 4505520a2a902684"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "clock2go2020.BituachLeumiAdditionalView.updateUI() -&gt; ()"
+                  moduleName = "clock2go2020"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kamalpunia/Documents/GitHub/clock2go2020-ios/clock2go2020/Dashboard/View/BituachLeumiAdditionalView/BituachLeumiAdditionalView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "83"
+                  endingLineNumber = "83"
+                  offsetFromSymbolStart = "2241">
+               </Location>
+               <Location
+                  uuid = "8506C906-B212-4299-9622-AA2A836DE373 - 4505520a2a902621"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "clock2go2020.BituachLeumiAdditionalView.updateUI() -&gt; ()"
+                  moduleName = "clock2go2020"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kamalpunia/Documents/GitHub/clock2go2020-ios/clock2go2020/Dashboard/View/BituachLeumiAdditionalView/BituachLeumiAdditionalView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "88"
+                  endingLineNumber = "88"
+                  offsetFromSymbolStart = "2504">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "8DDB0E1F-8AE5-482C-903C-EF95254C3A16"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "clock2go2020/Dashboard/View/MapView/LocationManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "120"
+            endingLineNumber = "120"
+            landmarkName = "askLocationPermissionForAlways()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "8DDB0E1F-8AE5-482C-903C-EF95254C3A16 - b402e3913a945a03"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "clock2go2020.LocationManager.askLocationPermissionForAlways() -&gt; ()"
+                  moduleName = "clock2go2020"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kamalpunia/Documents/GitHub/clock2go2020-ios/clock2go2020/Dashboard/View/MapView/LocationManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "120"
+                  endingLineNumber = "120"
+                  offsetFromSymbolStart = "89">
+               </Location>
+               <Location
+                  uuid = "8DDB0E1F-8AE5-482C-903C-EF95254C3A16 - b402e3913a945a03"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "clock2go2020.LocationManager.askLocationPermissionForAlways() -&gt; ()"
+                  moduleName = "clock2go2020"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kamalpunia/Documents/GitHub/clock2go2020-ios/clock2go2020/Dashboard/View/MapView/LocationManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "120"
+                  endingLineNumber = "120"
+                  offsetFromSymbolStart = "92">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F18C9D72-F7D0-4D5C-9F99-37432D793579"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "clock2go2020/ReportManagement/Popup/CloseMonthView/UpdateView/UpdateReportConfirmViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "141"
+            endingLineNumber = "141"
+            landmarkName = "shouldDIsableConfirmView()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B921639C-E6C9-4D33-90F4-FF0C080E0387"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "clock2go2020/ReportManagement/Popup/CloseMonthView/UpdateView/UpdateReportConfirmViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "137"
+            endingLineNumber = "137"
+            landmarkName = "shouldDIsableConfirmView()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "7441E454-F8AC-4DEF-A1BB-C22F62F935D8"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "clock2go2020/Dashboard/View/BituachLeumiAdditionalView/BituachLeumiAdditionalView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "86"
+            endingLineNumber = "86"
+            landmarkName = "updateUI()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PersonalInfoViewController" customModule="clock2go2020" customModuleProvider="target">
+            <connections>
+                <outlet property="accountInfoView" destination="DRv-FN-XuM" id="wed-Ey-bNG"/>
+                <outlet property="personalInfoView" destination="6iz-Qj-49A" id="T0Y-XM-LKf"/>
+                <outlet property="stackViewBottomConstraint" destination="DrH-Sc-csh" id="VaB-N9-inp"/>
+                <outlet property="view" destination="d5I-6x-XpY" id="u16-UQ-Qo3"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="d5I-6x-XpY">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dashboard_lines" translatesAutoresizingMaskIntoConstraints="NO" id="FMf-cp-Ucy">
+                    <rect key="frame" x="-150" y="751" width="714" height="145"/>
+                </imageView>
+                <stackView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="j3T-n3-qBi">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DRv-FN-XuM" customClass="AccountInfoView" customModule="clock2go2020" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="60"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="60" id="Q4X-NS-IxC"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6iz-Qj-49A" customClass="PersonalInfoView" customModule="clock2go2020" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="60" width="414" height="836"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="6iz-Qj-49A" secondAttribute="trailing" id="L1o-Nm-eCl"/>
+                        <constraint firstItem="DRv-FN-XuM" firstAttribute="top" secondItem="j3T-n3-qBi" secondAttribute="top" id="L7z-hu-wTk"/>
+                        <constraint firstItem="DRv-FN-XuM" firstAttribute="leading" secondItem="j3T-n3-qBi" secondAttribute="leading" id="Wwz-iF-yPH"/>
+                        <constraint firstAttribute="trailing" secondItem="DRv-FN-XuM" secondAttribute="trailing" id="cCh-DT-ahg"/>
+                        <constraint firstItem="6iz-Qj-49A" firstAttribute="leading" secondItem="j3T-n3-qBi" secondAttribute="leading" id="dPO-cd-cbT"/>
+                        <constraint firstAttribute="bottom" secondItem="6iz-Qj-49A" secondAttribute="bottom" id="v6A-g3-do1"/>
+                    </constraints>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" red="0.17357167600000001" green="0.49418878560000001" blue="0.83094662429999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="1V0-P3-M8o" firstAttribute="trailing" secondItem="j3T-n3-qBi" secondAttribute="trailing" id="5qt-dZ-Lhm"/>
+                <constraint firstItem="j3T-n3-qBi" firstAttribute="top" secondItem="d5I-6x-XpY" secondAttribute="top" id="7IM-vY-6NA"/>
+                <constraint firstAttribute="bottom" secondItem="FMf-cp-Ucy" secondAttribute="bottom" id="C4W-Pl-pJT"/>
+                <constraint firstAttribute="bottom" secondItem="j3T-n3-qBi" secondAttribute="bottom" id="DrH-Sc-csh"/>
+                <constraint firstItem="FMf-cp-Ucy" firstAttribute="leading" secondItem="1V0-P3-M8o" secondAttribute="leading" constant="-150" id="J9t-gq-7OK"/>
+                <constraint firstItem="j3T-n3-qBi" firstAttribute="leading" secondItem="1V0-P3-M8o" secondAttribute="leading" id="Qdz-bQ-7wx"/>
+                <constraint firstAttribute="trailing" secondItem="FMf-cp-Ucy" secondAttribute="trailing" constant="-150" id="gbG-h4-hpo"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="1V0-P3-M8o"/>
+            <point key="canvasLocation" x="137.68115942028987" y="-524.33035714285711"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="dashboard_lines" width="601" height="145"/>
+    </resources>
+</document>

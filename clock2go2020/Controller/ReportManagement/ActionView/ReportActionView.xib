@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="landscape" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="OpenSansHebrew-Bold.ttf">
+            <string>OpenSansHebrew-Bold</string>
+        </array>
+        <array key="OpenSansHebrew-Light.ttf">
+            <string>OpenSansHebrew-Light</string>
+        </array>
+        <array key="OpenSansHebrew-Regular.ttf">
+            <string>OpenSansHebrew-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ReportActionView" customModule="OneSignalNotificationServiceExtension" customModuleProvider="target">
+            <connections>
+                <outlet property="addReportButton" destination="NYv-Y2-wVf" id="GG3-xN-0Sv"/>
+                <outlet property="calendarView" destination="QEf-Wx-6eE" id="jTE-67-Ox8"/>
+                <outlet property="closeMonthButton" destination="A4y-lo-2sf" id="c75-WB-lDg"/>
+                <outlet property="closedMonthLabel" destination="K19-8F-aZF" id="fRp-hk-GLj"/>
+                <outlet property="contentView" destination="iN0-l3-epB" id="SGc-qB-DJj"/>
+                <outlet property="emailReportButton" destination="fdG-x0-NTv" id="EAu-7n-1xm"/>
+                <outlet property="reportTitle" destination="70d-bX-wjH" id="YOC-9x-2ST"/>
+                <outlet property="sortingView" destination="LCI-jP-ybP" id="58h-yS-S1L"/>
+                <outlet property="stackView" destination="mA6-6M-21l" id="CEb-Wl-XW7"/>
+                <outlet property="titleCalendarView" destination="xeV-9c-Hnp" id="ppd-RE-mic"/>
+                <outlet property="titleSortingView" destination="dbW-VY-aJD" id="fOE-7J-Mln"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="868" height="103"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="mA6-6M-21l">
+                    <rect key="frame" x="15" y="43.5" width="838" height="32"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NYv-Y2-wVf">
+                            <rect key="frame" x="0.0" y="0.0" width="32" height="32"/>
+                            <color key="backgroundColor" red="0.24313725490196078" green="0.80000000000000004" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="32" id="bpy-mN-p7J"/>
+                                <constraint firstAttribute="height" constant="32" id="k9V-cN-tdP"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                            <state key="normal" image="plus">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <connections>
+                                <action selector="addButtonTapped:" destination="-1" eventType="touchUpInside" id="3f8-vA-TH1"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A4y-lo-2sf">
+                            <rect key="frame" x="56" y="0.0" width="137" height="32"/>
+                            <color key="backgroundColor" red="0.90980392156862744" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="32" id="LVn-eu-WqY"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="OpenSansHebrew-Regular" family="Open Sans Hebrew" pointSize="13"/>
+                            <state key="normal" title="Button"/>
+                            <connections>
+                                <action selector="closeMonthButtonTapped:" destination="-1" eventType="touchUpInside" id="d8N-jB-pLf"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Month is locked" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K19-8F-aZF">
+                            <rect key="frame" x="217.5" y="0.0" width="137" height="32"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="32" id="UuX-fK-cyt"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="OpenSansHebrew-Light" family="Open Sans Hebrew" pointSize="13"/>
+                            <color key="textColor" red="0.065916486080000003" green="0.28398782010000001" blue="0.46380215879999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fdG-x0-NTv">
+                            <rect key="frame" x="378.5" y="0.0" width="137" height="32"/>
+                            <color key="backgroundColor" red="0.0" green="0.4392156862745098" blue="0.74901960784313726" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="32" id="NFR-og-kW6"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="OpenSansHebrew-Bold" family="Open Sans Hebrew" pointSize="13"/>
+                            <state key="normal" title="Button">
+                                <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="sendEmailButtonTapped:" destination="-1" eventType="touchUpInside" id="LR7-QI-N6c"/>
+                            </connections>
+                        </button>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LCI-jP-ybP">
+                            <rect key="frame" x="540" y="0.0" width="137" height="32"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="הצג לפי" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dbW-VY-aJD">
+                                    <rect key="frame" x="48.5" y="7" width="39.5" height="18"/>
+                                    <fontDescription key="fontDescription" name="OpenSansHebrew-Light" family="Open Sans Hebrew" pointSize="13"/>
+                                    <color key="textColor" red="0.1137254902" green="0.30196078430000001" blue="0.43529411759999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="funnel" translatesAutoresizingMaskIntoConstraints="NO" id="Ztc-w5-Afm">
+                                    <rect key="frame" x="111" y="10" width="11" height="12"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="11" id="uxo-dW-8Nb"/>
+                                        <constraint firstAttribute="height" constant="12" id="wK3-8Y-MWd"/>
+                                    </constraints>
+                                </imageView>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow_down" translatesAutoresizingMaskIntoConstraints="NO" id="JPa-RW-ngx">
+                                    <rect key="frame" x="13.5" y="13.5" width="8" height="5"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="5" id="TqY-5L-qu2"/>
+                                        <constraint firstAttribute="width" constant="8" id="ygH-Y5-y2I"/>
+                                    </constraints>
+                                </imageView>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="JPa-RW-ngx" firstAttribute="leading" secondItem="LCI-jP-ybP" secondAttribute="leading" constant="13.5" id="7tH-Hs-cgj"/>
+                                <constraint firstAttribute="trailing" secondItem="Ztc-w5-Afm" secondAttribute="trailing" constant="15" id="Bhc-Wl-SNR"/>
+                                <constraint firstItem="dbW-VY-aJD" firstAttribute="centerX" secondItem="LCI-jP-ybP" secondAttribute="centerX" id="H8C-XM-ohC"/>
+                                <constraint firstItem="Ztc-w5-Afm" firstAttribute="centerY" secondItem="dbW-VY-aJD" secondAttribute="centerY" id="I9b-hn-2sT"/>
+                                <constraint firstItem="JPa-RW-ngx" firstAttribute="centerY" secondItem="dbW-VY-aJD" secondAttribute="centerY" id="S3b-uy-m6b"/>
+                                <constraint firstItem="dbW-VY-aJD" firstAttribute="centerY" secondItem="LCI-jP-ybP" secondAttribute="centerY" id="Zm5-cZ-KEO"/>
+                                <constraint firstAttribute="height" constant="32" id="mXa-ji-Mon"/>
+                                <constraint firstAttribute="width" constant="137" id="swf-v5-jFn"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QEf-Wx-6eE">
+                            <rect key="frame" x="701" y="0.0" width="137" height="32"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="בחר חודש" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xeV-9c-Hnp">
+                                    <rect key="frame" x="43.5" y="7" width="50.5" height="18"/>
+                                    <fontDescription key="fontDescription" name="OpenSansHebrew-Light" family="Open Sans Hebrew" pointSize="13"/>
+                                    <color key="textColor" red="0.1137254902" green="0.30196078430000001" blue="0.43529411759999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="calendar18" translatesAutoresizingMaskIntoConstraints="NO" id="dJc-Yj-Iw9">
+                                    <rect key="frame" x="111" y="11.5" width="11" height="9"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="9" id="IkP-sV-Ffj"/>
+                                        <constraint firstAttribute="width" constant="11" id="eso-oh-7P8"/>
+                                    </constraints>
+                                </imageView>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow_down" translatesAutoresizingMaskIntoConstraints="NO" id="XOa-32-a2s">
+                                    <rect key="frame" x="13" y="13.5" width="8" height="5"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="5" id="72U-KO-4hV"/>
+                                        <constraint firstAttribute="width" constant="8" id="lXc-sm-0k8"/>
+                                    </constraints>
+                                </imageView>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="XOa-32-a2s" firstAttribute="leading" secondItem="QEf-Wx-6eE" secondAttribute="leading" constant="13" id="8Jg-I9-jwk"/>
+                                <constraint firstItem="xeV-9c-Hnp" firstAttribute="centerX" secondItem="QEf-Wx-6eE" secondAttribute="centerX" id="ApE-jk-oot"/>
+                                <constraint firstAttribute="trailing" secondItem="dJc-Yj-Iw9" secondAttribute="trailing" constant="15" id="PZO-1u-KKe"/>
+                                <constraint firstItem="dJc-Yj-Iw9" firstAttribute="centerY" secondItem="xeV-9c-Hnp" secondAttribute="centerY" id="WvO-Zf-Dax"/>
+                                <constraint firstAttribute="height" constant="32" id="dMq-gW-McR"/>
+                                <constraint firstItem="xeV-9c-Hnp" firstAttribute="centerY" secondItem="QEf-Wx-6eE" secondAttribute="centerY" id="oIq-fM-C62"/>
+                                <constraint firstItem="XOa-32-a2s" firstAttribute="centerY" secondItem="xeV-9c-Hnp" secondAttribute="centerY" id="vmB-oA-HzL"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="LCI-jP-ybP" firstAttribute="width" secondItem="QEf-Wx-6eE" secondAttribute="width" id="5k1-WK-PTw"/>
+                        <constraint firstItem="K19-8F-aZF" firstAttribute="width" secondItem="A4y-lo-2sf" secondAttribute="width" id="5kt-ME-LUp"/>
+                        <constraint firstItem="LCI-jP-ybP" firstAttribute="width" secondItem="fdG-x0-NTv" secondAttribute="width" id="Fp2-0v-M5T"/>
+                        <constraint firstItem="A4y-lo-2sf" firstAttribute="width" secondItem="fdG-x0-NTv" secondAttribute="width" id="ueZ-fO-p9g"/>
+                    </constraints>
+                </stackView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ניהול דיווחים" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="70d-bX-wjH">
+                    <rect key="frame" x="400" y="9" width="68.5" height="19.5"/>
+                    <fontDescription key="fontDescription" name="OpenSansHebrew-Regular" family="Open Sans Hebrew" pointSize="14"/>
+                    <color key="textColor" red="0.066666666666666666" green="0.28235294117647058" blue="0.46274509803921571" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="plD-gw-OTa">
+                    <rect key="frame" x="813" y="9" width="35" height="22"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="35" id="lmW-Uu-eQB"/>
+                    </constraints>
+                    <state key="normal" image="arrow_blue_right_large"/>
+                    <connections>
+                        <action selector="backButtonTapped:" destination="-1" eventType="touchUpInside" id="YNV-ME-ZYJ"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="70d-bX-wjH" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="JIc-7S-a1z"/>
+                <constraint firstItem="mA6-6M-21l" firstAttribute="top" secondItem="70d-bX-wjH" secondAttribute="bottom" constant="15" id="Phq-6L-lrl"/>
+                <constraint firstItem="mA6-6M-21l" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="UhS-aA-95K"/>
+                <constraint firstItem="mA6-6M-21l" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="15" id="dW4-HV-mrQ"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="plD-gw-OTa" secondAttribute="trailing" constant="20" id="eUE-xE-XNs"/>
+                <constraint firstItem="plD-gw-OTa" firstAttribute="top" secondItem="70d-bX-wjH" secondAttribute="top" id="lr4-iG-Lbg"/>
+                <constraint firstItem="70d-bX-wjH" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="9" id="mzr-nX-kmr"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="96.251874062968525" y="36"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="arrow_blue_right_large" width="10" height="17.5"/>
+        <image name="arrow_down" width="10.5" height="6"/>
+        <image name="calendar18" width="9" height="9"/>
+        <image name="funnel" width="13" height="13"/>
+        <image name="plus" width="30" height="30"/>
+    </resources>
+</document>

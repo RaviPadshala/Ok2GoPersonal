@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="OpenSansHebrew-Regular.ttf">
+            <string>OpenSansHebrew-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TrackingReportHeaderTableView" customModule="clock2go2020" customModuleProvider="target">
+            <connections>
+                <outlet property="contentView" destination="dVK-fh-H1e" id="d6u-ox-SbR"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="dVK-fh-H1e">
+            <rect key="frame" x="0.0" y="0.0" width="718" height="80"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="xFQ-kg-nTy">
+                    <rect key="frame" x="50" y="33.5" width="97.5" height="13.5"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="סה׳׳כ עלות ש״ח" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7cZ-6X-aR9">
+                            <rect key="frame" x="0.0" y="0.0" width="85.5" height="13.5"/>
+                            <fontDescription key="fontDescription" name="OpenSansHebrew-Regular" family="Open Sans Hebrew" pointSize="12"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fqD-1u-eQF">
+                            <rect key="frame" x="96.5" y="0.0" width="1" height="13.5"/>
+                            <color key="backgroundColor" white="1" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="1" id="1qX-hH-Yih"/>
+                                <constraint firstAttribute="height" constant="13.5" id="RPo-cj-9eo"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                </stackView>
+                <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="efT-vr-8JU" userLabel="total">
+                    <rect key="frame" x="147.5" y="33.5" width="97.5" height="13.5"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="תעריף נסיעה" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X4g-8Y-cOL">
+                            <rect key="frame" x="0.0" y="0.0" width="80.5" height="13.5"/>
+                            <fontDescription key="fontDescription" name="OpenSansHebrew-Regular" family="Open Sans Hebrew" pointSize="12"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qho-cH-Hoq">
+                            <rect key="frame" x="96.5" y="0.0" width="1" height="13.5"/>
+                            <color key="backgroundColor" white="1" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="1" id="QIf-sw-f2r"/>
+                                <constraint firstAttribute="height" constant="13.5" id="d6n-48-JMY"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                </stackView>
+                <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="doV-Wg-QPZ" userLabel="logout localion">
+                    <rect key="frame" x="245" y="33.5" width="65" height="13.5"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="מרחק" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mCx-zv-k0d">
+                            <rect key="frame" x="0.0" y="0.0" width="64" height="13.5"/>
+                            <fontDescription key="fontDescription" name="OpenSansHebrew-Regular" family="Open Sans Hebrew" pointSize="12"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Urt-SR-1N3">
+                            <rect key="frame" x="64" y="0.0" width="1" height="13.5"/>
+                            <color key="backgroundColor" white="1" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="13.5" id="avR-0h-Qf1"/>
+                                <constraint firstAttribute="width" constant="1" id="dxA-NO-MIP"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="65" id="LM9-4o-bu4"/>
+                    </constraints>
+                </stackView>
+                <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B95-vB-s9c" userLabel="logout time">
+                    <rect key="frame" x="310" y="33.5" width="98" height="13.5"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="סיום" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jBq-gG-sJ8">
+                            <rect key="frame" x="0.0" y="0.0" width="97" height="13.5"/>
+                            <fontDescription key="fontDescription" name="OpenSansHebrew-Regular" family="Open Sans Hebrew" pointSize="12"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b2t-Xv-7vR">
+                            <rect key="frame" x="97" y="0.0" width="1" height="13.5"/>
+                            <color key="backgroundColor" white="1" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="13.5" id="4fK-jZ-Yjk"/>
+                                <constraint firstAttribute="width" constant="1" id="Kgf-QQ-Edf"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                </stackView>
+                <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JtX-Ua-YKO" userLabel="login location">
+                    <rect key="frame" x="408" y="33.5" width="97.5" height="13.5"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="התחלה" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yHz-Xy-D3v">
+                            <rect key="frame" x="0.0" y="0.0" width="96.5" height="13.5"/>
+                            <fontDescription key="fontDescription" name="OpenSansHebrew-Regular" family="Open Sans Hebrew" pointSize="12"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nt5-Nu-1fX">
+                            <rect key="frame" x="96.5" y="0.0" width="1" height="13.5"/>
+                            <color key="backgroundColor" white="1" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="1" id="60u-dd-tW0"/>
+                                <constraint firstAttribute="height" constant="13.5" id="KAH-uv-SfE"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                </stackView>
+                <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xd4-TS-znS" userLabel="login time">
+                    <rect key="frame" x="505.5" y="33.5" width="97.5" height="13.5"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="סוג נסיעה" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KKH-eO-dgT">
+                            <rect key="frame" x="0.0" y="0.0" width="96.5" height="13.5"/>
+                            <fontDescription key="fontDescription" name="OpenSansHebrew-Regular" family="Open Sans Hebrew" pointSize="12"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ouD-Dl-p1T">
+                            <rect key="frame" x="96.5" y="0.0" width="1" height="13.5"/>
+                            <color key="backgroundColor" white="1" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="1" id="ZpG-7z-JjE"/>
+                                <constraint firstAttribute="height" constant="13.5" id="ogS-et-49w"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                </stackView>
+                <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="R6d-oZ-fLG" userLabel="task">
+                    <rect key="frame" x="603" y="32" width="65" height="16.5"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="תאריך" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UxQ-AH-Hgy">
+                            <rect key="frame" x="0.0" y="0.0" width="65" height="16.5"/>
+                            <fontDescription key="fontDescription" name="OpenSansHebrew-Regular" family="Open Sans Hebrew" pointSize="12"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" red="0.062745098040000002" green="0.28235294119999998" blue="0.46274509800000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="JtX-Ua-YKO" firstAttribute="leading" secondItem="B95-vB-s9c" secondAttribute="trailing" id="HXF-B1-CBA"/>
+                <constraint firstItem="efT-vr-8JU" firstAttribute="centerY" secondItem="dVK-fh-H1e" secondAttribute="centerY" id="IaL-LD-Odt"/>
+                <constraint firstItem="doV-Wg-QPZ" firstAttribute="leading" secondItem="efT-vr-8JU" secondAttribute="trailing" id="O8s-l1-n3K"/>
+                <constraint firstItem="doV-Wg-QPZ" firstAttribute="centerY" secondItem="dVK-fh-H1e" secondAttribute="centerY" id="Qhv-v3-I1M"/>
+                <constraint firstItem="R6d-oZ-fLG" firstAttribute="width" secondItem="doV-Wg-QPZ" secondAttribute="width" id="Rn3-U9-2CC"/>
+                <constraint firstAttribute="trailing" secondItem="R6d-oZ-fLG" secondAttribute="trailing" constant="50" id="Wtx-I7-kLS"/>
+                <constraint firstItem="JtX-Ua-YKO" firstAttribute="centerY" secondItem="dVK-fh-H1e" secondAttribute="centerY" id="XKd-d7-XEP"/>
+                <constraint firstItem="xFQ-kg-nTy" firstAttribute="leading" secondItem="dVK-fh-H1e" secondAttribute="leading" constant="50" id="dIf-G7-ZTM"/>
+                <constraint firstItem="Xd4-TS-znS" firstAttribute="width" secondItem="efT-vr-8JU" secondAttribute="width" id="dwB-GX-9U9"/>
+                <constraint firstItem="R6d-oZ-fLG" firstAttribute="leading" secondItem="Xd4-TS-znS" secondAttribute="trailing" id="fhB-M6-dPZ"/>
+                <constraint firstItem="B95-vB-s9c" firstAttribute="centerY" secondItem="dVK-fh-H1e" secondAttribute="centerY" id="ghN-aK-gwM"/>
+                <constraint firstItem="efT-vr-8JU" firstAttribute="leading" secondItem="xFQ-kg-nTy" secondAttribute="trailing" id="iKi-kN-HMH"/>
+                <constraint firstItem="Xd4-TS-znS" firstAttribute="leading" secondItem="JtX-Ua-YKO" secondAttribute="trailing" id="kWk-ny-2Ws"/>
+                <constraint firstItem="JtX-Ua-YKO" firstAttribute="width" secondItem="B95-vB-s9c" secondAttribute="width" id="low-Mx-1hZ"/>
+                <constraint firstItem="R6d-oZ-fLG" firstAttribute="centerY" secondItem="dVK-fh-H1e" secondAttribute="centerY" id="mHq-Vh-8Fa"/>
+                <constraint firstItem="xFQ-kg-nTy" firstAttribute="centerY" secondItem="dVK-fh-H1e" secondAttribute="centerY" id="nKg-JK-2yY"/>
+                <constraint firstItem="Xd4-TS-znS" firstAttribute="centerY" secondItem="dVK-fh-H1e" secondAttribute="centerY" id="sUr-gk-LFK"/>
+                <constraint firstItem="B95-vB-s9c" firstAttribute="width" secondItem="efT-vr-8JU" secondAttribute="width" id="xu8-fp-MOd"/>
+                <constraint firstItem="efT-vr-8JU" firstAttribute="width" secondItem="xFQ-kg-nTy" secondAttribute="width" id="yXh-AO-w0X"/>
+                <constraint firstItem="B95-vB-s9c" firstAttribute="leading" secondItem="doV-Wg-QPZ" secondAttribute="trailing" id="zuR-zA-2WW"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="9Vo-gN-zaV"/>
+            <point key="canvasLocation" x="-267.19999999999999" y="-137.6311844077961"/>
+        </view>
+    </objects>
+</document>

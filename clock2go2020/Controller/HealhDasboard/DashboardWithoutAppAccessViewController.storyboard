@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Dashboard Without App Access View Controller-->
+        <scene sceneID="azd-1w-WaV">
+            <objects>
+                <viewController storyboardIdentifier="DashboardWithoutAppAccessViewController" id="Fpw-NU-Vta" customClass="DashboardWithoutAppAccessViewController" customModule="clock2go2020" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Oyc-9I-1f3">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dashboard_lines" translatesAutoresizingMaskIntoConstraints="NO" id="8fA-uc-bBU">
+                                <rect key="frame" x="-150" y="751" width="714" height="145"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kcA-Ap-8Qi" customClass="TrackingView" customModule="clock2go2020" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="50" width="414" height="250"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="h8K-iy-TGV"/>
+                                </constraints>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="eT4-HQ-S2X">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="80"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8S8-Y2-wgR" customClass="AccountInfoView" customModule="clock2go2020" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="80"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="80" id="8FZ-iH-6bj"/>
+                                        </constraints>
+                                    </view>
+                                    <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hVo-yP-RYc" customClass="TaskBarView" customModule="clock2go2020" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
+                                        <color key="backgroundColor" red="0.98976117370000005" green="0.98990291360000005" blue="0.98973017929999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="100" id="3uV-vN-nq6"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="hVo-yP-RYc" firstAttribute="leading" secondItem="eT4-HQ-S2X" secondAttribute="leading" id="PbV-Lk-1Pl"/>
+                                    <constraint firstItem="8S8-Y2-wgR" firstAttribute="top" secondItem="eT4-HQ-S2X" secondAttribute="top" id="UGG-nZ-MeO"/>
+                                    <constraint firstAttribute="trailing" secondItem="hVo-yP-RYc" secondAttribute="trailing" id="dUg-8h-Gin"/>
+                                    <constraint firstItem="8S8-Y2-wgR" firstAttribute="leading" secondItem="eT4-HQ-S2X" secondAttribute="leading" id="dml-Lu-9uN"/>
+                                    <constraint firstAttribute="trailing" secondItem="8S8-Y2-wgR" secondAttribute="trailing" id="pQs-3B-scx"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="gfG-oc-uH5"/>
+                        <color key="backgroundColor" red="0.17357167600000001" green="0.49418878560000001" blue="0.83094662429999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="eT4-HQ-S2X" firstAttribute="leading" secondItem="gfG-oc-uH5" secondAttribute="leading" id="1EY-xp-xHV"/>
+                            <constraint firstItem="gfG-oc-uH5" firstAttribute="trailing" secondItem="eT4-HQ-S2X" secondAttribute="trailing" id="1l8-gc-ACe"/>
+                            <constraint firstItem="kcA-Ap-8Qi" firstAttribute="leading" secondItem="gfG-oc-uH5" secondAttribute="leading" id="EAM-Sf-2Jd"/>
+                            <constraint firstAttribute="trailing" secondItem="8fA-uc-bBU" secondAttribute="trailing" constant="-150" id="Mzg-H8-Qj5"/>
+                            <constraint firstAttribute="bottom" secondItem="8fA-uc-bBU" secondAttribute="bottom" id="TPj-vd-Qck"/>
+                            <constraint firstItem="eT4-HQ-S2X" firstAttribute="top" secondItem="Oyc-9I-1f3" secondAttribute="top" id="goe-Aj-dqg"/>
+                            <constraint firstItem="gfG-oc-uH5" firstAttribute="trailing" secondItem="kcA-Ap-8Qi" secondAttribute="trailing" id="jw5-qN-s3x"/>
+                            <constraint firstItem="kcA-Ap-8Qi" firstAttribute="top" secondItem="eT4-HQ-S2X" secondAttribute="bottom" constant="-30" id="ogN-ja-0AJ"/>
+                            <constraint firstItem="8fA-uc-bBU" firstAttribute="leading" secondItem="gfG-oc-uH5" secondAttribute="leading" constant="-150" id="ua9-MI-94C"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="accountInfoView" destination="8S8-Y2-wgR" id="KKs-jo-oec"/>
+                        <outlet property="taskBarView" destination="hVo-yP-RYc" id="ual-gU-Dri"/>
+                        <outlet property="trackingView" destination="kcA-Ap-8Qi" id="MVu-5B-0ve"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dAR-39-WL8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="334.78260869565219" y="-135.26785714285714"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="dashboard_lines" width="601" height="145"/>
+    </resources>
+</document>

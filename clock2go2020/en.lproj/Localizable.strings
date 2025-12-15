@@ -1,0 +1,1213 @@
+"DAILY_STUDENT_REPORTS_TITLE" = "Daily Student Reports";
+"HELLO" = "Hello %@";
+"Internship" = "Internship: %@";
+"Subspecialty" = "Subspecialty: %@";
+"CONFIRMATION_TITLE" = "Confirmation";
+"STUDENT_NAME_TITLE" = "Student name";
+"ATTENDANCE_CONFIRMATION_TITLE" = "Attendance confirmation";
+"ENTRY_TIME_TITLE" = "Entry time";
+"TRAFFIC_LIGHT_SCORE_TITLE" = "Traffic light score";
+"NOTES_TITLE" = "Notes";
+"Please_select_traffic_light_score_in_student" = "Please select traffic light score in student";
+"Please_add_notes_in_student" = "Please enter notes with a red or yellow traffic-light rating";
+"Please_add_report_time_in_student" = "Please enter a reporting time for attendance markers";
+"Student_data_submitted_successfully" = "Student data submitted successfully!";
+"Alert" = "Alert!";
+"You_have_to_fill" = "Number of forms to fill out: %d";
+"forms_to_exit" = "forms to exit.";
+"forms_to_enter" = "forms to enter.";
+"forms_to_service_exit" = "forms to service exit.";
+"forms_to_service_enter" = "forms to service enter.";
+"success" = "Success!";
+"Form_data_submitted_successfully_Please_fill_another_form_data" = "Form signed successfully, Please fill another form data!";
+"Form_sign_successfully" = "The form has been successfully signed";
+"Fill_out_form_data" = "You must have to fill out the form";
+"No_student_report_data" = "There are no student report data.";
+"Month_block" = "The month is locked for report completion";
+"error_1700" = "Not allow report";
+"error_1701" = "Not allow report NFC not active";
+
+//"Invalid_NFC_Tag"
+"The_tag_is_invalid_please_contact_the_responsible_person_in_your_organization" = "The tag is invalid, please contact the responsible person in your organization";
+//"Not_supported_tag"
+"The_tag_is_not_supported_please_contact_the_administrator_in_your_organization" =  " The tag is not supported, please contact the administrator in your organization";
+
+"Reporting_without_NFC_is_not_allowed_Please_use_NFC_to_complete_the_report" = "Reporting without NFC is not allowed. Please use NFC to complete the report";
+
+"Office_treatment" = "Office treatment";
+"Clinic_treatment" = "Clinic treatment";
+"On_site_treatment" = "On-site treatment";
+"Group_treatment" = "Group treatment";
+"Online" = "Online";
+"Individual" = "Individual";
+"Group" = "Group";
+"Projective" = "Projective";
+"Medical" = "Medical";
+"Choose_Therapy" = "Choose a treatment";
+"Select_Therapy" = "Select Therapy";
+"Please_select_therapy_type" = "Please select therapy type";
+
+"Scan" = "Scan";
+"Entry_Report" = "Entry Report";
+"Exit_Report" = "Exit Report";
+"Please_select_report_type" = "Please select report type.";
+"NFC_scan_successfully" = "NFC scanned successfully. You can now proceed to report";
+
+"Add_Distance_Measurement" = "Add Distance Measurement";
+"select_city" = "Select City";
+"Enter_manual_distance" = "Enter manual distance";
+"Search_a_city" = "Search a city";
+"Please_select_a_travel_route" = "Please select a travel route";
+
+"Scaned_NFC_is_not_active" = "Scaned NFC is not active";
+"NFC_not_exist" = "NFC not exist";
+"error_1703_message" = "You are not authorized to report, please contact your manager in your organization";
+"error_1704_message" = "The tag you are trying to report is not active, please contact the administrator in your organization";
+"Patient_not_found" = "Patient not found";
+"offline_report_message" = "The report has been received successfully and will be updated in the system once the connection is restored";
+"closing_message" = "Closing for %@ is no longer allowed";
+
+
+
+
+
+
+
+
+
+
+
+
+"CONTINUE" = "Continue";
+"CHOOSE_LANGUAGE_TITLE" = "Language";
+"SELECT_LANGUAGE_MESSAGE" = "Selcet your language";
+"PHONE_INPUT_TITLE" = "Welcome";
+"PHONE_INPUT_MESSAGE" = "For registration, enter \
+Your phone number ";
+"TERMS_ARGEEMENT_MESSAGE" = "I confirm that I have read and understood the Terms of Use";
+"TERMS_OF_USE" = "Terms of Use";
+"PHONE_WRONG_MESSAGE" = "* The number is incorrect";
+"PASSWORD_INPUT_TITLE" = "Verify details";
+"PASSWORD_SEND_MESSAGE" = "An SMS with a registration code has been sent to you. \
+Enter the code";
+"ENTERED_PASSWORD_INVALID_MESSAGE" = "* Password is invalid";
+"ENTER_CODE" = "Enter the code";
+"WRONG_CODE_MESSAGE" = "Wrong verification code";
+"PASSWORD_RESEND_MESSAGE" = "Send SMS again";
+"WELCOME_TITLE" = "Welcome";
+"SHOW_USAGE_GUIDE_MESSAGE" = "Watch our user guide";
+"WATCH_GUIDE" = "View Guide";
+"SKIP" = "Skip";
+"GOOD_MORNING_TITLE" = "Good morning";
+"GOOD_AFTERNOON" = "Good afternoon";
+"GOOD_AFTERNOON_2" = "Good afternoon";
+"GOOD_EVENING" = "Good evening";
+"GOOD_NIGHT" = "Good night";
+"CANT_USE_APP_ERROR_MESSAGE" = "To use the app - Contact the manager in your organization to set up your service on the employee card. After updating the service, re-open the app and start reporting";
+"MISSING" = "Missing";
+"TOTAL_HOURS" = "Total hours";
+"ABSENCES" = "Absences";
+"SELECT_TASK_MESSAGE" = "First, select a Task";
+"SELECT_TASK" = "Select a task";
+"SEARCH_ADD_TASK" = "Search / add a task";
+"SEARCH_TASK" = "Search a task";
+"LOGIN_WITH_TASK_TITLE" = "Do you want to login with a task?";
+"LOGIN_WITHOUT_TASK_TITLE" = "Do you want to login?";
+"LOGIN_BEFORE_STANDARD_TIME" = "Do you want to login before work time?";
+"LOGIN_AFTER_STANDARD_TIME" = "Do you want to login after work time?";
+"LOGOUT_WITH_TASK_TITLE" = "To End the task, select one of the options";
+"LOGOUT_WITHOUT_TASK_TITLE" = "Do you want to logout?";
+"LOGOUT_BEFORE_STANDARD_TIME" = "Do you want to logout before work time?";
+"LOGOUT_AFTER_STANDARD_TIME" = "Do you want to logout after work time?";
+"LOGIN_SUCCESS_TITLE" = "Report has been received successfully";
+"LOGOUT_SUCCESS_TITLE" = "Logout successful";
+"FINISH_TASK_TITLE" = "End the task";
+"FINISH_AND_START_TASK_TITLE" = "End the task and move to a new one";
+"TAKE_BREAK_TITLE" = "Do you want to take a break?";
+"END_BREAK_TITLE" = "Do you want to end the break?";
+"BREAK_SUCCESS_TITLE" = "Successfully";
+"ABSENCE_CONFIRM_TITLE" = "do you want to report %@ for this dates? %@ - %@ total days %@";
+"CONFIRM" = "Approve";
+"CANCEL" = "Cancel";
+"ADD_COMMENT" = "Add comment";
+"TAKE_A_PICTURE" = "Take a picture";
+"Do you want to report an entry with task" = "Do you want to report an entry with task ";
+"and event" = " and event ";
+"MULTI_LOGIN" = "Multi Login";
+"MULTI_LOGOUT" = "Multi Logout";
+"CHOOSE_EMPLOYEES" = "Select employees";
+"TASK_NOT_CHOOSED" = "Without task";
+"CHOOSE_TASK_TO_LOGIN" = "Please, choose task to login";
+"CHOOSE_TASK_TO_LOGOUT" = "Please, choose task to logout";
+"SELECT_USERS_TO_PROCCED" = "Select User(s) to proceed";
+"SELECTED_0_USER" = "Selected 0 user";
+"SELECTED_0_USERS" = "Selected 0 users";
+"PICTURE_REPORT_LOGIN" = "To make a login ";
+"PICTURE_REPORT_TASK_LOGIN" = "To make a login with task ";
+"PICTURE_REPORT_LOGOUT" = "To make a logout ";
+"HEALTH_APPROVE" = "Approve";
+"HEALTH_REJECT" = "Not approve";
+"HEALTH_DISCLAIMER_APPROVED" = "report accepted with health disclaimer";
+"HEALTH_DISCLAIMER_REJECTED" = "you cant report without healt disclaimer";
+"ABSENCE_REPORT_TITLE" = "Absence reporting";
+"ABSENCE_TYPE_TITLE" = "Absence type";
+"DATE_TO_TITLE" = "Until";
+"DATE_FROM_TITLE" = "From";
+"ATTACH_FILE_TITLE" = "photo/add file";
+"ATTACH_REQUIRED_TITLE" = "photo/add file is mandatory";
+"CHOOSE_EMPLOYEE_TITLE" = "Select an employee";
+"SELECT_ABSENCE_TYPE_TITLE" = "Select the type of absence";
+"VACATIONS" = "Vacation";
+"RESERVE_SERVICE" = "Reserve service";
+"DISEASE" = "Disease";
+"COURSE" = "Course";
+"GENERAL_ABSENCE" = "General Absence";
+"KID_DISEASE" = "Kid disease";
+"MOURNING" = "Mourning";
+"ELECTIONS_DAY" = "Elections Day";
+"TRAINING" = "Training";
+"MATERNITY" = "Maternity";
+"EMERGENCY" = "Emergency";
+"WEDDING" = "Wedding";
+"ACCIDENT" = "Accident";
+"WOMENS_DAY" = "Women's Day";
+"HMO_VISIT" = "HMO visit";
+"COMPANY_TRIP" = "Company trip";
+"DECLARATION_DAY" = "Declaration day";
+"OPTIONAL_HOLIDAY" = "Optional holyday";
+"SPOUSE_DISEASE" = "Spouse disease";
+"PARENT_DISEASE" = "Parent disease";
+"MEETINGS" = "Meetings";
+"UNPAID_VOCATION" = "Unpaid vacation";
+"HALF_DAY_VOCATION" = "Half day vacation";
+"CORONA_QUARANTINE" = "Corona quarantine";
+"PAIRING" = "Pairing";
+"AVAILABLE" = "Available";
+"ATTACH_TITLE" = "Please attach a file or take a picture";
+"ATTACH_PHOTO_TITLE" = "Upload file";
+"ATTACH_CAMERA_TITLE" = "Take a picture";
+"ATTACH_BIG_SIZE_MESSAGE" = "Please select image less than 1000KB";
+"LOGOUT" = "OUT";
+"LOGIN" = "IN";
+"ABSCENCE" = "Absence";
+"PAUSE" = "Break";
+"END_PAUSE" = "End break";
+"SHOW_TRACK_TITLE" = "Show track";
+"ADD_DISTANCE" = "Add distance";
+"ADDITIONAL_BUTTON_MAKE_ACTION" = "Do you want to make ";
+"ADD_A_TRIP" = "Adding a trip";
+"START_RIDE" = "Start ride";
+"END_RIDE" = "End ride";
+"DISTANCE_MEASUREMENT_ERROR" = "Please wait a minute before start a new distance";
+"START_TRAKING_CONFIRM_TITLE" = "Start";
+"STOP_TRAKING_CONFIRM_TITLE" = "Finish";
+"SHOW_TRAKING_CONFIRM_TITLE" = "Ok";
+"START_TRAKING_TITLE" = "Start measuring distance?";
+"STOP_TRAKING_TITLE" = "Finish measuring distance?";
+"SHOW_TRAKING_TITLE" = "You tracked - ";
+"KILOMETERS" = "kilometers";
+"METERS" = "meters";
+"DATE" = "date";
+"ABSCENCE_REASON" = "Absence from work due";
+"ERROR" = "Error";
+"SUCCESS_TITLE" = "Operation performed successfully!";
+"ACTIONS" = "Actions";
+"MY_PROFILE" = "My profile";
+"MY_REPORTS" = "My reports";
+"MY_FORMS" = "My forms";
+"MY_TRIPS" = "My transports";
+"MESSAGES" = "Messages";
+"SETTINGS" = "Settings";
+"CHOOSE_LANGUAGE" = "Choose language";
+"LEGAL_INFORMATION" = "Legal Information";
+"ABOUT" = "About";
+"SUPPORT" = "Support";
+"EXIT" = "Log out";
+"PROFILE_SETTINGS_TITLE" = "Profile settings";
+"COMPANY_NAME_TITLE" = "Company Name";
+"PERSONAL_INFORMATION_TITLE" = "Personal Information";
+"REMINDER_TITLE" = "Alarms";
+"LOGIN_REMINDER_TITLE" = "Login reminder";
+"LOGOUT_REMINDER_TITLE" = "Logout reminder";
+"LOGIN_REMINDER_TEXT" = "Please log in";
+"Add new reminder" = "Add new reminder";
+"LOGOUT_REMINDER_TEXT" = "Please log out";
+"WORKER_NAME" = "Name";
+"EMAIL_ADDRESS" = "Email";
+"POSITION" = "Role";
+"FIELD_NOT_MANDATORY" = "* The field is not mandatory";
+"SAVE" = "Save";
+"SETUP_DAYS_REMINDER" = "Set daily schedule";
+"REMIND_SIGNIN_AT" = "Remind me to login";
+"REMIND_LEAVE_AT" = "Remind me to logout";
+"REMIND_WHEN_WORK_MORE_THAN" = "Remind me when I work more than:";
+"REMIND_WHEN_BREAK_MORE_THAN" = "Remind me when I'm on break more than:";
+"ALL_DAYS" = "All days";
+"ALL_SUNDAYS" = "All Sundays";
+"ALL_MODAYS" = "All Mondays";
+"ALL_TUESDAYS" = "All Tuesdays";
+"ALL_WEDNESDAYS" = "All Wednesdays";
+"ALL_THURSDAYS" = "All Thursday";
+"ALL_FRIDAYS" = "All Fridays";
+"ALL_SATURDAYS" = "All Saturdays";
+"DELETE" = "Delete";
+"SELECT_ALL" = "Select all";
+"YOU_HAVE_NUMBER_NEW_ALERTDS" = "You have 0 new alerts";
+"MY_REPORT_TITLE" = "My reports";
+"REPORT_CUMULATIVE_TITLE" = "Cumulative";
+"REPORT_TOTAL_TITLE" = "Total";
+"REPORT_EXIT_LOCATION_TITLE" = "Exit localion";
+"REPORT_EXIT_TIME_TITLE" = "Exit time";
+"REPORT_ENTER_LOCATION_TITLE" = "Enter location";
+"REPORT_ENTER_TIME_TITLE" = "Enter time";
+"REPORT_TASK_TITLE" = "Task";
+"REPORT_DATE_TITLE" = "Date";
+"CLOSE_MONTH_TITLE" = "Close month";
+"IS_CLOSE_MONTH_TITLE" = "Month is locked";
+"SEND_EMAIL_TITLE" = "Send email";
+"VIEW_BY_TITLE" = "View by";
+"CHOOSE_MONTH_TITLE" = "Choose month";
+"MISSING_TITLE" = "Missing";
+"ABSENCE_TITLE" = "Absence";
+"BREAKS_TITLE" = "Breaks";
+"STANDARDS_TITLE" = "Standards";
+"NOREPORT_TITLE" = "No report";
+"SHOW_ALL_TITLE" = "Show all";
+"MUST_REPORT_PAIRS_TITLE" = "You must fill reports in pairs before close month";
+"EMAIL_PLACEHOLDER" = "Email";
+"SEND" = "Send";
+"SIGN_AND_CONFIRM_MONTH_REPORT" = "i confirm and sign this monthly report";
+"HOURS" = "Hours";
+"TERMS_TITLE" = "Terms of use";
+"TERMS_TEXT" = "The user hereby declares that he is aware that all property rights in the attendance application and the clock2go attendance software (hereinafter, both:' ' the Software' ') are owned by Ok2go (hereinafter and hereinafter - ' 'the Company' ') and its licensors, and its use is under a license granted On behalf of the company only.\
+This software is the exclusive property, with all rights in it, of the company. The software includes applications and / or procedures and / or other databases, which are owned by third parties and all rights in them are reserved to these parties and the company only.\
+The software is intended for subscribers who use the presence, solely for the purpose of stamping the presence and anyone who uses it, including copying, reproducing, modifying or distributing the software or data or any part thereof, violates the license to use the software, and is subject to civil and criminal lawsuits. When reporting the presence, the system locates the location of the device at the time of reporting only and it is registered for the purpose of controlling and verifying the data and is transferred for the needs of the subscription organization that ordered the service. The information is stored in the system for half a year and / or in special cases according to the needs and definitions of the customer in maintaining attendance data.\
+The Company has the authority to make additions or changes at its sole discretion. The user relieves the company of the need to update us regarding the changes and / or the information and / or data provided by it.\
+Due to the great complexity of computer software and satellite tracking systems, the company does not guarantee that the software activity will be continuous or error-free, or that the information presented by the software will not include errors and / or errors and / or missing information.\
+The user declares that he agrees to the said conditions and that the use of the software constitutes his consent to all the terms of the license, including what is stated in this document.\
+The user undertakes to operate and use the software solely subject to the license terms applicable to the software, as determined from time to time by the company.\
+In any case, the company is not liable to the user, in any liability and the user must make sure that his attendance reports correspond to the reporter according to the software.\
+The user releases the company from any liability and / or responsibility whatsoever and / or error in relation to the attendance reports and / or imprints as received and / or processed and / or provided to his employers by the software and / or by the company.\
+When registering for the system, the identification number of the device will be registered next to the telephone number, and after an initial report, it will be possible to continue reporting only from this device in order to prevent forgeries.\
+During registration, an SMS message will be sent to the subscriber with a registration code for the purpose of identifying and verifying one-time the reported number. If the correct code is entered, further reporting will be possible.";
+
+"LEGAL_INFORMATION_TITLE" = "Legal Information";
+"ABOUT_TITLE" = "About";
+"ABOUT_TEXT" = "Clock2go is a time clock application that allows you to report attendance anywhere and anytime! The app provides you a variety of advanced tools for the employee: Reporting on tasks and projects, reporting on a variety of absences, viewing reports and completing reports by permission, sending documents, set alerts and more! \
+The app was developed and designed so that any organization can flexibly adjust the app's settings according to their needs! \
+In cock2go, we focused on the employee experience in using the app comfortably and in a friendly way that puts him in the center! \
+It is important that you know that the data is stored in the company's database and transferred to the organization according to its requirements and according to the agreement between the company and the employer. The time of signing (start / end of work) and date are taken from the system server, the phone location at the time of signing will be sent according to the requirements of the organization and subject to the device technologies and data received from the cellular network and satellites. Please note that each session of the presence app involves browsing according to the conditions of the browsing program that you are in and may be charged a fee in accordance with the agreement between you and your communications provider. Also, due to the use of the integrated positioning system on the device - the use of the device battery may be shortened.";
+"SUPPORT_TITLE" = "Support";
+"SUPPORT_TEXT" = "For other support, contact our call center: \
+\
+Sunday - Thursday, 8am - 5pm \
+\
+ext 2972-39209700 \
+\
+You can send an email to support@ok2go.co.il and we will return to you in one business day. \
+\
+For more information, go to www.ok2go.co.il and look for the support menu.";
+"SUPPORT_GUIDE_TEXT" = "Click here for watching the application guide. ";
+"SUPPORT_CLICK_HERE" = "Click here";
+"TRACKING_TERMS_TITLE" = "Terms of use for tracking";
+"TRACKING_TERMS_TEXT" = "I agree to share my phone's location with others, even if the app on my phone is closed.\
+\
+The service uses the device's internal GPS to measure distance during a trip. Continuous use of GPS affects battery consumption. If the application only runs in the background, battery consumption is reduced.\
+\
+The system keeps a location history for three months in order to monitor and investigate customer problems and complaints. In addition, the company is responsible for monthly backups and/or printouts of reports.\
+\
+The user knows that when GPS is turned off on the device (screen), it is impossible to determine the location of the subscriber.\
+\
+If an employee is inside a closed building, underground car park, tunnel, etc., this may result in the employee's location being impossible or inaccurate, which may cause measurement deviations.\
+\
+The employer is responsible for the service and must inform the employee about the service.\
+The company is not responsible for device or communication problems. The Client is aware that from time to time there may be problems with communication or transmission of information.\
+\
+The Service is subject to the Customer Service Agreement, its terms and conditions.\
+\
+If necessary (vacation, backup service, etc.), the employee can block the determination of his location in the settings menu of his device. In this case, the employee is displayed on the map in red.\
+\
+The accumulated information depends on the device and the measurements made via the device's GPS. As a result, deviations beyond the control of the company are possible. When measuring distance, the deviation range is taken into account.\
+\
+The company is not responsible for GPS or satellites and presents the image as received from the device.";
+"To_chat_with_a_representative_press" = "To chat with a representative, press";
+"PASSWORD_RESEND" = "Reset password";
+"INPUT_PASSWORD" = "Enter your password for clock2go";
+"REPORT_WAY_TITLE" = "Choose report way";
+"LOGIN_AND_LOGOUT" = "Login and Logout";
+"WITH_EMPLOYEE_CODE" = "With Empoyee Code";
+"WITH_TASK" = "With Task";
+"WITH_EMPLOYEE_CODE_AND_TASK" = "With Empoyee Code and Task";
+"TEAM_MANAGER_AND_TASK" = "Team manager and Task";
+"<No Task>" = "No Task";
+"201" = "You are not authorized to perform distance measurement - for permission, please contact the manager in your organization";
+"202" = "You are not allowed to add new tasks, you must select from an existing list - for permission, please contact the manager in your organization";
+"203" = "You are not allowed to close a month - for permission, please contact the manager in your organization";
+"204" = "In order to close the month all the gaps in reports must be completed";
+"205" = "You are not authorized to view reports - for permission, please contact the manager of your organization";
+"206" = "You are not authorized to view reports - for permission, please contact the manager of your organization";
+"207" = "The employee is not active - you should contact the manager in your organization to update the employee card as active in the system";
+"208" = "You are not authorized to complete attendance reports - for permission, please contact the manager in your organization";
+"209" = "You are not allowed to report absences for other employees - for permission please contact the manager in your organization";
+"210" = "You are not authorized to approve the monthly attendance month for this client";
+"211" = "You are not authorized to perform distance measurement - for permission, please contact the manager in your organization";
+"212" = "The file was not received by the system, please try again";
+"254" = "This task name already exists for this project";
+"255" = "The task was not found, please try again";
+"301" = "The phone number was not recognized in the system - please try again or contact the support center 03-9209700";
+"302" = "Your device is not recognized in the system - please try again or contact the support center 03-9209700";
+"303" = "Your employee code is not recognized in the system - please try again or contact the support center 03-9209700";
+"304" = "The device language you selected is not available - please try again or contact the support center on 03-9209700";
+"305" = "There is a problem with the way the dates were sent to the system - please try again or contact support at 03-9209700";
+"306" = "One of the parameters of your company settings is missing and prevents the app from updating with the system - please try again or contact support at 039209700";
+"307" = "The action you are trying to perform is not known to the system and prevents the application from completing the action - please try again or contact support at 039209700";
+"308" = "The action you are trying to perform can not be saves in the system - please try again or contact support at 03-9209700";
+"309" = "The task you tried to add was not accepted by the system. Please try again or contact your organization's administrator to see if you have permission to do so";
+"310" = "The closing of the month in the system was not saved. Please try again or contact your organization's administrator to see if you have permission to do so";
+"311" = "The file could not be deleted, please try again or contact your organization's administrator to see if you have permission to do so";
+"312" = "The task you selected was not accepted by the system. Please try again or contact your organization's administrator to see if you have permission to do so";
+"313" = "The verification code is not accepted by the system. Please make sure that the code typed is correct. If so, try re-registering";
+"314" = "Employee inactive - Contact the manager in your organization to update the employee card as active in the system";
+"315" = "The report you selected was not sent. Please try again or contact your organization's administrator to see if you have permission to do so";
+"316" = "The report format selected is not correct. Please try again or contact your organization's administrator to see if you have permission to do so";
+"317" = "The report was not sent. Please try again or contact your organization's administrator to see if you have permission to do so";
+"318" = "There is a problem with the way the dates were sent to the system - please try again or contact support at 039209700";
+"319" = "Unable to complete reporting, please try again or contact your organization's administrator to see if you have permission to do so";
+"320" = "The report could not be deleted, please try again or contact your organization's administrator to see if you have permission to do so";
+"321" = "The name or email you entered is not accepted in the system, please try again or contact support at 39209700";
+"322" = "The device from which you registered is not updated in the system - please try again or contact the support center on 039209700";
+"323" = "The absence you selected is not accepted in the system - please try again or contact the support center on 039209700";
+"324" = "Please select a date range for the absences you have chosen and try again";
+"325" = "You are not authorized to report for other employees. To open the authorization, please contact the manager in your organization";
+"326" = "There is a problem with the way the dates were sent to the system - please try again or contact support at 039209700";
+"327" = "The action you are trying to perform can not be saves in the system - please try again or contact support at 039209700";
+"328" = "The file was not received in the system, please try again";
+"329" = "Unable to measure distance - please try again or contact the support center on 039209700";
+"330" = "The task you selected was not accepted in the system. Please try again or contact your organization's administrator to see if you have permission to do so";
+"331" = "No distance measurement start point was detected for the purpose of completing the measurement";
+"332" = "Unable to save distance measurement Please try again or contact your organization's administrator to see if you have permission to do so";
+"333" = "One of the parameters of your company settings is missing and prevents the app from updating with the system - please try again or contact support at 039209700";
+"334" = "The action you are trying to perform can not be saves in the system - please try again or contact support at 039209700";
+"335" = "You are not authorized to report for other employees. To get authorization, please contact the manager in your organization";
+"400" = "There is an error, please try again later";
+"401" = "Тhe  phone number is already registered on another device. You must register again";
+"403" = "There is an error, please try again later";
+"410" = "The number is not set in the system, contact your manager";
+"411" = "Your employee card is not active in the system – contact your manager";
+"412" = "Wrong verification code";
+"418" = "The file is not correcr, please try again";
+"420" = "No adequate satellite reception was found to receive the reporting location. Try to improve your location or check the location settings and report again";
+"421" = "You must report with a task";
+"423" = "You must logout befor login again";
+"424" = "You can report only from the working area ";
+"425" = "As part of improving service, we want to update you that the report is outside of the unit. Please report when you are in your unit";
+"426" = "Please wait a minute and try again";
+"429" = "You must logut from this task befor login again";
+"430" = "Bad accuracy";
+"433" = "You must complete all missing report befor you close the month";
+"434" = "The month is closed, contact your manger to open the month";
+"435" = "No data";
+"450" = "Can not report on this patient";
+"453" = "Cannot report lock month for report";
+"500" = "There is an error, please try again later";
+"NO_INTERNET_CONNECTION" = "No internet connection. You can login or logout. For other actions, wait for internet reconnection";
+"OFFLINE_MODE_REPORT_SAVED" = "The report excepted and will upload to system when the connection returns";
+"ERROR_WITH_CODE" = "Message";
+"APPROVE" = "Approve";
+"CLOSE_MONTH_EMP" = "Are you sure you want to close the month for this employee?";
+"OPEN_MONTH_EMP" = "Are you sure you want to open the month for this employee?";
+"APPROVE_ALL_REPORTS" = "Are you sure you want to approve all reports?";
+"REMOVE_ALL_REPORTS" = "Are you sure you want to remove the approval of the month for all employees?";
+"APPROVE_EMP" = "Are you sure you want to approve the month for this employee?";
+"REMOVE_APPROVAL_EMP" = "Are you sure you want to remove the approval of the month for this employee?";
+"OPEN_MONTH_STATUS" = "Open Month";
+"CLOSE_MONTH_STATUS" = "Close Month";
+"APPROVE_MONTH_STATUS" = "Approved Month";
+"ALL_MONTH_STATUS" = "Show All";
+"ENTER_AFTER_PASSWORD" = "Log In";
+"CHOOSE_COMPANY" = "Choose company";
+"ABSENCE_FROM_WORK_DUE" = "Absence from work for a reason ";
+"ABSENCE_DURATION" = "Total days";
+"UNKNOWN_ERROR" = "An error has occurred. Please try again later";
+"VALIDATION_APPROVED" = "Verification completed successfully";
+"MANAGER_APP" = "Manager App";
+"PERSONAL_APP" = "Back to report";
+"PASSWORD" = "Password";
+"FORGOT_PASSWORD" = "Forgot password?";
+"CLOSE_MANAGER_REPORTS_TITLE" = "Close month";
+"APPROVE_ALL" = "Approve all";
+"APPROVE_SELECTED_REPORTS" = "Are you sure you want to approve the selected reports?";
+"EMP_APPOVAL_DATE" = "Employeer approval date - ";
+"EMP_REJECT_DATE" = "Employeer reject date - ";
+"REJECT" = "Reject";
+"NAME" = "Name";
+"SELECT" = "Select";
+"CLOSE_EMP_DATE" = "Сlosed by employee";
+"CLOSE_MGR_DATE" = "Closing date";
+"EMPLOYER_NAME" = "Employer name";
+"APPROVAL_STATUS" = "Employer Approval";
+"APPROVAL_MGR" = "Manager Approval";
+"BY_EMP_CODE" = "By employee code";
+"NOT_ACTIVE_ONLY" = "Not active only";
+"ACTIVE_ONLY" = "Active only";
+"ALL_EMP" = "All employees";
+"CHOOSE_DEPARTMENT" = "Choose department";
+"ENTRY" = "Entry";
+"FULL" = "Full";
+"NONE" = "None";
+"MISS" = "Absence";
+"EMPLOYEES" = "Employees";
+"FILTER_OPTIONS" = "Filter options";
+"ADD_EMPLOYEE" = "Adding a new employee";
+"CODE_WORKS" = "Code works";
+"DEPARTMENT" = "Department";
+"PHONE_REPORTS" = "Phone reports";
+"REPORTING_ROUTE" = "Reporting route";
+"ADD" = "Add";
+"MONTH_REPORT" = "Month report";
+"FAMILY_ABSENCE" = "Family absence";
+"SIGNED" = "Signed";
+"APPROVED" = "Approved";
+"REJECTED" = "Rejected";
+"EXIT_AND_RETURN_FROM_SERVICE" = "Exit and return from service";
+"EDIT_EMPLOYEE" = "Edit employee";
+"SAVE_EDIT" = "Save";
+"EMPLOYEE_ADDED" = "New employee was added successfully";
+"EMPLOYEE_UPDATE" = "Employee information was updated successfully";
+"LOCATION_REQUEST_TITLE" = "Enable location services";
+"LOCATION_REQUSET_SUBTITLE" = "In order to report, one has to go to settings and open access to location";
+"MUST_NOTE" = "Note must be entered";
+"SELECT_COMMENT" = "Select a comment";
+"DISTANCE_MEASUREMENT" = "Distance measurement";
+"DISTANCE" = "Distnace so far";
+"airplane_mode_turned_off_message_alert" = "Your airplane mode seems to be enabled, do you want to disable it?";
+"no_internet_message_alert" = "You don't have internet connection. Please enable it to continue.";
+"SELECT_AN_EVENT" = "Select an event";
+"EVENTS" = "Events";
+"SELECT_CLIENT" = "Choose client";
+"TREATMENT" = "Treatment";
+"GENERAL_TRAINING" = "General Training";
+"ADD_REMARK" = "Add remark";
+"EVENT_REPORT_SECCESSFULLY" = "Event report was received successfully";
+"EVENT_TRAINING" = "Training";
+"TRNS_TYPE" = "Transaction type";
+"CELL" = "Cell";
+"CLIENT" = "Client";
+"SELECT_DATE" = "Select date";
+"OFFLINE_MODE" = "Offline Mode";
+"UNKNOWN_TASK" = "Unknown task";
+"WARNING" = "WARNING";
+"UNKNOWN_TASK_ERROR_MESSAGE" = "The task with scanned identifier has not been found. Do you want to continue?";
+"YES" = "Yes";
+"NO" = "No";
+"must_report_with_comment_error" = "Must report with a comment";
+"must_report_with_date_error" = "Must report with a date";
+"must_report_with_time_error" = "Must report with a time";
+"CHOOSE_PROJECT_STRING" = "Choose project";
+"TURN_ON_WIFI_IF_IN_BILDING" = "If you are in a building, please enable your Wi-Fi";
+"TURN_ON_WIFI_TITLE" = "Enable Wi-Fi service";
+"NOT_ALLOWED_TO_USE_THE_APP" = "Not allowed to use the app";
+"WORK_SCHEDULE_TIME_STRING" = "Time";
+"WORK_SCHEDULE_TASK_NAME_STRING" = "Task Name";
+"WORK_SCHEDULE_ADDRESS_STRING" = "Address";
+"WORK_SCHEDULE_NOTE_STRING" = "Note";
+"WORK_SCHEDULE_TITLE" = "Daily Work Schedule";
+"WORK_SCHEDULE_SIDE_BAR_TITLE" = "Work Schedule";
+"WEEK_SCHEDULE_CURRENT_BUTTON_TITLE" = "Current Week";
+"WEEK_SCHEDULE_PREVIOUS_BUTTON_TITLE" = "Previous Week";
+"WEEK_SCHEDULE_NEXT_BUTTON_TITLE" = "Next Week";
+"WEEK_SCHEDULE_SCREEN_TITLE" = "Weekly work schedule";
+"WEEK_SCHEDULE_TASK_CODE" = "Task Code";
+"WEEK_SCHEDULE_TASK_NAME" = "Task Name";
+"WEEK_SCHEDULE_DAY" = "Day";
+"WEEK_SCHEDULE_HOURS" = "Hours";
+"WEEK_SCHEDULE_ADDRESS" = "Address";
+"LOCATION_NAMES" = "Location names";
+"TASK_SEARCH" = "Task Search";
+"INSURED_ID" = "Insured Id";
+"SEARCH" = "Search";
+"Service Entry" = "Service Entry";
+"Service Exit" = "Service Exit";
+"Sample Report" = "I'm here";
+"REPORT_WAS_SENT" = "The report was sent";
+"REQUEST_COMPLETION_YESTERDAY_REPORT" = "Please complete yesterday's missing exit report";
+"REQUEST_COMPLETION_TODAY_REPORT" = "Please complete today's missing exit report";
+"REQUEST_COMPLETION_YESTERDAY_WAS" = "Your entry yesterday was at ";
+"REQUEST_COMPLETION_TODAY_WAS" = "Your entry today was at ";
+"REQUEST_COMPLETION_WRONG_TIMME_ERROR" = "The exit time should be after entry time, please try again";
+"REQUEST_COMPLETION_24_HOURS_ERROR" = "The exit report should be within 24 hours period after the entry, please try again";
+"INVALID_EMAIL_FORMAT" = "Invalid email format";
+"AS_OF_YESTERDAY" = "as of Yesterday";
+"דווח מדגמי" = "Sample Report";
+"יציאה בתפקיד" = "Service Exit";
+"כניסה בתפקיד" = "Service Entry";
+"FORMAT" = "format";
+"MONTH_01" = "January";
+"MONTH_02" = "February";
+"MONTH_03" = "March";
+"MONTH_04" = "April";
+"MONTH_05" = "May";
+"MONTH_06" = "June";
+"MONTH_07" = "July";
+"MONTH_08" = "August";
+"MONTH_09" = "September";
+"MONTH_10" = "October";
+"MONTH_11" = "November";
+"MONTH_12" = "December";
+"CHOOSE_CLIENT" = "Choose a client";
+"402" = "The password is invalid, please try again. To recover your password, go to the clock2go website.";
+"app_name" = "clock2go2020";
+"ok2go" = "Ok2Go";
+"udid_preference_key" = "pref_key_udid";
+"phone_preference_key" = "pref_key_phone";
+"employee_id_preference_key" = "pref_key_employee_id";
+"email_preference_key" = "pref_key_email";
+"language_preference_key" = "pref_key_settings_language";
+"selected_company_id_preference_key" = "pref_key_selected_company_id";
+"user_icon_path_preference_key" = "pref_key_user_icon_path";
+"manager_app_token_preference_key" = "pref_key_manager_app_token";
+"language_preference_item_iw" = "עברית";
+"language_preference_item_en" = "English";
+"language_preference_item_ru" = "Русский";
+"language_preference_item_ar" = "اَلْعَرَبِيَّةُ";
+"language_preference_entries[0]" = "@string/language_preference_item_iw";
+"language_preference_entries[1]" = "@string/language_preference_item_en";
+"language_preference_entries[2]" = "@string/language_preference_item_ru";
+"language_preference_entries[3]" = "@string/language_preference_item_ar";
+"language_preference_item_he_key" = "he";
+"language_preference_item_en_key" = "en";
+"language_preference_item_ru_key" = "ru";
+"language_preference_item_ar_key" = "ar";
+"language_preference_entry_values[0]" = "@string/language_preference_item_he_key";
+"language_preference_entry_values[1]" = "@string/language_preference_item_en_key";
+"language_preference_entry_values[2]" = "@string/language_preference_item_ru_key";
+"language_preference_entry_values[3]" = "@string/language_preference_item_ar_key";
+"month_01" = "January";
+"month_02" = "February";
+"month_03" = "March";
+"month_04" = "April";
+"month_05" = "May";
+"month_06" = "June";
+"month_07" = "July";
+"month_08" = "August";
+"month_09" = "September";
+"month_10" = "October";
+"month_11" = "November";
+"month_12" = "December";
+"i_do_not_receive_code_resend" = "<u>Send SMS again</u>";
+"welcome" = "Welcome";
+"welcome_fragment_title" = "\
+        Welcome\
+        \
+<b>%1$s</b>\
+    ";
+"select_language_you_want_from_the_list" = "Select your language";
+"continuation" = "Continue";
+"for_one_time_registration_enter_phone" = "\"For registration, enter\
+Your phone number \"";
+"incorrect_phone_number_was_entered" = "The number is not set in the system, contact your manager";
+"i_confirm_that_i_have_read_and_understood_terms_of_use" = "I confirm that I have read and understood the ";
+"verify_details" = "Verify details";
+"message_with_registration_code_is_sent_to_you_code_must_be_entered" = "An SMS with a registration code has been sent to you.\
+       \
+Enter the code";
+"entered_password_is_invalid" = "Password is invalid ";
+"enter_password" = "Enter the code";
+"enter_password_manager_app" = "Enter your password for clock2go ";
+"password" = "Password";
+"skip" = "Skip";
+"do_you_want_to_see_app_usage_guide" = "Watch our user guide";
+"select_task" = "Select a task";
+"add_task" = "Search or add a task";
+"search_employee" = "Search employee";
+"do_you_want_to_report_task_login" = "Do you want to login with a task?";
+"do_i_sign_in" = "Do you want to login?";
+"take_break" = "Do you want to take a break?";
+"end_break_button" = "Do you want to end the break?";
+"user_name_with_greeting_placeholder" = "%s, %s";
+"good_morning" = "Good morning";
+"good_afternoon_1" = "Good afternoon";
+"good_afternoon_2" = "Good afternoon";
+"good_evening" = "Good evening";
+"good_night" = "Good night";
+"missing" = "Missing";
+"total_hours" = "Total hours";
+"absences" = "Absences";
+"actions" = "Actions";
+"settings" = "Settings";
+"manager_app" = "Manager app";
+"personal_app" = "Personal app";
+"my_profile" = "My profile";
+"reporting" = "My reports";
+"my_forms" = "My forms";
+"my_rides" = "My transports";
+"notifications" = "Messages";
+"choose_language" = "Choose language";
+"language" = "Language";
+"legal_information" = "Legal Information";
+"about" = "About";
+"support" = "Support";
+"sign_out" = "Log out";
+"profile_settings" = "Profile settings";
+"company_name" = "Company Name";
+"personal_information" = "Personal Information";
+"set_reminder" = "Alarms";
+"choose_company" = "Choose a company";
+"absence_vacation" = "Vacation";
+"absence_reserve_service" = "Reserve service";
+"absence_disease" = "Disease";
+"absence_course" = "Course";
+"absence_general" = "General Absence";
+"absence_kid_disease" = "Kid disease";
+"absence_mourning" = "Mourning";
+"absence_elections_day" = "Election Day";
+"absence_training" = "Training";
+"absence_maternity" = "Maternity";
+"absence_emergency" = "Emergency";
+"absence_wedding" = "Wedding";
+"absence_accident" = "Accident";
+"absence_womens_day" = "Women's Day";
+"absence_hmo_visit" = "HMO visit";
+"absence_company_trip" = "Company trip";
+"absence_declaration_day" = "Declaration day";
+"absence_optional_holiday" = "Optional holiday";
+"absence_spouse_disease" = "Spouse disease";
+"absence_parent_disease" = "Parent disease";
+"absence_meetings" = "Meetings";
+"absence_unpaid_vacation" = "Unpaid vacation";
+"absence_half_day_vacation" = "Half day vacation";
+"absence_corona_quarantine" = "Corona quarantine";
+"absence_pairing" = "Pairing";
+"absence_available" = "Available";
+"absence_signed_report" = "Signed report";
+"absence_vacation_confirmation_question" = "Do you want to report %1$s for this dates?";
+"worker_name" = "Name";
+"email_address" = "Email";
+"role" = "Role";
+"field_in_not_mandatory" = "* The field is not mandatory";
+"save" = "Save";
+"please_select_image_less_than_500kb" = "Please select image less than 500KB";
+"logout" = "OUT";
+"login" = "IN";
+"absence" = "Absence";
+"pause" = "Break";
+"end_break" = "End break";
+"select_task_to_do" = "First, select a Task";
+"no_reports_yet" = "There are no reports yet";
+"standard_time_placeholder" = "- %s -";
+"absence_date" = "Date";
+"absence_from_work_due" = "Absence from work due";
+"confirmation" = "Approve";
+"cancel" = "Cancel";
+"reject" = "Reject";
+"add_comment" = "Add a comment";
+"are_you_reporting_before_work_time" = "Do you want to login before work time?";
+"are_you_reporting_late_at_work" = "Do you want to login after work time?";
+"to_finish_task_select_one_of_the_options" = "To End the task, select one of the options";
+"finish_a_task" = "End the task";
+"finish_a_task_and_start_a_new_one" = "End the task and move to a new one";
+"do_exit_reporting" = "Do you want to logout?";
+"are_you_reporting_sooner_than_the_end_of_work" = "Do you want to logout before work time?";
+"are_you_reporting_after_the_end_of_work" = "Do you want to logout after work time?";
+"remind_me_to_sign_in_at" = "Remind me to login:";
+"remind_me_to_leave_at" = "Remind me to logout:";
+"set_periodicity_on_days" = "Set daily schedule";
+"absence_duration" = "%s - %s total days %d";
+"all_the_days" = "All days";
+"sundays" = "All Sundays";
+"mondays" = "All Mondays";
+"tuesdays" = "All Tuesdays";
+"wednesdays" = "All Wednesdays";
+"thursdays" = "All Thursday";
+"fridays" = "All Fridays";
+"saturdays" = "All Saturdays׳";
+"unknown_error" = "Something went wrong. Please try again later.";
+"absence_reporting" = "Absence reporting";
+"absence_type" = "Absence type";
+"photo_or_attach_file" = "Photo/add file";
+"absence_cannot_be_confirmed_without_attaching_file" = "* photo/add file is mandatory";
+"select_the_type_of_absence" = "Select the type of absence";
+"show_route" = "Show track";
+"choose_task" = "Select a task";
+"verification_successfully_passed" = "Validation approved";
+"please_attach_file_or_take_picture" = "Please attach a file or take a picture";
+"take_picture" = "Take a picture";
+"upload_file" = "Upload file";
+"error" = "Error";
+"error_number" = "Error %d";
+"ok" = "OK";
+"report_has_been_received_successfully" = "Report has been received successfully";
+"start_task" = "Have a nice day";
+"please_choose_task_to_login" = "Please, choose task to login";
+"please_choose_task_to_logout" = "Please, choose task to logout";
+"track_frequency_is_not_present_in_settings" = "Track frequency is not present in the settings! ";
+"error_invalid_email" = "Email address isn't valid!";
+"signed_report" = "Month report";
+"select_all" = "Select all";
+"remove" = "Delete";
+"you_have" = "You have";
+"new_alerts" = "new alerts";
+"lack_of_entry" = "Lack of entry";
+"lack_of_exit" = "Lack of exit";
+"duty_entry_reminder" = "Duty entry reminder";
+"duty_exit_reminder" = "Duty exit reminder";
+"personal_reminder" = "Personal reminder";
+"misses_for_employee" = "Misses for employee";
+"misses_for_manager" = "Misses for manager";
+"attendance_report_confirmation" = "Attendance Report Confirmation";
+"alert_by_behavior" = "Alert by behavior";
+"overtime" = "Overtime";
+"exception_from_polygon" = "Exception from polygon";
+"different_polygon" = "Difference polygon";
+"did_not_report_for_3_days" = "Did not report for 3 days";
+"labor_laws" = "Labor laws";
+"proactive_message" = "A proactive message";
+"system_notifications" = "System notifications";
+"report_managment" = "My reports";
+"close_month" = "Close month";
+"send_email" = "Send email";
+"view_by" = "View by";
+"choose_month" = "Choose month";
+"cumulative" = "Cumulative";
+"total" = "Total";
+"exit_location" = "Location";
+"exit_time" = "Exit time";
+"enter_location" = "Location";
+"enter_time" = "Enter time";
+"task" = "Task";
+"standard" = "Standard";
+"date" = "Date";
+"view_by_missing" = "Missing";
+"view_by_absence" = "Absence";
+"view_by_breaks" = "Breaks";
+"view_by_standards" = "Standards";
+"view_by_show_all" = "Show all";
+"view_by_waiting_for_approval" = "Waiting for approval";
+"view_by_not_approved" = "Not approved";
+"view_by_approved" = "Approved";
+"view_by_open_month" = "Open Months";
+"view_by_closed_month" = "Closed month";
+"view_by_approved_month" = "Approved month";
+"view_by_employer_approved" = "Employer approved";
+"view_by_employer_rejected" = "Employer rejected";
+"approved_in" = "Approved in %s";
+"rejected_in" = "Rejected in %s";
+"ad_report_task" = "task";
+"report_type_presence" = "presence";
+"report_type_tasks" = "tasks";
+"report_type_absences" = "absences";
+"report_type_misses" = "Missing";
+"report_type_breaks" = "breaks";
+"report_type_standards" = "standards";
+"send" = "Send";
+"month_is_closed" = "Month is locked";
+"reports_stats_total_hours" = "%.2f hours";
+"reports_stats_total_hours_string" = "%s hours";
+"reports_stats_missing" = "%d missing";
+"reports_stats_absence" = "%d absences";
+"error_invalid_signature" = "Signature isn't valid!";
+"must_report_with_task" = "Must report with task";
+"must_select_time" = "Must select time";
+"must_select_time_in_past" = "Select time from past";
+"delete" = "Delete";
+"add_remark" = "Remark";
+"start_traveling" = "Start ride";
+"finish_traveling" = "End ride";
+"start_measuring_distance" = "Start measurement?";
+"stop_measuring_distance" = "Stop measurement?";
+"tracked_distance_km" = "Tracked distance: %.2f km";
+"finish" = "Finish";
+"logout_successful" = "Logout successful";
+"add_ride" = "Add distance";
+"distance_in_km" = "Distance in km";
+"enter_distance_in_km" = "Enter a distance in km";
+"ride_successfully_added" = "Ride successfully added!";
+"empty_list_of_files" = "There is no attachments";
+"terms_of_use" = "Terms of use";
+"terms_of_use_content" = "\"The user hereby declares that he is aware that all property rights in the attendance application and the clock2go attendance software (hereinafter, both:\" \"the Software\" \") are owned by Ok2go (hereinafter and hereinafter -\" \"the Company\" \") and its licensors, and its use is under a license granted On behalf of the company only.\
+This software is the exclusive property, with all rights in it, of the company. The software includes applications and / or procedures and / or other databases, which are owned by third parties and all rights in them are reserved to these parties and the company only.\
+The software is intended for subscribers who use the presence, solely for the purpose of stamping the presence and anyone who uses it, including copying, reproducing, modifying or distributing the software or data or any part thereof, violates the license to use the software, and is subject to civil and criminal lawsuits. When reporting the presence, the system locates the location of the device at the time of reporting only and it is registered for the purpose of controlling and verifying the data and is transferred for the needs of the subscription organization that ordered the service. The information is stored in the system for half a year and / or in special cases according to the needs and definitions of the customer in maintaining attendance data.\
+The Company has the authority to make additions or changes at its sole discretion. The user relieves the company of the need to update us regarding the changes and / or the information and / or data provided by it.\
+Due to the great complexity of computer software and satellite tracking systems, the company does not guarantee that the software activity will be continuous or error-free, or that the information presented by the software will not include errors and / or errors and / or missing information.\
+The user declares that he agrees to the said conditions and that the use of the software constitutes his consent to all the terms of the license, including what is stated in this document.\
+The user undertakes to operate and use the software solely subject to the license terms applicable to the software, as determined from time to time by the company.\
+In any case, the company is not liable to the user, in any liability and the user must make sure that his attendance reports correspond to the reporter according to the software.\
+The user releases the company from any liability and / or responsibility whatsoever and / or error in relation to the attendance reports and / or imprints as received and / or processed and / or provided to his employers by the software and / or by the company.\
+When registering for the system, the identification number of the device will be registered next to the telephone number, and after an initial report, it will be possible to continue reporting only from this device in order to prevent forgeries.\
+During registration, an SMS message will be sent to the subscriber with a registration code for the purpose of identifying and verifying one-time the reported number. If the correct code is entered, further reporting will be possible. \"";
+"i_confirm_that_i_have_read_and_understood" = "I confirm that I have read and understood the ";
+"about_content" = "The clock2go attendance clock application allows you to report attendance from anywhere and at any time!\
+\
+The application provides you with a variety of advanced tools for the employee:\
+\
+Reporting on tasks and projects, reporting on various types of absences, viewing reports and completing reports according to permission, sending documents to the organization, travel, reminders and more!\
+\
+The application was developed and designed so that any organization can flexibly adjust the application settings according to its needs!\
+\
+In the clock2go app, we put emphasis on the employee's experience using the app in a comfortable and friendly way that puts the employee at the center!\
+\
+It is important that you know that the data will be stored in the company's database and transferred to the organization in accordance with its requirements and according to the agreement between the company and the employer. The signing time (start/end of work) and the date are taken from the system server, the location of the phone at the time of signing will be sent according to the organization's requirements and subject to the device technologies and the data received from the cellular network and satellites. Please note that each activation of the presence application involves browsing in accordance with the terms of the browsing plan you are in and may be required to pay a fee in accordance with the agreement between you and your communication provider. Also, due to the use of the integral positioning system in the device - the time of use of the device's battery may be shortened.";
+"support_content" = "For additional support, you can contact the service center\
+\
+On Sundays - Thursdays, between the hours of 08:00 - 17:00\
+\
+039209700 extension 2\
+\
+You can send an email to support@ok2go.co.il and you will receive a response within one business day of receiving the email.\
+\
+For more information, you can go to www.ok2go.co.il and access the service and support menu";
+"terms_for_tracking" = "Terms of use for Tracking";
+"terms_for_tracking_content" = "I agree to show others the location of my phone even if the application is closed on my phone.\
+\
+The service uses the internal GPS of the device for the purposes of measuring the distance during the travel time, due to the continuous use there is an effect on the consumption of the battery life.\
+\
+If the application only works in the background, the battery will be low.\
+\
+The system will keep location history for three months for control purposes and will investigate customer problems and complaints. Beyond that, it is the company's responsibility to make backups and/or print the reports every month.\
+\
+The user is aware that not activating the GPS on the device (Settings screen) will not allow the tracking of the subscriber\
+\
+Being inside a closed building, an underground parking lot, tunnels, etc. may cause a lack of location or an inaccurate location and as a result there may be deviations in the measurement.\
+\
+<b>The responsibility for the service is on the employer and he must inform the employee about the service.</b>\
+The company is not responsible for device problems or communication problems and the client / known as you have heard from time to time can have communication problems or problems in the transfer of information.\
+\
+The service is subject to the service agreement and its terms as will be signed with the customer from time to time.\
+\
+The employee will be able to block location tracking when necessary (vacation, reserve, etc.) from his device in the settings menu. In that case the employee will appear in red on the map\
+\
+The accumulated information depends on the device and measurements that are made through the device's GPS. As a result, it is possible\
+\
+Deviations that do not depend on the company. The range of the deviation is taken into account in the measurement.\
+\
+The company is not responsible for the accuracy of the GPS or satellites and here it presents an image as received from the device.";
+"dear_doctor" = "Dear Doctor";
+"out_of_polygon_message" = "You can report only from the working area ";
+"doctors_out_of_polygon_message" = "As part of improving service, we want to update you that the report is outside of the unit. Please report when you are in your unit";
+"action_type_out" = "Action Type Out";
+"action_type_in" = "Action Type In";
+"report_cannot_be_confirmed_without_attaching_file" = "* Report cannot be confirmed without attaching a file";
+"operation_performed_successfully" = "The report performed successfully!";
+"entry_can_only_be_reported_after_employee_has_been_exited" = "You can login only after logout of the last employee";
+"you_should_enter_sales_amount" = "You must add sales";
+"enter_sales_amount" = "Please add sales";
+"actual_hours" = "Actual hours";
+"time_frame" = "time frame";
+"search" = "Search";
+"by_employee_code" = "By employee code";
+"not_active_only" = "Show not active";
+"active_only" = "Show only active";
+"all_employee" = "Show all";
+"all_departments" = "Choose department";
+"add_new_employee" = "Add new employee";
+"edit_new_employee" = "Edit employee";
+"employee_code" = "Employee code";
+"phone" = "Phone";
+"department" = "Department";
+"add_employee" = "Add new employee";
+"mandatory_field" = "Mandatory field";
+"login_and_logout" = "Login and logout";
+"with_employee_code" = "With employee code";
+"with_task" = "With tasks ";
+"with_employee_code_and_task" = "With task and code";
+"team_manager_and_task" = "Team manager ";
+"exit_and_return_from_service" = "Exit and return from service";
+"miss" = "miss";
+"full" = "full";
+"none" = "none";
+"entry" = "entry";
+"employee" = "Employee";
+"error_invalid_emp_code" = "Employee code isn't valid!";
+"employee_added" = "New employee was added successfully";
+"employee_updated" = "Employee information was updated successfully";
+"confirm" = "Approve";
+"not_confirm" = "Not approve";
+"login_and_disclaimer_confirmed" = "Login successful and Disclaimer confirmed";
+"health_disclaimer_accept_short" = "Health disclaimer accepted";
+"health_disclaimer_accept" = "Report accepted successfully with health disclaimer";
+"health_disclaimer_reject" = "You can't report without approving health disclaimer\
+";
+"watch_guide" = "Watch our guide";
+"to_watch_user_guide_click" = "Watch our guide";
+"here" = "here";
+"to_contact_us_click" = "for chat press";
+"link_whatsapp" = "https://wa.me/972506801061?text=שלום, אשמח לקבל עזרה באתר";
+"remove_task" = "Without task";
+"select_employees" = "Select employees";
+"select_an_employee" = "Select an employee";
+"select_users_to_proceed" = "Select User(s) to proceed";
+"multi_logout" = "Multi Logout";
+"multi_login" = "Multi Login";
+"task_is_not_selected" = "Task is not selected";
+"please_wait_a_minute_before_start_new_distance" = "Please wait a minute before start a new distance";
+"select_date" = "Select date";
+"must_select_date" = "Must select date";
+"app_version_placeholder" = "v%s";
+"clutch" = "Clutch";
+"login_notification" = "Login notification";
+"please_sign_in" = "Please log in";
+"logout_notification" = "Logout notification";
+"its_time_to_leave" = "Please log out";
+"contact_manager_to_get_app_access" = "To use the app - Contact the manager in your organization to set up your service on the employee card. After updating the service, re-open the app and start reporting";
+"fill_reports_in_pairs_to_close_month" = "You must fill reports in pairs before close month";
+"email" = "Email";
+"report_type" = "Report type";
+"i_confirm_and_sign_this_monthly_report" = "I confirm and sign this monthly report ";
+"gps_turned_off_message_alert" = "Your GPS seems to be disabled, do you want to enable it?";
+"yes" = "Yes";
+"no" = "No";
+"wifi_turned_off_message_alert" = "If you are in a building, please enable your WiFi";
+"cellular_data_turned_off_message_alert" = "Looks like your mobile data is off, please enable your mobile date";
+"location_permissions_denied_alert" = "Please, allow location permission manually and try again";
+"location_permissions_activity_recognition_denied_alert" = "Please, allow location and activity recognition permissions manually and try again";
+"open_settings" = "Settings";
+"do_you_want_to_make" = "Do you want to make %1$s?";
+"exit_to_service" = "Exit to service";
+"re_enter_from_service" = "Re-enter from service";
+"error_201_msg" = "You are not authorized to perform distance measurement - for permission, please contact the manager in your organization";
+"error_202_msg" = "You are not allowed to add new tasks, you must select from an existing list - for permission, please contact the manager in your organization";
+"error_203_msg" = "You are not allowed to close a month - for permission, please contact the manager in your organization";
+"error_204_msg" = "In order to close the month all the gaps in reports must be completed";
+"error_205_msg" = "You are not authorized to view reports - for permission, please contact the manager of your organization";
+"error_206_msg" = "You are not authorized to view reports - for permission, please contact the manager of your organization";
+"error_207_msg" = "The employee is not active - you should contact the manager in your organization to update the employee card as active in the system";
+"error_208_msg" = "You are not authorized to complete attendance reports - for permission, please contact the manager in your organization";
+"error_209_msg" = "You are not allowed to report absences for other employees - for permission please contact the manager in your organization";
+"error_210_msg" = "You are not authorized to approve the monthly attendance month for this client";
+"error_211_msg" = "You are not authorized to perform distance measurement - for permission, please contact the manager in your organization";
+"error_212_msg" = "The file was not received by the system, please try again";
+"error_301_msg" = "The phone number was not recognized in the system - please try again or contact the support center 0393209700";
+"error_302_msg" = "Your device is not recognized in the system - please try again or contact the support center 0393209700";
+"error_303_msg" = "Your employee code is not recognized in the system - please try again or contact the support center 0393209700";
+"error_304_msg" = "The device language you selected is not available - please try again or contact the support center on 039209700";
+"error_305_msg" = "There is a problem with the way the dates were sent to the system - please try again or contact support at 039209700";
+"error_306_msg" = "One of the parameters of your company settings is missing and prevents the app from updating with the system - please try again or contact support at 039209700";
+"error_307_msg" = "The action you are trying to perform is not known to the system and prevents the application from completing the action - please try again or contact support at 039209700";
+"error_308_msg" = "The action you are trying to perform can not be saves in the system - please try again or contact support at 039209700";
+"error_309_msg" = "The task you tried to add was not accepted by the system. Please try again or contact your organization's administrator to see if you have permission to do so";
+"error_310_msg" = "The closing of the month in the system was not saved. Please try again or contact your organization's administrator to see if you have permission to do so";
+"error_311_msg" = "The file could not be deleted, please try again or contact your organization's administrator to see if you have permission to do so.";
+"error_312_msg" = "The task you selected was not accepted by the system. Please try again or contact your organization's administrator to see if you have permission to do so";
+"error_313_msg" = "The verification code is not accepted by the system. Please make sure that the code typed is correct. If so, try re-registering";
+"error_314_msg" = "Employee inactive - Contact the manager in your organization to update the employee card as active in the system";
+"error_315_msg" = "The report you selected was not sent. Please try again or contact your organization's administrator to see if you have permission to do so";
+"error_316_msg" = "The report format selected is not correct. Please try again or contact your organization's administrator to see if you have permission to do so";
+"error_317_msg" = "The report was not sent. Please try again or contact your organization's administrator to see if you have permission to do so";
+"error_318_msg" = "There is a problem with the way the dates were sent to the system - please try again or contact support at 039209700";
+"error_319_msg" = "Unable to complete reporting, please try again or contact your organization's administrator to see if you have permission to do so.";
+"error_320_msg" = "The report could not be deleted, please try again or contact your organization's administrator to see if you have permission to do so.";
+"error_321_msg" = "The name or email you entered is not accepted in the system, please try again or contact support at 39209700";
+"error_322_msg" = "The device from which you registered is not updated in the system - please try again or contact the support center on 039209700";
+"error_323_msg" = "The absence you selected is not accepted in the system - please try again or contact the support center on 039209700";
+"error_324_msg" = "Please select a date range for the absences you have chosen and try again";
+"error_325_msg" = "You are not authorized to report for other employees. To open the authorization, please contact the manager in your organization";
+"error_326_msg" = "There is a problem with the way the dates were sent to the system - please try again or contact support at 039209700";
+"error_327_msg" = "The action you are trying to perform can not be saves in the system - please try again or contact support at 039209700";
+"error_328_msg" = "The file was not received in the system, please try again";
+"error_329_msg" = "Unable to measure distance - please try again or contact the support center on 039209700";
+"error_330_msg" = "The task you selected was not accepted in the system. Please try again or contact your organization's administrator to see if you have permission to do so";
+"error_331_msg" = "No distance measurement start point was detected for the purpose of completing the measurement";
+"error_332_msg" = "Unable to save distance measurement Please try again or contact your organization's administrator to see if you have permission to do so";
+"error_333_msg" = "One of the parameters of your company settings is missing and prevents the app from updating with the system - please try again or contact support at 039209700";
+"error_334_msg" = "The action you are trying to perform can not be saves in the system - please try again or contact support at 039209700";
+"error_335_msg" = "  You are not authorized to report for other employees. To get authorization, please contact the manager in your organization";
+"error_401_msg" = "Тhe  phone number is already registered on another device. You must register again";
+"error_402_msg" = "Password is invalid, for reset password, please go to clock2go website";
+"error_410_msg" = "The number is not set in the system, contact your manager";
+"error_411_msg" = "Your employee card is not active in the system – contact your manager";
+"error_412_msg" = "Wrong verification code";
+"error_418_msg" = "The file is not correct, please try again";
+"error_420_msg" = "No adequate satellite reception was found to receive the reporting location. try to improve your location or check the location settings and report again";
+"error_421_msg" = "You must report with a task";
+"error_423_msg" = "You must logout before login again";
+"error_424_msg" = "You can report only from the working area ";
+"error_425_msg" = "As part of improving service, we want to update you that the report is outside of the unit. Please report when you are in your unit";
+"error_426_msg" = "Please wait a minute and try again";
+"error_429_msg" = "You must logout from this task before login again";
+"error_430_msg" = "Error 430";
+"error_433_msg" = "You must complete all missing report before you close the month";
+"error_434_msg" = "The month is closed, contact your manger to open the month";
+"error_435_msg" = "Error 435";
+"error_common_msg" = "There is an error, please try again later";
+"must_picture_login" = "To make a login %s";
+"must_picture_logout" = "To make a logout %s";
+"must_picture_login_with_task" = "To make a login with task <b>%1$s</b> %2$s";
+"must_picture_logout_with_task" = "To make a logout %1$s and choose one of the options below";
+"no_internet_connection_msg" = "No internet connection. You can login or logout. For other actions, wait for internet reconnection";
+"report_saved_successfully" = "The report excepted and will upload to system when the connection returns";
+"question_approve_selected_reports" = "Are you sure you want to approve the selected reports?";
+"question_approve_all_reports" = "Are you sure you want to approve all reports?";
+"question_close_month_for_employee" = "Are you sure you want to close the month for this employee?";
+"question_open_month_for_employee" = "Are you sure you want to open the month for this employee?";
+"question_approve_month_for_employee" = "Are you sure you want to approve the month for this employee?";
+"question_remove_approve_month_for_employee" = "Are you sure you want to remove the approval of the month for this employee?";
+"question_approve_month_for_all" = "Are you sure you want to approve the month for all employees?";
+"approve" = "Approve";
+"approve_all" = "Approve all";
+"manager_approval" = "Manager approval";
+"employer_approval" = "Employer Approval";
+"employer_name" = "Employer name";
+"closing_date" = "Closing date";
+"closed_by_employee" = "Closed by employee";
+"missing_reports" = "Missing reports";
+"employee_name" = "Employee name";
+"approved" = "Approved";
+"rejected" = "Rejected";
+"signed" = "Signed";
+"enter" = "Enter";
+"save_edit_employee" = "Save";
+"employee_category" = "Employees";
+"out_of_polygon_notification" = "You are not in the polygon";
+"out_of_polygon_notification_msg" = "Hello, you are outside the area of the position you reported at the entrance. Now the application will exit and end work at the position";
+"gps_disabled_notification" = "Your GPS seems to be disabled";
+"gps_disabled_notification_msg" = "Your GPS seems to be disabled, please enable it";
+"internet_disabled_notification" = "Your Internet seems to be disabled";
+"internet_disabled_notification_msg" = "Your Internet seems to be disabled, please enable it";
+"title_location_permission" = "Use of Location permissions";
+"text_location_permission" = "This app collects location data to enable Tracking and Distance Measurement features even when the app is closed or not in use. You should grant this permission to correct work of application";
+"text_location_permission_denied" = "Your user requires perfoming position tracking or/and distance measurment. To provide this functionality this app needs to collect your location data even when the app is closed or not in use. You should grant the Location permission to use this features.";
+"text_location_permission_simple" = "This app needs the access to location data to allow you to make reports with your position. You should grant this permission to correct work of application";
+"text_location_permission_simple_denied" = "Your user requires reporting with providing of location data. You should grant the Location permission to perfom these actions";
+"note_must_be_entered" = "Note must be entered";
+"select_comment" = "Select a comment";
+"revacha_transaction_1" = "Treatment";
+"revacha_transaction_2" = "Training";
+"revacha_transaction_3" = "General Training";
+"transaction_type" = "Report type";
+"must_report_with_transaction_type" = "Must report with transaction type";
+"client" = "Client";
+"events" = "Events";
+"select_client" = "Select a client";
+"client_hint" = "Search for a client";
+"choose_client" = "Choose client";
+"must_report_with_client" = "Must report with client";
+"select_an_event" = "Select an event";
+"revacha_event_saved_successfully" = "Event report was received successfully";
+"revacha_remark_min" = "min: 10";
+"revacha_remark_max" = "max: %1$d";
+"revacha_cell" = "Cellular phone";
+"revacha_emails_error" = "Wrong emails:";
+"revacha_email_error" = "Wrong email:\
+%1$s";
+"select_transaction_type" = "Choose report type";
+"revacha_add_remark" = "Add remark";
+"revacha_other" = "Other";
+"incorrect_cell_error" = "Incorrect phone number";
+"necessary_field" = "Necessary field";
+"report_event" = "Do you want to report an entry with task <b>%1$s</b> and event <b>%2$s</b>";
+"qr_title" = "Scan task barcode";
+"qr_unkown_task" = "Unknown task";
+"positive" = "Yes";
+"negative" = "No";
+"qr_warning" = "WARNING";
+"qr_warning_description" = "The task with scanned identifier has not been found. Do you want to continue?";
+"offline_mode" = "Offline mode";
+"daily_schedule_title" = "Daily Work Schedule";
+"time" = "Time";
+"address" = "Address";
+"previous_week" = "Previous week";
+"current_week" = "Current week";
+"next_week" = "Next week";
+"task_code" = "Task Code";
+"task_name" = "Task Name";
+"day" = "Day";
+"hours" = "Hours";
+"weekly_schedule" = "My Weekly Schedule";
+"weekly_schedule_drawer" = "Work Schedule";
+"search_task" = "Task Search";
+"search_task_hint" = "Insured Id";
+"incorrect_task_search_error" = "Task id must be between 6 to 9 characters, contain only digits 0 to 9";
+"not_found_task_search_error" = "The task was not found, please try again";
+"email_has_been_send_successfully" = "Email has been sent successfully";
+"task_location_error" = "Please select location";
+"task_location_title" = "Location names";
+"sample_report" = "Sample report";
+"choose_project" = "Choose project";
+"task_project_error" = "Please select project";
+"empty_time" = "--:--";
+"exit_entry_report" = "Your entry %1$s was at %2$s";
+"exit_report" = "Please complete %s’s missing exit report";
+"today" = "today";
+"yesterday" = "yesterday";
+"must_report_remark" = "Must report with remark";
+"exit_time_after_entry_time" = "The exit time should be after entry time, please try again";
+"exit_time_period" = "The exit report should be within 24 hours period after the entry, please try again";
+"number_of_hours_left_for_patient" = "The number of hours reported for the patient this month: %@";
+"note" = "Note: %@";
+"Patient not at home" = "Patient not at home";
+"Return from service and enter work" = "Return from service and enter work";
+"Return from service" = "Return from service";
+"Exit from service" = "Exit from service";
+"Exit from work and service" = "Exit from work and service";
+"reportReceivedSuccessfully" = "The report was received successfully";
+"logoutAlert" = "Do you want to log out of the app?";
+"identicalReport" = "There is an identical report from time %@, should I make another report?";
+"signOut" = "Logout";
+"authenticationErrorMessage" = "The number has been disconnected from the app, please connect again";
+"Choose format" = "Choose format";
+"Insufficient satellite reception was found.\nOpen the Wifi connection and try again" = "Insufficient satellite reception was found.\nOpen the Wifi connection and try again";
+"ENTER_MINISTRYOFAGRICULTURE" = "Assumption of office";
+"EXIT_MINISTRYOFAGRICULTURE" = "Departure from office";
+"Su" = "S";
+"M" = "M";
+"Tu" = "T";
+"W" = "W";
+"Th" = "T";
+"F" = "F";
+"Sa" = "S";
+"D" = "D";
+"Sunday" = "Sunday";
+"Monday" = "Monday";
+"Tuesday" = "Tuesday";
+"Wednesday" = "Wednesday";
+"Thursday" = "Thursday";
+"Friday" = "Friday";
+"Saturday" = "Saturday";
+"I_M_Here" = "I'm Here";
+"Forms" = "Forms";
+
+
+//Approve Hours
+"Please_confirm_the_hours_reports_for_the_month_of" = "Please confirm the hours reports for the month of %@";
+"amount_of_hours"= "amount of hours (%@)";
+"Approval" = "Approval";
+"Cancel" = "Cancel";
+"To_edit_click_on_the_pencil" = "To edit click on the pencil";
+
+//Approve Hours EditScreen
+"Please_enter_the_hours_reports_for_the_month_of" = "Please enter the hours reports for the month of %@";
+"Enter_the_amount_of_hours" = "Enter the amount of hours %@";
+"The_maximum_number_of_hours_that_can_be_reported_is" = "The maximum number of hours that can be reported is %@";
+
+
+//Approve Hours Success
+"The_report_was_made_successfully" = "The report was made successfully!";
+"Back_to_main_screen" = "Back to main screen";
+
+
+
+//NFC
+"Invalid_NFC_Tag" = "Invalid NFC Tag";
+"You_need_to_logout_first_task_Id" = "You need to logout first task Id %@";
+"Task_Id_Not_Found" = "Task Id %@ Not Found";
+"Location_Sent" = "Location Sent";
+"You are not authorized to send location" = "You are not authorized to send location";
+"There_are_too_many_tags_present_Remove_all_and_try_again" = "There are too many tags  present. Remove all and try again";
+"Read_Tag" = "Read Tag";
+
+"Scan_the_sticker_with_your_phone_to_make_a_report" = "Scan the sticker with your phone to make a report";
+
+
+
+//"You_need_to_logout_first_task_Id"
+"Please_report_exit_before_tag_scanning" = "Please report exit before tag scanning";
+
+//"Task_Id_Not_Found"
+"You_are_not_authorized_to_report_on_this_task_please_contact_the_person_in_charge_in_your_organization" = "You are not authorized to report on this task, please contact the person in charge in your organization";
+//"NFC_Reader_not_available"
+"NFC_Reader_not_available" =  "NFC Reader not available";
+
+
+
+//"Could_not_read_tag"
+"Tag_could_not_be_read_please_try_again" = "Tag could not be read, please try again";

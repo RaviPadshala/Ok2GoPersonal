@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="15508" systemVersion="18G95" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="PushNotification" representedClassName=".PushNotification" syncable="YES">
+        <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="isManager" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="isUnread" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="message" optional="YES" attributeType="String"/>
+        <attribute name="notificationId" optional="YES" attributeType="String"/>
+        <attribute name="notificationType" optional="YES" attributeType="String"/>
+    </entity>
+    <elements>
+        <element name="PushNotification" positionX="0" positionY="0" width="128" height="133"/>
+    </elements>
+</model>

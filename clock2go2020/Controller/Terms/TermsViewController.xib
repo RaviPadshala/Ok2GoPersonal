@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="OpenSansHebrew-Bold.ttf">
+            <string>OpenSansHebrew-Bold</string>
+        </array>
+        <array key="OpenSansHebrew-Regular.ttf">
+            <string>OpenSansHebrew-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TermsViewController" customModule="clock2go2020" customModuleProvider="target">
+            <connections>
+                <outlet property="backButton" destination="FXz-sg-i9O" id="x3K-uk-w3J"/>
+                <outlet property="confirmTitle" destination="ghn-Sm-aJr" id="yN7-ez-Fin"/>
+                <outlet property="confirmView" destination="3ox-so-tuB" id="X9N-mt-Xu0"/>
+                <outlet property="screenTitle" destination="bJW-gm-6Rc" id="oOn-NC-iK9"/>
+                <outlet property="textTitle" destination="fo3-hU-OxV" id="0RT-Ip-rtV"/>
+                <outlet property="view" destination="Ue4-6T-HpT" id="lbB-R3-Nh5"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="Ue4-6T-HpT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q0p-fd-O8c">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="80"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="zyk-JZ-vsq">
+                            <rect key="frame" x="106.5" y="46.5" width="201" height="23.5"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="תנאי השימוש במערכת" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bJW-gm-6Rc">
+                                    <rect key="frame" x="0.0" y="0.0" width="166" height="23.5"/>
+                                    <fontDescription key="fontDescription" name="OpenSansHebrew-Bold" family="Open Sans Hebrew" pointSize="17"/>
+                                    <color key="textColor" red="0.14498609300000001" green="0.30285957460000001" blue="0.4466221333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="document" translatesAutoresizingMaskIntoConstraints="NO" id="K7G-5N-XtY">
+                                    <rect key="frame" x="183" y="0.0" width="18" height="23.5"/>
+                                </imageView>
+                            </subviews>
+                        </stackView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FXz-sg-i9O">
+                            <rect key="frame" x="378" y="47.5" width="10" height="22"/>
+                            <state key="normal" image="arrow_blue_right_large"/>
+                            <connections>
+                                <action selector="backAction:" destination="-1" eventType="touchUpInside" id="bp2-kr-Nnd"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="80" id="6iw-0t-1tn"/>
+                        <constraint firstAttribute="bottom" secondItem="zyk-JZ-vsq" secondAttribute="bottom" constant="10" id="Ioz-VU-FwP"/>
+                        <constraint firstAttribute="trailing" secondItem="FXz-sg-i9O" secondAttribute="trailing" constant="26" id="bWj-2F-5zm"/>
+                        <constraint firstItem="FXz-sg-i9O" firstAttribute="centerY" secondItem="zyk-JZ-vsq" secondAttribute="centerY" id="mjt-Fq-ct5"/>
+                        <constraint firstItem="zyk-JZ-vsq" firstAttribute="centerX" secondItem="Q0p-fd-O8c" secondAttribute="centerX" id="u4f-du-EOa"/>
+                    </constraints>
+                </view>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qhM-Wk-gR7">
+                    <rect key="frame" x="30" y="90" width="354" height="767"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="mNq-0g-QW9">
+                            <rect key="frame" x="0.0" y="0.0" width="354" height="1469.5"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fo3-hU-OxV">
+                                    <rect key="frame" x="0.0" y="0.0" width="354" height="1389.5"/>
+                                    <string key="text">המשתמש מצהיר בזאת כי ידוע לו שכל זכויות הקניין באפליקציית הנוכחות ובתוכנת שעון נוכחות clock2go (להלן, שניהם: "התוכנה") הינן בבעלות Ok2go (לעיל ולהלן- "החברה") ומורשיה, והשימוש בה הינו על-פי רישיון שניתן מטעם החברה בלבד.
+
+תוכנה זו הינה רכושה הבלעדי, על כל הזכויות בה, של החברה. התוכנה כוללת אפליקציות ו/או פרוצדורות ו/או מאגרי מידע נוספים, אשר הינם בבעלות צדדים שלישיים וכל הזכויות בהם שמורות לצדדים אלו ולחברה בלבד.
+
+התוכנה מיועדת ,למנויים המשתמשים בנוכחות ,אך ורק לשימוש להחתמת הנוכחות וכל העושה בה שימוש אחר, לרבות מעתיק, משכפל, משנה או מפיץ את התוכנה או את הנתונים או כל חלק מהם, מפר את הרישיון לשימוש בתוכנה, וצפוי לתביעות אזרחיות ופליליות כקבוע בחוק. בעת דיווח הנוכחות המערכת מאתר את מיקום המכשיר בזמן הדיווח בלבד והוא נרשם לצורכי בקרה ואימות הנתונים ומועבר לצורכי ארגון המנוי שהזמין את השירות. המידע נשמר במערכת לחצי שנה ו/או במקרים מיוחדים לפי צורכי והגדרות הלקוח בשמירת נתוני הנוכחות.
+
+לחברה הרשות לערוך תוספות או שינויים לפי שיקול דעתה הבלעדי. המשתמש פוטר את החברה מהצורך לעדכנו בדבר השינויים ו/או המידע ו/או הנתונים הנמסרים על ידה.
+
+בשל המורכבות הרבה של תוכנות מחשב ומערכות איתור באמצעות לווין, החברה אינה מתחייבת כי פעילות התוכנה תהא רציפה או חפה מטעויות, או שהמידע המוצג על ידי התוכנה לא יכלול טעויות ו/או שגיאות ו/או מידע חסר.
+
+המשתמש מצהיר כי הינו מסכים לתנאים האמורים וכי עשיית שימוש בתוכנה מהווה הסכמתו לכלל תנאי הרישיון לרבות האמור במסמך זה.
+
+המשתמש מתחייב לפעול ולעשות שימוש בתוכנה אך ורק בכפוף לתנאי הרישיון החלים על התוכנה, כפי שיקבעו מעת לעת על ידי החברה.
+
+בכל מקרה, אין החברה חבה כלפי המשתמש, בכל חבות שהיא ועל המשתמש לוודא כי דיווחי הנוכחות שלו תואמים את המדווח עפ"י התוכנה.
+
+המשתמש פוטר את החברה מכל חבות ו/או אחריות שהיא ו/או טעות ביחס לדיווחי הנוכחות ו/או ההחתמות כפי שנקלטו ו/או עובדו ו/או נמסרו למעסיקיו ע"י התוכנה ו/או ע"י החברה.
+
+בעת הרישום למערכת יירשם המספר המזהה של המכשיר לצד מספר הטלפון, ולאחר דיווח ראשוני יתאפשר המשך הדיווחים אך ורק ממכשיר זה בכדי למנוע זיופים.
+
+בעת הרישום תישלח הודעת SMS למנוי עם קוד רישום לצורך זיהוי ואימות חד פעמי של המספר המדווח. היה והוכנס הקוד הנכון, יתאפשר המשך הדיווח.</string>
+                                    <fontDescription key="fontDescription" name="OpenSansHebrew-Regular" family="Open Sans Hebrew" pointSize="17"/>
+                                    <color key="textColor" red="0.1137254902" green="0.30196078430000001" blue="0.43529411759999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3ox-so-tuB">
+                                    <rect key="frame" x="0.0" y="1409.5" width="354" height="60"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="אישור" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ghn-Sm-aJr">
+                                            <rect key="frame" x="150" y="15.5" width="54" height="29"/>
+                                            <fontDescription key="fontDescription" name="OpenSansHebrew-Bold" family="Open Sans Hebrew" pointSize="21"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow_white_left" translatesAutoresizingMaskIntoConstraints="NO" id="lEV-l0-YYt">
+                                            <rect key="frame" x="22" y="20.5" width="11" height="19"/>
+                                        </imageView>
+                                    </subviews>
+                                    <color key="backgroundColor" red="0.1345449984" green="0.39854079479999999" blue="0.68488258120000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <constraints>
+                                        <constraint firstItem="ghn-Sm-aJr" firstAttribute="centerX" secondItem="3ox-so-tuB" secondAttribute="centerX" id="Hpu-En-K5W"/>
+                                        <constraint firstItem="ghn-Sm-aJr" firstAttribute="centerY" secondItem="3ox-so-tuB" secondAttribute="centerY" id="MUG-bZ-0Ry"/>
+                                        <constraint firstItem="lEV-l0-YYt" firstAttribute="centerY" secondItem="3ox-so-tuB" secondAttribute="centerY" id="Ofh-ea-5Td"/>
+                                        <constraint firstAttribute="height" constant="60" id="n3G-dr-uS2"/>
+                                        <constraint firstItem="lEV-l0-YYt" firstAttribute="leading" secondItem="3ox-so-tuB" secondAttribute="leading" constant="22" id="w0u-9i-vo5"/>
+                                    </constraints>
+                                </view>
+                            </subviews>
+                            <constraints>
+                                <constraint firstItem="fo3-hU-OxV" firstAttribute="leading" secondItem="mNq-0g-QW9" secondAttribute="leading" id="7t2-je-FlD"/>
+                                <constraint firstItem="3ox-so-tuB" firstAttribute="centerX" secondItem="mNq-0g-QW9" secondAttribute="centerX" id="IxY-Ca-Y7t"/>
+                                <constraint firstAttribute="trailing" secondItem="fo3-hU-OxV" secondAttribute="trailing" id="h72-c1-r5X"/>
+                            </constraints>
+                        </stackView>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="mNq-0g-QW9" secondAttribute="trailing" id="FJ7-s7-v7h"/>
+                        <constraint firstItem="mNq-0g-QW9" firstAttribute="centerX" secondItem="qhM-Wk-gR7" secondAttribute="centerX" id="NAu-bW-cip"/>
+                        <constraint firstItem="mNq-0g-QW9" firstAttribute="top" secondItem="qhM-Wk-gR7" secondAttribute="top" id="bx8-Zt-nN0"/>
+                        <constraint firstItem="mNq-0g-QW9" firstAttribute="leading" secondItem="qhM-Wk-gR7" secondAttribute="leading" id="giu-QQ-GVK"/>
+                        <constraint firstAttribute="bottom" secondItem="mNq-0g-QW9" secondAttribute="bottom" id="yVC-p7-Q6W"/>
+                    </constraints>
+                </scrollView>
+            </subviews>
+            <color key="backgroundColor" red="0.91777414079999997" green="0.94561547040000005" blue="0.96376711130000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="x1C-z3-wJt" firstAttribute="bottom" secondItem="qhM-Wk-gR7" secondAttribute="bottom" constant="5" id="2Cr-xC-hSq"/>
+                <constraint firstItem="x1C-z3-wJt" firstAttribute="trailing" secondItem="qhM-Wk-gR7" secondAttribute="trailing" constant="30" id="Ai0-Gc-6CT"/>
+                <constraint firstItem="Q0p-fd-O8c" firstAttribute="top" secondItem="Ue4-6T-HpT" secondAttribute="top" id="JjA-co-tOY"/>
+                <constraint firstItem="Q0p-fd-O8c" firstAttribute="leading" secondItem="x1C-z3-wJt" secondAttribute="leading" id="NL0-lC-qsv"/>
+                <constraint firstItem="Q0p-fd-O8c" firstAttribute="trailing" secondItem="x1C-z3-wJt" secondAttribute="trailing" id="NUj-p6-qV7"/>
+                <constraint firstItem="qhM-Wk-gR7" firstAttribute="top" secondItem="Q0p-fd-O8c" secondAttribute="bottom" constant="10" id="bc8-AT-8Ud"/>
+                <constraint firstItem="qhM-Wk-gR7" firstAttribute="centerX" secondItem="Ue4-6T-HpT" secondAttribute="centerX" id="k2n-Ln-nIp"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="x1C-z3-wJt"/>
+            <point key="canvasLocation" x="25" y="125"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="arrow_blue_right_large" width="10" height="17.5"/>
+        <image name="arrow_white_left" width="11" height="19"/>
+        <image name="document" width="18" height="22.5"/>
+    </resources>
+</document>

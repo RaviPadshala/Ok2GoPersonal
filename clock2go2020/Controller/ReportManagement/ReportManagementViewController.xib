@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="landscape" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ReportManagementViewController" customModule="clock2go2020" customModuleProvider="target">
+            <connections>
+                <outlet property="reportActionView" destination="dhd-HK-5MR" id="TnW-5Z-5e5"/>
+                <outlet property="tableHeaderView" destination="azf-Ak-bgc" id="dxu-80-afa"/>
+                <outlet property="tableView" destination="0Kx-pY-vVK" id="reJ-8Q-Xxq"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dhd-HK-5MR" customClass="ReportActionView" customModule="clock2go2020" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="0.0" width="667" height="88"/>
+                    <viewLayoutGuide key="safeArea" id="qvT-kx-B79"/>
+                    <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="88" id="Xvc-qT-ATi"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="azf-Ak-bgc" customClass="ReportManagementHeaderTableView" customModule="clock2go2020" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="88" width="667" height="45"/>
+                    <viewLayoutGuide key="safeArea" id="NBI-t7-Led"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="45" id="A4x-OS-rYe"/>
+                    </constraints>
+                </view>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="0Kx-pY-vVK">
+                    <rect key="frame" x="0.0" y="133" width="667" height="242"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </tableView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="azf-Ak-bgc" firstAttribute="top" secondItem="dhd-HK-5MR" secondAttribute="bottom" id="Dke-9B-u3q"/>
+                <constraint firstItem="dhd-HK-5MR" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="HIR-da-k0I"/>
+                <constraint firstItem="0Kx-pY-vVK" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="Ibk-KC-Hgv"/>
+                <constraint firstItem="0Kx-pY-vVK" firstAttribute="top" secondItem="azf-Ak-bgc" secondAttribute="bottom" id="Ifx-j2-Wiq"/>
+                <constraint firstItem="dhd-HK-5MR" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Jmz-YJ-ung"/>
+                <constraint firstItem="dhd-HK-5MR" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="KHX-I5-oYc"/>
+                <constraint firstAttribute="bottom" secondItem="0Kx-pY-vVK" secondAttribute="bottom" id="RnB-Hq-81n"/>
+                <constraint firstItem="azf-Ak-bgc" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="Zp5-GK-U2t"/>
+                <constraint firstItem="0Kx-pY-vVK" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="nsg-ff-LO4"/>
+                <constraint firstItem="azf-Ak-bgc" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="wQH-69-6DN"/>
+            </constraints>
+            <point key="canvasLocation" x="44.866071428571423" y="120.28985507246378"/>
+        </view>
+    </objects>
+</document>

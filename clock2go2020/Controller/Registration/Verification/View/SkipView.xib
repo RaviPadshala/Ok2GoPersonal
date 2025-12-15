@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="OpenSansHebrew-Regular.ttf">
+            <string>OpenSansHebrew-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SkipView" customModule="clock2go2020" customModuleProvider="target">
+            <connections>
+                <outlet property="contentView" destination="iN0-l3-epB" id="27K-jt-d2v"/>
+                <outlet property="skipTitle" destination="HQT-lf-cds" id="sHT-BK-91D"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="88" height="61"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="דלג" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HQT-lf-cds">
+                    <rect key="frame" x="21" y="18" width="46" height="25"/>
+                    <fontDescription key="fontDescription" name="OpenSansHebrew-Regular" family="Open Sans Hebrew" pointSize="18"/>
+                    <color key="textColor" red="0.062745098040000002" green="0.28235294119999998" blue="0.46274509800000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow_blue_left" translatesAutoresizingMaskIntoConstraints="NO" id="5Sx-uL-djb">
+                    <rect key="frame" x="9" y="24.5" width="7" height="12"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="7" id="dvl-cH-I8Z"/>
+                        <constraint firstAttribute="height" constant="12" id="hnq-fg-FpL"/>
+                    </constraints>
+                </imageView>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow_blue_left" translatesAutoresizingMaskIntoConstraints="NO" id="Z6u-J1-kZ7">
+                    <rect key="frame" x="2" y="24.5" width="7" height="12"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="7" id="ibp-y4-yGl"/>
+                        <constraint firstAttribute="height" constant="12" id="mAS-BJ-eug"/>
+                    </constraints>
+                </imageView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="5Sx-uL-djb" firstAttribute="centerY" secondItem="HQT-lf-cds" secondAttribute="centerY" id="1Zg-u9-ear"/>
+                <constraint firstItem="Z6u-J1-kZ7" firstAttribute="centerY" secondItem="5Sx-uL-djb" secondAttribute="centerY" id="4Gv-5Z-f9f"/>
+                <constraint firstItem="HQT-lf-cds" firstAttribute="leading" secondItem="5Sx-uL-djb" secondAttribute="trailing" constant="5" id="CYD-XJ-0gV"/>
+                <constraint firstItem="5Sx-uL-djb" firstAttribute="leading" secondItem="Z6u-J1-kZ7" secondAttribute="trailing" id="bqi-kD-c0e"/>
+                <constraint firstItem="HQT-lf-cds" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="eBh-kj-EcD"/>
+                <constraint firstItem="Z6u-J1-kZ7" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="2" id="lwV-w0-368"/>
+                <constraint firstItem="HQT-lf-cds" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="m3j-dO-67W"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="224.63768115942031" y="365.29017857142856"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="arrow_blue_left" width="6" height="10.5"/>
+    </resources>
+</document>

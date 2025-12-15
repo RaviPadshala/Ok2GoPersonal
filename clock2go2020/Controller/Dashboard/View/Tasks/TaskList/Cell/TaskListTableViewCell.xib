@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="OpenSansHebrew-Regular.ttf">
+            <string>OpenSansHebrew-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="TaskListTableViewCell" customModule="clock2go2020" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XUc-UT-CVS">
+                        <rect key="frame" x="25" y="11" width="13" height="22"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="13" id="75c-nE-MEE"/>
+                        </constraints>
+                        <state key="normal" image="arrow_down"/>
+                        <connections>
+                            <action selector="expandAction" destination="KGk-i7-Jjw" eventType="touchUpInside" id="iF9-Id-Bbl"/>
+                        </connections>
+                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fre-hT-363">
+                        <rect key="frame" x="30" y="7" width="260" height="30"/>
+                        <fontDescription key="fontDescription" name="OpenSansHebrew-Regular" family="Open Sans Hebrew" pointSize="22"/>
+                        <color key="textColor" red="0.065916486080000003" green="0.28398782010000001" blue="0.46380215879999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dRJ-cC-Mxy">
+                        <rect key="frame" x="315.5" y="9.5" width="4.5" height="25"/>
+                        <color key="backgroundColor" red="0.21011883020401001" green="0.79933696985244751" blue="0.40157115459442139" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="4.2999999999999998" id="B3Y-tx-FJL"/>
+                            <constraint firstAttribute="height" constant="25" id="bTC-F9-few"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="fre-hT-363" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="30" id="A85-AB-97D"/>
+                    <constraint firstItem="fre-hT-363" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="AhL-Uu-ENB"/>
+                    <constraint firstItem="fre-hT-363" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="JT6-1r-amq"/>
+                    <constraint firstItem="dRJ-cC-Mxy" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="QUj-ep-nWX"/>
+                    <constraint firstAttribute="trailing" secondItem="fre-hT-363" secondAttribute="trailing" constant="30" id="Sj2-Dx-I0w"/>
+                    <constraint firstItem="XUc-UT-CVS" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="Zf4-cM-U2V"/>
+                    <constraint firstAttribute="trailing" secondItem="dRJ-cC-Mxy" secondAttribute="trailing" id="eKk-pv-MAT"/>
+                    <constraint firstItem="XUc-UT-CVS" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="25" id="fz3-ec-VgI"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="contentView" destination="H2p-sc-9uM" id="0lW-od-wAe"/>
+                <outlet property="subtaskButton" destination="XUc-UT-CVS" id="zw5-Lr-0Cl"/>
+                <outlet property="subtaskIndicatorView" destination="dRJ-cC-Mxy" id="Aq4-fI-g6U"/>
+                <outlet property="taskTitle" destination="fre-hT-363" id="7Ny-sB-4MP"/>
+            </connections>
+            <point key="canvasLocation" x="131.8840579710145" y="144.64285714285714"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="arrow_down" width="10.5" height="6"/>
+    </resources>
+</document>

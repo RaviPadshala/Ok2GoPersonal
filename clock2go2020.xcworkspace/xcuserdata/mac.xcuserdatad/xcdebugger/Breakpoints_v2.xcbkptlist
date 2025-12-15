@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "124DF226-5DD6-440B-907C-1720E5869297"
+   type = "0"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "1F01646B-8E77-46B6-A13E-2BF14B7E67D2"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "clock2go2020/Controller/Dashboard/DashboardViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "1383"
+            endingLineNumber = "1383"
+            landmarkName = "sendMultipleReport(multipleReport:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "1F01646B-8E77-46B6-A13E-2BF14B7E67D2 - 8f5321ee878eb61a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;clock2go2020.ReportResult&gt;, Swift.Optional&lt;clock2go2020.ErrorObject&gt;) -&gt; () in clock2go2020.DashboardViewModel.sendMultipleReport(multipleReport: clock2go2020.MultipleReportObj) -&gt; ()"
+                  moduleName = "clock2go2020"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mac/Desktop/Workspace/clock2go2020-ios/clock2go2020/Controller/Dashboard/DashboardViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "1384"
+                  endingLineNumber = "1384"
+                  offsetFromSymbolStart = "116">
+               </Location>
+               <Location
+                  uuid = "1F01646B-8E77-46B6-A13E-2BF14B7E67D2 - 38e218997e6df8ff"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "clock2go2020.DashboardViewModel.sendMultipleReport(multipleReport: clock2go2020.MultipleReportObj) -&gt; ()"
+                  moduleName = "clock2go2020"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mac/Desktop/Workspace/clock2go2020-ios/clock2go2020/Controller/Dashboard/DashboardViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "1383"
+                  endingLineNumber = "1383"
+                  offsetFromSymbolStart = "860">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "CFAA0969-0BBA-418A-9116-3656F1E283EB"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "clock2go2020/Controller/Dashboard/DashboardViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "1412"
+            endingLineNumber = "1412"
+            landmarkName = "sendSalesAmountReport(sales:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "CFAA0969-0BBA-418A-9116-3656F1E283EB - 8c5f17041784c8f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;clock2go2020.ReportResult&gt;, Swift.Optional&lt;clock2go2020.ErrorObject&gt;) -&gt; () in clock2go2020.DashboardViewModel.sendSalesAmountReport(sales: Swift.String) -&gt; ()"
+                  moduleName = "clock2go2020"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mac/Desktop/Workspace/clock2go2020-ios/clock2go2020/Controller/Dashboard/DashboardViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "1413"
+                  endingLineNumber = "1413"
+                  offsetFromSymbolStart = "116">
+               </Location>
+               <Location
+                  uuid = "CFAA0969-0BBA-418A-9116-3656F1E283EB - dc6ae968cb996b66"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "clock2go2020.DashboardViewModel.sendSalesAmountReport(sales: Swift.String) -&gt; ()"
+                  moduleName = "clock2go2020"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mac/Desktop/Workspace/clock2go2020-ios/clock2go2020/Controller/Dashboard/DashboardViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "1412"
+                  endingLineNumber = "1412"
+                  offsetFromSymbolStart = "1148">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "23BA2ED6-3A0A-429C-886C-B8A8087C6919"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "clock2go2020/Controller/Dashboard/DashboardViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "1469"
+            endingLineNumber = "1469"
+            landmarkName = "sendTrackingReport(type:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "23BA2ED6-3A0A-429C-886C-B8A8087C6919 - 5a99f7a4bb886de6"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;clock2go2020.ReportResult&gt;, Swift.Optional&lt;clock2go2020.ErrorObject&gt;) -&gt; () in clock2go2020.DashboardViewModel.sendTrackingReport(type: clock2go2020.ReportActionType) -&gt; ()"
+                  moduleName = "clock2go2020"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mac/Desktop/Workspace/clock2go2020-ios/clock2go2020/Controller/Dashboard/DashboardViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "1469"
+                  endingLineNumber = "1469"
+                  offsetFromSymbolStart = "328">
+               </Location>
+               <Location
+                  uuid = "23BA2ED6-3A0A-429C-886C-B8A8087C6919 - cc7cb1511b46377f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "clock2go2020.DashboardViewModel.sendTrackingReport(type: clock2go2020.ReportActionType) -&gt; ()"
+                  moduleName = "clock2go2020"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mac/Desktop/Workspace/clock2go2020-ios/clock2go2020/Controller/Dashboard/DashboardViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "1469"
+                  endingLineNumber = "1469"
+                  offsetFromSymbolStart = "496">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
