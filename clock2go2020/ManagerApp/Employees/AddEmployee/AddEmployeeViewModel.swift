@@ -107,9 +107,9 @@ class AddEmployeeViewModel {
 
     func setReportWay(title: String) {
         guard let reportWay = ReportWayType.withTitle(title) else { return }
-        if reportWay.rawValue == 3{
-            employee.reportWay = 4
-        }
+//        if reportWay.rawValue == 3{
+//            employee.reportWay = 4
+//        }
         employee.reportWay = reportWay.rawValue
     }
 

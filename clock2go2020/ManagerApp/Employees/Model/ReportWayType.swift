@@ -8,10 +8,10 @@
 import Foundation
 
 enum ReportWayType: Int, CaseIterable {
-    case loginAndLogout             = 1
-    case withEmployeeCode           = 2
-    case withTask                   = 3
-    case withEmployeeCodeAndTask    = 4
+    case loginAndLogout             = 2
+    case withEmployeeCode           = 3
+    case withTask                   = 4
+    case withEmployeeCodeAndTask    = 1
     case teamManagerAndTask         = 5
     case exitAndReturnFromService   = 6
 
