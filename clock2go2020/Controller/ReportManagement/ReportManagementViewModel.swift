@@ -44,7 +44,10 @@ class ReportManagementViewModel {
         var monthIndex = calendar.component(.month, from: date)
         
         if CompaniesDataManager.shared.getSpecialClientType() == 1 {
-            monthIndex = monthIndex - 1
+            monthIndex -= 1
+            if monthIndex == 0 {
+                monthIndex = 12
+            }
             let date = self.getDateForMonthIndex(index: monthIndex)
             self.month = date.toString(format: "yyyy-MM")
         }
@@ -83,7 +86,9 @@ class ReportManagementViewModel {
     }
     
     func getDateForMonthIndex(index: Int) -> Date {
-        guard var selectedDate = Calendar.current.date(bySetting: .month, value: index, of: Date()) else { return Date() }
+        guard var selectedDate = Calendar.current.date(bySetting: .month, value: index, of: Date()) else {
+            return Date()
+        }
         
         if Date().months(from: selectedDate) < 0 {
             selectedDate = Calendar.current.date(byAdding: .year, value: -1, to: selectedDate) ?? Date()
