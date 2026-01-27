@@ -166,8 +166,35 @@ class AddEmployeeView: UIViewController {
     }
 
     @objc func confirmTapped() {
+        
+        if let str = self.codeTextField.text, str.count == 0{
+            let message = String(format: "Please_enter_employee_code".localized, "")
+            self.showErrorView(message: message, errorCode: nil)
+            return
+        }else if let str = self.nameTextField.text, str.count == 0{
+            let message = String(format: "Please_enter_employee_name".localized, "")
+            self.showErrorView(message: message, errorCode: nil)
+            return
+        }else if let str = self.phoneTextField.text, str.count == 0{
+            let message = String(format: "Please_enter_phone_address".localized, "")
+            self.showErrorView(message: message, errorCode: nil)
+            return
+        }else if let str = self.emailTextField.text, str.count == 0{
+            let message = String(format: "Please_enter_email_address".localized, "")
+            self.showErrorView(message: message, errorCode: nil)
+            return
+        }
+        
         dismissView()
         confirmAction?(viewModel.getEmployee())
+    }
+    
+    func showErrorView(message: String?, errorCode: Int?) {
+        let vc = ViewSource.errorView()
+        vc.modalPresentationStyle = .overCurrentContext
+        vc.modalTransitionStyle = .crossDissolve
+        vc.viewModel = ErrorViewModel(title: String(errorCode ?? 0), message: message)
+        self.present(vc, animated: true, completion: nil)
     }
 
     @objc func cancelTapped() {

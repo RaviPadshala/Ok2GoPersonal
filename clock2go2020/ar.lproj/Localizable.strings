@@ -67,7 +67,10 @@
 "offline_report_message" = "تم استلام التقرير بنجاح وسيتم تحديثه في النظام بمجرد استعادة الاتصال";
 "closing_message" = "إغلاق فترة %@ لم يعد مسموحًا";
 
-
+"Please_enter_employee_code" = "الرجاء إدخال رمز الموظف.";
+"Please_enter_employee_name" = "الرجاء إدخال اسم الموظف";
+"Please_enter_phone_address" = "الرجاء إدخال رقم الهاتف";
+"Please_enter_email_address" = "الرجاء إدخال عنوان البريد الإلكتروني";
 
 
 

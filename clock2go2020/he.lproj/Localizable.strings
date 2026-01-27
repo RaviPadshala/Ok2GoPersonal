@@ -69,7 +69,10 @@
 "offline_report_message" = "הדיווח התקבל בהצלחה ויתעדכן במערכת עם חיבור התקשורת";
 "closing_message" = "סגירת חודש לתאריך %@ לא מאושרת";
 
-
+"Please_enter_employee_code" = "אנא הזן את קוד העובד";
+"Please_enter_employee_name" = "אנא הזן את שם העובד";
+"Please_enter_phone_address" = "אנא הזן מספר טלפון";
+"Please_enter_email_address" = "אנא הזן כתובת דוא\"\ל";
 
 
 
