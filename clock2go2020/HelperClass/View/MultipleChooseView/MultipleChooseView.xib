@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="24506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="24504"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -17,6 +18,8 @@
             <connections>
                 <outlet property="backgroundView" destination="sW1-su-tad" id="5XR-M3-ToZ"/>
                 <outlet property="chooseLabel" destination="7HR-tP-I4K" id="Jvi-QN-8cM"/>
+                <outlet property="confirmview" destination="yDp-LE-tCV" id="PxC-kH-6AG"/>
+                <outlet property="lbl_confirm" destination="Vo8-mE-cGe" id="gHP-D1-LJK"/>
                 <outlet property="roundedView" destination="cVu-oJ-GjA" id="mhK-Ko-Qge"/>
                 <outlet property="tableView" destination="SW4-fO-AJy" id="evD-jl-pHE"/>
                 <outlet property="tableViewHeightConstraint" destination="AnV-VT-rWG" id="IQb-q0-4Tc"/>
@@ -33,42 +36,63 @@
                     <color key="backgroundColor" red="0.08268459886" green="0.28099378940000003" blue="0.46375954149999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 </view>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aTk-hL-kbd">
-                    <rect key="frame" x="30" y="296.5" width="82.5" height="82.5"/>
+                    <rect key="frame" x="30" y="260.5" width="82.5" height="82.5"/>
                     <state key="normal" image="close"/>
                     <connections>
                         <action selector="closeButtonAction:" destination="-1" eventType="touchUpInside" id="O4j-rA-JBd"/>
                     </connections>
                 </button>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cVu-oJ-GjA">
-                    <rect key="frame" x="50" y="359" width="314" height="178.5"/>
+                    <rect key="frame" x="50" y="323" width="314" height="250"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7HR-tP-I4K">
-                            <rect key="frame" x="132.5" y="30" width="49" height="23.5"/>
+                            <rect key="frame" x="130" y="30" width="54" height="27.5"/>
                             <fontDescription key="fontDescription" name="OpenSansHebrew-Bold" family="Open Sans Hebrew" pointSize="20"/>
                             <color key="textColor" red="0.08268459886" green="0.28099378940000003" blue="0.46375954149999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" style="plain" separatorStyle="default" rowHeight="50" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="SW4-fO-AJy">
-                            <rect key="frame" x="0.0" y="68.5" width="314" height="100"/>
+                            <rect key="frame" x="0.0" y="72.5" width="314" height="100"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="100" id="AnV-VT-rWG"/>
                             </constraints>
                             <inset key="scrollIndicatorInsets" minX="0.0" minY="10" maxX="0.0" maxY="10"/>
                         </tableView>
+                        <view clipsSubviews="YES" contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="yDp-LE-tCV">
+                            <rect key="frame" x="204" y="183" width="100" height="57"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="הוסף עובד" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vo8-mE-cGe">
+                                    <rect key="frame" x="4.5" y="15" width="91" height="27.5"/>
+                                    <fontDescription key="fontDescription" name="OpenSansHebrew-Bold" family="Open Sans Hebrew" pointSize="20"/>
+                                    <color key="textColor" red="0.019607843137254902" green="0.4392156862745098" blue="0.75294117647058822" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="Vo8-mE-cGe" firstAttribute="centerY" secondItem="yDp-LE-tCV" secondAttribute="centerY" id="mED-IL-h8O"/>
+                                <constraint firstItem="Vo8-mE-cGe" firstAttribute="centerX" secondItem="yDp-LE-tCV" secondAttribute="centerX" id="sWu-jq-bvf"/>
+                                <constraint firstAttribute="width" constant="100" id="t1O-JN-SFh"/>
+                                <constraint firstAttribute="height" constant="57" id="wG5-qj-zlN"/>
+                            </constraints>
+                        </view>
                     </subviews>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
+                        <constraint firstAttribute="trailing" secondItem="yDp-LE-tCV" secondAttribute="trailing" constant="10" id="5mu-SL-rdJ"/>
+                        <constraint firstItem="yDp-LE-tCV" firstAttribute="top" secondItem="SW4-fO-AJy" secondAttribute="bottom" constant="10.5" id="7Ga-hI-0ER"/>
                         <constraint firstItem="SW4-fO-AJy" firstAttribute="leading" secondItem="cVu-oJ-GjA" secondAttribute="leading" id="86B-Lq-qiC"/>
+                        <constraint firstAttribute="bottom" secondItem="yDp-LE-tCV" secondAttribute="bottom" constant="10" id="NEo-27-S5H"/>
                         <constraint firstItem="7HR-tP-I4K" firstAttribute="top" secondItem="cVu-oJ-GjA" secondAttribute="top" constant="30" id="TjY-xI-2HL"/>
                         <constraint firstAttribute="trailing" secondItem="SW4-fO-AJy" secondAttribute="trailing" id="cxm-AM-9RU"/>
                         <constraint firstItem="SW4-fO-AJy" firstAttribute="top" secondItem="7HR-tP-I4K" secondAttribute="bottom" constant="15" id="fRz-3D-nX1"/>
                         <constraint firstItem="7HR-tP-I4K" firstAttribute="centerX" secondItem="cVu-oJ-GjA" secondAttribute="centerX" id="l5a-xS-CII"/>
                         <constraint firstAttribute="width" constant="314" id="sBM-FP-pWH"/>
-                        <constraint firstAttribute="bottom" secondItem="SW4-fO-AJy" secondAttribute="bottom" constant="10" id="sps-ND-aNd"/>
                     </constraints>
                 </view>
             </subviews>
+            <viewLayoutGuide key="safeArea" id="iha-Vg-JeK"/>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="cVu-oJ-GjA" firstAttribute="centerX" secondItem="393-RO-qRU" secondAttribute="centerX" id="913-xb-wTQ"/>
@@ -80,11 +104,13 @@
                 <constraint firstItem="aTk-hL-kbd" firstAttribute="leading" secondItem="cVu-oJ-GjA" secondAttribute="leading" constant="-20" id="b5S-25-sLx"/>
                 <constraint firstAttribute="bottom" secondItem="sW1-su-tad" secondAttribute="bottom" id="gJM-Sa-6G6"/>
             </constraints>
-            <viewLayoutGuide key="safeArea" id="iha-Vg-JeK"/>
             <point key="canvasLocation" x="131.8840579710145" y="153.34821428571428"/>
         </view>
     </objects>
     <resources>
         <image name="close" width="82.5" height="82.5"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>

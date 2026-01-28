@@ -14,7 +14,9 @@ class MultipleChooseView: UIViewController {
     @IBOutlet weak var chooseLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var tableViewHeightConstraint: NSLayoutConstraint!
-
+    @IBOutlet weak var confirmview: UIView!
+    @IBOutlet weak var lbl_confirm: UILabel!
+    
     var viewModel: MultipleChooseViewModel?
     var choosedTypes: ((_ titles: [String]) -> Void)?
 
@@ -34,6 +36,8 @@ class MultipleChooseView: UIViewController {
         tableView.roundCorners([.allCorners], radius: 25.0)
 
         chooseLabel.text = viewModel?.getChooseListTitle()
+        
+        self.lbl_confirm.text = "SAVE_EDIT".localized
     }
 
     func setupTableView() {
@@ -49,6 +53,16 @@ class MultipleChooseView: UIViewController {
     func setupTap() {
         let closeTap = UITapGestureRecognizer(target: self, action: #selector(dismissView))
         backgroundView.addGestureRecognizer(closeTap)
+        
+        let confirmTap = UITapGestureRecognizer(target: self, action: #selector(confirmTapped))
+        self.confirmview.addGestureRecognizer(confirmTap)
+    }
+    
+    @objc func confirmTapped() {
+        if let titles = viewModel?.getSelectedValues() {
+            self.choosedTypes?(titles)
+        }
+        dismissView()
     }
 
     @IBAction func closeButtonAction(_ sender: Any) {
@@ -57,9 +71,6 @@ class MultipleChooseView: UIViewController {
 
     @objc func dismissView() {
         self.dismiss(animated: true, completion: nil)
-        if let titles = viewModel?.getSelectedValues() {
-            self.choosedTypes?(titles)
-        }
     }
 
 }
