@@ -65,6 +65,8 @@
 "Please_enter_employee_name" = "Моля, въведете името на служителя";
 "Please_enter_phone_address" = "Моля, въведете телефонен номер";
 "Please_enter_email_address" = "Моля, въведете имейл адрес";
+"Please_select_department" = "Моля, изберете отдели";
+"Please_select_reportWay" = "Моля, изберете начин за докладване";
 
 
 

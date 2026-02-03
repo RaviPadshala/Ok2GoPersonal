@@ -36,7 +36,8 @@ class AddEmployeeView: UIViewController {
     @IBOutlet weak var cancelViewTitle: UILabel!
 
     @IBOutlet weak var bottomConstraint: NSLayoutConstraint!
-
+    @IBOutlet weak var lbl_department: UILabel!
+    
     var viewModel = AddEmployeeViewModel()
     var confirmAction: ((_ employee: EmployeeObj) -> Void)?
 
@@ -140,6 +141,7 @@ class AddEmployeeView: UIViewController {
         phoneTextField.placeholder = "PHONE_REPORTS".localized
         emailTextField.placeholder = "EMAIL_ADDRESS".localized
         cancelViewTitle.text = "CANCEL".localized
+        self.lbl_department.text = "department".localized
     }
 
     func setupTaps() {
@@ -179,8 +181,12 @@ class AddEmployeeView: UIViewController {
             let message = String(format: "Please_enter_phone_address".localized, "")
             self.showErrorView(message: message, errorCode: nil)
             return
-        }else if let str = self.emailTextField.text, str.count == 0{
-            let message = String(format: "Please_enter_email_address".localized, "")
+        }else if viewModel.getDeptIds().count == 0{
+            let message = String(format: "Please_select_department".localized, "")
+            self.showErrorView(message: message, errorCode: nil)
+            return
+        }else if viewModel.getReportWay().count == 0{
+            let message = String(format: "Please_select_reportWay".localized, "")
             self.showErrorView(message: message, errorCode: nil)
             return
         }

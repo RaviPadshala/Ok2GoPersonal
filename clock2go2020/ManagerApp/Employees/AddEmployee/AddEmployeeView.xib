@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="24506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="24504"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -35,6 +35,7 @@
                 <outlet property="emailTextField" destination="0Pb-Py-OKO" id="hoe-nj-6Oh"/>
                 <outlet property="icon" destination="IKI-8u-4tv" id="rkd-UP-0sy"/>
                 <outlet property="iconView" destination="n38-t3-3rn" id="uee-Xk-Ao9"/>
+                <outlet property="lbl_department" destination="4tp-EV-krq" id="iq8-Fd-OJQ"/>
                 <outlet property="nameTextField" destination="3z3-8t-tk3" id="5jh-lL-w52"/>
                 <outlet property="phoneTextField" destination="ATd-5i-rIU" id="ayt-s1-2Xj"/>
                 <outlet property="reportWayTitle" destination="k9q-Al-NYh" id="CJz-ZF-ZK7"/>
@@ -233,6 +234,7 @@
                             <constraints>
                                 <constraint firstAttribute="trailing" secondItem="X1o-3Z-9rP" secondAttribute="trailing" constant="16" id="DFX-F7-LcD"/>
                                 <constraint firstItem="X1o-3Z-9rP" firstAttribute="centerX" secondItem="0IS-1S-Nw4" secondAttribute="centerX" id="Eah-AJ-OAl"/>
+                                <constraint firstItem="X1o-3Z-9rP" firstAttribute="top" secondItem="0IS-1S-Nw4" secondAttribute="top" constant="60" id="RHN-N8-fdB"/>
                                 <constraint firstAttribute="bottom" secondItem="X1o-3Z-9rP" secondAttribute="bottom" constant="20" id="fJ2-08-Sa0"/>
                             </constraints>
                         </view>
@@ -260,7 +262,6 @@
                     <constraints>
                         <constraint firstItem="n38-t3-3rn" firstAttribute="centerX" secondItem="byb-Ca-ZBz" secondAttribute="centerX" id="0Mm-FX-HIe"/>
                         <constraint firstItem="n38-t3-3rn" firstAttribute="top" secondItem="byb-Ca-ZBz" secondAttribute="top" id="9Cd-jE-ExU"/>
-                        <constraint firstItem="X1o-3Z-9rP" firstAttribute="top" secondItem="0IS-1S-Nw4" secondAttribute="top" constant="60" id="RHN-N8-fdB"/>
                         <constraint firstItem="0IS-1S-Nw4" firstAttribute="top" secondItem="byb-Ca-ZBz" secondAttribute="top" constant="50" id="maU-cI-IYD"/>
                         <constraint firstItem="0IS-1S-Nw4" firstAttribute="leading" secondItem="byb-Ca-ZBz" secondAttribute="leading" id="pjx-hc-Eal"/>
                         <constraint firstAttribute="bottom" secondItem="0IS-1S-Nw4" secondAttribute="bottom" id="uqw-Nb-xsN"/>

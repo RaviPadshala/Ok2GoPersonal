@@ -73,6 +73,8 @@
 "Please_enter_employee_name" = "אנא הזן את שם העובד";
 "Please_enter_phone_address" = "אנא הזן מספר טלפון";
 "Please_enter_email_address" = "אנא הזן כתובת דוא\"\ל";
+"Please_select_department" = "אנא בחר מחלקות";
+"Please_select_reportWay" = "אנא בחר דרך דיווח";
 
 
 

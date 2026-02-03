@@ -72,6 +72,8 @@
 "Please_enter_employee_name" = "Please enter employee name";
 "Please_enter_phone_address" = "Please enter Phone Number";
 "Please_enter_email_address" = "Please enter email address";
+"Please_select_department" = "Please select Departments";
+"Please_select_reportWay" = "Please select Report Way";
 
 
 

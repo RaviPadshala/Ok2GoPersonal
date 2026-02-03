@@ -66,6 +66,10 @@ class AddEmployeeViewModel {
     func getEmail() -> String {
         return employee.empEmail ?? ""
     }
+    
+    func getDeptIds() -> [String?] {
+        return employee.deptIds ?? []
+    }
 
     func setEmail(_ email: String?) {
         employee.empEmail = email

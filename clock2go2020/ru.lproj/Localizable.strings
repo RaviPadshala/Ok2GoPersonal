@@ -71,6 +71,8 @@
 "Please_enter_employee_name" = "Пожалуйста, введите имя сотрудника.";
 "Please_enter_phone_address" = "Пожалуйста, введите номер телефона.";
 "Please_enter_email_address" = "Пожалуйста, введите адрес электронной почты.";
+"Please_select_department" = "Пожалуйста, выберите отделы.";
+"Please_select_reportWay" = "Пожалуйста, выберите способ отправки отчета.";
 
 
 

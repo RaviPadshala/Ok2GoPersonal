@@ -71,6 +71,8 @@
 "Please_enter_employee_name" = "الرجاء إدخال اسم الموظف";
 "Please_enter_phone_address" = "الرجاء إدخال رقم الهاتف";
 "Please_enter_email_address" = "الرجاء إدخال عنوان البريد الإلكتروني";
+"Please_select_department" = "الرجاء اختيار الأقسام";
+"Please_select_reportWay" = "الرجاء تحديد طريقة الإبلاغ";
 
 
 
