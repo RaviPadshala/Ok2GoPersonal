@@ -33,6 +33,7 @@ class AddEmployeeEndpoint: EndpointItem {
     }
 
     func apiCall(handler: @escaping (_ response: [EmployeesObj?]?, _ error: ErrorObject?) -> Void) {
+        print("convertToDictionary()", convertToDictionary())
         apiManager.call(type: endpointType, params: convertToDictionary()) { (result: EmployeesResult?, error: ErrorObject?) in
             handler(result?.data, error)
         }

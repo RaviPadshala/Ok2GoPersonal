@@ -70,6 +70,13 @@ class AddEmployeeViewModel {
     func getDeptIds() -> [String?] {
         return employee.deptIds ?? []
     }
+    
+    func checkReportwayAddOrNot() -> Bool {
+        if let val = employee.reportWay, val > 0{
+            return true
+        }
+        return false
+    }
 
     func setEmail(_ email: String?) {
         employee.empEmail = email

@@ -185,7 +185,7 @@ class AddEmployeeView: UIViewController {
             let message = String(format: "Please_select_department".localized, "")
             self.showErrorView(message: message, errorCode: nil)
             return
-        }else if viewModel.getReportWay().count == 0{
+        }else if viewModel.checkReportwayAddOrNot() == false{
             let message = String(format: "Please_select_reportWay".localized, "")
             self.showErrorView(message: message, errorCode: nil)
             return
