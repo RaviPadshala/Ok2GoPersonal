@@ -158,7 +158,7 @@ class EmployeesViewModel {
                 self.delegate?.shouldReloadView()
                 NavigationController.shared?.showSuccessView(message: "EMPLOYEE_ADDED".localized)
             } else {
-
+                self.showErrorView(message: error?.error_message, errorCode: error?.error_code)
             }
         }
     }
@@ -178,6 +178,14 @@ class EmployeesViewModel {
 
             }
         }
+    }
+    
+    func showErrorView(message: String?, errorCode: Int?) {
+        let vc = ViewSource.errorView()
+        vc.modalPresentationStyle = .overCurrentContext
+        vc.modalTransitionStyle = .crossDissolve
+        vc.viewModel = ErrorViewModel(title: String(errorCode ?? 0), message: message)
+        NavigationController.shared?.present(vc, animated: true, completion: nil)
     }
 }
 
