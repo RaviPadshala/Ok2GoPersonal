@@ -67,7 +67,7 @@ class SetPasswordManagerViewController: UIViewController {
         passwordTextField.addCloseToolbar()
         passwordTextField.placeholder = "ENTER_CODE".localized
         
-        self.passwordTextField.text = "0iR2K48"
+//        self.passwordTextField.text = "Ravi@1515"
     }
 
     func setLocalizedStrings() {
