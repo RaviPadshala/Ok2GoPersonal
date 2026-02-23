@@ -40,6 +40,15 @@ class AddEmployeeView: UIViewController {
     
     var viewModel = AddEmployeeViewModel()
     var confirmAction: ((_ employee: EmployeeObj) -> Void)?
+    var addConfirmAction: ((_ employee: [EmployeesObj?]) -> Void)?
+    
+    
+    let loadingView = LoadingView()
+    var vc: UIViewController? {
+        let vc = NavigationController.shared?.getCurrentViewController()
+        self.loadingView.frame = vc?.view.frame ?? CGRect(x: 0, y: 0, width: 0, height: 0)
+        return vc
+    }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -191,8 +200,9 @@ class AddEmployeeView: UIViewController {
             return
         }
         
-        dismissView()
-        confirmAction?(viewModel.getEmployee())
+        
+        self.addEmployee(employee: viewModel.getEmployee())
+        
     }
     
     func showErrorView(message: String?, errorCode: Int?) {
@@ -284,6 +294,25 @@ extension AddEmployeeView {
         UIView.animate(withDuration: 1) {
             self.bottomConstraint.constant = 40
             self.view.layoutIfNeeded()
+        }
+    }
+    
+    func addEmployee(employee: EmployeeObj) {
+        vc?.view.addSubview(loadingView)
+
+        let addEmpEndpoint = AddEmployeeEndpoint(employee: employee)
+        addEmpEndpoint.apiCall { result, error in
+            self.loadingView.removeFromSuperview()
+
+            if error?.success ?? false {
+                NavigationController.shared?.showSuccessView(message: "EMPLOYEE_ADDED".localized)
+                self.addConfirmAction?(result ?? [])
+                self.dismissView()
+            } else {
+                self.viewModel.clearAllField()
+                self.setupValues()
+                self.showErrorView(message: error?.error_message, errorCode: error?.error_code)
+            }
         }
     }
 }

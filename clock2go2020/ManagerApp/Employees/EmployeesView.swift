@@ -91,8 +91,9 @@ class EmployeesView: UIView {
         let vc = ViewSource.addEmployeeView()
         vc.modalPresentationStyle = .overCurrentContext
         vc.modalTransitionStyle = .crossDissolve
-        vc.confirmAction = { employee in
-            self.viewModel.addEmployee(employee: employee)
+        vc.addConfirmAction = { employee in
+            self.viewModel.setEmployees(employees: employee)
+            self.shouldReloadView()
         }
         NavigationController.shared?.present(vc, animated: true, completion: nil)
     }

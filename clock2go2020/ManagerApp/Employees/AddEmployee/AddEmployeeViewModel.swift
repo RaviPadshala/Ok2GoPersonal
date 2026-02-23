@@ -81,6 +81,15 @@ class AddEmployeeViewModel {
     func setEmail(_ email: String?) {
         employee.empEmail = email
     }
+    
+    func clearAllField(){
+        self.employee.empCode = nil
+        self.employee.empName = nil
+        self.employee.empPhone = nil
+        self.employee.empEmail = nil
+        self.employee.deptIds = nil
+        self.employee.reportWay = nil
+    }
 
     func getDepartmentTitles() -> [String] {
         return ManagerAppDataManager.shared.getDepartmentTitles()
