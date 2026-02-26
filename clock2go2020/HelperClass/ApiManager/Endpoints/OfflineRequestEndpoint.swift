@@ -52,16 +52,19 @@ class OfflineRequestEndpoint: EndpointItem {
             dict["lon"]          = offlineRequest.lon
             dict["accuracy"]     = offlineRequest.accuracy
             dict["taskId"]       = offlineRequest.taskId
+            dict["taskName"]       = offlineRequest.taskname
             dict["remark"]       = offlineRequest.remark
             dict["timestamp"]    = offlineRequest.timestamp
             
             if endpointType == .writeDistance {
             dict["distance"]     = offlineRequest.distance
             }
-         
-            let locationName = offlineRequest.locationName != -1000 ? offlineRequest.locationName : nil
-            dict["extraFields"]     = ["trnsType": offlineRequest.trnsType, "locationName" : locationName]
-           
+        
+            if offlineRequest.locationName != -1000 {
+                dict["extraFields"]     = ["trnsType": offlineRequest.trnsType, "locationName" : offlineRequest.locationName]
+            } else {
+                dict["extraFields"]     = ["trnsType": offlineRequest.trnsType]
+            }
             
             return dict
         }

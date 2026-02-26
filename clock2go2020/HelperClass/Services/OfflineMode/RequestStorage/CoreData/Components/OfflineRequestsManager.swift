@@ -45,9 +45,9 @@ class OfflineRequestsManager: NSObject {
         self.save()
     }
 
-    func save(type: String?, taskId: String?, remark: String?, locationName: Int?) {
+    func save(type: String?, taskId: String?, taskName: String?, remark: String?, locationName: Int?) {
         let request = Request(context: context)
-        request.set(type: type, taskId: taskId, remark: remark, locationName: locationName)
+        request.set(type: type, taskId: taskId, taskName: taskName, remark: remark, locationName: locationName)
         self.save()
     }
 

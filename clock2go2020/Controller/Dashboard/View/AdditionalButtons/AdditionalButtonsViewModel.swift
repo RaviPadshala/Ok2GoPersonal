@@ -274,7 +274,7 @@ class AdditionalButtonsViewModel: NSObject {
     }
 
     private func saveReportOffline(type: ReportActionType, task: TaskObj?, remark: String?) {
-        OfflineRequestsManager.sharedInstance.save(type: type.rawValue, taskId: task?.taskId, remark: remark, locationName: nil)
+        OfflineRequestsManager.sharedInstance.save(type: type.rawValue, taskId: task?.taskId, taskName: task?.taskName, remark: remark, locationName: nil)
         NavigationController.shared?.showSuccessView(message: "OFFLINE_MODE_REPORT_SAVED".localized)
     }
 

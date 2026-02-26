@@ -26,7 +26,7 @@ extension Request {
         self.attachedFile = reportPicture.attachedFiles.first?.data
     }
 
-    func set(type: String?, taskId: String?, remark: String?, locationName: Int? = nil) {
+    func set(type: String?, taskId: String?, taskName: String?, remark: String?, locationName: Int? = nil) {
         self.type = type
         self.action = "write_report"
 
@@ -46,6 +46,7 @@ extension Request {
         self.accuracy = Int16(accuracy)
 
         self.taskId = taskId
+        self.taskname = taskName
         self.remark = remark
         self.locationName = Int16(locationName ?? -1000)
 

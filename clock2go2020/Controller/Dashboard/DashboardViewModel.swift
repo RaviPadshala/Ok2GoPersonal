@@ -1061,7 +1061,7 @@ class DashboardViewModel {
     }
     
     func saveReportOffline(type: ReportActionType) {
-        OfflineRequestsManager.sharedInstance.save(type: type.rawValue, taskId: selectedTask?.taskId, remark: selectedTask?.remark, locationName: selectedLocationName?.locationId)
+        OfflineRequestsManager.sharedInstance.save(type: type.rawValue, taskId: selectedTask?.taskId, taskName: selectedTask?.taskName, remark: selectedTask?.remark, locationName: selectedLocationName?.locationId)
         NavigationController.shared?.showSuccessView(message: "OFFLINE_MODE_REPORT_SAVED".localized)
     }
     
@@ -1303,16 +1303,16 @@ class DashboardViewModel {
             }
         }
         
-        requestTimer = Timer.scheduledTimer(withTimeInterval: 8.0, repeats: false, block: { [weak self] timer in
-            self?.requestTimer?.invalidate()
-            self?.requestTimer = nil
-            report?.apiManager.cancelSession()
-            self?.saveReportOffline(type: type)
-            self?.sendTrackingReportByReportType(type: type)
-            
-            NavigationController.shared?.showSuccessView(message: "offline_report_message".localized)
-            return
-        })
+//        requestTimer = Timer.scheduledTimer(withTimeInterval: 8.0, repeats: false, block: { [weak self] timer in
+//            self?.requestTimer?.invalidate()
+//            self?.requestTimer = nil
+//            report?.apiManager.cancelSession()
+//            self?.saveReportOffline(type: type)
+//            self?.sendTrackingReportByReportType(type: type)
+//            
+//            NavigationController.shared?.showSuccessView(message: "offline_report_message".localized)
+//            return
+//        })
         
         //   }
         
@@ -1710,6 +1710,7 @@ class DashboardViewModel {
         if let request = requests.first {
             self.vc?.view.addSubview(self.loadingView)
             let endpoint = OfflineRequestEndpoint(offlineRequest: request)
+            print("enpoint offline report", endpoint.convertToDictionary())
             endpoint.apiCall { (_, error) in
                 if error?.success ?? false || error == nil {
                     self.waitingForLoadData = true
