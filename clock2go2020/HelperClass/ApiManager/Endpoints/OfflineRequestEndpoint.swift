@@ -55,6 +55,7 @@ class OfflineRequestEndpoint: EndpointItem {
             dict["taskName"]       = offlineRequest.taskname
             dict["remark"]       = offlineRequest.remark
             dict["timestamp"]    = offlineRequest.timestamp
+            dict["action"] = offlineRequest.action
             
             if endpointType == .writeDistance {
             dict["distance"]     = offlineRequest.distance
@@ -79,6 +80,7 @@ class OfflineRequestEndpoint: EndpointItem {
         } else {
             switch endpointType {
             case .report, .reportTracking:
+                print("params:", convertToDictionary())
                 apiManager.call(type: endpointType, params: convertToDictionary()) { (response: ReportResult?, error: ErrorObject?) in
                     handler(response, error)
                 }

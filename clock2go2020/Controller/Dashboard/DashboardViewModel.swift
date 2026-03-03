@@ -1060,10 +1060,12 @@ class DashboardViewModel {
         offlineModeLabelHidden = false
     }
     
-    func saveReportOffline(type: ReportActionType) {
-        OfflineRequestsManager.sharedInstance.save(type: type.rawValue, taskId: selectedTask?.taskId, taskName: selectedTask?.taskName, remark: selectedTask?.remark, locationName: selectedLocationName?.locationId)
+    func saveReportOffline(type: ReportActionType, task: TaskObj) {
+        print("type:", type.rawValue, "task name:", task.taskName, "tsdkID:", task.taskId)
+        OfflineRequestsManager.sharedInstance.save(type: type.rawValue, taskId: task.taskId, taskName: task.taskName, remark: selectedTask?.remark, locationName: selectedLocationName?.locationId)
         NavigationController.shared?.showSuccessView(message: "OFFLINE_MODE_REPORT_SAVED".localized)
         self.delegate?.shouldRefreshView()
+//        self.checkSavedRequests(isFromReachability: true)
     }
     
     
@@ -1117,7 +1119,7 @@ class DashboardViewModel {
     
     
     func sendReport(endpointType: EndpointItemType = .report, type: ReportActionType, remark: String?) {
-        
+        let task = self.getTaskByActionType(type)
         vc?.view.addSubview(loadingView)
         guard UserDefaultsManager.connectionServiceCount > 0 else {
             self.showNoInternetPopup()
@@ -1132,7 +1134,7 @@ class DashboardViewModel {
              type == .serviceEntry ||
              type == .serviceExit) {
             
-            saveReportOffline(type: type)
+            saveReportOffline(type: type, task: task!)
             self.sendTrackingReportByReportType(type: type)
             self.loadingView.removeFromSuperview()
             return
@@ -1161,7 +1163,7 @@ class DashboardViewModel {
         
         let accuracy = 16
         
-        let task = self.getTaskByActionType(type)
+        
         let taskId: String? = task?.taskId ?? self.unknownTask?.taskId
         
         let taskName: String? = task?.taskName ?? self.unknownTask?.taskName
@@ -1213,7 +1215,7 @@ class DashboardViewModel {
         } else {
             report = ReportEndpoint(endpointType: endpointType, type: type, absenceType: absenceType, files: files, taskId: taskId, taskName: taskName, remark: remark, fromDate: fromDate, toDate: toDate, lat: lat, lon: lon, accuracy: accuracy, tagUID: self.tagUID, empIds: emps, extraFields: extraFields, fromCity: self.selectedFromCity, toCity: self.selectedToCity, distance: self.enteredDistance)
         }
-        
+        var isReportSent = Bool()
         report?.apiCall { (result, error) in
             self.selectedToCity = nil
             self.selectedFromCity = nil
@@ -1225,6 +1227,7 @@ class DashboardViewModel {
             if error?.success ?? false {
                 self.latNFC = nil
                 self.longNFC = nil
+                isReportSent = true
                 
                 CompaniesDataManager.shared.setReportList(reports: result?.data ?? [])
                 
@@ -1312,18 +1315,20 @@ class DashboardViewModel {
             }
         }
         
-        requestTimer = Timer.scheduledTimer(withTimeInterval: 8.0, repeats: false, block: { [weak self] timer in
-            self?.requestTimer?.invalidate()
-            self?.requestTimer = nil
-            report?.apiManager.cancelSession()
-            self?.saveReportOffline(type: type)
-            self?.sendTrackingReportByReportType(type: type)
-            
-            NavigationController.shared?.showSuccessView(message: "offline_report_message".localized)
-            return
-        })
-        
-        //   }
+        if !isReportSent{
+            requestTimer = Timer.scheduledTimer(withTimeInterval: 8.0, repeats: false, block: { [weak self] timer in
+                if !isReportSent{
+                    self?.requestTimer?.invalidate()
+                    self?.requestTimer = nil
+                    report?.apiManager.cancelSession()
+                    self?.saveReportOffline(type: type, task: task!)
+                    self?.sendTrackingReportByReportType(type: type)
+                    
+                    NavigationController.shared?.showSuccessView(message: "offline_report_message".localized)
+                    return
+                }
+            })
+        }
         
     }
     
@@ -1661,7 +1666,7 @@ class DashboardViewModel {
                     self?.delegate?.shouldRefreshView()
                     completion()
                 } else {
-                    self?.checkSavedRequests()
+//                    self?.checkSavedRequests()
                     completion()
                 }
             }
@@ -1676,29 +1681,6 @@ class DashboardViewModel {
             CompaniesDataManager.shared.getFromCache()
             delegate?.shouldRefreshView()
             completion()
-        }
-    }
-    
-    private func sendEchoRequest() {
-        if !ReachabilityManager.shared.isMobileDataDisabled() && LocationManager.shared.isLocationEnabled() && UserDefaultsManager.connectionServiceCount > 0 {
-            let request = EchoEndpoint()
-            request.apiCall { [weak self] result, error in
-                self?.requestTimer?.invalidate()
-                self?.requestTimer = nil
-                if result?.success ?? false {
-                    self?.checkSavedRequests()
-                } else {
-                    self?.offlineModeLabelHidden = false
-                    CompaniesDataManager.shared.getFromCache()
-                    self?.delegate?.shouldRefreshView()
-                }
-            }
-            
-            requestTimer = Timer.scheduledTimer(withTimeInterval: 5.0, repeats: false, block: { [weak self] timer in
-                self?.requestTimer?.invalidate()
-                self?.requestTimer = nil
-//                request.apiManager.cancelSession()
-            })
         }
     }
     
@@ -1719,7 +1701,6 @@ class DashboardViewModel {
         if let request = requests.first {
             self.vc?.view.addSubview(self.loadingView)
             let endpoint = OfflineRequestEndpoint(offlineRequest: request)
-            print("enpoint offline report", endpoint.convertToDictionary())
             endpoint.apiCall { (_, error) in
                 if error?.success ?? false || error == nil {
                     self.waitingForLoadData = true

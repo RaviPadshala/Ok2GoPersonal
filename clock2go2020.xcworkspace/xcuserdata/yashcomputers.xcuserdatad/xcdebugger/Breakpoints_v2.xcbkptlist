@@ -7,32 +7,48 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "1CEFB1F5-ADB0-4D88-8410-CB979D6AF992"
+            uuid = "8AA67DE3-75DA-49E0-80E2-E9B1409A21F0"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "clock2go2020/Controller/Dashboard/DashboardViewModel.swift"
+            filePath = "clock2go2020/HelperClass/ApiManager/Endpoints/OfflineRequestEndpoint.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1149"
-            endingLineNumber = "1149"
-            landmarkName = "sendReport(endpointType:type:remark:)"
+            startingLineNumber = "83"
+            endingLineNumber = "83"
+            landmarkName = "apiCall(handler:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "4CB8C4A8-3552-4559-BC88-5A3842F2D089"
+            uuid = "267D8F7E-CAE3-4661-AD7E-4E419DD20702"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "clock2go2020/HelperClass/ApiManager/Endpoints/OfflineRequestEndpoint.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "85"
+            endingLineNumber = "85"
+            landmarkName = "apiCall(handler:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F14A427D-8F12-4E90-8F4F-17F598BD0814"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "clock2go2020/Controller/Dashboard/DashboardViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1147"
-            endingLineNumber = "1147"
-            landmarkName = "sendReport(endpointType:type:remark:)"
+            startingLineNumber = "1707"
+            endingLineNumber = "1707"
+            landmarkName = "checkSavedRequests(isFromReachability:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

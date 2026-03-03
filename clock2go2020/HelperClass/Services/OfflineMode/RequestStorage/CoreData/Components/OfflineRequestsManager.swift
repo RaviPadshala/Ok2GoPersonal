@@ -118,8 +118,6 @@ class OfflineRequestsManager: NSObject {
             timestamp = numberValue.doubleValue
         }
         
-
-        print("Timestamp:", timestamp)
         let timezoneString = input["timezone"] as? String ?? "UTC"
         let lat = input["lat"] as? Double
         let lon = input["lon"] as? Double

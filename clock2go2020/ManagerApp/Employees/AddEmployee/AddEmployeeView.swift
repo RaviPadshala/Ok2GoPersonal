@@ -230,6 +230,7 @@ class AddEmployeeView: UIViewController {
 
         vc.choosedTypes = { titles in
             self.viewModel.setSelectedDepartments(selectedDepartments: titles)
+            self.lbl_department.text = titles.joined(separator: ", ")
             self.setupValues()
         }
 
