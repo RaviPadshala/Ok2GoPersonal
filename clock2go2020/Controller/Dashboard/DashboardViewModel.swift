@@ -1118,17 +1118,12 @@ class DashboardViewModel {
     
     func sendReport(endpointType: EndpointItemType = .report, type: ReportActionType, remark: String?) {
         
+        vc?.view.addSubview(loadingView)
         guard UserDefaultsManager.connectionServiceCount > 0 else {
             self.showNoInternetPopup()
+            self.loadingView.removeFromSuperview()
             return
         }
-        
-//        guard !(!ReachabilityManager.shared.hasInternetConnection && (type == .workStart || type == .workEnd || type == .endAndStartWork || type == .serviceEntry || type == .serviceExit)) else {
-//            
-//            saveReportOffline(type: type)
-//            self.sendTrackingReportByReportType(type: type)
-//            return
-//        }
         
         if !ReachabilityManager.shared.hasInternetConnection &&
             (type == .workStart ||
@@ -1139,6 +1134,7 @@ class DashboardViewModel {
             
             saveReportOffline(type: type)
             self.sendTrackingReportByReportType(type: type)
+            self.loadingView.removeFromSuperview()
             return
         }
         
@@ -1316,16 +1312,16 @@ class DashboardViewModel {
             }
         }
         
-//        requestTimer = Timer.scheduledTimer(withTimeInterval: 8.0, repeats: false, block: { [weak self] timer in
-//            self?.requestTimer?.invalidate()
-//            self?.requestTimer = nil
-//            report?.apiManager.cancelSession()
-//            self?.saveReportOffline(type: type)
-//            self?.sendTrackingReportByReportType(type: type)
-//            
-//            NavigationController.shared?.showSuccessView(message: "offline_report_message".localized)
-//            return
-//        })
+        requestTimer = Timer.scheduledTimer(withTimeInterval: 8.0, repeats: false, block: { [weak self] timer in
+            self?.requestTimer?.invalidate()
+            self?.requestTimer = nil
+            report?.apiManager.cancelSession()
+            self?.saveReportOffline(type: type)
+            self?.sendTrackingReportByReportType(type: type)
+            
+            NavigationController.shared?.showSuccessView(message: "offline_report_message".localized)
+            return
+        })
         
         //   }
         
