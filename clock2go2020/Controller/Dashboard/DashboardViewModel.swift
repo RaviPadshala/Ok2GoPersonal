@@ -1063,6 +1063,7 @@ class DashboardViewModel {
     func saveReportOffline(type: ReportActionType) {
         OfflineRequestsManager.sharedInstance.save(type: type.rawValue, taskId: selectedTask?.taskId, taskName: selectedTask?.taskName, remark: selectedTask?.remark, locationName: selectedLocationName?.locationId)
         NavigationController.shared?.showSuccessView(message: "OFFLINE_MODE_REPORT_SAVED".localized)
+        self.delegate?.shouldRefreshView()
     }
     
     
@@ -1122,7 +1123,19 @@ class DashboardViewModel {
             return
         }
         
-        guard !(!ReachabilityManager.shared.hasInternetConnection && (type == .workStart || type == .workEnd || type == .endAndStartWork || type == .serviceEntry || type == .serviceExit)) else {
+//        guard !(!ReachabilityManager.shared.hasInternetConnection && (type == .workStart || type == .workEnd || type == .endAndStartWork || type == .serviceEntry || type == .serviceExit)) else {
+//            
+//            saveReportOffline(type: type)
+//            self.sendTrackingReportByReportType(type: type)
+//            return
+//        }
+        
+        if !ReachabilityManager.shared.hasInternetConnection &&
+            (type == .workStart ||
+             type == .workEnd ||
+             type == .endAndStartWork ||
+             type == .serviceEntry ||
+             type == .serviceExit) {
             
             saveReportOffline(type: type)
             self.sendTrackingReportByReportType(type: type)

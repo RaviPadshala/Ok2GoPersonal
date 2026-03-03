@@ -186,9 +186,24 @@ class CompaniesDataManager {
     }
 
     func getLastReports() -> [ReportObj?] {
-        guard var lastReports = currentCompany()?.lastReports as? [ReportObj] else { return [] }
-        lastReports.sort { $0.time > $1.time }
-        return lastReports
+        if let company = currentCompany(), var arr = company.lastReports, arr.count > 0{
+            
+            let offlineReportarr = OfflineRequestsManager.sharedInstance.getOfflineReport()
+            print(offlineReportarr)
+            
+            arr.append(contentsOf: offlineReportarr)
+            
+            arr.sort { $0!.time > $1!.time }
+            return arr
+        }else{
+            var offlineReportarr = OfflineRequestsManager.sharedInstance.getOfflineReport()
+            print(offlineReportarr)
+            offlineReportarr.sort { $0.time > $1.time }
+            return offlineReportarr
+        }
+//        guard var lastReports = currentCompany()?.lastReports as? [ReportObj] else { return [] }
+//        lastReports.sort { $0.time > $1.time }
+//        return lastReports
     }
     
     func getLastReportsWithoutSort() -> [ReportObj?] {

@@ -91,4 +91,64 @@ class OfflineRequestsManager: NSObject {
         save()
     }
 
+    func getOfflineReport() -> [ReportObj]{
+        var arr: [ReportObj] = []
+        let requests = self.fetch(Request.self)
+        if !requests.isEmpty {
+            for item in requests {
+                let endpoint = OfflineRequestEndpoint(offlineRequest: item)
+                if let dict = endpoint.convertToDictionary() {
+                    // Attempt to extract a human-readable address if available
+                    let locationAddress = dict["location"] as? String
+                    let report = makeReportObj(from: dict, locationAddress: locationAddress)
+                    arr.append(report)
+                }
+            }
+        }
+        return arr
+    }
+    
+    func makeReportObj(from input: [String: Any], locationAddress: String?) -> ReportObj {
+        
+        // 1️⃣ Extract raw values
+        var timestamp = input["timestamp"] as? TimeInterval ?? 0
+        
+
+        if let numberValue = input["timestamp"] as? NSNumber {
+            timestamp = numberValue.doubleValue
+        }
+        
+
+        print("Timestamp:", timestamp)
+        let timezoneString = input["timezone"] as? String ?? "UTC"
+        let lat = input["lat"] as? Double
+        let lon = input["lon"] as? Double
+        let type = input["type"] as? String
+        let taskId = input["taskId"] as? String
+        let fullTaskName = input["taskName"] as? String ?? ""
+        
+        
+        // 5️⃣ Create ReportObj
+        return ReportObj(
+            time: self.convertTimestampToTime(timestamp, timezone: timezoneString),
+            actionType: type,
+            location: locationAddress,
+            lon: String(lon!),
+            lat: String(lat!),
+            taskName: fullTaskName,
+            taskId: taskId,
+            remark: nil,
+            healthDisclaimerAccepted: nil,
+            event: nil
+        )
+    }
+    
+    func convertTimestampToTime(_ timestamp: TimeInterval,
+                                timezone: String) -> String {
+        let date = Date(timeIntervalSince1970: timestamp)
+        let formatter = DateFormatter()
+        formatter.dateFormat = "HH:mm:ss"
+        formatter.timeZone = TimeZone(identifier: timezone)
+        return formatter.string(from: date)
+    }
 }
