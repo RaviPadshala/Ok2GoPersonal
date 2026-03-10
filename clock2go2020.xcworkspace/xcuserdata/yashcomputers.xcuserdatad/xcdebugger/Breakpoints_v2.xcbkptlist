@@ -46,9 +46,25 @@
             filePath = "clock2go2020/Controller/Dashboard/DashboardViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1707"
-            endingLineNumber = "1707"
+            startingLineNumber = "1710"
+            endingLineNumber = "1710"
             landmarkName = "checkSavedRequests(isFromReachability:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "073D838C-352F-46A4-8C89-4F5031CA4308"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "clock2go2020/Controller/Dashboard/DashboardViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "1137"
+            endingLineNumber = "1137"
+            landmarkName = "sendReport(endpointType:type:remark:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

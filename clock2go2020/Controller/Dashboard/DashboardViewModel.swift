@@ -1277,10 +1277,13 @@ class DashboardViewModel {
                 self.longNFC = nil
                 self.loadingView.removeFromSuperview()
                 switch error?.error_code ?? 01 {
-                    //                case 401, 500 ... 600, 1001, 2102, 01:
-                    //                    self.saveReportOffline(type: type)
-                    //                    print("success")
-                    //                    break
+                case 401, 500 ... 600, 1001, 2102, 01:
+                    self.saveReportOffline(type: type, task: task!)
+                    self.sendTrackingReportByReportType(type: type)
+                    
+                    NavigationController.shared?.showSuccessView(message: "offline_report_message".localized)
+                    print("success")
+                    break
                 case 1701:
                     if type == .workStart {
                         UserDefaultsManager.isLogin = false
