@@ -1060,9 +1060,13 @@ class DashboardViewModel {
         offlineModeLabelHidden = false
     }
     
-    func saveReportOffline(type: ReportActionType, task: TaskObj) {
-        print("type:", type.rawValue, "task name:", task.taskName, "tsdkID:", task.taskId)
-        OfflineRequestsManager.sharedInstance.save(type: type.rawValue, taskId: task.taskId, taskName: task.taskName, remark: selectedTask?.remark, locationName: selectedLocationName?.locationId)
+    func saveReportOffline(type: ReportActionType, task: TaskObj?) {
+        if let selectedtsk = task{
+            OfflineRequestsManager.sharedInstance.save(type: type.rawValue, taskId: selectedtsk.taskId, taskName: selectedtsk.taskName, remark: selectedTask?.remark, locationName: selectedLocationName?.locationId)
+        }else{
+            OfflineRequestsManager.sharedInstance.save(type: type.rawValue, taskId: nil, taskName: nil, remark: selectedTask?.remark, locationName: selectedLocationName?.locationId)
+        }
+        
         NavigationController.shared?.showSuccessView(message: "OFFLINE_MODE_REPORT_SAVED".localized)
         self.delegate?.shouldRefreshView()
 //        self.checkSavedRequests(isFromReachability: true)
@@ -1277,8 +1281,13 @@ class DashboardViewModel {
                 self.longNFC = nil
                 self.loadingView.removeFromSuperview()
                 switch error?.error_code ?? 01 {
-                case 401, 500 ... 600, 1001, 2102, 01:
-                    self.saveReportOffline(type: type, task: task!)
+                case 401, 500 ... 600, 1001, 2102, 01, 625:
+                    if let tsk = task{
+                        self.saveReportOffline(type: type, task: tsk)
+                    }else{
+                        self.saveReportOffline(type: type, task: nil)
+                    }
+                    
                     self.sendTrackingReportByReportType(type: type)
                     
                     NavigationController.shared?.showSuccessView(message: "offline_report_message".localized)
