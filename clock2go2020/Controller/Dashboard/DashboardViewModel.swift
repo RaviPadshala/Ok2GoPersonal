@@ -1138,7 +1138,11 @@ class DashboardViewModel {
              type == .serviceEntry ||
              type == .serviceExit) {
             
-            saveReportOffline(type: type, task: task!)
+            if let tsk = task{
+                self.saveReportOffline(type: type, task: tsk)
+            }else{
+                self.saveReportOffline(type: type, task: nil)
+            }
             self.sendTrackingReportByReportType(type: type)
             self.loadingView.removeFromSuperview()
             return
@@ -1333,7 +1337,11 @@ class DashboardViewModel {
                     self?.requestTimer?.invalidate()
                     self?.requestTimer = nil
                     report?.apiManager.cancelSession()
-                    self?.saveReportOffline(type: type, task: task!)
+                    if let tsk = task{
+                        self?.saveReportOffline(type: type, task: tsk)
+                    }else{
+                        self?.saveReportOffline(type: type, task: nil)
+                    }
                     self?.sendTrackingReportByReportType(type: type)
                     
                     NavigationController.shared?.showSuccessView(message: "offline_report_message".localized)
