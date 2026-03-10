@@ -1272,7 +1272,7 @@ class DashboardViewModel {
                     self.loadingView.removeFromSuperview()
                 }
             } else {
-                
+                isReportSent = true
                 self.latNFC = nil
                 self.longNFC = nil
                 self.loadingView.removeFromSuperview()
