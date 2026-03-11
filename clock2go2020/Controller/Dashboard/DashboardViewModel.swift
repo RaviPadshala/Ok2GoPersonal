@@ -1139,6 +1139,7 @@ class DashboardViewModel {
     func sendReport(endpointType: EndpointItemType = .report, type: ReportActionType, remark: String?) {
         let task = self.getTaskByActionType(type)
         vc?.view.addSubview(loadingView)
+        print("UserDefaultsManager.connectionServiceCount", UserDefaultsManager.connectionServiceCount)
         guard UserDefaultsManager.connectionServiceCount > 0 else {
             self.showNoInternetPopup()
             self.loadingView.removeFromSuperview()
@@ -1344,18 +1345,27 @@ class DashboardViewModel {
     
     func showNoInternetPopup() {
         
-        if isAirplaneModeOn(){
-            self.showFlightModePopup()
-            return
+//        if isAirplaneModeOn(){
+//            self.showFlightModePopup()
+//            return
+//        }
+        
+        isAirplaneModeOnNew { isAirplane in
+            if isAirplane {
+                self.showFlightModePopup()
+                return
+            }else{
+                let alertController = UIAlertController(title: "no_internet_message_alert".localized, message: "", preferredStyle: .alert)
+                let settingsAction = UIAlertAction(title: "OK".localized, style: .default, handler: nil)
+                alertController.addAction(settingsAction)
+                alertController.modalPresentationStyle = .overCurrentContext
+                alertController.modalTransitionStyle = .crossDissolve
+                
+                NavigationController.shared?.present(alertController, animated: true, completion: nil)
+            }
         }
         
-        let alertController = UIAlertController(title: "no_internet_message_alert".localized, message: "", preferredStyle: .alert)
-        let settingsAction = UIAlertAction(title: "OK".localized, style: .default, handler: nil)
-        alertController.addAction(settingsAction)
-        alertController.modalPresentationStyle = .overCurrentContext
-        alertController.modalTransitionStyle = .crossDissolve
         
-        NavigationController.shared?.present(alertController, animated: true, completion: nil)
     }
     
     func showFlightModePopup() {

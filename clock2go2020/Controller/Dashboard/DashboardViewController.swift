@@ -319,18 +319,27 @@ class DashboardViewController: UIViewController {
 
     func showNoInternetPopup() {
 
-        if isAirplaneModeOn(){
-            self.showFlightModePopup()
-            return
+//        if isAirplaneModeOn(){
+//            self.showFlightModePopup()
+//            return
+//        }
+        
+        isAirplaneModeOnNew { isAirplane in
+            if isAirplane {
+                self.showFlightModePopup()
+                return
+            }else{
+                let alertController = UIAlertController(title: "no_internet_message_alert".localized, message: "", preferredStyle: .alert)
+                let settingsAction = UIAlertAction(title: "OK".localized, style: .default, handler: nil)
+                alertController.addAction(settingsAction)
+                alertController.modalPresentationStyle = .overCurrentContext
+                alertController.modalTransitionStyle = .crossDissolve
+
+                NavigationController.shared?.present(alertController, animated: true, completion: nil)
+            }
         }
 
-        let alertController = UIAlertController(title: "no_internet_message_alert".localized, message: "", preferredStyle: .alert)
-        let settingsAction = UIAlertAction(title: "OK".localized, style: .default, handler: nil)
-        alertController.addAction(settingsAction)
-        alertController.modalPresentationStyle = .overCurrentContext
-        alertController.modalTransitionStyle = .crossDissolve
-
-        NavigationController.shared?.present(alertController, animated: true, completion: nil)
+        
     }
 
     func setupActions() {
