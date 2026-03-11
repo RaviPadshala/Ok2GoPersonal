@@ -188,12 +188,14 @@ class CompaniesDataManager {
     func getLastReports() -> [ReportObj?] {
         if let company = currentCompany(), var arr = company.lastReports, arr.count > 0{
             
-            let offlineReportarr = OfflineRequestsManager.sharedInstance.getOfflineReport()
+//            let offlineReportarr = OfflineRequestsManager.sharedInstance.getOfflineReport()
+            let offlineReportarr = OfflineRequestsManager.sharedInstance.newGetOfflineReport()
             arr.append(contentsOf: offlineReportarr)
             arr.sort { $0!.time > $1!.time }
             return arr
         }else{
-            var offlineReportarr = OfflineRequestsManager.sharedInstance.getOfflineReport()
+//            var offlineReportarr = OfflineRequestsManager.sharedInstance.getOfflineReport()
+            var offlineReportarr = OfflineRequestsManager.sharedInstance.newGetOfflineReport()
             offlineReportarr.sort { $0.time > $1.time }
             return offlineReportarr
         }

@@ -272,6 +272,7 @@
 		52FF4C8B23BF7EE700E40308 /* GuideView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52FF4C8723BF7EE700E40308 /* GuideView.xib */; };
 		52FF4C8C23BF7EE700E40308 /* SkipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FF4C8823BF7EE700E40308 /* SkipView.swift */; };
 		52FF4C8D23BF7EE700E40308 /* GuideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FF4C8923BF7EE700E40308 /* GuideView.swift */; };
+		5B6581C72F6141D900194B79 /* NewOfflineRequestEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6581C62F6141D900194B79 /* NewOfflineRequestEndpoint.swift */; };
 		840A1D902422C204002BFCD7 /* NotificationTypeEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840A1D8F2422C204002BFCD7 /* NotificationTypeEntity.swift */; };
 		840A1D912422C204002BFCD7 /* NotificationTypeEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840A1D8F2422C204002BFCD7 /* NotificationTypeEntity.swift */; };
 		840A1D93242357D2002BFCD7 /* UIBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840A1D92242357D2002BFCD7 /* UIBuilder.swift */; };
@@ -971,6 +972,7 @@
 		52FF4C8723BF7EE700E40308 /* GuideView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GuideView.xib; sourceTree = "<group>"; };
 		52FF4C8823BF7EE700E40308 /* SkipView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SkipView.swift; sourceTree = "<group>"; };
 		52FF4C8923BF7EE700E40308 /* GuideView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuideView.swift; sourceTree = "<group>"; };
+		5B6581C62F6141D900194B79 /* NewOfflineRequestEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewOfflineRequestEndpoint.swift; sourceTree = "<group>"; };
 		784701BEDC8F22BEE8E2A6EC /* Pods_clock2go2020.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_clock2go2020.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		840A1D8F2422C204002BFCD7 /* NotificationTypeEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationTypeEntity.swift; sourceTree = "<group>"; };
 		840A1D92242357D2002BFCD7 /* UIBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIBuilder.swift; sourceTree = "<group>"; };
@@ -3081,6 +3083,7 @@
 		8441CB2E23E061290034A43B /* Endpoints */ = {
 			isa = PBXGroup;
 			children = (
+				5B6581C62F6141D900194B79 /* NewOfflineRequestEndpoint.swift */,
 				41676B352DF0749E0027E006 /* CheckNFCEndPoint.swift */,
 				047F89732CC260AB00C6980D /* UpdateDailyStudentReportEndpoint.swift */,
 				8441CB2A23E05A760034A43B /* EndpointItem.swift */,
@@ -4282,6 +4285,7 @@
 				04561ED92CA583EB00B6A6CF /* FormWebViewController.swift in Sources */,
 				F70AD64C258BDDCA0025E47C /* AddMgrReportViewController.swift in Sources */,
 				04E16DAB2CF97E7F006CF609 /* GlobalFunction.swift in Sources */,
+				5B6581C72F6141D900194B79 /* NewOfflineRequestEndpoint.swift in Sources */,
 				04AC8B572C4917020034FADD /* CompanywiseReminderNotificationManager.swift in Sources */,
 				042A68B32BA94E350094D4DC /* SentHoursApprovedResult.swift in Sources */,
 				840C700E243B690700748DF2 /* WriteDistanceEndpoint.swift in Sources */,
@@ -4695,7 +4699,7 @@
 				CODE_SIGN_ENTITLEMENTS = clock2go2020/clock2go2020.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 4;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEVELOPMENT_TEAM = 9PG4W33667;
 				EXCLUDED_ARCHS = "";
@@ -4727,7 +4731,7 @@
 				CODE_SIGN_ENTITLEMENTS = clock2go2020/clock2go2020.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 4;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = 9PG4W33667;
 				EXCLUDED_ARCHS = "";

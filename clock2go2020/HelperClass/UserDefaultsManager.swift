@@ -7,6 +7,7 @@
 
 import UIKit
 
+let kSampleDictArray = "sampleDictArray"
 let kAppleLanguages = "AppleLanguages"
 let kPhoneNumber = "PhoneNumber"
 let kUDID = "udid"
@@ -256,6 +257,51 @@ class UserDefaultsManager: NSObject {
                 return nil
 
             }
+        }
+    }
+    
+    
+    // set/fetch offline report
+    class var sampleDictArray: [[String: Any]]? {
+        
+        set {
+            setDictionaryArray(newValue, forKey: kSampleDictArray)
+        }
+        
+        get {
+            return getDictionaryArray(forKey: kSampleDictArray)
+        }
+    }
+    
+    // store offline report
+    class func setDictionaryArray(_ array: [[String: Any]]?, forKey key: String) {
+        
+        guard let array = array else {
+            remove(for: key)
+            return
+        }
+        
+        do {
+            let data = try JSONSerialization.data(withJSONObject: array, options: [])
+            set(data, for: key, shouldClear: false)
+        } catch {
+            print("Failed to save dictionary array:", error)
+        }
+    }
+    
+    // get offline report
+    class func getDictionaryArray(forKey key: String) -> [[String: Any]]? {
+        
+        guard let data = getValue(forKey: key) as? Data else {
+            return nil
+        }
+        
+        do {
+            let array = try JSONSerialization.jsonObject(with: data, options: []) as? [[String: Any]]
+            return array
+        } catch {
+            print("Failed to fetch dictionary array:", error)
+            return nil
         }
     }
 

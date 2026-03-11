@@ -1072,6 +1072,20 @@ class DashboardViewModel {
 //        self.checkSavedRequests(isFromReachability: true)
     }
     
+    func newSaveOfflineReport(report: ReportEndpoint?){
+        if let rep = report, var params = rep.convertToDictionary(){
+            if var offlineData = UserDefaultsManager.sampleDictArray, offlineData.count > 0 {
+                params["timestamp"] = Int64(Date().timeIntervalSince1970)
+                offlineData.append(params)
+                UserDefaultsManager.sampleDictArray = offlineData
+            }else{
+                params["timestamp"] = Int64(Date().timeIntervalSince1970)
+                UserDefaultsManager.sampleDictArray = [params]
+            }
+            NavigationController.shared?.showSuccessView(message: "offline_report_message".localized)
+            self.delegate?.shouldRefreshView()
+        }
+    }
     
     func getAddressFromLatLon(pdblLatitude: String, withLongitude pdblLongitude: String,handler : @escaping(String)-> Void) {
         var center : CLLocationCoordinate2D = CLLocationCoordinate2D()
@@ -1131,29 +1145,10 @@ class DashboardViewModel {
             return
         }
         
-        if !ReachabilityManager.shared.hasInternetConnection &&
-            (type == .workStart ||
-             type == .workEnd ||
-             type == .endAndStartWork ||
-             type == .serviceEntry ||
-             type == .serviceExit) {
-            
-            if let tsk = task{
-                self.saveReportOffline(type: type, task: tsk)
-            }else{
-                self.saveReportOffline(type: type, task: nil)
-            }
-            self.sendTrackingReportByReportType(type: type)
-            self.loadingView.removeFromSuperview()
-            return
-        }
-        
         if endpointType != .reportAbsence{
             self.absenceReport = nil
         }
-        
-        // guard let appVersion = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String else { return }
-        
+                
         vc?.view.addSubview(loadingView)
         
         var lat : CLLocationDegrees?
@@ -1197,16 +1192,6 @@ class DashboardViewModel {
         }
         extraFields["locationName"] = selectedLocationName?.locationId
         
-        //        if CompaniesDataManager.shared.hasNFCLocationVerificationFeature(){
-//                    if self.latNFC != nil && self.longNFC != nil{
-//                        extraFields["LocationNFC"] = [
-//                            "latNFC": self.latNFC ?? 0.0,
-//                            "lonNFC": self.longNFC ?? 0.0
-//                        ]
-//                    }
-        //        }
-        
-        
         if self.isRevacha || self.isHolocaust {
             if isRevacha{
                 extraFields["trnsType"] = UserDefaultsManager.revachaLastLoginType
@@ -1223,6 +1208,22 @@ class DashboardViewModel {
         } else {
             report = ReportEndpoint(endpointType: endpointType, type: type, absenceType: absenceType, files: files, taskId: taskId, taskName: taskName, remark: remark, fromDate: fromDate, toDate: toDate, lat: lat, lon: lon, accuracy: accuracy, tagUID: self.tagUID, empIds: emps, extraFields: extraFields, fromCity: self.selectedFromCity, toCity: self.selectedToCity, distance: self.enteredDistance)
         }
+        
+        if !ReachabilityManager.shared.hasInternetConnection &&
+            (type == .workStart ||
+             type == .workEnd ||
+             type == .endAndStartWork ||
+             type == .serviceEntry ||
+             type == .serviceExit) {
+            
+            self.newSaveOfflineReport(report: report)
+            self.sendTrackingReportByReportType(type: type)
+            self.loadingView.removeFromSuperview()
+            return
+        }
+        
+        
+        
         var isReportSent = Bool()
         report?.apiCall { (result, error) in
             self.selectedToCity = nil
@@ -1286,15 +1287,9 @@ class DashboardViewModel {
                 self.loadingView.removeFromSuperview()
                 switch error?.error_code ?? 01 {
                 case 401, 500 ... 600, 1001, 2102, 01, 625:
-                    if let tsk = task{
-                        self.saveReportOffline(type: type, task: tsk)
-                    }else{
-                        self.saveReportOffline(type: type, task: nil)
-                    }
-                    
+                    self.newSaveOfflineReport(report: report)
                     self.sendTrackingReportByReportType(type: type)
-                    
-                    NavigationController.shared?.showSuccessView(message: "offline_report_message".localized)
+//                    NavigationController.shared?.showSuccessView(message: "offline_report_message".localized)
                     print("success")
                     break
                 case 1701:
@@ -1337,14 +1332,9 @@ class DashboardViewModel {
                     self?.requestTimer?.invalidate()
                     self?.requestTimer = nil
                     report?.apiManager.cancelSession()
-                    if let tsk = task{
-                        self?.saveReportOffline(type: type, task: tsk)
-                    }else{
-                        self?.saveReportOffline(type: type, task: nil)
-                    }
+                    self?.newSaveOfflineReport(report: report)
                     self?.sendTrackingReportByReportType(type: type)
-                    
-                    NavigationController.shared?.showSuccessView(message: "offline_report_message".localized)
+//                    NavigationController.shared?.showSuccessView(message: "offline_report_message".localized)
                     return
                 }
             })
@@ -1734,6 +1724,47 @@ class DashboardViewModel {
                     self.loadingView.removeFromSuperview()
                 }
             }
+        }
+    }
+    
+    func newFetchOfflineReport(isFromReachability: Bool = false){
+        if var offlineData = UserDefaultsManager.sampleDictArray, offlineData.count > 0 {
+//            print(offlineData)
+            
+            if offlineData.count > 0{
+                if let dict = offlineData.first, let action = dict["action"] as? String, action.count > 0 {
+                    let endpoint = NewOfflineRequestEndpoint(action: action)
+                    print(endpoint.endpointType)
+                    print(dict)
+                    
+//                    endpoint.offlineReportApiCall(dict) { (_, error) in
+//                        if error?.success ?? false || error == nil {
+//                            self.waitingForLoadData = true
+//                            offlineData.removeFirst()
+//                            UserDefaultsManager.sampleDictArray = offlineData
+//                            self.newFetchOfflineReport(isFromReachability: isFromReachability)
+//                        } else {
+//                            NavigationController.shared?.showErrorView(error: error)
+//                            
+//                            self.loadData()
+//                            
+//                            self.loadingView.removeFromSuperview()
+//                        }
+//                    }
+                }
+            }else{
+                if waitingForLoadData {
+                    self.loadData(isFromReachability: isFromReachability)
+                }
+                self.loadingView.removeFromSuperview()
+                return
+            }
+        }else{
+            if waitingForLoadData {
+                self.loadData(isFromReachability: isFromReachability)
+            }
+            self.loadingView.removeFromSuperview()
+            return
         }
     }
     

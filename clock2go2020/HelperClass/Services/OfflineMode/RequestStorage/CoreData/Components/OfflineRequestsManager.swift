@@ -108,6 +108,21 @@ class OfflineRequestsManager: NSObject {
         return arr
     }
     
+    func newGetOfflineReport() -> [ReportObj]{
+        var arr: [ReportObj] = []
+        if let requests = UserDefaultsManager.sampleDictArray, requests.count > 0 {
+            if !requests.isEmpty {
+                for item in requests {
+                    let locationAddress = item["locationName"] as? String
+                    let report = makeReportObj(from: item, locationAddress: locationAddress)
+                    arr.append(report)
+                }
+            }
+        }
+        
+        return arr
+    }
+    
     func makeReportObj(from input: [String: Any], locationAddress: String?) -> ReportObj {
         
         // 1️⃣ Extract raw values

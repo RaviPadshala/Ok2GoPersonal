@@ -2215,7 +2215,8 @@ extension DashboardViewController: ReachabilityObserverDelegate {
             print("No internet connection")
         } else {
             print("Has Internet connection")
-            viewModel.checkSavedRequests(isFromReachability: true)
+//            viewModel.checkSavedRequests(isFromReachability: true)
+            viewModel.newFetchOfflineReport(isFromReachability: true)
         }
     }
 }
