@@ -99,12 +99,12 @@ class DashboardViewController: UIViewController {
         }
         checkingDistanceMeasurement()
         UserDefaultsManager.isManagerApp = false
-        let fff = "400".localized
-        let hhh = "410".localized
-        let jjj = "421".localized
-        let uuu = "425".localized
-        let rrr = "434".localized
-        let qqq = "500".localized
+//        let fff = "400".localized
+//        let hhh = "410".localized
+//        let jjj = "421".localized
+//        let uuu = "425".localized
+//        let rrr = "434".localized
+//        let qqq = "500".localized
 
         NotificationCenter.default.addObserver(self, selector: #selector(companyChnage), name: Notification.Name(rawValue: "LoadData"), object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(companyChnage), name: Notification.Name(rawValue: "CompanyChnage"), object: nil)
@@ -116,6 +116,7 @@ class DashboardViewController: UIViewController {
         super.viewWillAppear(animated)
 
         NotificationCenter.default.addObserver(self, selector: #selector(updateAccountInfo), name: Notification.Name(rawValue: "PushNotificationRecieved"), object: nil)
+//        NotificationCenter.default.addObserver(self, selector: #selector(checkOfflineLabelVisibility(_:)), name: Notification.Name(rawValue: "EndpointStatusNotification"), object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(updateData), name: UIApplication.willEnterForegroundNotification, object: nil)
         self.tbl_sperad.addObserver(self, forKeyPath: "contentSize", options: .new, context: nil)
         refreshView()
@@ -918,7 +919,7 @@ class DashboardViewController: UIViewController {
         self.infoViewHeightConstraint.constant = viewModel.getInfoViewHeight()
         self.accountInfoView.config(viewModel: viewModel.getModelForAccountView())
 
-//        self.offlineLabel.isHidden = viewModel.offlineModeLabelHidden
+        self.offlineLabel.isHidden = viewModel.offlineModeLabelHidden
 
         self.trackingView.configure(model: viewModel.getModelForTrackingView())
 
@@ -1127,12 +1128,11 @@ class DashboardViewController: UIViewController {
     }
 
     @objc func checkOfflineLabelVisibility(_ notification: Notification) {
-//        if viewModel.offlineModeLabelHidden{
-//            self.offlineLabel.isHidden = true
-//        }else{
-//            self.offlineLabel.isHidden = false
-//        }
-
+        if viewModel.offlineModeLabelHidden{
+            self.offlineLabel.isHidden = true
+        }else{
+            self.offlineLabel.isHidden = false
+        }
     }
 
     func showConfirmView(type: ConfirmViewType, checkHealth: Bool = true) {
