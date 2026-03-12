@@ -1747,20 +1747,20 @@ class DashboardViewModel {
                     print(endpoint.endpointType)
                     print(dict)
                     
-//                    endpoint.offlineReportApiCall(dict) { (_, error) in
-//                        if error?.success ?? false || error == nil {
-//                            self.waitingForLoadData = true
-//                            offlineData.removeFirst()
-//                            UserDefaultsManager.sampleDictArray = offlineData
-//                            self.newFetchOfflineReport(isFromReachability: isFromReachability)
-//                        } else {
-//                            NavigationController.shared?.showErrorView(error: error)
-//                            
-//                            self.loadData()
-//                            
-//                            self.loadingView.removeFromSuperview()
-//                        }
-//                    }
+                    endpoint.offlineReportApiCall(dict) { (_, error) in
+                        if error?.success ?? false || error == nil {
+                            self.waitingForLoadData = true
+                            offlineData.removeFirst()
+                            UserDefaultsManager.sampleDictArray = offlineData
+                            self.newFetchOfflineReport(isFromReachability: isFromReachability)
+                        } else {
+                            NavigationController.shared?.showErrorView(error: error)
+                            
+                            self.loadData()
+                            
+                            self.loadingView.removeFromSuperview()
+                        }
+                    }
                 }
             }else{
                 if waitingForLoadData {
