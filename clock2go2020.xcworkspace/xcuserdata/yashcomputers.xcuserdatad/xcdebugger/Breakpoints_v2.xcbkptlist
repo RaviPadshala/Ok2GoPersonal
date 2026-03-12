@@ -18,36 +18,6 @@
             endingLineNumber = "133"
             landmarkName = "showNoInternetPopup()"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "A93513BD-0DE6-47A5-92CC-18688A91760F - 525db94f4560156d"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "clock2go2020.BarcodeScannerView.showNoInternetPopup() -&gt; ()"
-                  moduleName = "clock2go2020.debug.dylib"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/yashcomputers/Ravi&apos;sProject/Ok2GoPersonal/clock2go2020/Controller/Dashboard/View/BarcodeScannerView/BarcodeScannerView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "133"
-                  endingLineNumber = "133">
-               </Location>
-               <Location
-                  uuid = "A93513BD-0DE6-47A5-92CC-18688A91760F - c980bbec27b5b429"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Bool) -&gt; () in clock2go2020.BarcodeScannerView.showNoInternetPopup() -&gt; ()"
-                  moduleName = "clock2go2020.debug.dylib"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/yashcomputers/Ravi&apos;sProject/Ok2GoPersonal/clock2go2020/Controller/Dashboard/View/BarcodeScannerView/BarcodeScannerView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "134"
-                  endingLineNumber = "134">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -64,36 +34,38 @@
             endingLineNumber = "117"
             landmarkName = "showNoInternetPopup()"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "B6F0F9DF-3B8C-4949-AD80-693F0B0A1BBF - 652dafe9dc76c202"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "clock2go2020.AdditionalButtonsView.showNoInternetPopup() -&gt; ()"
-                  moduleName = "clock2go2020.debug.dylib"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/yashcomputers/Ravi&apos;sProject/Ok2GoPersonal/clock2go2020/Controller/Dashboard/View/AdditionalButtons/AdditionalButtonsView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "117"
-                  endingLineNumber = "117">
-               </Location>
-               <Location
-                  uuid = "B6F0F9DF-3B8C-4949-AD80-693F0B0A1BBF - 494efb521f036a04"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Bool) -&gt; () in clock2go2020.AdditionalButtonsView.showNoInternetPopup() -&gt; ()"
-                  moduleName = "clock2go2020.debug.dylib"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/yashcomputers/Ravi&apos;sProject/Ok2GoPersonal/clock2go2020/Controller/Dashboard/View/AdditionalButtons/AdditionalButtonsView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "118"
-                  endingLineNumber = "118">
-               </Location>
-            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "921FDEC7-85FC-4AFE-A722-4ACB1EF9A2E9"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "clock2go2020/AppDelegate.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "80"
+            endingLineNumber = "80"
+            landmarkName = "application(_:didFinishLaunchingWithOptions:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "846934B3-86C0-4C4B-9779-9EF6DA926FD8"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "clock2go2020/AppDelegate.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "77"
+            endingLineNumber = "77"
+            landmarkName = "application(_:didFinishLaunchingWithOptions:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
