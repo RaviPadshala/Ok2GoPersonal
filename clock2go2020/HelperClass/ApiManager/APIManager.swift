@@ -38,10 +38,10 @@ class APIManager {
     private var sessionManager: SessionManager
     
     //for developement purpose
-    static let networkEnviroment: NetworkEnvironment = .verotest
+//    static let networkEnviroment: NetworkEnvironment = .verotest
     
     // For live app
-//    static let networkEnviroment: NetworkEnvironment = .production_app_01_25_16
+    static let networkEnviroment: NetworkEnvironment = .production_app_01_25_16
     
     private static var sharedApiManager: APIManager = {
         let apiManager = APIManager(sessionManager: SessionManager())
