@@ -4699,7 +4699,7 @@
 				CODE_SIGN_ENTITLEMENTS = clock2go2020/clock2go2020.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 9;
+				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEVELOPMENT_TEAM = 9PG4W33667;
 				EXCLUDED_ARCHS = "";
@@ -4709,7 +4709,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.25.17;
+				MARKETING_VERSION = 1.25.18;
 				PRODUCT_BUNDLE_IDENTIFIER = com.ok2go.ok2go;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -4731,7 +4731,7 @@
 				CODE_SIGN_ENTITLEMENTS = clock2go2020/clock2go2020.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 9;
+				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = 9PG4W33667;
 				EXCLUDED_ARCHS = "";
@@ -4741,7 +4741,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.25.17;
+				MARKETING_VERSION = 1.25.18;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.ok2go.ok2go;
 				PRODUCT_NAME = "$(TARGET_NAME)";

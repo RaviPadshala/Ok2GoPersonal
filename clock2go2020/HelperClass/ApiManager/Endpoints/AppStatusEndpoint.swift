@@ -28,14 +28,14 @@ class AppStatusEndpoint: EndpointItem {
 
     override func convertToDictionary() -> Parameters? {
         var dict = [String : Any]()
-        dict["appVersion"] = appVersion
-        dict["gps_settings"] = hasGPSPermission ? 1 : 0
-        dict["gps_enabled"] = gpsEnabled ? 1 : 0
-        dict["battery_saving"] = batterySaving
-        dict["flight_mode"] = flightMode ? 1 : 0
         dict["action"] = "app_status"
         dict["phone"] = UserDefaultsManager.phoneNumber
         dict["udid"] = UserDefaultsManager.udid
+        dict["appVersion"] = appVersion
+        dict["flight_mode"] = flightMode ? 1 : 0
+        dict["battery_saving"] = batterySaving
+        dict["gps_enabled"] = gpsEnabled ? 1 : 0
+        dict["gps_settings"] = hasGPSPermission ? 1 : 0
 
         return dict
     }

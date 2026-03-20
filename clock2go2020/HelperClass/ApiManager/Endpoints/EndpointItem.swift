@@ -9,20 +9,20 @@ import UIKit
 import Alamofire
 
 class EndpointItem: NSObject {
-
+    
     var apiManager = APIManager.shared()
-
+    
     var endpointType: EndpointItemType
     var params: Parameters?
-
+    
     init(endpointType: EndpointItemType) {
         self.endpointType = endpointType
     }
-
+    
     func convertToDictionary() -> [String: Any]? {
         return nil
     }
-
+    
     /**
      Gets default query params that should be sent to all API requests.
      
@@ -36,37 +36,34 @@ class EndpointItem: NSObject {
         } else {
             items["action"] = endpointType.rawValue
         }
-
-       
-        items["agent"] = UAString()
-       
+        
+        // Get user phone number.
+        if let phone = UserDefaultsManager.phoneNumber {
+            items["phone"] = phone
+        }
+        
+        // Get user udid - except endpointType: register and verify_code
+        if let udid = UserDefaultsManager.udid {
+            items["udid"] = udid
+        }
         
         if let appVersion = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String{
             items["appVersion"] = appVersion
         }
         
+        
+        items["agent"] = UAString()
+        
         items["timezone"] = TimeZone.current.identifier
-
+        
         items["lang"] = UserDefaultsManager.appleLanguagesNew.first ?? "en"
         
-         // Get user phone number.
-        if let phone = UserDefaultsManager.phoneNumber {
-            items["phone"] = phone
-        }
-//        items["phone"] = "0528559938"
-
-        // Get user udid - except endpointType: register and verify_code
-        if let udid = UserDefaultsManager.udid {
-            items["udid"] = udid
-        }
-//        items["udid"] = "DdiiCdwpsDUSS9AQ"
-
         // Get user empId - except endpointType: register, verify_code and get_companies
         if let empId = UserDefaultsManager.empId {
             items["empId"] = empId
         }
-
+        
         return items
     }
-
+    
 }
