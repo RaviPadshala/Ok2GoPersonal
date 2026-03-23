@@ -42,6 +42,11 @@ class EndpointItem: NSObject {
             items["phone"] = phone
         }
         
+        // Get user empId - except endpointType: register, verify_code and get_companies
+        if let empId = UserDefaultsManager.empId {
+            items["empId"] = empId
+        }
+        
         // Get user udid - except endpointType: register and verify_code
         if let udid = UserDefaultsManager.udid {
             items["udid"] = udid
@@ -58,10 +63,7 @@ class EndpointItem: NSObject {
         
         items["lang"] = UserDefaultsManager.appleLanguagesNew.first ?? "en"
         
-        // Get user empId - except endpointType: register, verify_code and get_companies
-        if let empId = UserDefaultsManager.empId {
-            items["empId"] = empId
-        }
+        
         
         return items
     }
