@@ -21,12 +21,18 @@ class RegisterEndpoint: EndpointItem {
 
     override func convertToDictionary() -> Parameters? {
         var dict = super.getDefaultItems()
-
-        dict["phone"] = phone
-        dict["notificationId"] = notificationID
-        dict["cellType"] = "iOS"
- 
-        return dict
+        
+        var newDict = [String: Any]()
+        newDict["action"] = dict["action"]
+        newDict["phone"] = phone
+        newDict["notificationId"] = notificationID
+        newDict["cellType"] = "iOS"
+        newDict["lang"] = dict["lang"]
+        newDict["agent"] = dict["agent"]
+        newDict["timezone"] = dict["timezone"]
+        newDict["appVersion"] = dict["appVersion"]
+    
+        return newDict
     }
 
     func apiCall(handler: @escaping (_ response: ErrorObject?) -> Void) {
