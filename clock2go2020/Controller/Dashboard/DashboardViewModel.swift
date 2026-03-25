@@ -1739,14 +1739,10 @@ class DashboardViewModel {
     
     func newFetchOfflineReport(isFromReachability: Bool = false){
         if var offlineData = UserDefaultsManager.sampleDictArray, offlineData.count > 0 {
-//            print(offlineData)
-            
             if offlineData.count > 0{
                 if let dict = offlineData.first, let action = dict["action"] as? String, action.count > 0 {
-                    let endpoint = NewOfflineRequestEndpoint(action: action)
-                    print(endpoint.endpointType)
                     print(dict)
-                    
+                    let endpoint = NewOfflineRequestEndpoint(action: action)
                     endpoint.offlineReportApiCall(dict) { (_, error) in
                         if error?.success ?? false || error == nil {
                             self.waitingForLoadData = true

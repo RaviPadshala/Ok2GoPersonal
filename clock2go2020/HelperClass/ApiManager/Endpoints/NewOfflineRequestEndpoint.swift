@@ -23,25 +23,94 @@ class NewOfflineRequestEndpoint: EndpointItem {
         super.init(endpointType: endpoint)
     }
     
+    func converEndReportData(params: [String: Any]) -> Data? {
+        
+        var jsonString = """
+        {
+            "action": "\(params["action"] ?? "")",
+            "empId": "\(params["empId"] ?? "")",
+            "phone": "\(params["phone"] ?? "")",
+            "udid": "\(params["udid"] ?? "")"
+        """
+        
+        // extraFields (JSON)
+        if let extraFields = params["extraFields"],
+           let data = try? JSONSerialization.data(withJSONObject: extraFields),
+           let json = String(data: data, encoding: .utf8) {
+            jsonString += """
+            ,
+            "extraFields": \(json)
+            """
+        }
+        
+        // type
+        if let type = params["type"] {
+            jsonString += """
+            ,
+            "type": "\(type)"
+            """
+        }
+        
+        // location
+        if let lon = params["lon"] {
+            jsonString += """
+            ,
+            "lon": \(lon)
+            """
+        }
+        
+        if let lat = params["lat"] {
+            jsonString += """
+            ,
+            "lat": \(lat)
+            """
+        }
+        
+        if let accuracy = params["accuracy"] {
+            jsonString += """
+            ,
+            "accuracy": \(accuracy)
+            """
+        }
+        
+        // timestamp
+        if let timestamp = params["timestamp"] {
+            jsonString += """
+            ,
+            "timestamp": \(timestamp)
+            """
+        }
+        
+        // ending fields
+        jsonString += """
+            ,
+            "appVersion": "\(params["appVersion"] ?? "")",
+            "agent": "\(params["agent"] ?? "")",
+            "lang": "\(params["lang"] ?? "")",
+            "timezone": "\(params["timezone"] ?? "")"
+        }
+        """
+        
+        return jsonString.data(using: .utf8)
+    }
+    
     func offlineReportApiCall(_ params: Parameters, handler: @escaping (_ response: Any?, _ error: ErrorObject?) -> Void) {
 
         switch endpointType {
         case .report, .reportTracking:
             print("params:", params)
-            apiManager.call(type: endpointType, params: params) { (response: ReportResult?, error: ErrorObject?) in
-                handler(response, error)
+            
+            if let type = params["type"] as? Int, type == 2, !params.keys.contains("taskId") {
+                apiManager.call(type: endpointType, body: self.converEndReportData(params: params)) { (response: ReportResult?, error: ErrorObject?) in
+                    handler(response, error)
+                }
+            } else {
+                apiManager.call(type: endpointType, params: params) { (response: ReportResult?, error: ErrorObject?) in
+                    handler(response, error)
+                }
             }
-            break
-        case .writeDistance:
-            apiManager.call(type: endpointType, params: params) { (result: ErrorObject?, error: ErrorObject?) in
-                handler(result, error)
-            }
-        break
-        case .setAppStatus:
-            apiManager.call(type: endpointType, params: params) { (result: ErrorObject?, error: ErrorObject?) in
-                handler(result, error)
-            }
-            break
+            
+            
         default:
             break
         }

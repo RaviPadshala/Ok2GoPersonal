@@ -147,6 +147,123 @@ class ReportEndpoint: EndpointItem {
         return dict
     }
     
+    func convertWriteReportData() -> Data? {
+        let dict = super.getDefaultItems()
+        
+        var jsonString = """
+        {
+            "action": "\(dict["action"] ?? "")",
+            "empId": "\(dict["empId"] ?? "")",
+            "phone": "\(dict["phone"] ?? "")",
+            "udid": "\(dict["udid"] ?? "")"
+        """
+        
+        // extraFields (JSON)
+        if let extraFields = extraFields,
+           let data = try? JSONSerialization.data(withJSONObject: extraFields),
+           let json = String(data: data, encoding: .utf8) {
+            jsonString += """
+            ,
+            "extraFields": \(json)
+            """
+        }
+        
+        // type
+        let typeValue = (absenceType?.rawValue) ?? type.rawValue
+        jsonString += """
+        ,
+        "type": "\(typeValue)"
+        """
+        
+        // location fields
+        if let lon = lon {
+            jsonString += """
+            ,
+            "lon": \(lon)
+            """
+        }
+        
+        if let lat = lat {
+            jsonString += """
+            ,
+            "lat": \(lat)
+            """
+        }
+        
+        if let accuracy = accuracy {
+            jsonString += """
+            ,
+            "accuracy": \(accuracy)
+            """
+        }
+        
+        // city distance OR manual distance
+        if let city1 = selectedFromCity, let city2 = selectedToCity {
+            jsonString += """
+            ,
+            "CityDistance": {
+                "fromid": \(city1.ID ?? 0),
+                "toid": \(city2.ID ?? 0)
+            }
+            """
+        } else if let str = enteredDistance, str.count > 0 {
+            jsonString += """
+            ,
+            "Distance": {
+                "Distance": "\(str)"
+            }
+            """
+        }
+        
+        // NFC
+        if let str = tagUID, str.count > 0 {
+            jsonString += """
+            ,
+            "serial_nfc": "\(str)",
+            "nfc": 1
+            """
+        } else {
+            jsonString += """
+            ,
+            "nfc": 0
+            """
+        }
+        
+        // optional fields
+        if let taskId = taskId {
+            jsonString += """
+            ,
+            "taskId": "\(taskId)"
+            """
+        }
+        
+        if let taskName = taskName {
+            jsonString += """
+            ,
+            "taskName": "\(taskName)"
+            """
+        }
+        
+        if let remark = remark {
+            jsonString += """
+            ,
+            "remark": "\(remark)"
+            """
+        }
+        
+        // ending fields
+        jsonString += """
+            ,
+            "appVersion": "\(dict["appVersion"] ?? "")",
+            "agent": "\(dict["agent"] ?? "")",
+            "lang": "\(dict["lang"] ?? "")",
+            "timezone": "\(dict["timezone"] ?? "")"
+        }
+        """
+        
+        return jsonString.data(using: .utf8)
+    }
+    
     func convertReportAbsenseData() -> Data? {
         let dict = super.getDefaultItems()
         
@@ -326,6 +443,18 @@ class ReportEndpoint: EndpointItem {
             apiManager.call(type: endpointType, imagesData: files, body: convertReportAbsenseData()) { (response: ReportResult?, error: ErrorObject?) in
                 handler(response, error)
             }
+        case .report :
+            
+            if type == .workEnd{
+                apiManager.call(type: endpointType, body: convertWriteReportData()) { (response: ReportResult?, error: ErrorObject?) in
+                    handler(response, error)
+                }
+            }else{
+                apiManager.call(type: endpointType, params: convertToDictionary()) { (response: ReportResult?, error: ErrorObject?) in
+                    handler(response, error)
+                }
+            }
+            
         case .reportTracking :
             apiManager.call(type: endpointType, body: convertWriteTrakingData()) { (response: ReportResult?, error: ErrorObject?) in
                 handler(response, error)
