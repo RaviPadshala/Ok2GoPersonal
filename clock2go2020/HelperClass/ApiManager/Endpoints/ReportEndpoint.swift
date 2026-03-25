@@ -9,79 +9,79 @@ import Alamofire
 
 class ReportEndpoint: EndpointItem {
     
-
+    
     var type: ReportActionType
     var absenceType: AbsenceTypeEntity?
     var taskId: String?
     var taskName: String?
     var remark: String?
-
+    
     var files: [MediaObj?]
     var fromDate: String?
     var toDate: String?
-
+    
     var lat: Double?
     var lon: Double?
     var accuracy: Int?
-
-//    var appVersion: String?
-//    var agent: String?
+    
+    //    var appVersion: String?
+    //    var agent: String?
     var wifi: String?
     var tagUID: String?
-
+    
     var empIds: [Int]?
     var extraFields: [String: Any]?
     var selectedFromCity: CitylistObj?
     var selectedToCity: CitylistObj?
     var enteredDistance: String?
     
-  
-
+    
+    
     init(endpointType: EndpointItemType = .report, type: ReportActionType, absenceType: AbsenceTypeEntity? = nil, files: [MediaObj] = [], taskId: String? = nil, taskName: String? = nil, remark: String? = nil, fromDate: String? = nil, toDate: String? = nil, lat: Double? = nil, lon: Double? = nil, accuracy: Int? = nil,  wifi: String? = nil,tagUID: String?, empIds: [Int]? = nil, extraFields: [String: Any]? = nil, fromCity: CitylistObj? = nil, toCity: CitylistObj? = nil, distance: String? = nil) {
-
+        
         self.taskId = taskId
         self.taskName = taskName
         self.type = type
         self.absenceType = absenceType
         self.remark = remark
-
+        
         self.files = files
         self.fromDate = fromDate
         self.toDate = toDate
-
+        
         self.lat = lat
         self.lon = lon
         self.accuracy = accuracy
-
-//        self.appVersion = appVersion
-//        self.agent = agent
+        
+        //        self.appVersion = appVersion
+        //        self.agent = agent
         self.wifi = wifi
         self.tagUID = tagUID
-
+        
         self.empIds = empIds
         self.extraFields = extraFields
-       
+        
         self.selectedFromCity = fromCity
         self.selectedToCity = toCity
         self.enteredDistance = distance
         
         super.init(endpointType: endpointType)
     }
-
+    
     override func convertToDictionary() -> Parameters? {
         var dict = super.getDefaultItems()
-
+        
         if let absenceType = self.absenceType {
             dict["type"] = absenceType.rawValue
         } else {
             dict["type"] = type.rawValue
         }
         
-      
+        
         if fromDate != nil {
             dict["fromDate"] = fromDate
         }
-
+        
         if toDate != nil {
             dict["toDate"] = toDate
         }
@@ -91,15 +91,15 @@ class ReportEndpoint: EndpointItem {
         }
         
         dict["empIds"] = empIds
-
+        
         if lat != nil {
             dict["lat"] = lat
         }
-
+        
         if lon != nil {
             dict["lon"] = lon
         }
-
+        
         if taskId != nil {
             dict["taskId"] = taskId
         }
@@ -107,21 +107,21 @@ class ReportEndpoint: EndpointItem {
         if taskName != nil {
             dict["taskName"] = taskName
         }
-
+        
         if remark != nil {
             dict["remark"] = remark
         }
-
-//        if appVersion != nil {
-//            dict["appVersion"] = appVersion
-//        }
-
+        
+        //        if appVersion != nil {
+        //            dict["appVersion"] = appVersion
+        //        }
+        
         //dict["agent"] = UAString()
-
-//        if wifi != nil {
-//            dict["wifi"] = wifi
-//        }
-
+        
+        //        if wifi != nil {
+        //            dict["wifi"] = wifi
+        //        }
+        
         
         
         dict["extraFields"] = extraFields
@@ -143,14 +143,166 @@ class ReportEndpoint: EndpointItem {
         }else{
             dict["nfc"] = 0
         }
-
+        
         return dict
+    }
+    
+    func convertReportAbsenseData() -> Data? {
+        let dict = super.getDefaultItems()
+        
+        var jsonString = """
+        {
+            "action": "\(dict["action"] ?? "")",
+            "empId": "\(dict["empId"] ?? "")",
+            "phone": "\(dict["phone"] ?? "")",
+            "udid": "\(dict["udid"] ?? "")",
+            "type": "\(absenceType!.rawValue)"
+        """
+        
+        if let fromDate = fromDate {
+            jsonString += """
+            ,
+            "fromDate": "\(fromDate)"
+            """
+        }
+        
+        if let toDate = toDate {
+            jsonString += """
+            ,
+            "toDate": "\(toDate)"
+            """
+        }
+        
+        // Assuming extraFields is already valid JSON (array/dict)
+        if let extraFields = extraFields {
+            if let data = try? JSONSerialization.data(withJSONObject: extraFields),
+               let json = String(data: data, encoding: .utf8) {
+                jsonString += """
+                ,
+                "extraFields": \(json)
+                """
+            }
+        }
+        
+        if let lon = lon {
+            jsonString += """
+            ,
+            "lon": \(lon)
+            """
+        }
+        
+        if let lat = lat {
+            jsonString += """
+            ,
+            "lat": \(lat)
+            """
+        }
+        
+        if let accuracy = accuracy {
+            jsonString += """
+            ,
+            "accuracy": \(accuracy)
+            """
+        }
+        
+        if let str = self.tagUID, str.count > 0 {
+            jsonString += """
+            ,
+            "serial_nfc": "\(str)",
+            "nfc": 1
+            """
+        } else {
+            jsonString += """
+            ,
+            "nfc": 0
+            """
+        }
+        
+        jsonString += """
+            ,
+            "appVersion": "\(dict["appVersion"] ?? "")",
+            "agent": "\(dict["agent"] ?? "")",
+            "lang": "\(dict["lang"] ?? "")",
+            "timezone": "\(dict["timezone"] ?? "")"
+        }
+        """
+        
+        return jsonString.data(using: .utf8)
+    }
+    
+    func convertWriteTrakingData() -> Data? {
+        let dict = super.getDefaultItems()
+        
+        var jsonString = """
+        {
+            "action": "\(dict["action"] ?? "")",
+            "empId": "\(dict["empId"] ?? "")",
+            "phone": "\(dict["phone"] ?? "")",
+            "udid": "\(dict["udid"] ?? "")"
+        """
+        
+        if let lat = lat {
+            jsonString += """
+            ,
+            "lat": \(lat)
+            """
+        }
+        
+        if let lon = lon {
+            jsonString += """
+            ,
+            "lon": \(lon)
+            """
+        }
+        
+        if let accuracy = accuracy {
+            jsonString += """
+            ,
+            "accuracy": \(accuracy)
+            """
+        }
+        
+        if let str = self.tagUID, str.count > 0 {
+            jsonString += """
+            ,
+            "serial_nfc": "\(str)",
+            "nfc": 1
+            """
+        } else {
+            jsonString += """
+            ,
+            "nfc": 0
+            """
+        }
+        
+        if let absenceType = self.absenceType {
+            jsonString += """
+            ,
+            "type": "\(absenceType.rawValue)"
+            """
+        } else {
+            jsonString += """
+            ,
+            "type": "\(type.rawValue)"
+            """
+        }
+        
+        jsonString += """
+            ,
+            "lang": "\(dict["lang"] ?? "")",
+            "timezone": "\(dict["timezone"] ?? "")",
+            "appVersion": "\(dict["appVersion"] ?? "")",
+            "agent": "\(dict["agent"] ?? "")"
+        }
+        """
+        
+        return jsonString.data(using: .utf8)
     }
     
     func hexTo10D(hexNumber: String) -> String {
         // Remove any colons and convert to uppercase
         let cleanHex = hexNumber.replacingOccurrences(of: ":", with: "").uppercased()
-
+        
         // Convert the hex string to an integer
         if let decimalValue = Int(cleanHex, radix: 16) {
             // Format the decimal value as a 10-digit string
@@ -160,7 +312,7 @@ class ReportEndpoint: EndpointItem {
             return ""
         }
     }
-
+    
     func apiCall(handler: @escaping (_ response: ReportResult?, _ error: ErrorObject?) -> Void) {
         
         guard UserDefaultsManager.connectionServiceCount > 0 else {
@@ -170,23 +322,27 @@ class ReportEndpoint: EndpointItem {
         
         print("Request Params",convertToDictionary())
         switch endpointType {
-            case .reportAbsence:
-                apiManager.call(type: endpointType, imagesData: files, params: convertToDictionary()) { (response: ReportResult?, error: ErrorObject?) in
-                    handler(response, error)
-                }
-            default:
-                apiManager.call(type: endpointType, params: convertToDictionary()) { (response: ReportResult?, error: ErrorObject?) in
-                    handler(response, error)
-                }
+        case .reportAbsence:
+            apiManager.call(type: endpointType, imagesData: files, body: convertReportAbsenseData()) { (response: ReportResult?, error: ErrorObject?) in
+                handler(response, error)
+            }
+        case .reportTracking :
+            apiManager.call(type: endpointType, body: convertWriteTrakingData()) { (response: ReportResult?, error: ErrorObject?) in
+                handler(response, error)
+            }
+        default:
+            apiManager.call(type: endpointType, params: convertToDictionary()) { (response: ReportResult?, error: ErrorObject?) in
+                handler(response, error)
+            }
         }
     }
-
+    
     func showNoInternetPopup() {
         
-//        if isAirplaneModeOn(){
-//            self.showFlightModePopup()
-//            return
-//        }
+        //        if isAirplaneModeOn(){
+        //            self.showFlightModePopup()
+        //            return
+        //        }
         isAirplaneModeOnNew { isAirplane in
             if isAirplane {
                 self.showFlightModePopup()

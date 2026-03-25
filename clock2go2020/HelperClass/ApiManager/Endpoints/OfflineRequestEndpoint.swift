@@ -70,6 +70,24 @@ class OfflineRequestEndpoint: EndpointItem {
             return dict
         }
     }
+    
+    func convertToSetAppStatusBodyData() -> Data? {
+        
+        let jsonString = """
+        {
+            "action": "\(offlineRequest.action ?? "")",
+            "appVersion": "\(offlineRequest.appVersion ?? "")",
+            "gps_settings": "\(offlineRequest.hasLocationPermission ? 1 : 0)",
+            "gps_enabled": "\(offlineRequest.isLocationEnabled ? 1 : 0)",
+            "battery_saving": "\(Int(offlineRequest.batteryLevel))",
+            "flight_mode": "\(offlineRequest.isFlightMode ? 1 : 0)",
+            "phone": "\(UserDefaultsManager.phoneNumber ?? "")",
+            "udid": "\(UserDefaultsManager.udid ?? "")"
+        }
+        """
+        
+        return jsonString.data(using: .utf8)
+    }
 
     func apiCall(handler: @escaping (_ response: Any?, _ error: ErrorObject?) -> Void) {
 
@@ -91,7 +109,8 @@ class OfflineRequestEndpoint: EndpointItem {
                 }
             break
             case .setAppStatus:
-                apiManager.call(type: endpointType, params: convertToDictionary()) { (result: ErrorObject?, error: ErrorObject?) in
+                let bodyData = convertToSetAppStatusBodyData()
+                apiManager.call(type: endpointType, body: bodyData) { (result: ErrorObject?, error: ErrorObject?) in
                     handler(result, error)
                 }
                 break

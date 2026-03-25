@@ -45,8 +45,45 @@ class DeleteEmpReportEndpoint: EndpointItem {
         return newDict
     }
 
+    func convertToBodyData() -> Data? {
+        let dict = super.getDefaultItems()
+        
+        var jsonString = """
+        {
+            "action": "\(dict["action"] ?? "")",
+            "empId": "\(dict["empId"] ?? "")",
+            "phone": "\(dict["phone"] ?? "")",
+            "agent": "\(dict["agent"] ?? "")",
+            "udid": "\(dict["udid"] ?? "")"
+        """
+        
+        if let reportId = reportId {
+            jsonString += """
+            ,
+            "reportId": "\(reportId)"
+            """
+        }
+        
+        if let date = date {
+            jsonString += """
+            ,
+            "date": "\(date)"
+            """
+        }
+        
+        jsonString += """
+            ,
+            "timezone": "\(dict["timezone"] ?? "")",
+            "appVersion": "\(dict["appVersion"] ?? "")",
+            "lang": "\(dict["lang"] ?? "")"
+        }
+        """
+        
+        return jsonString.data(using: .utf8)
+    }
+    
     func apiCall(handler: @escaping (_ response: [String: EmpDayReportsObj]?, _ error: ErrorObject?) -> Void) {
-        apiManager.call(type: endpointType, params: convertToDictionary()) { (response: EmpUpdateReportsResult?, error: ErrorObject?) in
+        apiManager.call(type: endpointType, body: convertToBodyData()) { (response: EmpUpdateReportsResult?, error: ErrorObject?) in
             handler(response?.data, error)
         }
     }

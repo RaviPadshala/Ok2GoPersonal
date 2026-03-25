@@ -65,42 +65,78 @@ class APIManager {
         self.sessionManager = Alamofire.SessionManager(configuration: configuration) // not in this line
     }
     
-    func call<T>(type: EndPointType, params: Parameters? = nil, disableAuthExpireLogout: Bool = false, handler: @escaping (T?, _ error: ErrorObject?) -> Void) where T: Codable {
+    func call<T>(type: EndPointType, params: Parameters? = nil, body: Data? = nil, disableAuthExpireLogout: Bool = false, handler: @escaping (T?, _ error: ErrorObject?) -> Void) where T: Codable {
         
-        print("params : ", params!)
-        self.sessionManager.request(type.url,
-                                    method: type.httpMethod,
-                                    parameters: params,
-                                    encoding: type.encoding,
-                                    headers: type.headers).validate().responseJSON { response in
-            self.printLogs(response: response, params: params)
-            switch response.result {
-            case .success(_):
-                if let error = self.parseApiError(data: response.data), error.error_code == 402 {
-                    UserDefaultsManager.udid = nil
-                    UserDefaultsManager.phoneNumber = nil
-                    NavigationController.shared?.checkRootViewController()
-                }else if let error = self.parseApiError(data: response.data), error.error_code == 602 && !disableAuthExpireLogout {
-                    UserDefaultsManager.udid = nil
-                    UserDefaultsManager.phoneNumber = nil
-                    NavigationController.shared?.showAuthenticationErrorView()
-                } else if let error = self.parseApiError(data: response.data), error.error_code == 502 {
-                    NotificationCenter.default.post(name: OfflineModeBecomesActiveNotification, object: error)
-                } else {
-                    handler(self.parseApiResult(data: response.data), self.parseApiError(data: response.data))
+        if let bodyData = body{
+            var urlRequest = try! URLRequest(url: type.url, method: type.httpMethod, headers: type.headers)
+            
+            urlRequest.httpBody = bodyData
+            urlRequest.setValue("application/json", forHTTPHeaderField: "Content-Type")
+            
+            print("RAW BODY:", String(data: body ?? Data(), encoding: .utf8) ?? "")
+            
+            self.sessionManager.request(urlRequest).validate().responseJSON { response in
+                self.printLogs(response: response, params: params)
+                switch response.result {
+                case .success(_):
+                    if let error = self.parseApiError(data: response.data), error.error_code == 402 {
+                        UserDefaultsManager.udid = nil
+                        UserDefaultsManager.phoneNumber = nil
+                        NavigationController.shared?.checkRootViewController()
+                    }else if let error = self.parseApiError(data: response.data), error.error_code == 602 && !disableAuthExpireLogout {
+                        UserDefaultsManager.udid = nil
+                        UserDefaultsManager.phoneNumber = nil
+                        NavigationController.shared?.showAuthenticationErrorView()
+                    } else if let error = self.parseApiError(data: response.data), error.error_code == 502 {
+                        NotificationCenter.default.post(name: OfflineModeBecomesActiveNotification, object: error)
+                    } else {
+                        handler(self.parseApiResult(data: response.data), self.parseApiError(data: response.data))
+                    }
+                    // self.printLogs(response: response, params: params)
+                case .failure(let error):
+                    if error.localizedDescription == "cancelled" {
+                        handler(nil, ErrorObject(success: false, error_message: "cancelled", error_code: -999))
+                    } else {
+                        handler(nil, self.parseApiError(data: response.data))
+                    }
                 }
-                // self.printLogs(response: response, params: params)
-            case .failure(let error):
-                if error.localizedDescription == "cancelled" {
-                    handler(nil, ErrorObject(success: false, error_message: "cancelled", error_code: -999))
-                } else {
-                    handler(nil, self.parseApiError(data: response.data))
+            }
+            
+        }else{
+            self.sessionManager.request(type.url,
+                                        method: type.httpMethod,
+                                        parameters: params,
+                                        encoding: type.encoding,
+                                        headers: type.headers).validate().responseJSON { response in
+                self.printLogs(response: response, params: params)
+                switch response.result {
+                case .success(_):
+                    if let error = self.parseApiError(data: response.data), error.error_code == 402 {
+                        UserDefaultsManager.udid = nil
+                        UserDefaultsManager.phoneNumber = nil
+                        NavigationController.shared?.checkRootViewController()
+                    }else if let error = self.parseApiError(data: response.data), error.error_code == 602 && !disableAuthExpireLogout {
+                        UserDefaultsManager.udid = nil
+                        UserDefaultsManager.phoneNumber = nil
+                        NavigationController.shared?.showAuthenticationErrorView()
+                    } else if let error = self.parseApiError(data: response.data), error.error_code == 502 {
+                        NotificationCenter.default.post(name: OfflineModeBecomesActiveNotification, object: error)
+                    } else {
+                        handler(self.parseApiResult(data: response.data), self.parseApiError(data: response.data))
+                    }
+                    // self.printLogs(response: response, params: params)
+                case .failure(let error):
+                    if error.localizedDescription == "cancelled" {
+                        handler(nil, ErrorObject(success: false, error_message: "cancelled", error_code: -999))
+                    } else {
+                        handler(nil, self.parseApiError(data: response.data))
+                    }
                 }
             }
         }
     }
     
-    func call<T>(type: EndPointType, imagesData: [MediaObj?], params: Parameters? = nil, handler: @escaping (T?, _ error: ErrorObject?) -> Void) where T: Codable {
+    func call<T>(type: EndPointType, imagesData: [MediaObj?], params: Parameters? = nil, body: Data? = nil, handler: @escaping (T?, _ error: ErrorObject?) -> Void) where T: Codable {
         self.sessionManager.upload(multipartFormData: { (multipartFormData) in
             if let parameters = params {
                 do {
@@ -109,6 +145,8 @@ class APIManager {
                 } catch let error {
                     print("Error : \(error.localizedDescription)")
                 }
+            }else if let bodyData = body {
+                multipartFormData.append(bodyData, withName: "json")
             }
             
             for imageData in imagesData {

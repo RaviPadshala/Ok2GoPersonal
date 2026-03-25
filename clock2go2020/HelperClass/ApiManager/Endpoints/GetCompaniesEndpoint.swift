@@ -32,8 +32,28 @@ class GetCompaniesEndpoint: EndpointItem {
         return newDict
     }
     
+    func convertToBodyData() -> Data? {
+        let dict = super.getDefaultItems()
+        
+        let jsonString = """
+        {
+            "action": "\(dict["action"] ?? "")",
+            "empId": "\(dict["empId"] ?? "")",
+            "phone": "\(dict["phone"] ?? "")",
+            "udid": "\(dict["udid"] ?? "")",
+            "appVersion": "\(dict["appVersion"] ?? "")",
+            "agent": "\(dict["agent"] ?? "")",
+            "lang": "\(dict["lang"] ?? "")",
+            "timezone": "\(dict["timezone"] ?? "")"
+        }
+        """
+        
+        return jsonString.data(using: .utf8)
+    }
+    
     func apiCall(handler: @escaping (_ response: CompanyResult?, _ error: ErrorObject?) -> Void) {
-        apiManager.call(type: endpointType, params: convertToDictionary()) { (response: CompanyResult?, error: ErrorObject?) in
+        let bodyData = convertToBodyData()
+        apiManager.call(type: endpointType, body: bodyData) { (response: CompanyResult?, error: ErrorObject?) in
             handler(response, error)
         }
         
