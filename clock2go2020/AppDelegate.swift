@@ -15,6 +15,10 @@ import TSBackgroundFetch
 import TSLocationManager
 import Network
 import netfox
+import CoreLocation
+
+// Attendance security kit imports
+// Files are in Security/AttendanceSecurityKit.swift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -22,6 +26,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     let monitor = NWPathMonitor()
     /// set orientations you want to be allowed in this property by default
     var orientationLock = UIInterfaceOrientationMask.portrait
+    let locationValidator = LocationValidator()
 
     func application(_ application: UIApplication, willFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]? = nil) -> Bool {
 
@@ -59,6 +64,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UNUserNotificationCenter.current().delegate = self
 
         FirebaseApp.configure()
+
+        if #available(iOS 15.0, *) {
+            // Warm up location permission and validate linkage to AttendanceSecurityKit
+            Task { [weak self] in
+                let approvedBSSIDs: Set<String> = [] // configure if you have company Wi‑Fi anchors
+                do {
+                    _ = try await self?.locationValidator.currentValidatedLocation(approvedBSSIDs: approvedBSSIDs)
+                    print("[AttendanceSecurity] Location validation ready.")
+                } catch {
+                    print("[AttendanceSecurity] Location validation error: \(error)")
+                }
+            }
+        }
 
         // Disable log
         UserDefaults.standard.set(false, forKey: "_UIConstraintBasedLayoutLogUnsatisfiable")
@@ -236,3 +254,4 @@ extension AppDelegate {
         
     }
 }
+

@@ -272,6 +272,7 @@
 		52FF4C8B23BF7EE700E40308 /* GuideView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52FF4C8723BF7EE700E40308 /* GuideView.xib */; };
 		52FF4C8C23BF7EE700E40308 /* SkipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FF4C8823BF7EE700E40308 /* SkipView.swift */; };
 		52FF4C8D23BF7EE700E40308 /* GuideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FF4C8923BF7EE700E40308 /* GuideView.swift */; };
+		5B61C0562FA3258700760A39 /* CheckInSecurityService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B61C0552FA3258700760A39 /* CheckInSecurityService.swift */; };
 		5B6581C72F6141D900194B79 /* NewOfflineRequestEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6581C62F6141D900194B79 /* NewOfflineRequestEndpoint.swift */; };
 		840A1D902422C204002BFCD7 /* NotificationTypeEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840A1D8F2422C204002BFCD7 /* NotificationTypeEntity.swift */; };
 		840A1D912422C204002BFCD7 /* NotificationTypeEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840A1D8F2422C204002BFCD7 /* NotificationTypeEntity.swift */; };
@@ -972,6 +973,7 @@
 		52FF4C8723BF7EE700E40308 /* GuideView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GuideView.xib; sourceTree = "<group>"; };
 		52FF4C8823BF7EE700E40308 /* SkipView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SkipView.swift; sourceTree = "<group>"; };
 		52FF4C8923BF7EE700E40308 /* GuideView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuideView.swift; sourceTree = "<group>"; };
+		5B61C0552FA3258700760A39 /* CheckInSecurityService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckInSecurityService.swift; sourceTree = "<group>"; };
 		5B6581C62F6141D900194B79 /* NewOfflineRequestEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewOfflineRequestEndpoint.swift; sourceTree = "<group>"; };
 		784701BEDC8F22BEE8E2A6EC /* Pods_clock2go2020.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_clock2go2020.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		840A1D8F2422C204002BFCD7 /* NotificationTypeEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationTypeEntity.swift; sourceTree = "<group>"; };
@@ -2169,6 +2171,14 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		5B61C0522FA31EDC00760A39 /* SecurityCheckClass */ = {
+			isa = PBXGroup;
+			children = (
+				5B61C0552FA3258700760A39 /* CheckInSecurityService.swift */,
+			);
+			path = SecurityCheckClass;
+			sourceTree = "<group>";
+		};
 		695DE0F41A8FF0A47576C182 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -2541,6 +2551,7 @@
 		840D842023A0DD7100534966 /* clock2go2020 */ = {
 			isa = PBXGroup;
 			children = (
+				5B61C0522FA31EDC00760A39 /* SecurityCheckClass */,
 				841A7049241A30E30025C6CC /* clock2go2020.entitlements */,
 				047F89702CC252A200C6980D /* Assets */,
 				04C888F72CC0F10E00864783 /* HelperClass */,
@@ -4110,6 +4121,7 @@
 				429A655A28BC82DA00FA9C89 /* SearchTaskResult.swift in Sources */,
 				840A1DC42423AFE2002BFCD7 /* ReportActionView.swift in Sources */,
 				840BECAD2447182F00E26786 /* VerificationViewModel.swift in Sources */,
+				5B61C0562FA3258700760A39 /* CheckInSecurityService.swift in Sources */,
 				42EB3E63286CAD0000371362 /* ExtendedListCell.swift in Sources */,
 				52F94951242A23CE000475CE /* CloseMonthView.swift in Sources */,
 				847AFBD324EC1794008A6BF5 /* RequestSavedModel.xcdatamodeld in Sources */,
