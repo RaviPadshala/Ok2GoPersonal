@@ -121,28 +121,78 @@ public class TrackerController: UIViewController, CLLocationManagerDelegate {
 
             return
         }
-
-        let accuracy = 16
-
-        let location = LocationManager.shared.getCurrentLocation()
-        let latitude = location?.coordinate.latitude ?? 0
-        let longitude = location?.coordinate.longitude ?? 0
-
-        let report = ReportEndpoint(endpointType: endpointType, type: type, lat: latitude, lon: longitude, accuracy: accuracy, tagUID: "")
-        report.apiCall { (_, error) in
-            if error?.success ?? false {
-                print("sendTrackingReport: success")
-            } else {
-                switch error?.error_code ?? 01 {
-                case 500 ... 600, 1001, 2102, 01:
-                    OfflineRequestsManager.sharedInstance.save(type: type.rawValue)
-                    NavigationController.shared?.showSuccessView(message: "OFFLINE_MODE_REPORT_SAVED".localized)
-                break
-                default:
-                    print("sendTrackingReport: faile")
+        
+        // MARK: - Request Fresh Location
+        
+        LocationManager.shared.requestFreshLocation { location, error in
+            
+            // MARK: - Error
+            
+            if let error = error {
+                
+                print("Location Error:", error.localizedDescription)
+                
+                let rroobj = ErrorObject(error_message: error.localizedDescription)
+                NavigationController.shared?.showErrorView(error: rroobj)
+                
+                return
+            }
+            
+            // MARK: - Location
+            
+            guard let location = location else {
+                
+                let rroobj = ErrorObject(error_message: "Unable to fetch location")
+                NavigationController.shared?.showErrorView(error: rroobj)
+                return
+            }
+            
+            let latitude = location.coordinate.latitude
+            let longitude = location.coordinate.longitude
+            
+            let accuracy = Int(location.horizontalAccuracy)
+            
+            print("Latitude:", latitude)
+            print("Longitude:", longitude)
+            print("Accuracy:", accuracy)
+            
+            // MARK: - API Request
+            
+            let report = ReportEndpoint(
+                endpointType: endpointType,
+                type: type,
+                lat: latitude,
+                lon: longitude,
+                accuracy: accuracy,
+                tagUID: ""
+            )
+            
+            report.apiCall { (_, error) in
+                
+                if error?.success ?? false {
+                    
+                    print("sendTrackingReport: success")
+                    
+                } else {
+                    
+                    switch error?.error_code ?? 01 {
+                        
+                    case 500 ... 600, 1001, 2102, 01:
+                        
+                        OfflineRequestsManager.sharedInstance.save(
+                            type: type.rawValue
+                        )
+                        
+                        NavigationController.shared?.showSuccessView(
+                            message: "OFFLINE_MODE_REPORT_SAVED".localized
+                        )
+                        
+                    default:
+                        print("sendTrackingReport: failed")
+                    }
                 }
-
             }
         }
     }
+
 }
