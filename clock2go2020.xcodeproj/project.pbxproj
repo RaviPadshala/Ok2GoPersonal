@@ -975,6 +975,7 @@
 		52FF4C8923BF7EE700E40308 /* GuideView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuideView.swift; sourceTree = "<group>"; };
 		5B61C0552FA3258700760A39 /* CheckInSecurityService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckInSecurityService.swift; sourceTree = "<group>"; };
 		5B6581C62F6141D900194B79 /* NewOfflineRequestEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewOfflineRequestEndpoint.swift; sourceTree = "<group>"; };
+		5B76EAEC2FD2841400634B80 /* th */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = th; path = th.lproj/Localizable.strings; sourceTree = "<group>"; };
 		784701BEDC8F22BEE8E2A6EC /* Pods_clock2go2020.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_clock2go2020.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		840A1D8F2422C204002BFCD7 /* NotificationTypeEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationTypeEntity.swift; sourceTree = "<group>"; };
 		840A1D92242357D2002BFCD7 /* UIBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIBuilder.swift; sourceTree = "<group>"; };
@@ -3732,6 +3733,7 @@
 				ar,
 				he,
 				bg,
+				th,
 			);
 			mainGroup = 840D841523A0DD7100534966;
 			packageReferences = (
@@ -4555,6 +4557,7 @@
 				841348FE23D8587D00849C19 /* pt */,
 				F7C0D05D258CFDF8006C6ADB /* ar */,
 				048EA7B02D64954F00CF2824 /* bg */,
+				5B76EAEC2FD2841400634B80 /* th */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
