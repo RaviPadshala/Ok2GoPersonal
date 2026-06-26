@@ -1171,479 +1171,479 @@ class DashboardViewModel {
         }
     }
     
-    //    func sendReport(endpointType: EndpointItemType = .report, type: ReportActionType, remark: String?) {
-    //        let task = self.getTaskByActionType(type)
-    //        vc?.view.addSubview(loadingView)
-    //        print("UserDefaultsManager.connectionServiceCount", UserDefaultsManager.connectionServiceCount)
-    //        guard UserDefaultsManager.connectionServiceCount > 0 else {
-    //            self.showNoInternetPopup()
-    //            self.loadingView.removeFromSuperview()
-    //            return
-    //        }
-    //
-    //        if endpointType != .reportAbsence{
-    //            self.absenceReport = nil
-    //        }
-    //
-    //        vc?.view.addSubview(loadingView)
-    //
-    //        var lat : CLLocationDegrees?
-    //        var lon : CLLocationDegrees?
-    //        if shouldReportLocation{
-    //            let location = LocationManager.shared.getCurrentLocation()
-    //
-    //            let longitude = location?.coordinate.longitude
-    //            let latitude = location?.coordinate.latitude
-    //            lat = latitude
-    //            lon = longitude
-    //        }
-    //
-    //        // MARK: - 🔐 Security Check (STRICT BLOCKING)
-    //
-    //        checkSecurityCheckIn { isAllowed in
-    //            if isAllowed {
-    //                print("✅ Allowed")
-    //
-    //                // MARK: - Prepare Data
-    //
-    //                let accuracy = 16
-    //
-    //
-    //                let taskId: String? = task?.taskId ?? self.unknownTask?.taskId
-    //
-    //                let taskName: String? = task?.taskName ?? self.unknownTask?.taskName
-    //                let remark = task?.remark ?? self.absenceReport?.remark ?? remark
-    //
-    //                let absenceType: AbsenceTypeEntity? = self.absenceReport?.type
-    //                let fromDate: String? = self.absenceReport?.fromDate.toString(format: "yyyy-MM-dd")
-    //                let toDate: String? = self.absenceReport?.toDate.toString(format: "yyyy-MM-dd")
-    //                var emps: [Int]?
-    //                if let employeeId =  self.absenceEmployee?.empId, absenceType != nil {
-    //                    emps = [employeeId]
-    //                }
-    //
-    //                let files = self.absenceReport?.attachedFiles ?? []
-    //                var  report:ReportEndpoint? = nil
-    //                var extraFields: [String : Any] = [:]
-    //                if !self.isRevacha{
-    //                    extraFields["taskSource"] = self.taskSource.rawValue
-    //                }
-    //                extraFields["locationName"] = self.selectedLocationName?.locationId
-    //
-    //                if self.isRevacha || self.isHolocaust {
-    //                    if self.isRevacha{
-    //                        extraFields["trnsType"] = UserDefaultsManager.revachaLastLoginType
-    //                        extraFields["EventType"] = "0"
-    //                    }else{
-    //                        extraFields["trnsType"] = UserDefaultsManager.holocustLastLoginType - 3
-    //                        extraFields["TherapyType"] = UserDefaultsManager.holocustLastTheraphyType
-    //                    }
-    //                    if let event = self.selectedEvent {
-    //                        extraFields["EventType"] = Int(event.eventType ?? "0")
-    //                    }
-    //                    report = ReportEndpoint(endpointType: endpointType, type: type, absenceType: absenceType, files: files, taskId: taskId, taskName: taskName, remark:  remark, fromDate: fromDate, toDate: toDate, lat: lat, lon: lon, accuracy: accuracy, tagUID: self.tagUID, empIds: emps, extraFields: extraFields, fromCity: self.selectedFromCity, toCity: self.selectedToCity, distance: self.enteredDistance)
-    //
-    //                } else {
-    //                    report = ReportEndpoint(endpointType: endpointType, type: type, absenceType: absenceType, files: files, taskId: taskId, taskName: taskName, remark: remark, fromDate: fromDate, toDate: toDate, lat: lat, lon: lon, accuracy: accuracy, tagUID: self.tagUID, empIds: emps, extraFields: extraFields, fromCity: self.selectedFromCity, toCity: self.selectedToCity, distance: self.enteredDistance)
-    //                }
-    //
-    //                if !ReachabilityManager.shared.hasInternetConnection &&
-    //                    (type == .workStart ||
-    //                     type == .workEnd ||
-    //                     type == .endAndStartWork ||
-    //                     type == .serviceEntry ||
-    //                     type == .serviceExit) {
-    //
-    //                    self.newSaveOfflineReport(report: report)
-    //                    self.sendTrackingReportByReportType(type: type)
-    //                    self.loadingView.removeFromSuperview()
-    //                    return
-    //                }
-    //
-    //
-    //
-    //                var isReportSent = Bool()
-    //                report?.apiCall { (result, error) in
-    //                    self.selectedToCity = nil
-    //                    self.selectedFromCity = nil
-    //                    self.enteredDistance = ""
-    //
-    //                    self.selectedEvent = nil
-    //                    DashboardViewController.isRecentNFCScan = false
-    //                    self.delegate?.shouldUpdateTimer()
-    //                    if error?.success ?? false {
-    //                        self.latNFC = nil
-    //                        self.longNFC = nil
-    //                        isReportSent = true
-    //
-    //                        CompaniesDataManager.shared.setReportList(reports: result?.data ?? [])
-    //
-    //                        if type == .workEnd{
-    //                            if self.isRevacha{
-    //                                UserDefaultsManager.revachaLastLoginType = 1
-    //                            }else if self.isHolocaust{
-    //                                UserDefaultsManager.holocustLastLoginType = 6
-    //                                UserDefaultsManager.holocustLastTheraphyType = 1
-    //                            }
-    //
-    //                            NotificationCenter.default.post(name: NSNotification.Name(rawValue: "updateTrsType"), object: nil)
-    //                        }
-    //
-    //                        self.resetBreakTime(type: type)
-    //                        self.sendTrackingReportByReportType(type: type)
-    //                        self.showStartDistanceMeasurementByReportType(type: type)
-    //                        if self.waitingForHealthConfirm {
-    //                            self.waitingForHealthConfirm = false
-    //                            self.delegate?.shouldShowHealthDisclaimer(.accepted, nil)
-    //                        } else {
-    //                            if let lastReport = result?.data.last, let lastEntry = CompaniesDataManager.shared.lastEntryObject(), CompaniesDataManager.shared.hasRequestExitCompletionFeature() {
-    //                                if let lastReport = lastReport {
-    //                                    if lastReport.actionType == "1" || lastReport.actionType == "303" {
-    //                                        self.shouldShowRequestCompletionPopup(lastReport)
-    //                                    }
-    //                                } else if (lastReport?.actionType == "304" || lastReport?.actionType == "2") && lastReport?.taskId == lastEntry.taskId {
-    //                                    CompaniesDataManager.shared.disableRequestExitCompletion()
-    //                                    self.shouldShowConfirm(type: type)
-    //                                } else {
-    //                                    self.shouldShowConfirm(type: type)
-    //                                }
-    //                            } else {
-    //                                self.shouldShowConfirm(type: type)
-    //                            }
-    //                        }
-    //                        if type == .dayOff && endpointType == .reportAbsence {
-    //                            NavigationController.shared?.showSuccessView(message: "report_has_been_received_successfully".localized)
-    //                            self.loadData()
-    //                        } else {
-    //                            self.delegate?.shouldRefreshView()
-    //                            self.loadingView.removeFromSuperview()
-    //                        }
-    //                    } else {
-    //                        isReportSent = true
-    //                        self.latNFC = nil
-    //                        self.longNFC = nil
-    //                        self.loadingView.removeFromSuperview()
-    //                        switch error?.error_code ?? 01 {
-    //                        case 401, 500 ... 600, 1001, 2102, 01, 625:
-    //                            self.newSaveOfflineReport(report: report)
-    //                            self.sendTrackingReportByReportType(type: type)
-    //        //                    NavigationController.shared?.showSuccessView(message: "offline_report_message".localized)
-    //                            print("success")
-    //                            break
-    //                        case 1701:
-    //                            if type == .workStart {
-    //                                UserDefaultsManager.isLogin = false
-    //                            }
-    //                            else  if type == .workEnd {
-    //                                UserDefaultsManager.isLogin = true
-    //                            }
-    //
-    //                            self.delegate?.shouldShowErrorForNFC("error_1701".localized, title: "\(error!.error_code ?? 1701)")
-    //                            print("failure 1701")
-    //                        case 1700:
-    //                            if type == .workStart {
-    //                                UserDefaultsManager.isLogin = false
-    //                            }
-    //                            else  if type == .workEnd {
-    //                                UserDefaultsManager.isLogin = true
-    //                            }
-    //
-    //                            self.delegate?.shouldShowErrorForNFC("error_1700".localized, title: "\(error!.error_code ?? 1700)")
-    //                            print("failure 1700")
-    //                        default:
-    //                            if type == .workStart {
-    //                                UserDefaultsManager.isLogin = false
-    //                            }
-    //                            else  if type == .workEnd {
-    //                                UserDefaultsManager.isLogin = true
-    //                            }
-    //
-    //                            self.delegate?.shouldShowError(error)
-    //                            print("failure")
-    //                        }
-    //                    }
-    //                }
-    //
-    //                if !isReportSent{
-    //                    self.requestTimer = Timer.scheduledTimer(withTimeInterval: 8.0, repeats: false, block: { [weak self] timer in
-    //                        if !isReportSent{
-    //                            self?.requestTimer?.invalidate()
-    //                            self?.requestTimer = nil
-    //                            report?.apiManager.cancelSession()
-    //                            self?.newSaveOfflineReport(report: report)
-    //                            self?.sendTrackingReportByReportType(type: type)
-    //        //                    NavigationController.shared?.showSuccessView(message: "offline_report_message".localized)
-    //                            return
-    //                        }
-    //                    })
-    //                }
-    //
-    //            } else {
-    //                print("🚫 Blocked")
-    //                self.loadingView.removeFromSuperview()
-    //            }
-    //        }
-    //
-    //    }
-    
-    func sendReport(endpointType: EndpointItemType = .report, type: ReportActionType,remark: String?) {
-        
+    func sendReport(endpointType: EndpointItemType = .report, type: ReportActionType, remark: String?) {
         let task = self.getTaskByActionType(type)
-        
         vc?.view.addSubview(loadingView)
-        
-        print("UserDefaultsManager.connectionServiceCount",
-              UserDefaultsManager.connectionServiceCount)
-        
+        print("UserDefaultsManager.connectionServiceCount", UserDefaultsManager.connectionServiceCount)
         guard UserDefaultsManager.connectionServiceCount > 0 else {
-            
             self.showNoInternetPopup()
             self.loadingView.removeFromSuperview()
-            
             return
         }
         
-        if endpointType != .reportAbsence {
+        if endpointType != .reportAbsence{
             self.absenceReport = nil
         }
         
-        // MARK: - Request Fresh Location
+        vc?.view.addSubview(loadingView)
         
-        if shouldReportLocation {
+        var lat : CLLocationDegrees?
+        var lon : CLLocationDegrees?
+        if shouldReportLocation{
+            let location = LocationManager.shared.getCurrentLocation()
             
-            LocationManager.shared.requestFreshLocation { [weak self] location, error in
+            let longitude = location?.coordinate.longitude
+            let latitude = location?.coordinate.latitude
+            lat = latitude
+            lon = longitude
+        }
+        
+        // MARK: - 🔐 Security Check (STRICT BLOCKING)
+        
+//        checkSecurityCheckIn { isAllowed in
+//            if isAllowed {
+                print("✅ Allowed")
                 
-                guard let self = self else { return }
+                // MARK: - Prepare Data
                 
-                // MARK: - Location Error
+                let accuracy = 16
                 
-                if let error = error {
+                
+                let taskId: String? = task?.taskId ?? self.unknownTask?.taskId
+                
+                let taskName: String? = task?.taskName ?? self.unknownTask?.taskName
+                let remark = task?.remark ?? self.absenceReport?.remark ?? remark
+                
+                let absenceType: AbsenceTypeEntity? = self.absenceReport?.type
+                let fromDate: String? = self.absenceReport?.fromDate.toString(format: "yyyy-MM-dd")
+                let toDate: String? = self.absenceReport?.toDate.toString(format: "yyyy-MM-dd")
+                var emps: [Int]?
+                if let employeeId =  self.absenceEmployee?.empId, absenceType != nil {
+                    emps = [employeeId]
+                }
+                
+                let files = self.absenceReport?.attachedFiles ?? []
+                var  report:ReportEndpoint? = nil
+                var extraFields: [String : Any] = [:]
+                if !self.isRevacha{
+                    extraFields["taskSource"] = self.taskSource.rawValue
+                }
+                extraFields["locationName"] = self.selectedLocationName?.locationId
+                
+                if self.isRevacha || self.isHolocaust {
+                    if self.isRevacha{
+                        extraFields["trnsType"] = UserDefaultsManager.revachaLastLoginType
+                        extraFields["EventType"] = "0"
+                    }else{
+                        extraFields["trnsType"] = UserDefaultsManager.holocustLastLoginType - 3
+                        extraFields["TherapyType"] = UserDefaultsManager.holocustLastTheraphyType
+                    }
+                    if let event = self.selectedEvent {
+                        extraFields["EventType"] = Int(event.eventType ?? "0")
+                    }
+                    report = ReportEndpoint(endpointType: endpointType, type: type, absenceType: absenceType, files: files, taskId: taskId, taskName: taskName, remark:  remark, fromDate: fromDate, toDate: toDate, lat: lat, lon: lon, accuracy: accuracy, tagUID: self.tagUID, empIds: emps, extraFields: extraFields, fromCity: self.selectedFromCity, toCity: self.selectedToCity, distance: self.enteredDistance)
                     
+                } else {
+                    report = ReportEndpoint(endpointType: endpointType, type: type, absenceType: absenceType, files: files, taskId: taskId, taskName: taskName, remark: remark, fromDate: fromDate, toDate: toDate, lat: lat, lon: lon, accuracy: accuracy, tagUID: self.tagUID, empIds: emps, extraFields: extraFields, fromCity: self.selectedFromCity, toCity: self.selectedToCity, distance: self.enteredDistance)
+                }
+                
+                if !ReachabilityManager.shared.hasInternetConnection &&
+                    (type == .workStart ||
+                     type == .workEnd ||
+                     type == .endAndStartWork ||
+                     type == .serviceEntry ||
+                     type == .serviceExit) {
+                    
+                    self.newSaveOfflineReport(report: report)
+                    self.sendTrackingReportByReportType(type: type)
                     self.loadingView.removeFromSuperview()
-                    
-                    let errorObjec = ErrorObject(error_message: error.localizedDescription)
-                    NavigationController.shared?.showErrorView(error: errorObjec)
-                    
                     return
                 }
                 
-                // MARK: - Location Missing
                 
-                guard let location = location else {
+                
+                var isReportSent = Bool()
+                report?.apiCall { (result, error) in
+                    self.selectedToCity = nil
+                    self.selectedFromCity = nil
+                    self.enteredDistance = ""
                     
-                    self.loadingView.removeFromSuperview()
-                    
-                    let errorObjec = ErrorObject(error_message: "Unable to fetch location")
-                    NavigationController.shared?.showErrorView(error: errorObjec)
-                    
-                    return
-                }
-                
-                // MARK: - Fresh GPS
-                
-                let lat = location.coordinate.latitude
-                let lon = location.coordinate.longitude
-                
-                let accuracy = Int(location.horizontalAccuracy)
-                
-                print("Fresh Latitude :", lat)
-                print("Fresh Longitude :", lon)
-                print("GPS Accuracy :", accuracy)
-                print("Location Timestamp :", location.timestamp)
-                
-                // MARK: - Security Check
-                
-                self.checkSecurityCheckIn { isAllowed in
-                    
-                    if isAllowed {
+                    self.selectedEvent = nil
+                    DashboardViewController.isRecentNFCScan = false
+                    self.delegate?.shouldUpdateTimer()
+                    if error?.success ?? false {
+                        self.latNFC = nil
+                        self.longNFC = nil
+                        isReportSent = true
                         
-                        print("✅ Allowed")
+                        CompaniesDataManager.shared.setReportList(reports: result?.data ?? [])
                         
-                        // MARK: - Prepare Data
-                        
-                        let taskId: String? =
-                        task?.taskId ?? self.unknownTask?.taskId
-                        
-                        let taskName: String? =
-                        task?.taskName ?? self.unknownTask?.taskName
-                        
-                        let finalRemark =
-                        task?.remark ??
-                        self.absenceReport?.remark ??
-                        remark
-                        
-                        let absenceType: AbsenceTypeEntity? =
-                        self.absenceReport?.type
-                        
-                        let fromDate: String? =
-                        self.absenceReport?.fromDate.toString(format: "yyyy-MM-dd")
-                        
-                        let toDate: String? =
-                        self.absenceReport?.toDate.toString(format: "yyyy-MM-dd")
-                        
-                        var emps: [Int]?
-                        
-                        if let employeeId = self.absenceEmployee?.empId,
-                           absenceType != nil {
-                            
-                            emps = [employeeId]
-                        }
-                        
-                        let files = self.absenceReport?.attachedFiles ?? []
-                        
-                        var extraFields: [String : Any] = [:]
-                        
-                        if !self.isRevacha {
-                            extraFields["taskSource"] = self.taskSource.rawValue
-                        }
-                        
-                        extraFields["locationName"] =
-                        self.selectedLocationName?.locationId
-                        
-//                        // MARK: - Extra GPS Security Data
-//                        
-//                        extraFields["gpsTimestamp"] =location.timestamp.timeIntervalSince1970
-//                        extraFields["gpsAccuracy"] =location.horizontalAccuracy
-//                        extraFields["gpsSpeed"] = location.speed
-                        
-                        // MARK: - Revacha / Holocaust
-                        
-                        if self.isRevacha || self.isHolocaust {
-                            
-                            if self.isRevacha {
-                                
-                                extraFields["trnsType"] =
-                                UserDefaultsManager.revachaLastLoginType
-                                
-                                extraFields["EventType"] = "0"
-                                
-                            } else {
-                                
-                                extraFields["trnsType"] =
-                                UserDefaultsManager.holocustLastLoginType - 3
-                                
-                                extraFields["TherapyType"] =
-                                UserDefaultsManager.holocustLastTheraphyType
+                        if type == .workEnd{
+                            if self.isRevacha{
+                                UserDefaultsManager.revachaLastLoginType = 1
+                            }else if self.isHolocaust{
+                                UserDefaultsManager.holocustLastLoginType = 6
+                                UserDefaultsManager.holocustLastTheraphyType = 1
                             }
                             
-                            if let event = self.selectedEvent {
-                                extraFields["EventType"] =
-                                Int(event.eventType ?? "0")
-                            }
+                            NotificationCenter.default.post(name: NSNotification.Name(rawValue: "updateTrsType"), object: nil)
                         }
                         
-                        // MARK: - Report
-                        
-                        let report = ReportEndpoint(
-                            endpointType: endpointType,
-                            type: type,
-                            absenceType: absenceType,
-                            files: files,
-                            taskId: taskId,
-                            taskName: taskName,
-                            remark: finalRemark,
-                            fromDate: fromDate,
-                            toDate: toDate,
-                            lat: lat,
-                            lon: lon,
-                            accuracy: accuracy,
-                            tagUID: self.tagUID,
-                            empIds: emps,
-                            extraFields: extraFields,
-                            fromCity: self.selectedFromCity,
-                            toCity: self.selectedToCity,
-                            distance: self.enteredDistance
-                        )
-                        
-                        // MARK: - Offline Save
-                        
-                        if !ReachabilityManager.shared.hasInternetConnection &&
-                            (type == .workStart ||
-                             type == .workEnd ||
-                             type == .endAndStartWork ||
-                             type == .serviceEntry ||
-                             type == .serviceExit) {
-                            
-                            self.newSaveOfflineReport(report: report)
-                            
-                            self.sendTrackingReportByReportType(type: type)
-                            
-                            self.loadingView.removeFromSuperview()
-                            
-                            return
-                        }
-                        
-                        // MARK: - API Call
-                        
-                        var isReportSent = false
-                        
-                        report.apiCall { (result, error) in
-                            
-                            self.selectedToCity = nil
-                            self.selectedFromCity = nil
-                            self.enteredDistance = ""
-                            
-                            self.selectedEvent = nil
-                            
-                            DashboardViewController.isRecentNFCScan = false
-                            
-                            self.delegate?.shouldUpdateTimer()
-                            
-                            if error?.success ?? false {
-                                
-                                isReportSent = true
-                                
-                                self.loadingView.removeFromSuperview()
-                                
-                                print("✅ Report Success")
-                                
-                            } else {
-                                
-                                isReportSent = true
-                                
-                                self.loadingView.removeFromSuperview()
-                                
-                                print("❌ Report Failed")
-                            }
-                        }
-                        
-                        // MARK: - Timeout
-                        
-                        if !isReportSent {
-                            
-                            self.requestTimer = Timer.scheduledTimer(
-                                withTimeInterval: 8.0,
-                                repeats: false
-                            ) { [weak self] timer in
-                                
-                                if !isReportSent {
-                                    
-                                    self?.requestTimer?.invalidate()
-                                    self?.requestTimer = nil
-                                    
-                                    report.apiManager.cancelSession()
-                                    
-                                    self?.newSaveOfflineReport(report: report)
-                                    
-                                    self?.sendTrackingReportByReportType(type: type)
+                        self.resetBreakTime(type: type)
+                        self.sendTrackingReportByReportType(type: type)
+                        self.showStartDistanceMeasurementByReportType(type: type)
+                        if self.waitingForHealthConfirm {
+                            self.waitingForHealthConfirm = false
+                            self.delegate?.shouldShowHealthDisclaimer(.accepted, nil)
+                        } else {
+                            if let lastReport = result?.data.last, let lastEntry = CompaniesDataManager.shared.lastEntryObject(), CompaniesDataManager.shared.hasRequestExitCompletionFeature() {
+                                if let lastReport = lastReport {
+                                    if lastReport.actionType == "1" || lastReport.actionType == "303" {
+                                        self.shouldShowRequestCompletionPopup(lastReport)
+                                    }
+                                } else if (lastReport?.actionType == "304" || lastReport?.actionType == "2") && lastReport?.taskId == lastEntry.taskId {
+                                    CompaniesDataManager.shared.disableRequestExitCompletion()
+                                    self.shouldShowConfirm(type: type)
+                                } else {
+                                    self.shouldShowConfirm(type: type)
                                 }
+                            } else {
+                                self.shouldShowConfirm(type: type)
                             }
                         }
-                        
+                        if type == .dayOff && endpointType == .reportAbsence {
+                            NavigationController.shared?.showSuccessView(message: "report_has_been_received_successfully".localized)
+                            self.loadData()
+                        } else {
+                            self.delegate?.shouldRefreshView()
+                            self.loadingView.removeFromSuperview()
+                        }
                     } else {
-                        
-                        print("🚫 Blocked")
-                        
+                        isReportSent = true
+                        self.latNFC = nil
+                        self.longNFC = nil
                         self.loadingView.removeFromSuperview()
+                        switch error?.error_code ?? 01 {
+                        case 401, 500 ... 600, 1001, 2102, 01, 625:
+                            self.newSaveOfflineReport(report: report)
+                            self.sendTrackingReportByReportType(type: type)
+                            //                    NavigationController.shared?.showSuccessView(message: "offline_report_message".localized)
+                            print("success")
+                            break
+                        case 1701:
+                            if type == .workStart {
+                                UserDefaultsManager.isLogin = false
+                            }
+                            else  if type == .workEnd {
+                                UserDefaultsManager.isLogin = true
+                            }
+                            
+                            self.delegate?.shouldShowErrorForNFC("error_1701".localized, title: "\(error!.error_code ?? 1701)")
+                            print("failure 1701")
+                        case 1700:
+                            if type == .workStart {
+                                UserDefaultsManager.isLogin = false
+                            }
+                            else  if type == .workEnd {
+                                UserDefaultsManager.isLogin = true
+                            }
+                            
+                            self.delegate?.shouldShowErrorForNFC("error_1700".localized, title: "\(error!.error_code ?? 1700)")
+                            print("failure 1700")
+                        default:
+                            if type == .workStart {
+                                UserDefaultsManager.isLogin = false
+                            }
+                            else  if type == .workEnd {
+                                UserDefaultsManager.isLogin = true
+                            }
+                            
+                            self.delegate?.shouldShowError(error)
+                            print("failure")
+                        }
                     }
                 }
-            }
-            
-        } else {
-            
-            self.loadingView.removeFromSuperview()
-        }
+                
+                if !isReportSent{
+                    self.requestTimer = Timer.scheduledTimer(withTimeInterval: 8.0, repeats: false, block: { [weak self] timer in
+                        if !isReportSent{
+                            self?.requestTimer?.invalidate()
+                            self?.requestTimer = nil
+                            report?.apiManager.cancelSession()
+                            self?.newSaveOfflineReport(report: report)
+                            self?.sendTrackingReportByReportType(type: type)
+                            //                    NavigationController.shared?.showSuccessView(message: "offline_report_message".localized)
+                            return
+                        }
+                    })
+                }
+                
+//            } else {
+//                print("🚫 Blocked")
+//                self.loadingView.removeFromSuperview()
+//            }
+//        }
+        
     }
+    
+    //    func sendReport(endpointType: EndpointItemType = .report, type: ReportActionType,remark: String?) {
+    //
+    //        let task = self.getTaskByActionType(type)
+    //
+    //        vc?.view.addSubview(loadingView)
+    //
+    //        print("UserDefaultsManager.connectionServiceCount",
+    //              UserDefaultsManager.connectionServiceCount)
+    //
+    //        guard UserDefaultsManager.connectionServiceCount > 0 else {
+    //
+    //            self.showNoInternetPopup()
+    //            self.loadingView.removeFromSuperview()
+    //
+    //            return
+    //        }
+    //
+    //        if endpointType != .reportAbsence {
+    //            self.absenceReport = nil
+    //        }
+    //
+    //        // MARK: - Request Fresh Location
+    //
+    //        if shouldReportLocation {
+    //
+    //            LocationManager.shared.requestFreshLocation { [weak self] location, error in
+    //
+    //                guard let self = self else { return }
+    //
+    //                // MARK: - Location Error
+    //
+    //                if let error = error {
+    //
+    //                    self.loadingView.removeFromSuperview()
+    //
+    //                    let errorObjec = ErrorObject(error_message: error.localizedDescription)
+    //                    NavigationController.shared?.showErrorView(error: errorObjec)
+    //
+    //                    return
+    //                }
+    //
+    //                // MARK: - Location Missing
+    //
+    //                guard let location = location else {
+    //
+    //                    self.loadingView.removeFromSuperview()
+    //
+    //                    let errorObjec = ErrorObject(error_message: "Unable to fetch location")
+    //                    NavigationController.shared?.showErrorView(error: errorObjec)
+    //
+    //                    return
+    //                }
+    //
+    //                // MARK: - Fresh GPS
+    //
+    //                let lat = location.coordinate.latitude
+    //                let lon = location.coordinate.longitude
+    //
+    //                let accuracy = Int(location.horizontalAccuracy)
+    //
+    //                print("Fresh Latitude :", lat)
+    //                print("Fresh Longitude :", lon)
+    //                print("GPS Accuracy :", accuracy)
+    //                print("Location Timestamp :", location.timestamp)
+    //
+    //                // MARK: - Security Check
+    //
+    //                self.checkSecurityCheckIn { isAllowed in
+    //
+    //                    if isAllowed {
+    //
+    //                        print("✅ Allowed")
+    //
+    //                        // MARK: - Prepare Data
+    //
+    //                        let taskId: String? =
+    //                        task?.taskId ?? self.unknownTask?.taskId
+    //
+    //                        let taskName: String? =
+    //                        task?.taskName ?? self.unknownTask?.taskName
+    //
+    //                        let finalRemark =
+    //                        task?.remark ??
+    //                        self.absenceReport?.remark ??
+    //                        remark
+    //
+    //                        let absenceType: AbsenceTypeEntity? =
+    //                        self.absenceReport?.type
+    //
+    //                        let fromDate: String? =
+    //                        self.absenceReport?.fromDate.toString(format: "yyyy-MM-dd")
+    //
+    //                        let toDate: String? =
+    //                        self.absenceReport?.toDate.toString(format: "yyyy-MM-dd")
+    //
+    //                        var emps: [Int]?
+    //
+    //                        if let employeeId = self.absenceEmployee?.empId,
+    //                           absenceType != nil {
+    //
+    //                            emps = [employeeId]
+    //                        }
+    //
+    //                        let files = self.absenceReport?.attachedFiles ?? []
+    //
+    //                        var extraFields: [String : Any] = [:]
+    //
+    //                        if !self.isRevacha {
+    //                            extraFields["taskSource"] = self.taskSource.rawValue
+    //                        }
+    //
+    //                        extraFields["locationName"] =
+    //                        self.selectedLocationName?.locationId
+    //
+    ////                        // MARK: - Extra GPS Security Data
+    ////
+    ////                        extraFields["gpsTimestamp"] =location.timestamp.timeIntervalSince1970
+    ////                        extraFields["gpsAccuracy"] =location.horizontalAccuracy
+    ////                        extraFields["gpsSpeed"] = location.speed
+    //
+    //                        // MARK: - Revacha / Holocaust
+    //
+    //                        if self.isRevacha || self.isHolocaust {
+    //
+    //                            if self.isRevacha {
+    //
+    //                                extraFields["trnsType"] =
+    //                                UserDefaultsManager.revachaLastLoginType
+    //
+    //                                extraFields["EventType"] = "0"
+    //
+    //                            } else {
+    //
+    //                                extraFields["trnsType"] =
+    //                                UserDefaultsManager.holocustLastLoginType - 3
+    //
+    //                                extraFields["TherapyType"] =
+    //                                UserDefaultsManager.holocustLastTheraphyType
+    //                            }
+    //
+    //                            if let event = self.selectedEvent {
+    //                                extraFields["EventType"] =
+    //                                Int(event.eventType ?? "0")
+    //                            }
+    //                        }
+    //
+    //                        // MARK: - Report
+    //
+    //                        let report = ReportEndpoint(
+    //                            endpointType: endpointType,
+    //                            type: type,
+    //                            absenceType: absenceType,
+    //                            files: files,
+    //                            taskId: taskId,
+    //                            taskName: taskName,
+    //                            remark: finalRemark,
+    //                            fromDate: fromDate,
+    //                            toDate: toDate,
+    //                            lat: lat,
+    //                            lon: lon,
+    //                            accuracy: accuracy,
+    //                            tagUID: self.tagUID,
+    //                            empIds: emps,
+    //                            extraFields: extraFields,
+    //                            fromCity: self.selectedFromCity,
+    //                            toCity: self.selectedToCity,
+    //                            distance: self.enteredDistance
+    //                        )
+    //
+    //                        // MARK: - Offline Save
+    //
+    //                        if !ReachabilityManager.shared.hasInternetConnection &&
+    //                            (type == .workStart ||
+    //                             type == .workEnd ||
+    //                             type == .endAndStartWork ||
+    //                             type == .serviceEntry ||
+    //                             type == .serviceExit) {
+    //
+    //                            self.newSaveOfflineReport(report: report)
+    //
+    //                            self.sendTrackingReportByReportType(type: type)
+    //
+    //                            self.loadingView.removeFromSuperview()
+    //
+    //                            return
+    //                        }
+    //
+    //                        // MARK: - API Call
+    //
+    //                        var isReportSent = false
+    //
+    //                        report.apiCall { (result, error) in
+    //
+    //                            self.selectedToCity = nil
+    //                            self.selectedFromCity = nil
+    //                            self.enteredDistance = ""
+    //
+    //                            self.selectedEvent = nil
+    //
+    //                            DashboardViewController.isRecentNFCScan = false
+    //
+    //                            self.delegate?.shouldUpdateTimer()
+    //
+    //                            if error?.success ?? false {
+    //
+    //                                isReportSent = true
+    //
+    //                                self.loadingView.removeFromSuperview()
+    //
+    //                                print("✅ Report Success")
+    //
+    //                            } else {
+    //
+    //                                isReportSent = true
+    //
+    //                                self.loadingView.removeFromSuperview()
+    //
+    //                                print("❌ Report Failed")
+    //                            }
+    //                        }
+    //
+    //                        // MARK: - Timeout
+    //
+    //                        if !isReportSent {
+    //
+    //                            self.requestTimer = Timer.scheduledTimer(
+    //                                withTimeInterval: 8.0,
+    //                                repeats: false
+    //                            ) { [weak self] timer in
+    //
+    //                                if !isReportSent {
+    //
+    //                                    self?.requestTimer?.invalidate()
+    //                                    self?.requestTimer = nil
+    //
+    //                                    report.apiManager.cancelSession()
+    //
+    //                                    self?.newSaveOfflineReport(report: report)
+    //
+    //                                    self?.sendTrackingReportByReportType(type: type)
+    //                                }
+    //                            }
+    //                        }
+    //
+    //                    } else {
+    //
+    //                        print("🚫 Blocked")
+    //
+    //                        self.loadingView.removeFromSuperview()
+    //                    }
+    //                }
+    //            }
+    //
+    //        } else {
+    //
+    //            self.loadingView.removeFromSuperview()
+    //        }
+    //    }
     
     func showNoInternetPopup() {
         
