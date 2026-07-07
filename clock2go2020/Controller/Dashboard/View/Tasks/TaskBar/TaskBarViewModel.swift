@@ -24,7 +24,7 @@ class TaskBarViewModel {
         for task in items {
             taskBarItems.append(TaskBarItem(task: task))
         }
-        print("taskBarItems", taskBarItems)
+//        print("taskBarItems", taskBarItems)
     }
 
     func addTaskBarItem(_ item: TaskBarItem) {

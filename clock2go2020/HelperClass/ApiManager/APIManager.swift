@@ -185,7 +185,7 @@ class APIManager {
         if let jsonData = data {
             do {
                 let result = try JSONDecoder().decode(T.self, from: jsonData)
-                print("result", result)
+//                print("result", result)
                 return result
             } catch let error {
                 print("\n\n\(error)\n\n")

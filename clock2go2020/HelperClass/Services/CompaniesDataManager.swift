@@ -249,7 +249,7 @@ class CompaniesDataManager {
     
     func getLastLoginReport() -> ReportObj? {
         let reports = getLastLoginLogoutReports()
-        print("getLastLoginReport() currentClientId",self.currentClientId)
+//        print("getLastLoginReport() currentClientId",self.currentClientId)
         guard let report = reports.first else { return nil }
         
         //        guard report.actionType == "1" || report.actionType == ReportActionType.serviceEntry.rawValue else {

@@ -155,7 +155,7 @@ class DashboardViewController: UIViewController {
             if let newvalue = change?[.newKey]
             {
                 let newsize  = newvalue as! CGSize
-                print("table height:", newsize.height)
+//                print("table height:", newsize.height)
                 self.tbl_heightConstraint.constant = newsize.height
             }
         }
@@ -204,7 +204,7 @@ class DashboardViewController: UIViewController {
         let daysDiff = calendar.dateComponents([.day], from: selectedDay, to: today).day ?? 0
         
         if daysDiff >= 0 && daysDiff <= 6 {
-            print("✅ Editable: Within the last 6 days including today")
+//            print("✅ Editable: Within the last 6 days including today")
             // Enable editing of traffic light data
         } else {
             print("❌ Not editable: Outside editable range")

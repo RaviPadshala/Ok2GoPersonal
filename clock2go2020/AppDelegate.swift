@@ -64,6 +64,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UNUserNotificationCenter.current().delegate = self
 
         FirebaseApp.configure()
+        FirebaseConfiguration.shared.setLoggerLevel(.error)
 
         if #available(iOS 15.0, *) {
             // Warm up location permission and validate linkage to AttendanceSecurityKit
