@@ -976,6 +976,11 @@
 		5B61C0552FA3258700760A39 /* CheckInSecurityService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckInSecurityService.swift; sourceTree = "<group>"; };
 		5B6581C62F6141D900194B79 /* NewOfflineRequestEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewOfflineRequestEndpoint.swift; sourceTree = "<group>"; };
 		5B76EAEC2FD2841400634B80 /* th */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = th; path = th.lproj/Localizable.strings; sourceTree = "<group>"; };
+<<<<<<< Updated upstream
+=======
+		5BC1474530401B1A002A9D0F /* hi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = hi; path = hi.lproj/Localizable.strings; sourceTree = "<group>"; };
+		5BC1474730401DA0002A9D0F /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+>>>>>>> Stashed changes
 		784701BEDC8F22BEE8E2A6EC /* Pods_clock2go2020.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_clock2go2020.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		840A1D8F2422C204002BFCD7 /* NotificationTypeEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationTypeEntity.swift; sourceTree = "<group>"; };
 		840A1D92242357D2002BFCD7 /* UIBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIBuilder.swift; sourceTree = "<group>"; };
@@ -3734,6 +3739,11 @@
 				he,
 				bg,
 				th,
+<<<<<<< Updated upstream
+=======
+				hi,
+				"zh-Hans",
+>>>>>>> Stashed changes
 			);
 			mainGroup = 840D841523A0DD7100534966;
 			packageReferences = (
@@ -4558,6 +4568,11 @@
 				F7C0D05D258CFDF8006C6ADB /* ar */,
 				048EA7B02D64954F00CF2824 /* bg */,
 				5B76EAEC2FD2841400634B80 /* th */,
+<<<<<<< Updated upstream
+=======
+				5BC1474530401B1A002A9D0F /* hi */,
+				5BC1474730401DA0002A9D0F /* zh-Hans */,
+>>>>>>> Stashed changes
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
@@ -4714,7 +4729,11 @@
 				CODE_SIGN_ENTITLEMENTS = clock2go2020/clock2go2020.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
+<<<<<<< Updated upstream
 				CURRENT_PROJECT_VERSION = 8;
+=======
+				CURRENT_PROJECT_VERSION = 28;
+>>>>>>> Stashed changes
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEVELOPMENT_TEAM = 9PG4W33667;
 				EXCLUDED_ARCHS = "";
@@ -4746,7 +4765,11 @@
 				CODE_SIGN_ENTITLEMENTS = clock2go2020/clock2go2020.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
+<<<<<<< Updated upstream
 				CURRENT_PROJECT_VERSION = 8;
+=======
+				CURRENT_PROJECT_VERSION = 28;
+>>>>>>> Stashed changes
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = 9PG4W33667;
 				EXCLUDED_ARCHS = "";

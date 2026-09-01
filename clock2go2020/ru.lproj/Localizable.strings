@@ -499,6 +499,7 @@
 "SELECT_AN_EVENT" = "Выберите событие";
 "EVENTS" = "Экстраординарные события";
 "SELECT_CLIENT" = "Выберите клиент";
+"SELECT_Patient" = "Выберите пациента";
 "TREATMENT" = "Уход";
 "GENERAL_TRAINING" = "Общее обучение";
 "ADD_REMARK" = "Добавьте замечание";
@@ -1153,6 +1154,8 @@
 "Patient not at home" = "Пациента нет дома";
 "Return from service and enter work" = "Возвращение с службы и начало работы";
 "Return from service" = "Возвращение с службы";
+"Emergency Entry" = "Экстренный вход";
+"Emergency Exit" = "Запасный выход";
 "Exit from service" = "Выход с службы";
 "Exit from work and service" = "Выход с работы и службы";
 "Choose format" = "Выберите формат";

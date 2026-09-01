@@ -259,8 +259,11 @@ class EditReportView: UIViewController {
             self.holocustReportView.therapyTitle.text = viewModel.getHoloCustTherapyType()
             
             self.taskView.isHidden = true
-        }else{
+        }else  if CompaniesDataManager.shared.isRevacha(){
             revachaView.isHidden = false
+            self.holocustReportView.isHidden = true
+        }else{
+            revachaView.isHidden = true
             self.holocustReportView.isHidden = true
         }
         

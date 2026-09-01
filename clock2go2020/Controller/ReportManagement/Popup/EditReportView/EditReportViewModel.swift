@@ -105,7 +105,9 @@ class EditReportViewModel {
     }
 
     func getTask() -> String {
-        if isRevacha || isHolocust {
+        if isRevacha {
+            return shouldEnableTask() ? task?.taskName ?? "SELECT_Patient".localized : "SELECT_Patient".localized
+        }else if isHolocust{
             return shouldEnableTask() ? task?.taskName ?? "SELECT_CLIENT".localized : "SELECT_CLIENT".localized
         }
         return shouldEnableTask() ? task?.taskName ?? "SELECT_TASK".localized : "SELECT_TASK".localized
@@ -171,7 +173,7 @@ class EditReportViewModel {
     }
     
     func getEventName() -> String {
-        return event?.eventName ?? "SELECT_CLIENT".localized
+        return event?.eventName ?? "select_an_event".localized
     }
     
     func getReportType() -> String? {
@@ -264,10 +266,12 @@ class EditReportViewModel {
             let additionalButton2ActionType = additionalButtons.button_2?.action_type?.description ?? ""
             let additionalButton3ActionType = additionalButtons.button_3?.action_type?.description ?? ""
             let additionalButton4ActionType = additionalButtons.button_4?.action_type?.description ?? ""
+            let additionalButton5ActionType = additionalButtons.button_5?.action_type?.description ?? ""
+            let additionalButton6ActionType = additionalButtons.button_6?.action_type?.description ?? ""
 
-            if type == additionalButton1ActionType || type == additionalButton3ActionType {
+            if type == additionalButton1ActionType || type == additionalButton3ActionType || type == additionalButton5ActionType {
                 return #colorLiteral(red: 0.2101188302, green: 0.7993369699, blue: 0.4015711546, alpha: 1)
-            } else if type == additionalButton2ActionType || type == additionalButton4ActionType {
+            } else if type == additionalButton2ActionType || type == additionalButton4ActionType || type == additionalButton6ActionType {
                 return #colorLiteral(red: 0.9756608605, green: 0.3157561719, blue: 0.3174736798, alpha: 1)
             }
         }

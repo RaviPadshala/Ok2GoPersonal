@@ -7,6 +7,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
+<<<<<<< Updated upstream
             uuid = "7D083149-C528-4516-AA0C-20EDABD8D58D"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
@@ -49,6 +50,18 @@
             startingLineNumber = "1267"
             endingLineNumber = "1267"
             landmarkName = "sendReport(endpointType:type:remark:)"
+=======
+            uuid = "6FA085C1-C6BA-4444-8E9F-69755574D7A3"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "clock2go2020/Controller/ReportManagement/Popup/CloseMonthView/CloseMonthView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "140"
+            endingLineNumber = "140"
+            landmarkName = "setupValues()"
+>>>>>>> Stashed changes
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

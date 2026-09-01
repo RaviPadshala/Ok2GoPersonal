@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="24765" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="24743"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -19,16 +19,64 @@
                 <outlet property="button2" destination="lUF-PV-fwe" id="AXf-jC-Fgi"/>
                 <outlet property="button3" destination="tBx-JP-2ym" id="N8G-AI-nQ4"/>
                 <outlet property="button4" destination="njs-jl-LjC" id="Zwa-4f-LkM"/>
+                <outlet property="button5" destination="dL6-il-0qt" id="aUz-A4-lnQ"/>
+                <outlet property="button6" destination="u3Q-Se-Z9K" id="25q-pl-YER"/>
                 <outlet property="contentView" destination="iN0-l3-epB" id="Uob-5L-BWp"/>
+                <outlet property="emergencyButtonView" destination="zq9-Eq-gBg" id="BjE-eB-kUm"/>
+                <outlet property="emergencyViewHeight" destination="Sx5-I0-UpL" id="97L-z7-Eyz"/>
                 <outlet property="roundedBottomView" destination="nQF-Uf-MMv" id="Tmn-cD-fCP"/>
+                <outlet property="roundedButtonViewHeight" destination="0Sn-qz-gC2" id="YYP-Jv-2rt"/>
                 <outlet property="roundedTopView" destination="bF9-aX-hhn" id="aht-xE-X90"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB">
-            <rect key="frame" x="0.0" y="0.0" width="431" height="146"/>
+            <rect key="frame" x="0.0" y="0.0" width="431" height="417"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zq9-Eq-gBg">
+                    <rect key="frame" x="0.0" y="115" width="431" height="85"/>
+                    <subviews>
+                        <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u3Q-Se-Z9K">
+                            <rect key="frame" x="20" y="32.5" width="135" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="135" id="oWP-BK-IuT"/>
+                                <constraint firstAttribute="height" constant="40" id="pWf-BK-8EV"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="OpenSansHebrew-Bold" family="Open Sans Hebrew" pointSize="13"/>
+                            <color key="textColor" red="0.95686274509803915" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <view alpha="0.40000000596046448" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eWu-8M-vYM">
+                            <rect key="frame" x="215.5" y="37.5" width="0.5" height="30"/>
+                            <color key="backgroundColor" red="0.08268459886" green="0.28099378940000003" blue="0.46375954149999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="30" id="TNe-8H-JNW"/>
+                                <constraint firstAttribute="width" constant="0.5" id="UUT-wV-rWJ"/>
+                            </constraints>
+                        </view>
+                        <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dL6-il-0qt">
+                            <rect key="frame" x="276" y="32.5" width="135" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="aTI-SL-rWg"/>
+                                <constraint firstAttribute="width" constant="135" id="cLe-k8-EDN"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="OpenSansHebrew-Bold" family="Open Sans Hebrew" pointSize="13"/>
+                            <color key="textColor" red="0.26666666666666666" green="0.85882352941176465" blue="0.50588235294117645" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" red="0.96078431369999995" green="0.96470588239999999" blue="0.97254901959999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstItem="u3Q-Se-Z9K" firstAttribute="leading" secondItem="zq9-Eq-gBg" secondAttribute="leading" constant="20" id="4VJ-Rd-nvE"/>
+                        <constraint firstItem="eWu-8M-vYM" firstAttribute="centerY" secondItem="u3Q-Se-Z9K" secondAttribute="centerY" id="Afa-1Q-Gjg"/>
+                        <constraint firstAttribute="trailing" secondItem="dL6-il-0qt" secondAttribute="trailing" constant="20" id="AiS-4u-2WV"/>
+                        <constraint firstItem="eWu-8M-vYM" firstAttribute="centerX" secondItem="zq9-Eq-gBg" secondAttribute="centerX" id="GRx-X1-8ab"/>
+                        <constraint firstAttribute="height" constant="85" id="Sx5-I0-UpL"/>
+                        <constraint firstItem="u3Q-Se-Z9K" firstAttribute="centerY" secondItem="zq9-Eq-gBg" secondAttribute="centerY" constant="10" id="cvu-yj-0GR"/>
+                        <constraint firstItem="dL6-il-0qt" firstAttribute="centerY" secondItem="zq9-Eq-gBg" secondAttribute="centerY" constant="10" id="niy-Uz-GhW"/>
+                    </constraints>
+                </view>
                 <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nQF-Uf-MMv">
                     <rect key="frame" x="0.0" y="50" width="431" height="85"/>
                     <subviews>
@@ -82,7 +130,7 @@
                                 <constraint firstAttribute="width" constant="135" id="JX9-HA-u1w"/>
                             </constraints>
                             <fontDescription key="fontDescription" name="OpenSansHebrew-Bold" family="Open Sans Hebrew" pointSize="13"/>
-                            <color key="textColor" red="0.95592147110000003" green="0.33205372100000002" blue="0.33337348700000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="textColor" red="0.95686274509803915" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <view alpha="0.40000000596046448" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G5x-PA-MDi">
@@ -100,7 +148,7 @@
                                 <constraint firstAttribute="width" constant="135" id="nuI-ev-YwY"/>
                             </constraints>
                             <fontDescription key="fontDescription" name="OpenSansHebrew-Bold" family="Open Sans Hebrew" pointSize="13"/>
-                            <color key="textColor" red="0.26729533080000001" green="0.86027866600000003" blue="0.50500977039999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="textColor" red="0.26666666666666666" green="0.85882352941176465" blue="0.50588235294117645" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
                     </subviews>
@@ -124,10 +172,13 @@
                 <constraint firstItem="nQF-Uf-MMv" firstAttribute="top" secondItem="bF9-aX-hhn" secondAttribute="bottom" constant="-20" id="VMl-jk-S5r"/>
                 <constraint firstItem="bF9-aX-hhn" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="bUR-NI-pKD"/>
                 <constraint firstItem="nQF-Uf-MMv" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="c1H-zv-UiD"/>
+                <constraint firstItem="zq9-Eq-gBg" firstAttribute="top" secondItem="nQF-Uf-MMv" secondAttribute="bottom" constant="-20" id="kxd-Dh-Xz3"/>
+                <constraint firstItem="zq9-Eq-gBg" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="l70-UM-QPT"/>
                 <constraint firstItem="bF9-aX-hhn" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="lQD-vt-rH0"/>
+                <constraint firstItem="zq9-Eq-gBg" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="yIL-y8-jH2"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="128.2608695652174" y="62.276785714285708"/>
+            <point key="canvasLocation" x="128.2608695652174" y="153.01339285714286"/>
         </view>
     </objects>
 </document>

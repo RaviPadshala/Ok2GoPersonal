@@ -500,7 +500,7 @@ class DashboardViewController: UIViewController {
                         }
                         
                         vc.tapCancel = {
-                            self.performCheckOut()
+//                            self.performCheckOut()
                         }
                         
                         NavigationController.shared?.present(vc, animated: true, completion: nil)
@@ -1128,11 +1128,19 @@ class DashboardViewController: UIViewController {
     }
 
     @objc func checkOfflineLabelVisibility(_ notification: Notification) {
+<<<<<<< Updated upstream
         if viewModel.offlineModeLabelHidden{
             self.offlineLabel.isHidden = true
         }else{
             self.offlineLabel.isHidden = false
         }
+=======
+//        if viewModel.offlineModeLabelHidden{
+//            self.offlineLabel.isHidden = true
+//        }else{
+//            self.offlineLabel.isHidden = false
+//        }
+>>>>>>> Stashed changes
     }
 
     func showConfirmView(type: ConfirmViewType, checkHealth: Bool = true) {
@@ -1938,6 +1946,7 @@ extension DashboardViewController: AccountInfoViewDelegate {
 // MARK: - SideBarViewDelegate
 extension DashboardViewController: SideBarViewDelegate {
     func userDidTapLanguage() {
+        self.viewModel.loadData()
         self.refreshStrings()
         self.tbl_sperad.reloadData()
     }
@@ -2046,6 +2055,8 @@ extension DashboardViewController: ChooseTaskDelegate {
             }else if viewModel.isListOpenedForPatientNotAtHome {
                 self.viewModel.patientNotAtHome()
                 self.viewModel.isListOpenedForPatientNotAtHome = false
+            }else{
+                self.showConfirmView(type: .loginConfirm)
             }
         }
     }

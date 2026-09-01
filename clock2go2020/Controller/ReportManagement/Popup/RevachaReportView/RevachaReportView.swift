@@ -75,7 +75,7 @@ class RevachaReportView: UIView {
     func setupLocalized() {
         clientTitle.text = "SELECT_CLIENT".localized
         transactionTypeTitle.text = "TRNS_TYPE".localized
-        eventTitle.text = "SELECT_AN_EVENT".localized
+        eventTitle.text = "select_an_event".localized
     }
     
     func setupTaps() {

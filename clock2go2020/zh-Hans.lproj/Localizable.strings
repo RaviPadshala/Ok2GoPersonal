@@ -1,0 +1,1220 @@
+"DAILY_STUDENT_REPORTS_TITLE" = "每日学生报告";
+"HELLO" = "您好 %@";
+"Internship" = "实习:%@";
+"Subspecialty" = "亚专科:%@";
+"CONFIRMATION_TITLE" = "确认";
+"STUDENT_NAME_TITLE" = "学生姓名";
+"ATTENDANCE_CONFIRMATION_TITLE" = "考勤确认";
+"ENTRY_TIME_TITLE" = "进入时间";
+"TRAFFIC_LIGHT_SCORE_TITLE" = "红绿灯评分";
+"NOTES_TITLE" = "备注";
+"Please_select_traffic_light_score_in_student" = "请在学生中选择红绿灯评分";
+"Please_add_notes_in_student" = "请为红色或黄色红绿灯评分输入备注";
+"Please_add_report_time_in_student" = "请输入考勤标记的报告时间";
+"Student_data_submitted_successfully" = "学生数据提交成功!";
+"Alert" = "警告!";
+"You_have_to_fill" = "需要填写的表单数量:%d";
+"forms_to_exit" = "退出表单。";
+"forms_to_enter" = "进入表单。";
+"forms_to_service_exit" = "服务退出表单。";
+"forms_to_service_enter" = "服务进入表单。";
+"success" = "成功!";
+"Form_data_submitted_successfully_Please_fill_another_form_data" = "表单签署成功,请填写另一份表单数据!";
+"Form_sign_successfully" = "表单已成功签署";
+"Fill_out_form_data" = "您必须填写表单";
+"No_student_report_data" = "暂无学生报告数据。";
+"Month_block" = "该月已锁定,无法完成报告";
+"error_1700" = "不允许报告";
+"error_1701" = "不允许报告,NFC 未激活";
+
+//"Invalid_NFC_Tag"
+"The_tag_is_invalid_please_contact_the_responsible_person_in_your_organization" = "标签无效,请联系您组织中的负责人";
+//"Not_supported_tag"
+"The_tag_is_not_supported_please_contact_the_administrator_in_your_organization" =  " 该标签不受支持,请联系您组织中的管理员";
+
+"Reporting_without_NFC_is_not_allowed_Please_use_NFC_to_complete_the_report" = "不允许在没有 NFC 的情况下进行报告。请使用 NFC 完成报告";
+
+"Office_treatment" = "办公室治疗";
+"Clinic_treatment" = "诊所治疗";
+"On_site_treatment" = "现场治疗";
+"Group_treatment" = "团体治疗";
+"Online" = "在线";
+"Individual" = "个人";
+"Group" = "团体";
+"Projective" = "投射性";
+"Medical" = "医疗";
+"Choose_Therapy" = "选择治疗";
+"Select_Therapy" = "选择治疗";
+"Please_select_therapy_type" = "请选择治疗类型";
+
+"Scan" = "扫描";
+"Entry_Report" = "进入报告";
+"Exit_Report" = "退出报告";
+"Please_select_report_type" = "请选择报告类型。";
+"NFC_scan_successfully" = "NFC 扫描成功。您现在可以继续报告";
+
+"Add_Distance_Measurement" = "添加距离测量";
+"select_city" = "选择城市";
+"Enter_manual_distance" = "手动输入距离";
+"Search_a_city" = "搜索城市";
+"Please_select_a_travel_route" = "请选择行程路线";
+
+"Scaned_NFC_is_not_active" = "扫描的 NFC 未激活";
+"NFC_not_exist" = "NFC 不存在";
+"error_1703_message" = "您无权报告,请联系您组织中的经理";
+"error_1704_message" = "您尝试报告的标签未激活,请联系您组织中的管理员";
+"Patient_not_found" = "未找到患者";
+"offline_report_message" = "报告已成功接收,并将在连接恢复后在系统中更新";
+"closing_message" = "%@ 的关闭已不再允许";
+
+
+"Please_enter_employee_code" = "请输入员工编号";
+"Please_enter_employee_name" = "请输入员工姓名";
+"Please_enter_phone_address" = "请输入电话号码";
+"Please_enter_email_address" = "请输入电子邮件地址";
+"Please_select_department" = "请选择部门";
+"Please_select_reportWay" = "请选择报告方式";
+
+
+
+
+
+
+
+
+
+"CONTINUE" = "继续";
+"CHOOSE_LANGUAGE_TITLE" = "语言";
+"SELECT_LANGUAGE_MESSAGE" = "选择您的语言";
+"PHONE_INPUT_TITLE" = "欢迎";
+"PHONE_INPUT_MESSAGE" = "注册请输入 \
+您的电话号码 ";
+"TERMS_ARGEEMENT_MESSAGE" = "我确认我已阅读并理解使用条款";
+"TERMS_OF_USE" = "使用条款";
+"PHONE_WRONG_MESSAGE" = "* 该号码不正确";
+"PASSWORD_INPUT_TITLE" = "验证详细信息";
+"PASSWORD_SEND_MESSAGE" = "包含注册码的短信已发送给您。 \
+请输入验证码";
+"ENTERED_PASSWORD_INVALID_MESSAGE" = "* 密码无效";
+"ENTER_CODE" = "输入验证码";
+"WRONG_CODE_MESSAGE" = "验证码错误";
+"PASSWORD_RESEND_MESSAGE" = "重新发送短信";
+"WELCOME_TITLE" = "欢迎";
+"SHOW_USAGE_GUIDE_MESSAGE" = "观看我们的用户指南";
+"WATCH_GUIDE" = "查看指南";
+"SKIP" = "跳过";
+"GOOD_MORNING_TITLE" = "早上好";
+"GOOD_AFTERNOON" = "下午好";
+"GOOD_AFTERNOON_2" = "下午好";
+"GOOD_EVENING" = "晚上好";
+"GOOD_NIGHT" = "晚安";
+"CANT_USE_APP_ERROR_MESSAGE" = "要使用此应用 - 请联系您组织中的经理,在员工卡上设置您的服务。更新服务后,重新打开应用并开始报告";
+"MISSING" = "缺失";
+"TOTAL_HOURS" = "总工时";
+"ABSENCES" = "缺勤";
+"SELECT_TASK_MESSAGE" = "首先,请选择一项任务";
+"SELECT_TASK" = "选择任务";
+"SEARCH_ADD_TASK" = "搜索/添加任务";
+"SEARCH_TASK" = "搜索任务";
+"LOGIN_WITH_TASK_TITLE" = "您要带任务登录吗?";
+"LOGIN_WITHOUT_TASK_TITLE" = "您要登录吗?";
+"LOGIN_BEFORE_STANDARD_TIME" = "您要在工作时间之前登录吗?";
+"LOGIN_AFTER_STANDARD_TIME" = "您要在工作时间之后登录吗?";
+"LOGOUT_WITH_TASK_TITLE" = "要结束任务,请选择其中一个选项";
+"LOGOUT_WITHOUT_TASK_TITLE" = "您要注销吗?";
+"LOGOUT_BEFORE_STANDARD_TIME" = "您要在工作时间之前注销吗?";
+"LOGOUT_AFTER_STANDARD_TIME" = "您要在工作时间之后注销吗?";
+"LOGIN_SUCCESS_TITLE" = "报告已成功接收";
+"LOGOUT_SUCCESS_TITLE" = "注销成功";
+"FINISH_TASK_TITLE" = "结束任务";
+"FINISH_AND_START_TASK_TITLE" = "结束任务并切换到新任务";
+"TAKE_BREAK_TITLE" = "您要休息一下吗?";
+"END_BREAK_TITLE" = "您要结束休息吗?";
+"BREAK_SUCCESS_TITLE" = "成功";
+"ABSENCE_CONFIRM_TITLE" = "您要报告 %@ 这些日期吗? %@ - %@ 共 %@ 天";
+"CONFIRM" = "批准";
+"CANCEL" = "取消";
+"ADD_COMMENT" = "添加评论";
+"TAKE_A_PICTURE" = "拍照";
+"Do you want to report an entry with task" = "您要带任务报告进入吗 ";
+"and event" = " 和事件 ";
+"MULTI_LOGIN" = "多人登录";
+"MULTI_LOGOUT" = "多人注销";
+"CHOOSE_EMPLOYEES" = "选择员工";
+"TASK_NOT_CHOOSED" = "无任务";
+"CHOOSE_TASK_TO_LOGIN" = "请选择要登录的任务";
+"CHOOSE_TASK_TO_LOGOUT" = "请选择要注销的任务";
+"SELECT_USERS_TO_PROCCED" = "选择用户以继续";
+"SELECTED_0_USER" = "已选择 0 个用户";
+"SELECTED_0_USERS" = "已选择 0 个用户";
+"PICTURE_REPORT_LOGIN" = "登录 ";
+"PICTURE_REPORT_TASK_LOGIN" = "带任务登录 ";
+"PICTURE_REPORT_LOGOUT" = "注销 ";
+"HEALTH_APPROVE" = "批准";
+"HEALTH_REJECT" = "不批准";
+"HEALTH_DISCLAIMER_APPROVED" = "报告已通过健康声明接受";
+"HEALTH_DISCLAIMER_REJECTED" = "没有健康声明无法报告";
+"ABSENCE_REPORT_TITLE" = "缺勤报告";
+"ABSENCE_TYPE_TITLE" = "缺勤类型";
+"DATE_TO_TITLE" = "至";
+"DATE_FROM_TITLE" = "从";
+"ATTACH_FILE_TITLE" = "照片/添加文件";
+"ATTACH_REQUIRED_TITLE" = "照片/添加文件为必填项";
+"CHOOSE_EMPLOYEE_TITLE" = "选择员工";
+"SELECT_ABSENCE_TYPE_TITLE" = "选择缺勤类型";
+"VACATIONS" = "休假";
+"RESERVE_SERVICE" = "预备役服务";
+"DISEASE" = "病假";
+"COURSE" = "课程";
+"GENERAL_ABSENCE" = "一般缺勤";
+"KID_DISEASE" = "子女生病";
+"MOURNING" = "丧假";
+"ELECTIONS_DAY" = "选举日";
+"TRAINING" = "培训";
+"MATERNITY" = "产假";
+"EMERGENCY" = "紧急情况";
+"WEDDING" = "婚假";
+"ACCIDENT" = "意外事故";
+"WOMENS_DAY" = "妇女节";
+"HMO_VISIT" = "医保就诊";
+"COMPANY_TRIP" = "公司旅行";
+"DECLARATION_DAY" = "声明日";
+"OPTIONAL_HOLIDAY" = "可选假日";
+"SPOUSE_DISEASE" = "配偶生病";
+"PARENT_DISEASE" = "父母生病";
+"MEETINGS" = "会议";
+"UNPAID_VOCATION" = "无薪休假";
+"HALF_DAY_VOCATION" = "半天休假";
+"CORONA_QUARANTINE" = "新冠隔离";
+"PAIRING" = "配对";
+"AVAILABLE" = "可用";
+"ATTACH_TITLE" = "请附上文件或拍摄照片";
+"ATTACH_PHOTO_TITLE" = "上传文件";
+"ATTACH_CAMERA_TITLE" = "拍照";
+"ATTACH_BIG_SIZE_MESSAGE" = "请选择小于 1000KB 的图片";
+"LOGOUT" = "签退";
+"LOGIN" = "签到";
+"ABSCENCE" = "缺勤";
+"PAUSE" = "休息";
+"END_PAUSE" = "结束休息";
+"SHOW_TRACK_TITLE" = "显示轨迹";
+"ADD_DISTANCE" = "添加距离";
+"ADDITIONAL_BUTTON_MAKE_ACTION" = "您要进行 ";
+"ADD_A_TRIP" = "添加行程";
+"START_RIDE" = "开始行程";
+"END_RIDE" = "结束行程";
+"DISTANCE_MEASUREMENT_ERROR" = "请稍等一分钟后再开始新的距离测量";
+"START_TRAKING_CONFIRM_TITLE" = "开始";
+"STOP_TRAKING_CONFIRM_TITLE" = "完成";
+"SHOW_TRAKING_CONFIRM_TITLE" = "好的";
+"START_TRAKING_TITLE" = "开始测量距离吗?";
+"STOP_TRAKING_TITLE" = "完成距离测量吗?";
+"SHOW_TRAKING_TITLE" = "您已追踪 - ";
+"KILOMETERS" = "公里";
+"METERS" = "米";
+"DATE" = "日期";
+"ABSCENCE_REASON" = "因故缺勤";
+"ERROR" = "错误";
+"SUCCESS_TITLE" = "操作成功!";
+"ACTIONS" = "操作";
+"MY_PROFILE" = "我的资料";
+"MY_REPORTS" = "我的报告";
+"MY_FORMS" = "我的表单";
+"MY_TRIPS" = "我的交通";
+"MESSAGES" = "消息";
+"SETTINGS" = "设置";
+"CHOOSE_LANGUAGE" = "选择语言";
+"LEGAL_INFORMATION" = "法律信息";
+"ABOUT" = "关于";
+"SUPPORT" = "支持";
+"EXIT" = "登出";
+"PROFILE_SETTINGS_TITLE" = "资料设置";
+"COMPANY_NAME_TITLE" = "公司名称";
+"PERSONAL_INFORMATION_TITLE" = "个人信息";
+"REMINDER_TITLE" = "提醒";
+"LOGIN_REMINDER_TITLE" = "登录提醒";
+"LOGOUT_REMINDER_TITLE" = "注销提醒";
+"LOGIN_REMINDER_TEXT" = "请登录";
+"Add new reminder" = "添加新提醒";
+"LOGOUT_REMINDER_TEXT" = "请注销";
+"WORKER_NAME" = "姓名";
+"EMAIL_ADDRESS" = "电子邮件";
+"POSITION" = "职位";
+"FIELD_NOT_MANDATORY" = "* 此字段非必填";
+"SAVE" = "保存";
+"SETUP_DAYS_REMINDER" = "设置每日时间表";
+"REMIND_SIGNIN_AT" = "提醒我登录";
+"REMIND_LEAVE_AT" = "提醒我注销";
+"REMIND_WHEN_WORK_MORE_THAN" = "当我工作超过以下时间时提醒我:";
+"REMIND_WHEN_BREAK_MORE_THAN" = "当我休息超过以下时间时提醒我:";
+"ALL_DAYS" = "所有日子";
+"ALL_SUNDAYS" = "所有星期日";
+"ALL_MODAYS" = "所有星期一";
+"ALL_TUESDAYS" = "所有星期二";
+"ALL_WEDNESDAYS" = "所有星期三";
+"ALL_THURSDAYS" = "所有星期四";
+"ALL_FRIDAYS" = "所有星期五";
+"ALL_SATURDAYS" = "所有星期六";
+"DELETE" = "删除";
+"SELECT_ALL" = "全选";
+"YOU_HAVE_NUMBER_NEW_ALERTDS" = "您有 0 条新提醒";
+"MY_REPORT_TITLE" = "我的报告";
+"REPORT_CUMULATIVE_TITLE" = "累计";
+"REPORT_TOTAL_TITLE" = "合计";
+"REPORT_EXIT_LOCATION_TITLE" = "退出位置";
+"REPORT_EXIT_TIME_TITLE" = "退出时间";
+"REPORT_ENTER_LOCATION_TITLE" = "进入位置";
+"REPORT_ENTER_TIME_TITLE" = "进入时间";
+"REPORT_TASK_TITLE" = "任务";
+"REPORT_DATE_TITLE" = "日期";
+"CLOSE_MONTH_TITLE" = "关闭月份";
+"IS_CLOSE_MONTH_TITLE" = "月份已锁定";
+"SEND_EMAIL_TITLE" = "发送电子邮件";
+"VIEW_BY_TITLE" = "查看方式";
+"CHOOSE_MONTH_TITLE" = "选择月份";
+"MISSING_TITLE" = "缺失";
+"ABSENCE_TITLE" = "缺勤";
+"BREAKS_TITLE" = "休息";
+"STANDARDS_TITLE" = "标准";
+"NOREPORT_TITLE" = "无报告";
+"SHOW_ALL_TITLE" = "显示全部";
+"MUST_REPORT_PAIRS_TITLE" = "您必须在关闭月份之前成对填写报告";
+"EMAIL_PLACEHOLDER" = "电子邮件";
+"SEND" = "发送";
+"SIGN_AND_CONFIRM_MONTH_REPORT" = "我确认并签署此月度报告";
+"HOURS" = "小时";
+"TERMS_TITLE" = "使用条款";
+"TERMS_TEXT" = "用户在此声明,他知悉考勤应用程序及 clock2go 考勤软件(以下统称:''软件'')中的所有财产权均归 Ok2go(以下及下文称为 ''公司'')及其许可方所有,其使用须依据仅以公司名义授予的许可。\
+此软件是公司的独家财产,其中所有权利归公司所有。该软件包含归第三方所有的应用程序和/或程序和/或其他数据库,所有相关权利仅保留给这些方和公司。\
+该软件仅供使用考勤的订户用于打卡考勤,任何使用者,包括复制、复印、修改或分发该软件或数据或其任何部分,均违反使用该软件的许可,并将面临民事和刑事诉讼。在报告考勤时,系统仅在报告时定位设备的位置,记录该位置用于控制和核实数据,并传输给订购服务的订阅组织。信息在系统中保存半年和/或在特殊情况下根据客户在维护考勤数据方面的需求和定义保存。\
+公司有权根据其自行决定进行添加或更改。用户解除公司就所提供的更改和/或信息和/或数据通知我们的需要。\
+由于计算机软件和卫星追踪系统的高度复杂性,公司不保证软件活动将持续或无错误,或软件所提供的信息不包含错误和/或差错和/或遗漏信息。\
+用户声明同意上述条件,使用该软件即构成其对许可所有条款的同意,包括本文件中所述内容。\
+用户承诺仅根据适用于该软件的许可条款操作和使用该软件,该许可条款由公司不时确定。\
+在任何情况下,公司均不对用户负有任何责任,用户必须确保其考勤报告与根据软件的报告者相符。\
+用户解除公司对软件和/或公司接收和/或处理和/或提供给其雇主的考勤报告和/或印记的任何责任和/或义务和/或错误。\
+注册系统时,设备的标识号将与电话号码一起注册,首次报告后,只能从此设备继续报告,以防止伪造。\
+注册期间,将向订户发送包含注册码的短信,用于一次性识别和验证所报告的号码。如果输入正确的代码,则可以继续报告。";
+
+"LEGAL_INFORMATION_TITLE" = "法律信息";
+"ABOUT_TITLE" = "关于";
+"ABOUT_TEXT" = "Clock2go 是一款考勤应用,让您可以随时随地报告考勤!该应用为员工提供多种高级工具:任务和项目报告、各类缺勤报告、按权限查看和填写报告、发送文件、设置提醒等! \
+该应用经过开发和设计,可让任何组织根据自身需求灵活调整应用设置! \
+在 cock2go,我们专注于员工以舒适友好的方式使用应用的体验,并将其置于中心位置! \
+请您知悉,数据存储在公司数据库中,并根据公司与雇主之间的协议根据组织要求转移给组织。签到(工作开始/结束)时间和日期从系统服务器获取,签到时的电话位置将根据组织的要求并取决于设备技术以及从蜂窝网络和卫星接收的数据发送。请注意,考勤应用的每次使用都涉及根据您所在的浏览方案的条款进行浏览,可能根据您与通信提供商之间的协议收费。另外,由于使用了设备上的集成定位系统 - 设备电池的使用时间可能缩短。";
+"SUPPORT_TITLE" = "支持";
+"SUPPORT_TEXT" = "如需其他支持,请联系我们的呼叫中心: \
+\
+星期日 - 星期四,上午 8 点 - 下午 5 点 \
+\
+分机 2972-39209700 \
+\
+您可以发送电子邮件至 support@ok2go.co.il,我们将在一个工作日内回复您。 \
+\
+如需更多信息,请访问 www.ok2go.co.il 并查找支持菜单。";
+"SUPPORT_GUIDE_TEXT" = "点击此处观看应用指南。 ";
+"SUPPORT_CLICK_HERE" = "点击这里";
+"TRACKING_TERMS_TITLE" = "追踪使用条款";
+"TRACKING_TERMS_TEXT" = "我同意与他人分享我手机的位置,即使我手机上的应用已关闭。\
+\
+该服务使用设备的内部 GPS 来测量行程中的距离。GPS 的持续使用会影响电池消耗。如果应用仅在后台运行,电池消耗会减少。\
+\
+系统将位置历史保留三个月,以监控和调查客户问题和投诉。此外,公司负责每月备份和/或打印报告。\
+\
+用户知悉,当设备(屏幕)上的 GPS 关闭时,无法确定订户的位置。\
+\
+如果员工在封闭建筑物、地下停车场、隧道等内部,这可能导致无法定位员工位置或位置不准确,可能造成测量偏差。\
+\
+雇主对该服务负责,必须告知员工有关该服务的信息。\
+公司不对设备或通信问题负责。客户知悉,可能不时存在通信或信息传输问题。\
+\
+该服务受客户服务协议及其条款和条件约束。\
+\
+如有必要(休假、备份服务等),员工可以在其设备的设置菜单中阻止确定其位置。在这种情况下,员工在地图上显示为红色。\
+\
+累积的信息取决于设备和通过设备 GPS 进行的测量。因此,可能存在公司无法控制的偏差。测量距离时,会考虑偏差范围。\
+\
+公司不对 GPS 或卫星负责,并按从设备接收的方式呈现图像。";
+"To_chat_with_a_representative_press" = "要与代表聊天,请按";
+"PASSWORD_RESEND" = "重置密码";
+"INPUT_PASSWORD" = "输入您的 clock2go 密码";
+"REPORT_WAY_TITLE" = "选择报告方式";
+"LOGIN_AND_LOGOUT" = "登录和注销";
+"WITH_EMPLOYEE_CODE" = "使用员工编号";
+"WITH_TASK" = "使用任务";
+"WITH_EMPLOYEE_CODE_AND_TASK" = "使用员工编号和任务";
+"TEAM_MANAGER_AND_TASK" = "团队经理和任务";
+"<No Task>" = "无任务";
+"201" = "您无权进行距离测量 - 如需权限,请联系您组织中的经理";
+"202" = "您无法添加新任务,必须从现有列表中选择 - 如需权限,请联系您组织中的经理";
+"203" = "您无权关闭月份 - 如需权限,请联系您组织中的经理";
+"204" = "为了关闭月份,必须完成所有报告中的差距";
+"205" = "您无权查看报告 - 如需权限,请联系您组织的经理";
+"206" = "您无权查看报告 - 如需权限,请联系您组织的经理";
+"207" = "员工未激活 - 您应联系您组织中的经理在系统中将员工卡更新为已激活";
+"208" = "您无权完成考勤报告 - 如需权限,请联系您组织中的经理";
+"209" = "您无权为其他员工报告缺勤 - 如需权限,请联系您组织中的经理";
+"210" = "您无权批准此客户的月度考勤";
+"211" = "您无权进行距离测量 - 如需权限,请联系您组织中的经理";
+"212" = "系统未接收到文件,请重试";
+"254" = "此项目中已存在此任务名称";
+"255" = "未找到任务,请重试";
+"301" = "系统无法识别该电话号码 - 请重试或联系支持中心 03-9209700";
+"302" = "系统无法识别您的设备 - 请重试或联系支持中心 03-9209700";
+"303" = "系统无法识别您的员工编号 - 请重试或联系支持中心 03-9209700";
+"304" = "您选择的设备语言不可用 - 请重试或联系支持中心 03-9209700";
+"305" = "向系统发送日期的方式存在问题 - 请重试或联系支持 03-9209700";
+"306" = "您的公司设置中缺少一个参数,导致应用无法与系统更新 - 请重试或联系支持 039209700";
+"307" = "您尝试执行的操作系统无法识别,导致应用无法完成该操作 - 请重试或联系支持 039209700";
+"308" = "您尝试执行的操作无法在系统中保存 - 请重试或联系支持 03-9209700";
+"309" = "系统未接受您尝试添加的任务。请重试或联系您组织的管理员查看您是否有权限执行此操作";
+"310" = "系统未保存关闭月份操作。请重试或联系您组织的管理员查看您是否有权限执行此操作";
+"311" = "无法删除文件,请重试或联系您组织的管理员查看您是否有权限执行此操作";
+"312" = "系统未接受您选择的任务。请重试或联系您组织的管理员查看您是否有权限执行此操作";
+"313" = "系统未接受验证码。请确认输入的代码正确。如果正确,请尝试重新注册";
+"314" = "员工未激活 - 请联系您组织中的经理在系统中将员工卡更新为已激活";
+"315" = "未发送您选择的报告。请重试或联系您组织的管理员查看您是否有权限执行此操作";
+"316" = "所选报告格式不正确。请重试或联系您组织的管理员查看您是否有权限执行此操作";
+"317" = "未发送报告。请重试或联系您组织的管理员查看您是否有权限执行此操作";
+"318" = "向系统发送日期的方式存在问题 - 请重试或联系支持 039209700";
+"319" = "无法完成报告,请重试或联系您组织的管理员查看您是否有权限执行此操作";
+"320" = "无法删除报告,请重试或联系您组织的管理员查看您是否有权限执行此操作";
+"321" = "系统不接受您输入的姓名或电子邮件,请重试或联系支持 39209700";
+"322" = "您注册所用的设备未在系统中更新 - 请重试或联系支持中心 039209700";
+"323" = "系统不接受您选择的缺勤 - 请重试或联系支持中心 039209700";
+"324" = "请为您选择的缺勤选择日期范围,然后重试";
+"325" = "您无权为其他员工报告。要开启该权限,请联系您组织中的经理";
+"326" = "向系统发送日期的方式存在问题 - 请重试或联系支持 039209700";
+"327" = "您尝试执行的操作无法在系统中保存 - 请重试或联系支持 039209700";
+"328" = "系统未接收到文件,请重试";
+"329" = "无法测量距离 - 请重试或联系支持中心 039209700";
+"330" = "系统未接受您选择的任务。请重试或联系您组织的管理员查看您是否有权限执行此操作";
+"331" = "未检测到距离测量起点,无法完成测量";
+"332" = "无法保存距离测量,请重试或联系您组织的管理员查看您是否有权限执行此操作";
+"333" = "您的公司设置中缺少一个参数,导致应用无法与系统更新 - 请重试或联系支持 039209700";
+"334" = "您尝试执行的操作无法在系统中保存 - 请重试或联系支持 039209700";
+"335" = "您无权为其他员工报告。要获取权限,请联系您组织中的经理";
+"400" = "出现错误,请稍后重试";
+"401" = "该电话号码已在其他设备上注册。您必须重新注册";
+"403" = "出现错误,请稍后重试";
+"410" = "系统中未设置该号码,请联系您的经理";
+"411" = "您的员工卡在系统中未激活 - 请联系您的经理";
+"412" = "验证码错误";
+"418" = "文件不正确,请重试";
+"420" = "未发现适当的卫星接收以接收报告位置。请尝试改善您的位置或检查位置设置后再次报告";
+"421" = "您必须带任务报告";
+"423" = "您必须先注销才能再次登录";
+"424" = "您只能从工作区域报告";
+"425" = "作为服务改进的一部分,我们想告知您,报告位于单位外。请在您所在单位内报告";
+"426" = "请稍等一分钟后重试";
+"429" = "您必须先从此任务注销才能再次登录";
+"430" = "精度不佳";
+"433" = "您必须在关闭月份之前完成所有缺失报告";
+"434" = "月份已关闭,请联系您的经理开启月份";
+"435" = "无数据";
+"450" = "无法对此患者进行报告";
+"453" = "无法报告锁定月份";
+"500" = "出现错误,请稍后重试";
+"NO_INTERNET_CONNECTION" = "无网络连接。您可以登录或注销。其他操作请等待网络重新连接";
+"OFFLINE_MODE_REPORT_SAVED" = "报告已接受,将在连接恢复后上传至系统";
+"ERROR_WITH_CODE" = "消息";
+"APPROVE" = "批准";
+"CLOSE_MONTH_EMP" = "您确定要为此员工关闭月份吗?";
+"OPEN_MONTH_EMP" = "您确定要为此员工开启月份吗?";
+"APPROVE_ALL_REPORTS" = "您确定要批准所有报告吗?";
+"REMOVE_ALL_REPORTS" = "您确定要移除所有员工的月度审批吗?";
+"APPROVE_EMP" = "您确定要为此员工批准月份吗?";
+"REMOVE_APPROVAL_EMP" = "您确定要移除此员工的月度审批吗?";
+"OPEN_MONTH_STATUS" = "开启月份";
+"CLOSE_MONTH_STATUS" = "关闭月份";
+"APPROVE_MONTH_STATUS" = "已批准月份";
+"ALL_MONTH_STATUS" = "显示全部";
+"ENTER_AFTER_PASSWORD" = "登录";
+"CHOOSE_COMPANY" = "选择公司";
+"ABSENCE_FROM_WORK_DUE" = "因故缺勤 ";
+"ABSENCE_DURATION" = "总天数";
+"UNKNOWN_ERROR" = "发生错误。请稍后重试";
+"VALIDATION_APPROVED" = "验证成功完成";
+"MANAGER_APP" = "管理员应用";
+"PERSONAL_APP" = "返回报告";
+"PASSWORD" = "密码";
+"FORGOT_PASSWORD" = "忘记密码?";
+"CLOSE_MANAGER_REPORTS_TITLE" = "关闭月份";
+"APPROVE_ALL" = "全部批准";
+"APPROVE_SELECTED_REPORTS" = "您确定要批准所选报告吗?";
+"EMP_APPOVAL_DATE" = "雇主批准日期 - ";
+"EMP_REJECT_DATE" = "雇主拒绝日期 - ";
+"REJECT" = "拒绝";
+"NAME" = "姓名";
+"SELECT" = "选择";
+"CLOSE_EMP_DATE" = "由员工关闭";
+"CLOSE_MGR_DATE" = "关闭日期";
+"EMPLOYER_NAME" = "雇主姓名";
+"APPROVAL_STATUS" = "雇主审批";
+"APPROVAL_MGR" = "经理审批";
+"BY_EMP_CODE" = "按员工编号";
+"NOT_ACTIVE_ONLY" = "仅未激活";
+"ACTIVE_ONLY" = "仅激活";
+"ALL_EMP" = "所有员工";
+"CHOOSE_DEPARTMENT" = "选择部门";
+"ENTRY" = "进入";
+"FULL" = "完整";
+"NONE" = "无";
+"MISS" = "缺勤";
+"EMPLOYEES" = "员工";
+"FILTER_OPTIONS" = "筛选选项";
+"ADD_EMPLOYEE" = "添加新员工";
+"CODE_WORKS" = "员工编号";
+"DEPARTMENT" = "部门";
+"PHONE_REPORTS" = "电话报告";
+"REPORTING_ROUTE" = "报告路线";
+"ADD" = "添加";
+"MONTH_REPORT" = "月度报告";
+"FAMILY_ABSENCE" = "家庭缺勤";
+"SIGNED" = "已签署";
+"APPROVED" = "已批准";
+"REJECTED" = "已拒绝";
+"EXIT_AND_RETURN_FROM_SERVICE" = "退出并从服务返回";
+"EDIT_EMPLOYEE" = "编辑员工";
+"SAVE_EDIT" = "保存";
+"EMPLOYEE_ADDED" = "新员工添加成功";
+"EMPLOYEE_UPDATE" = "员工信息更新成功";
+"LOCATION_REQUEST_TITLE" = "启用位置服务";
+"LOCATION_REQUSET_SUBTITLE" = "为了报告,需要前往设置并开启位置访问权限";
+"MUST_NOTE" = "必须输入备注";
+"SELECT_COMMENT" = "选择评论";
+"DISTANCE_MEASUREMENT" = "距离测量";
+"DISTANCE" = "目前距离";
+"airplane_mode_turned_off_message_alert" = "您的飞行模式似乎已启用,您要禁用它吗?";
+"no_internet_message_alert" = "您没有网络连接。请启用网络以继续。";
+"SELECT_AN_EVENT" = "选择事件";
+"EVENTS" = "事件";
+"SELECT_CLIENT" = "选择客户";
+"TREATMENT" = "治疗";
+"GENERAL_TRAINING" = "一般培训";
+"ADD_REMARK" = "添加备注";
+"EVENT_REPORT_SECCESSFULLY" = "事件报告已成功接收";
+"EVENT_TRAINING" = "培训";
+"TRNS_TYPE" = "交易类型";
+"CELL" = "手机";
+"CLIENT" = "客户";
+"SELECT_DATE" = "选择日期";
+"OFFLINE_MODE" = "离线模式";
+"UNKNOWN_TASK" = "未知任务";
+"WARNING" = "警告";
+"UNKNOWN_TASK_ERROR_MESSAGE" = "未找到具有扫描标识符的任务。您要继续吗?";
+"YES" = "是";
+"NO" = "否";
+"must_report_with_comment_error" = "必须带评论报告";
+"must_report_with_date_error" = "必须带日期报告";
+"must_report_with_time_error" = "必须带时间报告";
+"CHOOSE_PROJECT_STRING" = "选择项目";
+"TURN_ON_WIFI_IF_IN_BILDING" = "如果您在建筑物内,请启用 Wi-Fi";
+"TURN_ON_WIFI_TITLE" = "启用 Wi-Fi 服务";
+"NOT_ALLOWED_TO_USE_THE_APP" = "不允许使用此应用";
+"WORK_SCHEDULE_TIME_STRING" = "时间";
+"WORK_SCHEDULE_TASK_NAME_STRING" = "任务名称";
+"WORK_SCHEDULE_ADDRESS_STRING" = "地址";
+"WORK_SCHEDULE_NOTE_STRING" = "备注";
+"WORK_SCHEDULE_TITLE" = "每日工作日程";
+"WORK_SCHEDULE_SIDE_BAR_TITLE" = "工作日程";
+"WEEK_SCHEDULE_CURRENT_BUTTON_TITLE" = "本周";
+"WEEK_SCHEDULE_PREVIOUS_BUTTON_TITLE" = "上周";
+"WEEK_SCHEDULE_NEXT_BUTTON_TITLE" = "下周";
+"WEEK_SCHEDULE_SCREEN_TITLE" = "每周工作日程";
+"WEEK_SCHEDULE_TASK_CODE" = "任务编号";
+"WEEK_SCHEDULE_TASK_NAME" = "任务名称";
+"WEEK_SCHEDULE_DAY" = "日";
+"WEEK_SCHEDULE_HOURS" = "小时";
+"WEEK_SCHEDULE_ADDRESS" = "地址";
+"LOCATION_NAMES" = "位置名称";
+"TASK_SEARCH" = "任务搜索";
+"INSURED_ID" = "被保险人 ID";
+"SEARCH" = "搜索";
+"Service Entry" = "服务进入";
+"Service Exit" = "服务退出";
+"Sample Report" = "我在这里";
+"REPORT_WAS_SENT" = "报告已发送";
+"REQUEST_COMPLETION_YESTERDAY_REPORT" = "请完成昨天缺失的退出报告";
+"REQUEST_COMPLETION_TODAY_REPORT" = "请完成今天缺失的退出报告";
+"REQUEST_COMPLETION_YESTERDAY_WAS" = "您昨天进入的时间是 ";
+"REQUEST_COMPLETION_TODAY_WAS" = "您今天进入的时间是 ";
+"REQUEST_COMPLETION_WRONG_TIMME_ERROR" = "退出时间应晚于进入时间,请重试";
+"REQUEST_COMPLETION_24_HOURS_ERROR" = "退出报告应在进入后 24 小时内,请重试";
+"INVALID_EMAIL_FORMAT" = "电子邮件格式无效";
+"AS_OF_YESTERDAY" = "截至昨天";
+"דווח מדגמי" = "抽样报告";
+"יציאה בתפקיד" = "服务退出";
+"כניסה בתפקיד" = "服务进入";
+"FORMAT" = "格式";
+"MONTH_01" = "1月";
+"MONTH_02" = "2月";
+"MONTH_03" = "3月";
+"MONTH_04" = "4月";
+"MONTH_05" = "5月";
+"MONTH_06" = "6月";
+"MONTH_07" = "7月";
+"MONTH_08" = "8月";
+"MONTH_09" = "9月";
+"MONTH_10" = "10月";
+"MONTH_11" = "11月";
+"MONTH_12" = "12月";
+"CHOOSE_CLIENT" = "选择客户";
+"402" = "密码无效,请重试。要恢复密码,请前往 clock2go 网站。";
+"app_name" = "clock2go2020";
+"ok2go" = "Ok2Go";
+"udid_preference_key" = "pref_key_udid";
+"phone_preference_key" = "pref_key_phone";
+"employee_id_preference_key" = "pref_key_employee_id";
+"email_preference_key" = "pref_key_email";
+"language_preference_key" = "pref_key_settings_language";
+"selected_company_id_preference_key" = "pref_key_selected_company_id";
+"user_icon_path_preference_key" = "pref_key_user_icon_path";
+"manager_app_token_preference_key" = "pref_key_manager_app_token";
+"language_preference_item_iw" = "עברית";
+"language_preference_item_en" = "English";
+"language_preference_item_ru" = "Русский";
+"language_preference_item_ar" = "اَلْعَرَبِيَّةُ";
+"language_preference_entries[0]" = "@string/language_preference_item_iw";
+"language_preference_entries[1]" = "@string/language_preference_item_en";
+"language_preference_entries[2]" = "@string/language_preference_item_ru";
+"language_preference_entries[3]" = "@string/language_preference_item_ar";
+"language_preference_item_he_key" = "he";
+"language_preference_item_en_key" = "en";
+"language_preference_item_ru_key" = "ru";
+"language_preference_item_ar_key" = "ar";
+"language_preference_entry_values[0]" = "@string/language_preference_item_he_key";
+"language_preference_entry_values[1]" = "@string/language_preference_item_en_key";
+"language_preference_entry_values[2]" = "@string/language_preference_item_ru_key";
+"language_preference_entry_values[3]" = "@string/language_preference_item_ar_key";
+"month_01" = "1月";
+"month_02" = "2月";
+"month_03" = "3月";
+"month_04" = "4月";
+"month_05" = "5月";
+"month_06" = "6月";
+"month_07" = "7月";
+"month_08" = "8月";
+"month_09" = "9月";
+"month_10" = "10月";
+"month_11" = "11月";
+"month_12" = "12月";
+"i_do_not_receive_code_resend" = "<u>重新发送短信</u>";
+"welcome" = "欢迎";
+"welcome_fragment_title" = "\
+        欢迎\
+        \
+<b>%1$s</b>\
+    ";
+"select_language_you_want_from_the_list" = "选择您的语言";
+"continuation" = "继续";
+"for_one_time_registration_enter_phone" = "\"注册请输入\
+您的电话号码 \"";
+"incorrect_phone_number_was_entered" = "系统中未设置该号码,请联系您的经理";
+"i_confirm_that_i_have_read_and_understood_terms_of_use" = "我确认我已阅读并理解 ";
+"verify_details" = "验证详细信息";
+"message_with_registration_code_is_sent_to_you_code_must_be_entered" = "包含注册码的短信已发送给您。\
+       \
+请输入验证码";
+"entered_password_is_invalid" = "密码无效 ";
+"enter_password" = "输入验证码";
+"enter_password_manager_app" = "输入您的 clock2go 密码 ";
+"password" = "密码";
+"skip" = "跳过";
+"do_you_want_to_see_app_usage_guide" = "观看我们的用户指南";
+"select_task" = "选择任务";
+"add_task" = "搜索或添加任务";
+"search_employee" = "搜索员工";
+"do_you_want_to_report_task_login" = "您要带任务登录吗?";
+"do_i_sign_in" = "您要登录吗?";
+"take_break" = "您要休息一下吗?";
+"end_break_button" = "您要结束休息吗?";
+"user_name_with_greeting_placeholder" = "%s,%s";
+"good_morning" = "早上好";
+"good_afternoon_1" = "下午好";
+"good_afternoon_2" = "下午好";
+"good_evening" = "晚上好";
+"good_night" = "晚安";
+"missing" = "缺失";
+"total_hours" = "总工时";
+"absences" = "缺勤";
+"actions" = "操作";
+"settings" = "设置";
+"manager_app" = "管理员应用";
+"personal_app" = "个人应用";
+"my_profile" = "我的资料";
+"reporting" = "我的报告";
+"my_forms" = "我的表单";
+"my_rides" = "我的交通";
+"notifications" = "消息";
+"choose_language" = "选择语言";
+"language" = "语言";
+"legal_information" = "法律信息";
+"about" = "关于";
+"support" = "支持";
+"sign_out" = "登出";
+"profile_settings" = "资料设置";
+"company_name" = "公司名称";
+"personal_information" = "个人信息";
+"set_reminder" = "提醒";
+"choose_company" = "选择公司";
+"absence_vacation" = "休假";
+"absence_reserve_service" = "预备役服务";
+"absence_disease" = "病假";
+"absence_course" = "课程";
+"absence_general" = "一般缺勤";
+"absence_kid_disease" = "子女生病";
+"absence_mourning" = "丧假";
+"absence_elections_day" = "选举日";
+"absence_training" = "培训";
+"absence_maternity" = "产假";
+"absence_emergency" = "紧急情况";
+"absence_wedding" = "婚假";
+"absence_accident" = "意外事故";
+"absence_womens_day" = "妇女节";
+"absence_hmo_visit" = "医保就诊";
+"absence_company_trip" = "公司旅行";
+"absence_declaration_day" = "声明日";
+"absence_optional_holiday" = "可选假日";
+"absence_spouse_disease" = "配偶生病";
+"absence_parent_disease" = "父母生病";
+"absence_meetings" = "会议";
+"absence_unpaid_vacation" = "无薪休假";
+"absence_half_day_vacation" = "半天休假";
+"absence_corona_quarantine" = "新冠隔离";
+"absence_pairing" = "配对";
+"absence_available" = "可用";
+"absence_signed_report" = "已签署报告";
+"absence_vacation_confirmation_question" = "您要报告 %1$s 这些日期吗?";
+"worker_name" = "姓名";
+"email_address" = "电子邮件";
+"role" = "职位";
+"field_in_not_mandatory" = "* 此字段非必填";
+"save" = "保存";
+"please_select_image_less_than_500kb" = "请选择小于 500KB 的图片";
+"logout" = "签退";
+"login" = "签到";
+"absence" = "缺勤";
+"pause" = "休息";
+"end_break" = "结束休息";
+"select_task_to_do" = "首先,请选择一项任务";
+"no_reports_yet" = "暂无报告";
+"standard_time_placeholder" = "- %s -";
+"absence_date" = "日期";
+"absence_from_work_due" = "因故缺勤";
+"confirmation" = "批准";
+"cancel" = "取消";
+"reject" = "拒绝";
+"add_comment" = "添加评论";
+"are_you_reporting_before_work_time" = "您要在工作时间之前登录吗?";
+"are_you_reporting_late_at_work" = "您要在工作时间之后登录吗?";
+"to_finish_task_select_one_of_the_options" = "要结束任务,请选择其中一个选项";
+"finish_a_task" = "结束任务";
+"finish_a_task_and_start_a_new_one" = "结束任务并切换到新任务";
+"do_exit_reporting" = "您要注销吗?";
+"are_you_reporting_sooner_than_the_end_of_work" = "您要在工作时间之前注销吗?";
+"are_you_reporting_after_the_end_of_work" = "您要在工作时间之后注销吗?";
+"remind_me_to_sign_in_at" = "提醒我登录:";
+"remind_me_to_leave_at" = "提醒我注销:";
+"set_periodicity_on_days" = "设置每日时间表";
+"absence_duration" = "%s - %s 共 %d 天";
+"all_the_days" = "所有日子";
+"sundays" = "所有星期日";
+"mondays" = "所有星期一";
+"tuesdays" = "所有星期二";
+"wednesdays" = "所有星期三";
+"thursdays" = "所有星期四";
+"fridays" = "所有星期五";
+"saturdays" = "所有星期六";
+"unknown_error" = "出现问题。请稍后重试。";
+"absence_reporting" = "缺勤报告";
+"absence_type" = "缺勤类型";
+"photo_or_attach_file" = "照片/添加文件";
+"absence_cannot_be_confirmed_without_attaching_file" = "* 照片/添加文件为必填项";
+"select_the_type_of_absence" = "选择缺勤类型";
+"show_route" = "显示轨迹";
+"choose_task" = "选择任务";
+"verification_successfully_passed" = "验证已批准";
+"please_attach_file_or_take_picture" = "请附上文件或拍摄照片";
+"take_picture" = "拍照";
+"upload_file" = "上传文件";
+"error" = "错误";
+"error_number" = "错误 %d";
+"ok" = "确定";
+"report_has_been_received_successfully" = "报告已成功接收";
+"start_task" = "祝您愉快";
+"please_choose_task_to_login" = "请选择要登录的任务";
+"please_choose_task_to_logout" = "请选择要注销的任务";
+"track_frequency_is_not_present_in_settings" = "设置中未设置追踪频率! ";
+"error_invalid_email" = "电子邮件地址无效!";
+"signed_report" = "月度报告";
+"select_all" = "全选";
+"remove" = "删除";
+"you_have" = "您有";
+"new_alerts" = "条新提醒";
+"lack_of_entry" = "缺少进入";
+"lack_of_exit" = "缺少退出";
+"duty_entry_reminder" = "值班进入提醒";
+"duty_exit_reminder" = "值班退出提醒";
+"personal_reminder" = "个人提醒";
+"misses_for_employee" = "员工缺勤";
+"misses_for_manager" = "经理缺勤";
+"attendance_report_confirmation" = "考勤报告确认";
+"alert_by_behavior" = "行为提醒";
+"overtime" = "加班";
+"exception_from_polygon" = "多边形例外";
+"different_polygon" = "不同的多边形";
+"did_not_report_for_3_days" = "3 天未报告";
+"labor_laws" = "劳动法";
+"proactive_message" = "主动消息";
+"system_notifications" = "系统通知";
+"report_managment" = "我的报告";
+"close_month" = "关闭月份";
+"send_email" = "发送电子邮件";
+"view_by" = "查看方式";
+"choose_month" = "选择月份";
+"cumulative" = "累计";
+"total" = "合计";
+"exit_location" = "位置";
+"exit_time" = "退出时间";
+"enter_location" = "位置";
+"enter_time" = "进入时间";
+"task" = "任务";
+"standard" = "标准";
+"date" = "日期";
+"view_by_missing" = "缺失";
+"view_by_absence" = "缺勤";
+"view_by_breaks" = "休息";
+"view_by_standards" = "标准";
+"view_by_show_all" = "显示全部";
+"view_by_waiting_for_approval" = "等待批准";
+"view_by_not_approved" = "未批准";
+"view_by_approved" = "已批准";
+"view_by_open_month" = "开启月份";
+"view_by_closed_month" = "关闭月份";
+"view_by_approved_month" = "已批准月份";
+"view_by_employer_approved" = "雇主已批准";
+"view_by_employer_rejected" = "雇主已拒绝";
+"approved_in" = "于 %s 批准";
+"rejected_in" = "于 %s 拒绝";
+"ad_report_task" = "任务";
+"report_type_presence" = "出勤";
+"report_type_tasks" = "任务";
+"report_type_absences" = "缺勤";
+"report_type_misses" = "缺失";
+"report_type_breaks" = "休息";
+"report_type_standards" = "标准";
+"send" = "发送";
+"month_is_closed" = "月份已锁定";
+"reports_stats_total_hours" = "%.2f 小时";
+"reports_stats_total_hours_string" = "%s 小时";
+"reports_stats_missing" = "缺失 %d 项";
+"reports_stats_absence" = "缺勤 %d 项";
+"error_invalid_signature" = "签名无效!";
+"must_report_with_task" = "必须带任务报告";
+"must_select_time" = "必须选择时间";
+"must_select_time_in_past" = "从过去选择时间";
+"delete" = "删除";
+"add_remark" = "备注";
+"start_traveling" = "开始行程";
+"finish_traveling" = "结束行程";
+"start_measuring_distance" = "开始测量?";
+"stop_measuring_distance" = "停止测量?";
+"tracked_distance_km" = "已追踪距离:%.2f 公里";
+"finish" = "完成";
+"logout_successful" = "注销成功";
+"add_ride" = "添加距离";
+"distance_in_km" = "距离(公里)";
+"enter_distance_in_km" = "输入以公里为单位的距离";
+"ride_successfully_added" = "行程添加成功!";
+"empty_list_of_files" = "无附件";
+"terms_of_use" = "使用条款";
+"terms_of_use_content" = "\"用户在此声明,他知悉考勤应用程序及 clock2go 考勤软件(以下统称:\" \"软件\" \")中的所有财产权均归 Ok2go(以下及下文称为 \" \"公司\" \")及其许可方所有,其使用须依据仅以公司名义授予的许可。\
+此软件是公司的独家财产,其中所有权利归公司所有。该软件包含归第三方所有的应用程序和/或程序和/或其他数据库,所有相关权利仅保留给这些方和公司。\
+该软件仅供使用考勤的订户用于打卡考勤,任何使用者,包括复制、复印、修改或分发该软件或数据或其任何部分,均违反使用该软件的许可,并将面临民事和刑事诉讼。在报告考勤时,系统仅在报告时定位设备的位置,记录该位置用于控制和核实数据,并传输给订购服务的订阅组织。信息在系统中保存半年和/或在特殊情况下根据客户在维护考勤数据方面的需求和定义保存。\
+公司有权根据其自行决定进行添加或更改。用户解除公司就所提供的更改和/或信息和/或数据通知我们的需要。\
+由于计算机软件和卫星追踪系统的高度复杂性,公司不保证软件活动将持续或无错误,或软件所提供的信息不包含错误和/或差错和/或遗漏信息。\
+用户声明同意上述条件,使用该软件即构成其对许可所有条款的同意,包括本文件中所述内容。\
+用户承诺仅根据适用于该软件的许可条款操作和使用该软件,该许可条款由公司不时确定。\
+在任何情况下,公司均不对用户负有任何责任,用户必须确保其考勤报告与根据软件的报告者相符。\
+用户解除公司对软件和/或公司接收和/或处理和/或提供给其雇主的考勤报告和/或印记的任何责任和/或义务和/或错误。\
+注册系统时,设备的标识号将与电话号码一起注册,首次报告后,只能从此设备继续报告,以防止伪造。\
+注册期间,将向订户发送包含注册码的短信,用于一次性识别和验证所报告的号码。如果输入正确的代码,则可以继续报告。 \"";
+"i_confirm_that_i_have_read_and_understood" = "我确认我已阅读并理解 ";
+"about_content" = "clock2go 考勤应用让您可以随时随地报告考勤!\
+\
+该应用为员工提供多种高级工具:\
+\
+任务和项目报告、各类缺勤报告、按权限查看和填写报告、向组织发送文件、出行、提醒等!\
+\
+该应用经过开发和设计,可让任何组织根据自身需求灵活调整应用设置!\
+\
+在 clock2go 应用中,我们重视员工以舒适友好的方式使用应用的体验,将员工置于中心位置!\
+\
+请您知悉,数据将存储在公司数据库中,并根据公司与雇主之间的协议根据组织要求转移给组织。签到时间(工作开始/结束)和日期从系统服务器获取,签到时电话的位置将根据组织的要求并取决于设备技术以及从蜂窝网络和卫星接收的数据发送。请注意,考勤应用的每次激活都涉及根据您所在的浏览方案条款进行浏览,可能根据您与通信提供商之间的协议要求支付费用。此外,由于使用了设备中的集成定位系统 - 设备电池的使用时间可能缩短。";
+"support_content" = "如需额外支持,您可以联系服务中心\
+\
+星期日 - 星期四,08:00 - 17:00\
+\
+039209700 分机 2\
+\
+您可以发送电子邮件至 support@ok2go.co.il,您将在收到电子邮件后的一个工作日内收到回复。\
+\
+如需更多信息,您可以访问 www.ok2go.co.il 并进入服务与支持菜单";
+"terms_for_tracking" = "追踪使用条款";
+"terms_for_tracking_content" = "我同意向他人显示我手机的位置,即使我手机上的应用已关闭。\
+\
+该服务使用设备的内部 GPS 在旅行期间测量距离,由于持续使用对电池寿命有影响。\
+\
+如果应用仅在后台工作,电池会减少。\
+\
+系统将位置历史保留三个月以用于控制目的,并将调查客户问题和投诉。除此之外,公司有责任每月备份和/或打印报告。\
+\
+用户知悉,不激活设备上的 GPS(设置屏幕)将不允许追踪订户\
+\
+处于封闭建筑物、地下停车场、隧道等内部可能导致位置缺失或位置不准确,因此测量可能存在偏差。\
+\
+<b>服务责任在雇主一方,他必须告知员工有关该服务的信息。</b>\
+公司不对设备问题或通信问题负责,客户/您不时听说可能会有通信问题或信息传输问题。\
+\
+该服务受服务协议及其条款约束,该协议将不时与客户签署。\
+\
+员工在必要时(休假、预备役等)可以从其设备的设置菜单中阻止位置追踪。在这种情况下,员工将在地图上以红色显示\
+\
+累积的信息取决于设备和通过设备 GPS 进行的测量。因此,可能存在\
+\
+不取决于公司的偏差。在测量中会考虑偏差范围。\
+\
+公司不对 GPS 或卫星的精度负责,这里按从设备接收的方式呈现图像。";
+"dear_doctor" = "尊敬的医生";
+"out_of_polygon_message" = "您只能从工作区域报告";
+"doctors_out_of_polygon_message" = "作为服务改进的一部分,我们想告知您,报告位于单位外。请在您所在单位内报告";
+"action_type_out" = "操作类型 - 退出";
+"action_type_in" = "操作类型 - 进入";
+"report_cannot_be_confirmed_without_attaching_file" = "* 未附加文件无法确认报告";
+"operation_performed_successfully" = "报告执行成功!";
+"entry_can_only_be_reported_after_employee_has_been_exited" = "您只能在上一位员工注销后登录";
+"you_should_enter_sales_amount" = "您必须添加销售额";
+"enter_sales_amount" = "请添加销售额";
+"actual_hours" = "实际工时";
+"time_frame" = "时间范围";
+"search" = "搜索";
+"by_employee_code" = "按员工编号";
+"not_active_only" = "显示未激活";
+"active_only" = "仅显示激活";
+"all_employee" = "显示全部";
+"all_departments" = "选择部门";
+"add_new_employee" = "添加新员工";
+"edit_new_employee" = "编辑员工";
+"employee_code" = "员工编号";
+"phone" = "电话";
+"department" = "部门";
+"add_employee" = "添加新员工";
+"mandatory_field" = "必填字段";
+"login_and_logout" = "登录和注销";
+"with_employee_code" = "使用员工编号";
+"with_task" = "使用任务 ";
+"with_employee_code_and_task" = "使用任务和编号";
+"team_manager_and_task" = "团队经理 ";
+"exit_and_return_from_service" = "退出并从服务返回";
+"miss" = "缺勤";
+"full" = "完整";
+"none" = "无";
+"entry" = "进入";
+"employee" = "员工";
+"error_invalid_emp_code" = "员工编号无效!";
+"employee_added" = "新员工添加成功";
+"employee_updated" = "员工信息更新成功";
+"confirm" = "批准";
+"not_confirm" = "不批准";
+"login_and_disclaimer_confirmed" = "登录成功且声明已确认";
+"health_disclaimer_accept_short" = "健康声明已接受";
+"health_disclaimer_accept" = "报告已通过健康声明成功接受";
+"health_disclaimer_reject" = "未批准健康声明无法报告\
+";
+"watch_guide" = "观看我们的指南";
+"to_watch_user_guide_click" = "观看我们的指南";
+"here" = "这里";
+"to_contact_us_click" = "聊天请按";
+"link_whatsapp" = "https://wa.me/972506801061?text=שלום, אשמח לקבל עזרה באתר";
+"remove_task" = "无任务";
+"select_employees" = "选择员工";
+"select_an_employee" = "选择员工";
+"select_users_to_proceed" = "选择用户以继续";
+"multi_logout" = "多人注销";
+"multi_login" = "多人登录";
+"task_is_not_selected" = "未选择任务";
+"please_wait_a_minute_before_start_new_distance" = "请稍等一分钟后再开始新的距离测量";
+"select_date" = "选择日期";
+"must_select_date" = "必须选择日期";
+"app_version_placeholder" = "v%s";
+"clutch" = "离合器";
+"login_notification" = "登录通知";
+"please_sign_in" = "请登录";
+"logout_notification" = "注销通知";
+"its_time_to_leave" = "请注销";
+"contact_manager_to_get_app_access" = "要使用此应用 - 请联系您组织中的经理,在员工卡上设置您的服务。更新服务后,重新打开应用并开始报告";
+"fill_reports_in_pairs_to_close_month" = "您必须在关闭月份之前成对填写报告";
+"email" = "电子邮件";
+"report_type" = "报告类型";
+"i_confirm_and_sign_this_monthly_report" = "我确认并签署此月度报告 ";
+"gps_turned_off_message_alert" = "您的 GPS 似乎已禁用,您要启用它吗?";
+"yes" = "是";
+"no" = "否";
+"wifi_turned_off_message_alert" = "如果您在建筑物内,请启用您的 Wi-Fi";
+"cellular_data_turned_off_message_alert" = "您的移动数据似乎已关闭,请启用移动数据";
+"location_permissions_denied_alert" = "请手动允许位置权限,然后重试";
+"location_permissions_activity_recognition_denied_alert" = "请手动允许位置和活动识别权限,然后重试";
+"open_settings" = "设置";
+"do_you_want_to_make" = "您要进行 %1$s 吗?";
+"exit_to_service" = "退出至服务";
+"re_enter_from_service" = "从服务重新进入";
+"error_201_msg" = "您无权进行距离测量 - 如需权限,请联系您组织中的经理";
+"error_202_msg" = "您无法添加新任务,必须从现有列表中选择 - 如需权限,请联系您组织中的经理";
+"error_203_msg" = "您无权关闭月份 - 如需权限,请联系您组织中的经理";
+"error_204_msg" = "为了关闭月份,必须完成所有报告中的差距";
+"error_205_msg" = "您无权查看报告 - 如需权限,请联系您组织的经理";
+"error_206_msg" = "您无权查看报告 - 如需权限,请联系您组织的经理";
+"error_207_msg" = "员工未激活 - 您应联系您组织中的经理在系统中将员工卡更新为已激活";
+"error_208_msg" = "您无权完成考勤报告 - 如需权限,请联系您组织中的经理";
+"error_209_msg" = "您无权为其他员工报告缺勤 - 如需权限,请联系您组织中的经理";
+"error_210_msg" = "您无权批准此客户的月度考勤";
+"error_211_msg" = "您无权进行距离测量 - 如需权限,请联系您组织中的经理";
+"error_212_msg" = "系统未接收到文件,请重试";
+"error_301_msg" = "系统无法识别该电话号码 - 请重试或联系支持中心 0393209700";
+"error_302_msg" = "系统无法识别您的设备 - 请重试或联系支持中心 0393209700";
+"error_303_msg" = "系统无法识别您的员工编号 - 请重试或联系支持中心 0393209700";
+"error_304_msg" = "您选择的设备语言不可用 - 请重试或联系支持中心 039209700";
+"error_305_msg" = "向系统发送日期的方式存在问题 - 请重试或联系支持 039209700";
+"error_306_msg" = "您的公司设置中缺少一个参数,导致应用无法与系统更新 - 请重试或联系支持 039209700";
+"error_307_msg" = "您尝试执行的操作系统无法识别,导致应用无法完成该操作 - 请重试或联系支持 039209700";
+"error_308_msg" = "您尝试执行的操作无法在系统中保存 - 请重试或联系支持 039209700";
+"error_309_msg" = "系统未接受您尝试添加的任务。请重试或联系您组织的管理员查看您是否有权限执行此操作";
+"error_310_msg" = "系统未保存关闭月份操作。请重试或联系您组织的管理员查看您是否有权限执行此操作";
+"error_311_msg" = "无法删除文件,请重试或联系您组织的管理员查看您是否有权限执行此操作。";
+"error_312_msg" = "系统未接受您选择的任务。请重试或联系您组织的管理员查看您是否有权限执行此操作";
+"error_313_msg" = "系统未接受验证码。请确认输入的代码正确。如果正确,请尝试重新注册";
+"error_314_msg" = "员工未激活 - 请联系您组织中的经理在系统中将员工卡更新为已激活";
+"error_315_msg" = "未发送您选择的报告。请重试或联系您组织的管理员查看您是否有权限执行此操作";
+"error_316_msg" = "所选报告格式不正确。请重试或联系您组织的管理员查看您是否有权限执行此操作";
+"error_317_msg" = "未发送报告。请重试或联系您组织的管理员查看您是否有权限执行此操作";
+"error_318_msg" = "向系统发送日期的方式存在问题 - 请重试或联系支持 039209700";
+"error_319_msg" = "无法完成报告,请重试或联系您组织的管理员查看您是否有权限执行此操作。";
+"error_320_msg" = "无法删除报告,请重试或联系您组织的管理员查看您是否有权限执行此操作。";
+"error_321_msg" = "系统不接受您输入的姓名或电子邮件,请重试或联系支持 39209700";
+"error_322_msg" = "您注册所用的设备未在系统中更新 - 请重试或联系支持中心 039209700";
+"error_323_msg" = "系统不接受您选择的缺勤 - 请重试或联系支持中心 039209700";
+"error_324_msg" = "请为您选择的缺勤选择日期范围,然后重试";
+"error_325_msg" = "您无权为其他员工报告。要开启该权限,请联系您组织中的经理";
+"error_326_msg" = "向系统发送日期的方式存在问题 - 请重试或联系支持 039209700";
+"error_327_msg" = "您尝试执行的操作无法在系统中保存 - 请重试或联系支持 039209700";
+"error_328_msg" = "系统未接收到文件,请重试";
+"error_329_msg" = "无法测量距离 - 请重试或联系支持中心 039209700";
+"error_330_msg" = "系统未接受您选择的任务。请重试或联系您组织的管理员查看您是否有权限执行此操作";
+"error_331_msg" = "未检测到距离测量起点,无法完成测量";
+"error_332_msg" = "无法保存距离测量,请重试或联系您组织的管理员查看您是否有权限执行此操作";
+"error_333_msg" = "您的公司设置中缺少一个参数,导致应用无法与系统更新 - 请重试或联系支持 039209700";
+"error_334_msg" = "您尝试执行的操作无法在系统中保存 - 请重试或联系支持 039209700";
+"error_335_msg" = "  您无权为其他员工报告。要获取权限,请联系您组织中的经理";
+"error_401_msg" = "该电话号码已在其他设备上注册。您必须重新注册";
+"error_402_msg" = "密码无效,要重置密码,请前往 clock2go 网站";
+"error_410_msg" = "系统中未设置该号码,请联系您的经理";
+"error_411_msg" = "您的员工卡在系统中未激活 - 请联系您的经理";
+"error_412_msg" = "验证码错误";
+"error_418_msg" = "文件不正确,请重试";
+"error_420_msg" = "未发现适当的卫星接收以接收报告位置。请尝试改善您的位置或检查位置设置后再次报告";
+"error_421_msg" = "您必须带任务报告";
+"error_423_msg" = "您必须先注销才能再次登录";
+"error_424_msg" = "您只能从工作区域报告";
+"error_425_msg" = "作为服务改进的一部分,我们想告知您,报告位于单位外。请在您所在单位内报告";
+"error_426_msg" = "请稍等一分钟后重试";
+"error_429_msg" = "您必须先从此任务注销才能再次登录";
+"error_430_msg" = "错误 430";
+"error_433_msg" = "您必须在关闭月份之前完成所有缺失报告";
+"error_434_msg" = "月份已关闭,请联系您的经理开启月份";
+"error_435_msg" = "错误 435";
+"error_common_msg" = "出现错误,请稍后重试";
+"must_picture_login" = "登录 %s";
+"must_picture_logout" = "注销 %s";
+"must_picture_login_with_task" = "带任务 <b>%1$s</b> %2$s 登录";
+"must_picture_logout_with_task" = "注销 %1$s 并选择以下选项之一";
+"no_internet_connection_msg" = "无网络连接。您可以登录或注销。其他操作请等待网络重新连接";
+"report_saved_successfully" = "报告已接受,将在连接恢复后上传至系统";
+"question_approve_selected_reports" = "您确定要批准所选报告吗?";
+"question_approve_all_reports" = "您确定要批准所有报告吗?";
+"question_close_month_for_employee" = "您确定要为此员工关闭月份吗?";
+"question_open_month_for_employee" = "您确定要为此员工开启月份吗?";
+"question_approve_month_for_employee" = "您确定要为此员工批准月份吗?";
+"question_remove_approve_month_for_employee" = "您确定要移除此员工的月度审批吗?";
+"question_approve_month_for_all" = "您确定要为所有员工批准月份吗?";
+"approve" = "批准";
+"approve_all" = "全部批准";
+"manager_approval" = "经理审批";
+"employer_approval" = "雇主审批";
+"employer_name" = "雇主姓名";
+"closing_date" = "关闭日期";
+"closed_by_employee" = "由员工关闭";
+"missing_reports" = "缺失报告";
+"employee_name" = "员工姓名";
+"approved" = "已批准";
+"rejected" = "已拒绝";
+"signed" = "已签署";
+"enter" = "进入";
+"save_edit_employee" = "保存";
+"employee_category" = "员工";
+"out_of_polygon_notification" = "您不在多边形内";
+"out_of_polygon_notification_msg" = "您好,您在进入时报告的位置区域之外。现在应用将退出并结束该位置的工作";
+"gps_disabled_notification" = "您的 GPS 似乎已禁用";
+"gps_disabled_notification_msg" = "您的 GPS 似乎已禁用,请启用它";
+"internet_disabled_notification" = "您的网络似乎已禁用";
+"internet_disabled_notification_msg" = "您的网络似乎已禁用,请启用它";
+"title_location_permission" = "使用位置权限";
+"text_location_permission" = "此应用收集位置数据以启用追踪和距离测量功能,即使应用已关闭或不使用。您应授予此权限以使应用正常工作";
+"text_location_permission_denied" = "您的用户需要执行位置追踪和/或距离测量。为提供此功能,此应用需要收集您的位置数据,即使应用已关闭或不使用。您应授予位置权限以使用此功能。";
+"text_location_permission_simple" = "此应用需要访问位置数据,以允许您带位置进行报告。您应授予此权限以使应用正常工作";
+"text_location_permission_simple_denied" = "您的用户需要带位置数据进行报告。您应授予位置权限以执行这些操作";
+"note_must_be_entered" = "必须输入备注";
+"select_comment" = "选择评论";
+"revacha_transaction_1" = "治疗";
+"revacha_transaction_2" = "培训";
+"revacha_transaction_3" = "一般培训";
+"transaction_type" = "报告类型";
+"must_report_with_transaction_type" = "必须带交易类型报告";
+"client" = "客户";
+"events" = "事件";
+"select_client" = "选择客户";
+"client_hint" = "搜索客户";
+"choose_client" = "选择客户";
+"must_report_with_client" = "必须带客户报告";
+"select_an_event" = "选择事件";
+"revacha_event_saved_successfully" = "事件报告已成功接收";
+"revacha_remark_min" = "最小:10";
+"revacha_remark_max" = "最大:%1$d";
+"revacha_cell" = "手机";
+"revacha_emails_error" = "错误的电子邮件:";
+"revacha_email_error" = "错误的电子邮件:\
+%1$s";
+"select_transaction_type" = "选择报告类型";
+"revacha_add_remark" = "添加备注";
+"revacha_other" = "其他";
+"incorrect_cell_error" = "电话号码不正确";
+"necessary_field" = "必填字段";
+"report_event" = "您要带任务 <b>%1$s</b> 和事件 <b>%2$s</b> 报告进入吗";
+"qr_title" = "扫描任务条码";
+"qr_unkown_task" = "未知任务";
+"positive" = "是";
+"negative" = "否";
+"qr_warning" = "警告";
+"qr_warning_description" = "未找到具有扫描标识符的任务。您要继续吗?";
+"offline_mode" = "离线模式";
+"daily_schedule_title" = "每日工作日程";
+"time" = "时间";
+"address" = "地址";
+"previous_week" = "上周";
+"current_week" = "本周";
+"next_week" = "下周";
+"task_code" = "任务编号";
+"task_name" = "任务名称";
+"day" = "日";
+"hours" = "小时";
+"weekly_schedule" = "我的每周日程";
+"weekly_schedule_drawer" = "工作日程";
+"search_task" = "任务搜索";
+"search_task_hint" = "被保险人 ID";
+"incorrect_task_search_error" = "任务 ID 必须在 6 到 9 个字符之间,仅包含数字 0 到 9";
+"not_found_task_search_error" = "未找到任务,请重试";
+"email_has_been_send_successfully" = "电子邮件发送成功";
+"task_location_error" = "请选择位置";
+"task_location_title" = "位置名称";
+"sample_report" = "抽样报告";
+"choose_project" = "选择项目";
+"task_project_error" = "请选择项目";
+"empty_time" = "--:--";
+"exit_entry_report" = "您 %1$s 进入的时间是 %2$s";
+"exit_report" = "请完成 %s 的缺失退出报告";
+"today" = "今天";
+"yesterday" = "昨天";
+"must_report_remark" = "必须带备注报告";
+"exit_time_after_entry_time" = "退出时间应晚于进入时间,请重试";
+"exit_time_period" = "退出报告应在进入后 24 小时内,请重试";
+"number_of_hours_left_for_patient" = "本月为患者报告的小时数:%@";
+"note" = "备注:%@";
+"Patient not at home" = "患者不在家";
+"Return from service and enter work" = "从服务返回并进入工作";
+"Return from service" = "从服务返回";
+"Exit from service" = "退出服务";
+"Emergency Entry" = "紧急入口";
+"Emergency Exit" = "紧急出口";
+"Exit from work and service" = "退出工作和服务";
+"reportReceivedSuccessfully" = "报告已成功接收";
+"logoutAlert" = "您要登出应用吗?";
+"identicalReport" = "已有时间为 %@ 的相同报告,是否再做一次报告?";
+"signOut" = "登出";
+"authenticationErrorMessage" = "该号码已与应用断开连接,请重新连接";
+"Choose format" = "选择格式";
+"Insufficient satellite reception was found.\nOpen the Wifi connection and try again" = "未发现足够的卫星接收。\n请打开 Wi-Fi 连接后重试";
+"ENTER_MINISTRYOFAGRICULTURE" = "就职";
+"EXIT_MINISTRYOFAGRICULTURE" = "离任";
+"Su" = "日";
+"M" = "一";
+"Tu" = "二";
+"W" = "三";
+"Th" = "四";
+"F" = "五";
+"Sa" = "六";
+"D" = "D";
+"Sunday" = "星期日";
+"Monday" = "星期一";
+"Tuesday" = "星期二";
+"Wednesday" = "星期三";
+"Thursday" = "星期四";
+"Friday" = "星期五";
+"Saturday" = "星期六";
+"I_M_Here" = "我在这里";
+"Forms" = "表单";
+
+
+//Approve Hours
+"Please_confirm_the_hours_reports_for_the_month_of" = "请确认 %@ 月份的工时报告";
+"amount_of_hours"= "工时数量(%@)";
+"Approval" = "批准";
+"Cancel" = "取消";
+"To_edit_click_on_the_pencil" = "点击铅笔进行编辑";
+
+//Approve Hours EditScreen
+"Please_enter_the_hours_reports_for_the_month_of" = "请输入 %@ 月份的工时报告";
+"Enter_the_amount_of_hours" = "输入工时数量 %@";
+"The_maximum_number_of_hours_that_can_be_reported_is" = "可报告的最大工时数为 %@";
+
+
+//Approve Hours Success
+"The_report_was_made_successfully" = "报告已成功提交!";
+"Back_to_main_screen" = "返回主屏幕";
+
+
+
+//NFC
+"Invalid_NFC_Tag" = "无效的 NFC 标签";
+"You_need_to_logout_first_task_Id" = "您需要先注销任务 ID %@";
+"Task_Id_Not_Found" = "未找到任务 ID %@";
+"Location_Sent" = "位置已发送";
+"You are not authorized to send location" = "您无权发送位置";
+"There_are_too_many_tags_present_Remove_all_and_try_again" = "存在过多标签。请移除全部后重试";
+"Read_Tag" = "读取标签";
+
+"Scan_the_sticker_with_your_phone_to_make_a_report" = "用手机扫描贴纸进行报告";
+
+
+
+//"You_need_to_logout_first_task_Id"
+"Please_report_exit_before_tag_scanning" = "请在标签扫描前报告退出";
+
+//"Task_Id_Not_Found"
+"You_are_not_authorized_to_report_on_this_task_please_contact_the_person_in_charge_in_your_organization" = "您无权报告此任务,请联系您组织中的负责人";
+//"NFC_Reader_not_available"
+"NFC_Reader_not_available" =  "NFC 读取器不可用";
+
+
+
+//"Could_not_read_tag"
+"Tag_could_not_be_read_please_try_again" = "无法读取标签,请重试";

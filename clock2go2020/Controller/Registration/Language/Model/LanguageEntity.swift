@@ -17,6 +17,11 @@ enum LanguageEntity: Int, CaseIterable {
     case arabic
     case bulgarian
     case Thai
+<<<<<<< Updated upstream
+=======
+    case hindi
+    case chinese
+>>>>>>> Stashed changes
 
     static func withIdentifier(_ label: String) -> LanguageEntity? {
         return self.allCases.first { "\($0.idetifier)" == label }
@@ -40,6 +45,13 @@ enum LanguageEntity: Int, CaseIterable {
             return "bg"
         case .Thai:
             return "th"
+<<<<<<< Updated upstream
+=======
+        case .hindi:
+            return "hi"
+        case .chinese:
+            return "zh-Hans"
+>>>>>>> Stashed changes
         }
     }
 
@@ -61,6 +73,13 @@ enum LanguageEntity: Int, CaseIterable {
             return "български"
         case .Thai:
             return "แบบไทย"
+<<<<<<< Updated upstream
+=======
+        case .hindi:
+            return "हिंदी"
+        case .chinese:
+            return "中国人"
+>>>>>>> Stashed changes
         }
     }
 
@@ -82,6 +101,13 @@ enum LanguageEntity: Int, CaseIterable {
             return UIImage(named: "Bulgaria")
         case .Thai:
             return UIImage(named: "Thailand")
+<<<<<<< Updated upstream
+=======
+        case .hindi:
+            return UIImage(named: "India")
+        case .chinese:
+            return UIImage(named: "China")
+>>>>>>> Stashed changes
         }
     }
 

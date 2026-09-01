@@ -131,9 +131,16 @@ class DashboardViewModel {
     }
     
     var lastReport: ReportObj? {
-        if let report = CompaniesDataManager.shared.getLastReportsWithoutSort().last {
-            return report
+        if self.isRevacha{
+            if let report = CompaniesDataManager.shared.getLastReportsWithoutSort().last {
+                return report
+            }
+        }else{
+            if let report = CompaniesDataManager.shared.getLastReportsWithoutSort().first {
+                return report
+            }
         }
+        
         return nil
     }
     
@@ -334,7 +341,7 @@ class DashboardViewModel {
         }
         var addonButtonsHeight: CGFloat = 0.0
         if CompaniesDataManager.shared.getAddonButtons() != nil {
-            addonButtonsHeight = 135.0
+            addonButtonsHeight = 200.0
         }
         var imHereButtonheight = 0.0
         if  CompaniesDataManager.shared.hasBreakFeature() && CompaniesDataManager.shared.hasAbsenceFeature() && CompaniesDataManager.shared.hasImHereFeature() {
@@ -1299,7 +1306,12 @@ class DashboardViewModel {
                             if let lastReport = result?.data.last, let lastEntry = CompaniesDataManager.shared.lastEntryObject(), CompaniesDataManager.shared.hasRequestExitCompletionFeature() {
                                 if let lastReport = lastReport {
                                     if lastReport.actionType == "1" || lastReport.actionType == "303" {
+<<<<<<< Updated upstream
                                         self.shouldShowRequestCompletionPopup(lastReport)
+=======
+//                                        self.shouldShowRequestCompletionPopup(lastReport)
+                                        self.shouldShowConfirm(type: type)
+>>>>>>> Stashed changes
                                     }
                                 } else if (lastReport?.actionType == "304" || lastReport?.actionType == "2") && lastReport?.taskId == lastEntry.taskId {
                                     CompaniesDataManager.shared.disableRequestExitCompletion()
@@ -1719,7 +1731,7 @@ class DashboardViewModel {
     }
     
     func showSampleInfoAlert(_ info: SampleReportObj) {
-        let alertController = UIAlertController(title: info.polygon, message: info.address, preferredStyle: .alert)
+        let alertController = UIAlertController(title: "\(info.polygon ?? 0)", message: info.address, preferredStyle: .alert)
         let cancelAction = UIAlertAction(title: "SHOW_TRAKING_CONFIRM_TITLE".localized, style: .default, handler: nil)
         alertController.addAction(cancelAction)
         alertController.modalPresentationStyle = .overCurrentContext

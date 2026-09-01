@@ -490,6 +490,7 @@ The company is not responsible for GPS or satellites and presents the image as r
 "SELECT_AN_EVENT" = "Select an event";
 "EVENTS" = "Events";
 "SELECT_CLIENT" = "Choose client";
+"SELECT_Patient" = "Select Patient";
 "TREATMENT" = "Treatment";
 "GENERAL_TRAINING" = "General Training";
 "ADD_REMARK" = "Add remark";
@@ -1143,6 +1144,8 @@ The company is not responsible for the accuracy of the GPS or satellites and her
 "Return from service and enter work" = "Return from service and enter work";
 "Return from service" = "Return from service";
 "Exit from service" = "Exit from service";
+"Emergency Entry" = "Emergency Entry";
+"Emergency Exit" = "Emergency Exit";
 "Exit from work and service" = "Exit from work and service";
 "reportReceivedSuccessfully" = "The report was received successfully";
 "logoutAlert" = "Do you want to log out of the app?";

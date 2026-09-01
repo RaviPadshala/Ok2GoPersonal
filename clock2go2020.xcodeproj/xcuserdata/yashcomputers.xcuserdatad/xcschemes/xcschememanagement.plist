@@ -7,7 +7,11 @@
 		<key>Build Target.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
+<<<<<<< Updated upstream
 			<integer>13</integer>
+=======
+			<integer>15</integer>
+>>>>>>> Stashed changes
 		</dict>
 		<key>OneSignalNotificationServiceExtension.xcscheme_^#shared#^_</key>
 		<dict>

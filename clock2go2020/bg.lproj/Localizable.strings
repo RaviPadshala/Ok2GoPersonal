@@ -521,6 +521,7 @@
 "SELECT_AN_EVENT" = "Избор на събитие";
 "EVENTS" = "Събития";
 "SELECT_CLIENT" = "Избор на клиент";
+"SELECT_Patient" = "Избор на пациент";
 "TREATMENT" = "Лечение";
 "GENERAL_TRAINING" = "Общо обучение";
 "ADD_REMARK" = "Добавяне на забележка";
@@ -1160,6 +1161,8 @@
 "Return from service and enter work" = "Връщане от служба и влизане в работата";
 "Return from service" = "Връщане от служба";
 "Exit from service" = "Излизане от служба";
+"Emergency Entry" = "ен вход";
+"Emergency Exit" = "Авариен изход";
 "Exit from work and service" = "Излизане от работа и служба";
 "reportReceivedSuccessfully" = "Отчетът беше получен успешно";
 

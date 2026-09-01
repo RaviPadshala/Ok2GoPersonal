@@ -498,6 +498,7 @@
 "SELECT_AN_EVENT" = "בחרו אירוע";
 "EVENTS" = "אירוע חריג";
 "SELECT_CLIENT" = "בחר לקוח";
+"SELECT_Patient" = "בחר מטופל";
 "TREATMENT" = "טיפול";
 "GENERAL_TRAINING" = "הדרכה כללית";
 "ADD_REMARK" = "הוסיפו הערה";
@@ -1175,6 +1176,8 @@
 "Return from service and enter work" = "חזרה מתפקיד וכניסה לעבודה";
 "Return from service" = "חזרה מתפקיד";
 "Exit from service" = "יציאה לתפקיד";
+"Emergency Entry" = "כניסת חירום";
+"Emergency Exit" = "יציאת חירום";
 "Exit from work and service" = "יציאה מהעבודה ויציאה לתפקיד";
 "ENTER_MINISTRYOFAGRICULTURE" = "כניסה בתפקיד";
 "EXIT_MINISTRYOFAGRICULTURE" = "יציאה בתפקיד";

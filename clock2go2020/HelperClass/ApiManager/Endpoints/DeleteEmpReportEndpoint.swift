@@ -14,7 +14,7 @@ class DeleteEmpReportEndpoint: EndpointItem {
 
     init(reportId: Int?) {
         self.reportId = reportId
-        self.date = Date().toString(format: "yyyy-MM-dd HH:mm:ss")
+        self.date = Date().toString(format: "yyyy-MM-dd hh:mm:ss")
 
         super.init(endpointType: .deleteEmpRep)
     }

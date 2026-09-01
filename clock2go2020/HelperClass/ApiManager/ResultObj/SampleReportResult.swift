@@ -14,7 +14,7 @@ struct SampleReportResult: Codable {
 
 struct SampleReportObj: Codable {
     let address: String?
-    let polygon: String?
+    let polygon: Int?
 }
 
 

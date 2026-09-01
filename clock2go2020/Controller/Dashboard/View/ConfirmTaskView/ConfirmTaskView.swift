@@ -43,6 +43,7 @@ class ConfirmTaskView: UIViewController {
     @IBOutlet weak var cancelViewTitle: UILabel!
     
     @IBOutlet weak var commentTaskTextField: UITextField!
+    @IBOutlet weak var comentTextfilend_count: UILabel!
     
     @IBOutlet weak var mustNoteTitle: UILabel!
     @IBOutlet weak var commentListView: UIView!
@@ -168,9 +169,11 @@ class ConfirmTaskView: UIViewController {
                     }
                     commentTaskTextField.isHidden = true
                     mustNoteTitle.isHidden = true
+                    comentTextfilend_count.isHidden = true
                     commentListView.isHidden = false
                 } else if viewModel.mustNoteOnEntry() && !viewModel.mustSelectCommentOnEntry() {
                     commentTaskTextField.isHidden = false
+                    comentTextfilend_count.isHidden = false
                     mustNoteTitle.isHidden = false
                     commentListView.isHidden = true
                     changeCommentDields(textField: commentTaskTextField)
@@ -190,10 +193,12 @@ class ConfirmTaskView: UIViewController {
                         confirmView.backgroundColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
                     }
                     commentTaskTextField.isHidden = true
+                    comentTextfilend_count.isHidden = true
                     mustNoteTitle.isHidden = true
                     commentListView.isHidden = false
                 } else if viewModel.mustNoteOnExit() && !viewModel.mustSelectCommentOnExit() {
                     commentTaskTextField.isHidden = false
+                    comentTextfilend_count.isHidden = false
                     // mustNoteTitle.isHidden = false
                     commentListView.isHidden = true
                     changeCommentDields(textField: commentTaskTextField)
@@ -203,11 +208,13 @@ class ConfirmTaskView: UIViewController {
                 break
             default:
                 commentTaskTextField.isHidden = !viewModel.shouldShowCommentField()
+                comentTextfilend_count.isHidden = !viewModel.shouldShowCommentField()
                 disableMustNote()
                 break
             }
         } else {
             commentTaskTextField.isHidden = !viewModel.shouldShowCommentField()
+            comentTextfilend_count.isHidden = !viewModel.shouldShowCommentField()
             disableMustNote()
             
             if viewModel.confirmType == .logoutConfirm{
@@ -222,6 +229,7 @@ class ConfirmTaskView: UIViewController {
                     mustNoteTitle.isHidden = false
                     
                     commentTaskTextField.isHidden = false
+                    comentTextfilend_count.isHidden = false
                     
                     changeCommentDields(textField: commentTaskTextField)
                 }else{
@@ -234,6 +242,7 @@ class ConfirmTaskView: UIViewController {
                     mustNoteTitle.isHidden = true
                     
                     commentTaskTextField.isHidden = false
+                    comentTextfilend_count.isHidden = false
                 }
                 
                 
@@ -328,21 +337,78 @@ protocol TaskConfirmViewDelegate: NSObjectProtocol {
 
 extension ConfirmTaskView: UITextFieldDelegate {
     
-    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        guard let textFieldText = textField.text, let rangeOfTextToReplace = Range(range, in: textFieldText) else {
+//    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+//        guard let textFieldText = textField.text, let rangeOfTextToReplace = Range(range, in: textFieldText) else {
+//            return false
+//        }
+//        let substringToReplace = textFieldText[rangeOfTextToReplace]
+//        let count = textFieldText.count - substringToReplace.count + string.count
+//        if viewModel?.event != nil {
+//            return count <= 500
+//        }
+//        return count <= 30
+//    }
+    
+    func textField(_ textField: UITextField,shouldChangeCharactersIn range: NSRange,replacementString string: String) -> Bool {
+        
+        guard let currentText = textField.text,
+              let textRange = Range(range, in: currentText) else {
             return false
         }
-        let substringToReplace = textFieldText[rangeOfTextToReplace]
-        let count = textFieldText.count - substringToReplace.count + string.count
-        if viewModel?.event != nil {
-            return count <= 500
+        
+        let updatedText = currentText.replacingCharacters(
+            in: textRange,
+            with: string
+        )
+        
+        let characterCount = updatedText.count
+        
+        // Maximum 255 characters
+        if characterCount > 255 {
+            showNoteLimitError()
+            return false
         }
-        return count <= 30
+        
+        updateNoteCharacterCount(characterCount)
+        
+        return true
+    }
+    
+    private func showNoteLimitError() {
+//        showAlert(
+//            title: "Note Limit",
+//            message: "Notes cannot exceed 255 characters."
+//        )
+        print("Notes cannot exceed 255 characters.")
+    }
+    
+    private func updateNoteCharacterCount(_ count: Int) {
+        
+        self.comentTextfilend_count.text = "\(count)/255"
+        
+        switch count {
+        case 0...200:
+            self.comentTextfilend_count.textColor = .black
+            
+        case 201...248:
+            self.comentTextfilend_count.textColor = .orange
+            
+        default:
+            // 249...255
+            self.comentTextfilend_count.textColor = .red
+        }
     }
     
     @objc func textFieldDidChange(_ textField: UITextField) {
         viewModel?.setRemaark(textField.text)
         changeCommentDields(textField: textField)
+        print("count:", textField.text?.count)
+        
+        if let str = textField.text, str.count > 0{
+            
+        }else{
+            self.comentTextfilend_count.text = "0/250"
+        }
     }
     
     func changeCommentDields(textField: UITextField) {
