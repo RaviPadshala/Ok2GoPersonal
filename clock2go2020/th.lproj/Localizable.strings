@@ -1144,6 +1144,8 @@
 "Return from service and enter work" = "กลับจากบริการและเข้าทำงาน";
 "Return from service" = "กลับจากบริการ";
 "Exit from service" = "ออกจากบริการ";
+"Emergency Entry" = "ทางเข้าฉุกเฉิน";
+"Emergency Exit" = "ทางออกฉุกเฉิน";
 "Exit from work and service" = "ออกจากงานและบริการ";
 "reportReceivedSuccessfully" = "ได้รับรายงานเรียบร้อยแล้ว";
 "logoutAlert" = "คุณต้องการออกจากระบบของแอปหรือไม่?";

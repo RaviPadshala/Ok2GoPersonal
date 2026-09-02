@@ -341,7 +341,7 @@ class DashboardViewModel {
         }
         var addonButtonsHeight: CGFloat = 0.0
         if CompaniesDataManager.shared.getAddonButtons() != nil {
-            addonButtonsHeight = 135.0
+            addonButtonsHeight = 200.0
         }
         var imHereButtonheight = 0.0
         if  CompaniesDataManager.shared.hasBreakFeature() && CompaniesDataManager.shared.hasAbsenceFeature() && CompaniesDataManager.shared.hasImHereFeature() {

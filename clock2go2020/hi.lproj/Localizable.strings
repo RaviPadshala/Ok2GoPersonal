@@ -1143,6 +1143,8 @@ clock2go ऐप में, हमने ऐप का उपयोग करत�
 "Return from service and enter work" = "सेवा से वापसी और कार्य में प्रवेश";
 "Return from service" = "सेवा से वापसी";
 "Exit from service" = "सेवा से बाहर निकलें";
+"Emergency Entry" = "आपातकालीन प्रवेश";
+"Emergency Exit" = "आपातकालीन निकास";
 "Exit from work and service" = "कार्य और सेवा से बाहर निकलें";
 "reportReceivedSuccessfully" = "रिपोर्ट सफलतापूर्वक प्राप्त हुई";
 "logoutAlert" = "क्या आप ऐप से लॉग आउट करना चाहते हैं?";

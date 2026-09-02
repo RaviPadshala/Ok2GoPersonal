@@ -1043,6 +1043,8 @@
 "Return from service and enter work" = "العودة من الخدمة والدخول إلى العمل";
 "Return from service" = "العودة من الخدمة";
 "Exit from service" = "الخروج من الخدمة";
+"Emergency Entry" = "دخول للطوارئ";
+"Emergency Exit" = "مخرج طوارئ";
 "Exit from work and service" = "الخروج من العمل والخدمة";
 "reportReceivedSuccessfully" = "التقرير تم استلامه بنجاح";
 "Choose format" = "اختر التنسيق";
