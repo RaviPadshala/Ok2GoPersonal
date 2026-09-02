@@ -147,7 +147,7 @@ class TrackingViewModel {
     }
     
     func additionalButtonsHeight() -> CGFloat {
-        return shouldShowAdditionalButtonsView() ? 200.0 : 0.0
+        return shouldShowAdditionalButtonsView() ? 135.0 : 0.0
     }
 
     func shouldDisplaySignedReportView() -> Bool {

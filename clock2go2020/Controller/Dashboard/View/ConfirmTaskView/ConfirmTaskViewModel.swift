@@ -141,12 +141,10 @@ class ConfirmTaskViewModel {
             let additionalButton2ActionType = additionalButtons.button_2?.action_type
             let additionalButton3ActionType = additionalButtons.button_3?.action_type
             let additionalButton4ActionType = additionalButtons.button_4?.action_type
-            let additionalButton5ActionType = additionalButtons.button_5?.action_type
-            let additionalButton6ActionType = additionalButtons.button_6?.action_type
 
-            if additional?.action_type == additionalButton1ActionType || additional?.action_type == additionalButton3ActionType || additional?.action_type == additionalButton5ActionType {
+            if additional?.action_type == additionalButton1ActionType || additional?.action_type == additionalButton3ActionType {
                 return #colorLiteral(red: 0.2101188302, green: 0.7993369699, blue: 0.4015711546, alpha: 1)
-            } else if additional?.action_type == additionalButton2ActionType || additional?.action_type == additionalButton4ActionType || additional?.action_type == additionalButton6ActionType {
+            } else if additional?.action_type == additionalButton2ActionType || additional?.action_type == additionalButton4ActionType {
                 return #colorLiteral(red: 0.9756608605, green: 0.3157561719, blue: 0.3174736798, alpha: 1)
             }
         }

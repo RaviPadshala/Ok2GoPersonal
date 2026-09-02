@@ -1143,8 +1143,6 @@
 "Return from service and enter work" = "从服务返回并进入工作";
 "Return from service" = "从服务返回";
 "Exit from service" = "退出服务";
-"Emergency Entry" = "紧急入口";
-"Emergency Exit" = "紧急出口";
 "Exit from work and service" = "退出工作和服务";
 "reportReceivedSuccessfully" = "报告已成功接收";
 "logoutAlert" = "您要登出应用吗?";

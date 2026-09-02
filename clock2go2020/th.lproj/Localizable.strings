@@ -490,10 +490,7 @@
 "SELECT_AN_EVENT" = "เลือกเหตุการณ์";
 "EVENTS" = "เหตุการณ์";
 "SELECT_CLIENT" = "เลือกลูกค้า";
-<<<<<<< Updated upstream
-=======
 "SELECT_Patient" = "เลือกผู้ป่วย";
->>>>>>> Stashed changes
 "TREATMENT" = "การรักษา";
 "GENERAL_TRAINING" = "การฝึกอบรมทั่วไป";
 "ADD_REMARK" = "เพิ่มหมายเหตุ";
@@ -1147,11 +1144,6 @@
 "Return from service and enter work" = "กลับจากบริการและเข้าทำงาน";
 "Return from service" = "กลับจากบริการ";
 "Exit from service" = "ออกจากบริการ";
-<<<<<<< Updated upstream
-=======
-"Emergency Entry" = "ทางเข้าฉุกเฉิน";
-"Emergency Exit" = "ทางออกฉุกเฉิน";
->>>>>>> Stashed changes
 "Exit from work and service" = "ออกจากงานและบริการ";
 "reportReceivedSuccessfully" = "ได้รับรายงานเรียบร้อยแล้ว";
 "logoutAlert" = "คุณต้องการออกจากระบบของแอปหรือไม่?";

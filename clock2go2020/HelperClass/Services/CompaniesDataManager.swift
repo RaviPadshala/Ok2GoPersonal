@@ -205,19 +205,12 @@ class CompaniesDataManager {
         var additionalButton2ActionType = ""
         var additionalButton3ActionType = ""
         var additionalButton4ActionType = ""
-<<<<<<< Updated upstream
-=======
-        var additionalButton5ActionType = ""
-        var additionalButton6ActionType = ""
->>>>>>> Stashed changes
         
         if let additionalButtons = CompaniesDataManager.shared.getAddonButtons() {
             additionalButton1ActionType = additionalButtons.button_1?.action_type?.description ?? ""
             additionalButton2ActionType = additionalButtons.button_2?.action_type?.description ?? ""
             additionalButton3ActionType = additionalButtons.button_3?.action_type?.description ?? ""
             additionalButton4ActionType = additionalButtons.button_4?.action_type?.description ?? ""
-            additionalButton5ActionType = additionalButtons.button_5?.action_type?.description ?? ""
-            additionalButton6ActionType = additionalButtons.button_6?.action_type?.description ?? ""
         }
         
         let filtered = oppositReports.filter {($0.actionType?.elementsEqual("1") ?? false)
@@ -230,8 +223,6 @@ class CompaniesDataManager {
             || ($0.actionType?.elementsEqual(additionalButton2ActionType) ?? false)
             || ($0.actionType?.elementsEqual(additionalButton3ActionType) ?? false)
             || ($0.actionType?.elementsEqual(additionalButton4ActionType) ?? false)
-            || ($0.actionType?.elementsEqual(additionalButton5ActionType) ?? false)
-            || ($0.actionType?.elementsEqual(additionalButton6ActionType) ?? false)
             || $0.actionType == nil }
         
         return filtered
@@ -257,19 +248,7 @@ class CompaniesDataManager {
     }
     
     func getLastLoginReport() -> ReportObj? {
-<<<<<<< Updated upstream
-        let reports = getLastLoginLogoutReports()
-//        print("getLastLoginReport() currentClientId",self.currentClientId)
-        guard let report = reports.first else { return nil }
-        
-        //        guard report.actionType == "1" || report.actionType == ReportActionType.serviceEntry.rawValue else {
-        //            return nil
-        //        }
-        //
-        //        return report
-=======
 //        let reports = getLastLoginLogoutReports()
->>>>>>> Stashed changes
         
         if self.isRevacha(){
             let reports = getLastReportsWithoutSort()

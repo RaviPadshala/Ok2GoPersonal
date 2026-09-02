@@ -341,7 +341,7 @@ class DashboardViewModel {
         }
         var addonButtonsHeight: CGFloat = 0.0
         if CompaniesDataManager.shared.getAddonButtons() != nil {
-            addonButtonsHeight = 200.0
+            addonButtonsHeight = 135.0
         }
         var imHereButtonheight = 0.0
         if  CompaniesDataManager.shared.hasBreakFeature() && CompaniesDataManager.shared.hasAbsenceFeature() && CompaniesDataManager.shared.hasImHereFeature() {
@@ -1306,12 +1306,8 @@ class DashboardViewModel {
                             if let lastReport = result?.data.last, let lastEntry = CompaniesDataManager.shared.lastEntryObject(), CompaniesDataManager.shared.hasRequestExitCompletionFeature() {
                                 if let lastReport = lastReport {
                                     if lastReport.actionType == "1" || lastReport.actionType == "303" {
-<<<<<<< Updated upstream
-                                        self.shouldShowRequestCompletionPopup(lastReport)
-=======
 //                                        self.shouldShowRequestCompletionPopup(lastReport)
                                         self.shouldShowConfirm(type: type)
->>>>>>> Stashed changes
                                     }
                                 } else if (lastReport?.actionType == "304" || lastReport?.actionType == "2") && lastReport?.taskId == lastEntry.taskId {
                                     CompaniesDataManager.shared.disableRequestExitCompletion()

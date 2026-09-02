@@ -1161,8 +1161,6 @@
 "Return from service and enter work" = "Връщане от служба и влизане в работата";
 "Return from service" = "Връщане от служба";
 "Exit from service" = "Излизане от служба";
-"Emergency Entry" = "ен вход";
-"Emergency Exit" = "Авариен изход";
 "Exit from work and service" = "Излизане от работа и служба";
 "reportReceivedSuccessfully" = "Отчетът беше получен успешно";
 

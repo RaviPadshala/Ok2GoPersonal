@@ -27,8 +27,6 @@ class AdditionalButtonsViewModel: NSObject {
     private(set) var button2String: String = ""
     private(set) var button3String: String = ""
     private(set) var button4String: String = ""
-    private(set) var button5String: String = ""
-    private(set) var button6String: String = ""
     private var isSpecialClientDoctor: Bool {
         return CompaniesDataManager.shared.getSpecialClientType() == 1 || CompaniesDataManager.shared.getSpecialClientType() == 2
     }
@@ -55,8 +53,6 @@ class AdditionalButtonsViewModel: NSObject {
         button2String = (additionalButtons?.button_2?.text ?? "").localized
         button3String = (additionalButtons?.button_3?.text ?? "").localized
         button4String = (additionalButtons?.button_4?.text ?? "").localized
-        button5String = (additionalButtons?.button_5?.text ?? "").localized
-        button6String = (additionalButtons?.button_6?.text ?? "").localized
     }
     func loadButtons() {
         addonButtons = CompaniesDataManager.shared.getAddonButtons()
@@ -76,14 +72,6 @@ class AdditionalButtonsViewModel: NSObject {
 
     func getButton4Title() -> String? {
         return (addonButtons?.button_4?.text ?? "").localized
-    }
-    
-    func getButton5Title() -> String? {
-        return (addonButtons?.button_5?.text ?? "").localized
-    }
-    
-    func getButton6Title() -> String? {
-        return (addonButtons?.button_6?.text ?? "").localized
     }
 
     let loadingView = LoadingView()
@@ -142,36 +130,6 @@ class AdditionalButtonsViewModel: NSObject {
             showConfirmView(aditionalButton: addonButtons?.button_4)
         }
     }
-    
-    func fixthButtonTapped() {
-        if isSpecialClientDoctor {
-            guard let type = addonButtons?.button_5?.action_type else { return }
-            sendReport(type: type)
-        } else if isBituachLeumiClient {
-            if needShowChooseTaskError() {
-                self.showErrorView(title: "421", message: "421".localized)
-            } else {
-                showRegularConfirm(additionalButton: addonButtons?.button_5, confirmType: .logoutConfirm)
-            }
-        } else {
-            showConfirmView(aditionalButton: addonButtons?.button_5)
-        }
-    }
-    
-    func sixthButtonTapped() {
-        if isSpecialClientDoctor {
-            guard let type = addonButtons?.button_6?.action_type else { return }
-            sendReport(type: type)
-        } else if isBituachLeumiClient {
-            if needShowChooseTaskError() {
-                self.showErrorView(title: "421", message: "421".localized)
-            } else {
-                showRegularConfirm(additionalButton: addonButtons?.button_6, confirmType: .logoutConfirm)
-            }
-        } else {
-            showConfirmView(aditionalButton: addonButtons?.button_6)
-        }
-    }
 
     func getColorthirdButton() -> UIColor? {
            if isSpecialClientDoctor {
@@ -189,10 +147,6 @@ class AdditionalButtonsViewModel: NSObject {
 
     func shouldShowSecondLayer() -> Bool {
         return addonButtons?.button_3 != nil || addonButtons?.button_4 != nil
-    }
-    
-    func shouldShowThirdLayer() -> Bool {
-        return addonButtons?.button_5 != nil || addonButtons?.button_6 != nil
     }
 
     func showConfirmView(aditionalButton: AddonButtonObj?) {

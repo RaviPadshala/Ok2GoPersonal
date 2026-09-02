@@ -330,7 +330,7 @@ class SelectClientView: UIView {
     }
     
     func disableReportTypeTaskTypeTreantmentType(isDisable: Bool){
-//        print("isDisable: \(isDisable)")
+        print("isDisable: \(isDisable)")
         if isDisable{
             self.view_holocaust.alpha = 0.5
             

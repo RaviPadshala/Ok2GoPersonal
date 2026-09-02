@@ -22,18 +22,12 @@ class AdditionalButtonsView: UIView {
     @IBOutlet var contentView: UIView!
     @IBOutlet weak var roundedTopView: UIView!
     @IBOutlet weak var roundedBottomView: UIView!
-    @IBOutlet weak var emergencyButtonView: UIView!
-    @IBOutlet weak var emergencyViewHeight: NSLayoutConstraint!
-    @IBOutlet weak var roundedButtonViewHeight: NSLayoutConstraint!
-    
-    
+
     @IBOutlet weak var button1: UILabel!
     @IBOutlet weak var button2: UILabel!
     @IBOutlet weak var button3: UILabel!
     @IBOutlet weak var button4: UILabel!
-    @IBOutlet weak var button5: UILabel!
-    @IBOutlet weak var button6: UILabel!
-    
+
     var reportsChanged: (() -> Void)?
 
     var viewModel = AdditionalButtonsViewModel()
@@ -76,8 +70,6 @@ class AdditionalButtonsView: UIView {
         button4.textColor = viewModel.getColortFourthButton()
 
         roundedBottomView.isHidden = !viewModel.shouldShowSecondLayer()
-        emergencyButtonView.isHidden = !viewModel.shouldShowThirdLayer()
-        
         updateUI()
     }
 
@@ -87,9 +79,6 @@ class AdditionalButtonsView: UIView {
 
         roundedBottomView.roundCorners([.bottomLeft, .bottomRight], radius: 25)
         roundedBottomView.shadow(CGSize(width: 0, height: 5), opacity: 0.2, radius: 5, color: #colorLiteral(red: 0.08268459886, green: 0.2809937894, blue: 0.4637595415, alpha: 1))
-        
-        emergencyButtonView.roundCorners([.bottomLeft, .bottomRight], radius: 25)
-        emergencyButtonView.shadow(CGSize(width: 0, height: 5), opacity: 0.2, radius: 5, color: #colorLiteral(red: 0.08268459886, green: 0.2809937894, blue: 0.4637595415, alpha: 1))
 
     }
     func updateUI(){
@@ -98,8 +87,6 @@ class AdditionalButtonsView: UIView {
         button2.text = viewModel.button2String
         button3.text = viewModel.button3String
         button4.text = viewModel.button4String
-        button5.text = viewModel.button5String
-        button6.text = viewModel.button6String
     }
     
     func changeSelectedTask(_ task: TaskObj?) {
@@ -118,12 +105,6 @@ class AdditionalButtonsView: UIView {
 
         let fourthButtonTap = UITapGestureRecognizer(target: self, action: #selector(fourthButtonTapped))
         button4.addGestureRecognizer(fourthButtonTap)
-        
-        let fifthButtonTap = UITapGestureRecognizer(target: self, action: #selector(fifthButtonTapped))
-        button5.addGestureRecognizer(fifthButtonTap)
-        
-        let zixthButtonTap = UITapGestureRecognizer(target: self, action: #selector(sixthButtonTapped))
-        button6.addGestureRecognizer(zixthButtonTap)
     }
     
     func showNoInternetPopup() {
@@ -225,14 +206,6 @@ class AdditionalButtonsView: UIView {
 
     @objc func fourthButtonTapped() {
         viewModel.fourthButtonTapped()
-    }
-    
-    @objc func fifthButtonTapped() {
-        viewModel.fixthButtonTapped()
-    }
-    
-    @objc func sixthButtonTapped() {
-        viewModel.sixthButtonTapped()
     }
 
     func showErrorView(title: String?, message: String?) {

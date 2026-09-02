@@ -39,10 +39,10 @@ class APIManager {
     private var sessionManager: SessionManager
     
     //for developement purpose
-    static let networkEnviroment: NetworkEnvironment = .verotest
+//    static let networkEnviroment: NetworkEnvironment = .verotest
     
     // For live app
-//    static let networkEnviroment: NetworkEnvironment = .production_app_08_26
+    static let networkEnviroment: NetworkEnvironment = .production_app_08_26
     
     private static var sharedApiManager: APIManager = {
         let apiManager = APIManager(sessionManager: SessionManager())
@@ -186,7 +186,7 @@ class APIManager {
         if let jsonData = data {
             do {
                 let result = try JSONDecoder().decode(T.self, from: jsonData)
-//                print("result", result)
+                print("result", result)
                 return result
             } catch let error {
                 print("\n\n\(error)\n\n")
