@@ -61,7 +61,12 @@ class EndpointItem: NSObject {
         
         items["timezone"] = TimeZone.current.identifier
         
-        items["lang"] = UserDefaultsManager.appleLanguagesNew.first ?? "en"
+        if UserDefaultsManager.appleLanguagesNew.first ?? "en" == "zh-Hans"{
+            items["lang"] = "zh"
+        }else{
+            items["lang"] = UserDefaultsManager.appleLanguagesNew.first ?? "en"
+        }
+        
         
         
         
