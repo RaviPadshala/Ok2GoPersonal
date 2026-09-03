@@ -26,6 +26,20 @@ class LegalInformationViewController: UIViewController {
     func setLocalized() {
         screenTitle.text = "LEGAL_INFORMATION_TITLE".localized
         textTitle.text = "TERMS_TEXT".localized
+        
+        if self.getCurrentLanguage() == "he" || self.getCurrentLanguage() == "ar"{
+            textTitle.textAlignment = .right
+        }else{
+            textTitle.textAlignment = .left
+        }
+    }
+    
+    func getCurrentLanguage() -> String{
+        if let selectedLanguage = UserDefaultsManager.appleLanguagesNew.first, selectedLanguage.count > 0{
+            return selectedLanguage
+        }else{
+            return "en"
+        }
     }
 
     func dismissView() {
