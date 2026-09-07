@@ -29,6 +29,8 @@ class AdditionalButtonsViewModel: NSObject {
     private(set) var button4String: String = ""
     private(set) var button5String: String = ""
     private(set) var button6String: String = ""
+    private(set) var button7String: String = ""
+    private(set) var button8String: String = ""
     private var isSpecialClientDoctor: Bool {
         return CompaniesDataManager.shared.getSpecialClientType() == 1 || CompaniesDataManager.shared.getSpecialClientType() == 2
     }
@@ -55,8 +57,10 @@ class AdditionalButtonsViewModel: NSObject {
         button2String = (additionalButtons?.button_2?.text ?? "").localized
         button3String = (additionalButtons?.button_3?.text ?? "").localized
         button4String = (additionalButtons?.button_4?.text ?? "").localized
-        button5String = (additionalButtons?.button_5?.text ?? "").localized
-        button6String = (additionalButtons?.button_6?.text ?? "").localized
+        button5String = (additionalButtons?.button_5?.text ?? "")
+        button6String = (additionalButtons?.button_6?.text ?? "")
+        button7String = (additionalButtons?.button_7?.text ?? "")
+        button8String = (additionalButtons?.button_8?.text ?? "")
     }
     func loadButtons() {
         addonButtons = CompaniesDataManager.shared.getAddonButtons()
@@ -79,11 +83,19 @@ class AdditionalButtonsViewModel: NSObject {
     }
     
     func getButton5Title() -> String? {
-        return (addonButtons?.button_5?.text ?? "").localized
+        return (addonButtons?.button_5?.text ?? "")
     }
     
     func getButton6Title() -> String? {
-        return (addonButtons?.button_6?.text ?? "").localized
+        return (addonButtons?.button_6?.text ?? "")
+    }
+    
+    func getButton7Title() -> String? {
+        return (addonButtons?.button_7?.text ?? "")
+    }
+    
+    func getButton8Title() -> String? {
+        return (addonButtons?.button_8?.text ?? "")
     }
 
     let loadingView = LoadingView()
@@ -172,6 +184,36 @@ class AdditionalButtonsViewModel: NSObject {
             showConfirmView(aditionalButton: addonButtons?.button_6)
         }
     }
+    
+    func seventhButtonTapped() {
+        if isSpecialClientDoctor {
+            guard let type = addonButtons?.button_7?.action_type else { return }
+            sendReport(type: type)
+        } else if isBituachLeumiClient {
+            if needShowChooseTaskError() {
+                self.showErrorView(title: "421", message: "421".localized)
+            } else {
+                showRegularConfirm(additionalButton: addonButtons?.button_7, confirmType: .logoutConfirm)
+            }
+        } else {
+            showConfirmView(aditionalButton: addonButtons?.button_7)
+        }
+    }
+    
+    func eightthButtonTapped() {
+        if isSpecialClientDoctor {
+            guard let type = addonButtons?.button_8?.action_type else { return }
+            sendReport(type: type)
+        } else if isBituachLeumiClient {
+            if needShowChooseTaskError() {
+                self.showErrorView(title: "421", message: "421".localized)
+            } else {
+                showRegularConfirm(additionalButton: addonButtons?.button_8, confirmType: .logoutConfirm)
+            }
+        } else {
+            showConfirmView(aditionalButton: addonButtons?.button_8)
+        }
+    }
 
     func getColorthirdButton() -> UIColor? {
            if isSpecialClientDoctor {
@@ -193,6 +235,10 @@ class AdditionalButtonsViewModel: NSObject {
     
     func shouldShowThirdLayer() -> Bool {
         return addonButtons?.button_5 != nil || addonButtons?.button_6 != nil
+    }
+    
+    func shouldShowForthLayer() -> Bool {
+        return addonButtons?.button_7 != nil || addonButtons?.button_8 != nil
     }
 
     func showConfirmView(aditionalButton: AddonButtonObj?) {

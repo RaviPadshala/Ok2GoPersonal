@@ -146,7 +146,14 @@ class TrackingViewModel {
         return CompaniesDataManager.shared.getAddonButtons() != nil && !isBituachLeumiClient
     }
     
+    func shouldShowForthLayer() -> Bool {
+        return CompaniesDataManager.shared.getAddonButtons()?.button_7 != nil || CompaniesDataManager.shared.getAddonButtons()?.button_8 != nil
+    }
+    
     func additionalButtonsHeight() -> CGFloat {
+        if shouldShowForthLayer() {
+            return shouldShowAdditionalButtonsView() ? 265.0 : 0.0
+        }
         return shouldShowAdditionalButtonsView() ? 200.0 : 0.0
     }
 

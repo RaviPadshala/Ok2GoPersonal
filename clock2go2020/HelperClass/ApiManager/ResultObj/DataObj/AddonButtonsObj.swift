@@ -14,6 +14,8 @@ struct AddonButtonsObj: Codable {
     var button_4: AddonButtonObj?
     var button_5: AddonButtonObj?
     var button_6: AddonButtonObj?
+    var button_7: AddonButtonObj?
+    var button_8: AddonButtonObj?
 }
 
 struct AddonButtonObj: Codable {
