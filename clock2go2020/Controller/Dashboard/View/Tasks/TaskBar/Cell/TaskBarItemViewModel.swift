@@ -82,10 +82,12 @@ class TaskBarItemViewModel {
             let additionalButton4ActionType = additionalButtons.button_4?.action_type?.description
             let additionalButton5ActionType = additionalButtons.button_5?.action_type?.description
             let additionalButton6ActionType = additionalButtons.button_6?.action_type?.description
+            let additionalButton7ActionType = additionalButtons.button_7?.action_type?.description
+            let additionalButton8ActionType = additionalButtons.button_8?.action_type?.description
 
-            if item.task?.actionType == additionalButton1ActionType || item.task?.actionType == additionalButton3ActionType || item.task?.actionType == additionalButton5ActionType {
+            if item.task?.actionType == additionalButton1ActionType || item.task?.actionType == additionalButton3ActionType || item.task?.actionType == additionalButton5ActionType || item.task?.actionType == additionalButton7ActionType {
                 return #colorLiteral(red: 0.2101188302, green: 0.7993369699, blue: 0.4015711546, alpha: 1)
-            } else if item.task?.actionType == additionalButton2ActionType || item.task?.actionType == additionalButton4ActionType || item.task?.actionType == additionalButton6ActionType {
+            } else if item.task?.actionType == additionalButton2ActionType || item.task?.actionType == additionalButton4ActionType || item.task?.actionType == additionalButton6ActionType || item.task?.actionType == additionalButton8ActionType {
                 return #colorLiteral(red: 0.9756608605, green: 0.3157561719, blue: 0.3174736798, alpha: 1)
             }
         }

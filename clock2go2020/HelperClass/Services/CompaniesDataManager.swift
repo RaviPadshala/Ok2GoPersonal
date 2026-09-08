@@ -207,6 +207,8 @@ class CompaniesDataManager {
         var additionalButton4ActionType = ""
         var additionalButton5ActionType = ""
         var additionalButton6ActionType = ""
+        var additionalButton7ActionType = ""
+        var additionalButton8ActionType = ""
         
         if let additionalButtons = CompaniesDataManager.shared.getAddonButtons() {
             additionalButton1ActionType = additionalButtons.button_1?.action_type?.description ?? ""
@@ -215,6 +217,8 @@ class CompaniesDataManager {
             additionalButton4ActionType = additionalButtons.button_4?.action_type?.description ?? ""
             additionalButton5ActionType = additionalButtons.button_5?.action_type?.description ?? ""
             additionalButton6ActionType = additionalButtons.button_6?.action_type?.description ?? ""
+            additionalButton7ActionType = additionalButtons.button_7?.action_type?.description ?? ""
+            additionalButton8ActionType = additionalButtons.button_8?.action_type?.description ?? ""
         }
         
         let filtered = oppositReports.filter {($0.actionType?.elementsEqual("1") ?? false)
@@ -229,6 +233,8 @@ class CompaniesDataManager {
             || ($0.actionType?.elementsEqual(additionalButton4ActionType) ?? false)
             || ($0.actionType?.elementsEqual(additionalButton5ActionType) ?? false)
             || ($0.actionType?.elementsEqual(additionalButton6ActionType) ?? false)
+            || ($0.actionType?.elementsEqual(additionalButton7ActionType) ?? false)
+            || ($0.actionType?.elementsEqual(additionalButton8ActionType) ?? false)
             || $0.actionType == nil }
         
         return filtered

@@ -341,7 +341,11 @@ class DashboardViewModel {
         }
         var addonButtonsHeight: CGFloat = 0.0
         if CompaniesDataManager.shared.getAddonButtons() != nil {
-            addonButtonsHeight = 200.0
+            if shouldShowForthLayer() {
+                addonButtonsHeight = 265.0
+            }else{
+                addonButtonsHeight = 200.0
+            }
         }
         var imHereButtonheight = 0.0
         if  CompaniesDataManager.shared.hasBreakFeature() && CompaniesDataManager.shared.hasAbsenceFeature() && CompaniesDataManager.shared.hasImHereFeature() {
@@ -349,6 +353,10 @@ class DashboardViewModel {
         }
         
         return imHereButtonheight + ( isMapShown ? 55 + addonButtonsHeight : 175 + addonButtonsHeight)
+    }
+    
+    func shouldShowForthLayer() -> Bool {
+        return CompaniesDataManager.shared.getAddonButtons()?.button_7 != nil || CompaniesDataManager.shared.getAddonButtons()?.button_8 != nil
     }
     
     func getModelForAccountView() -> AccountInfoViewModel {
