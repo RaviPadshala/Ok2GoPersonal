@@ -228,6 +228,7 @@ class DashboardViewModel {
         clearSelectedEvent()
         CompaniesDataManager.shared.getFromCache()
         NotificationCenter.default.addObserver(self, selector: #selector(offlineModeBecomesActive(_:)), name: OfflineModeBecomesActiveNotification, object: nil)
+        self.setupScanner()
     }
     
     init(lastloginTask: TaskObj? = nil, selectedTask: TaskObj? = nil) {
@@ -734,6 +735,48 @@ class DashboardViewModel {
         return CompaniesDataManager.shared.getSpecialClientType() == 3314
     }
     
+    // Bluetooth Scan
+    private func setupScanner() {
+        
+        EddystoneBeaconHelper.shared.onUIDFound = {
+            [weak self] beacon in
+            
+            guard let self = self else {
+                return
+            }
+            
+            print("UID Found:")
+            print("Namespace: \(beacon.namespace)")
+            print("Instance: \(beacon.instance)")
+            print("UID: \(beacon.uid)")
+            print("RSSI: \(beacon.rssi)")
+            print("Device: \(beacon.deviceName)")
+            
+            // Update your UI here
+        }
+        
+        EddystoneBeaconHelper.shared.onBluetoothStateChanged = {
+            state in
+            
+            if state == .poweredOn {
+                print("Bluetooth is ready")
+            }
+        }
+    }
+    
+    func scanBluetooth(){
+//        EddystoneBeaconHelper.shared.startScanning()
+        
+        EddystoneBeaconHelper.shared.scanForUIDs(duration: 5) { beacons in
+            print("Total UID found: \(beacons.count)")
+            for beacon in beacons {
+                print("UID: \(beacon.uid)")
+                print("Namespace: \(beacon.namespace)")
+                print("Instance: \(beacon.instance)")
+                print("RSSI: \(beacon.rssi)")
+            }
+        }
+    }
     
     // NFC
     

@@ -9,105 +9,242 @@ import UIKit
 
 class BarcodeScannerView: UIView {
     
-    private var contentView: UIView!
-    private var scannerButton: UIButton!
-    private var nfcButton: UIButton!
+    // MARK: - UI Components
     
-    var onScanAction: (() -> ())?
-    var onNFCScanAction: (() -> ())?
+    private var contentView: UIView!
+    private var scannerButton: UIButton?
+    private var nfcButton: UIButton?
+    private var beaconButton: UIButton?
+    
+    // MARK: - Actions
+    
+    var onScanAction: (() -> Void)?
+    var onNFCScanAction: (() -> Void)?
+    var onBeaconScanAction: (() -> Void)?
+    
+    // MARK: - Constants
+    
+    private let buttonSize: CGFloat = 40.0
+    private let buttonSpacing: CGFloat = 20.0
+    
+    // MARK: - Initialization
     
     override init(frame: CGRect) {
         super.init(frame: frame)
         commonInit()
     }
-
+    
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        
-
         commonInit()
     }
-
-    @objc func updateList(){
-        if scannerButton != nil {
-            scannerButton.removeFromSuperview()
-        }
-        if nfcButton != nil{
-            nfcButton.removeFromSuperview()
-        }
-        
-        
-        if CompaniesDataManager.shared.hasBarcodeReportsFeature() && CompaniesDataManager.shared.hasNFCReportsFeature(){
-            NFCAndBarcodeFeature()
-        }else  if CompaniesDataManager.shared.hasBarcodeReportsFeature() {
-            onlyBarcodeScannerFeautre()
-        }else  if CompaniesDataManager.shared.hasNFCReportsFeature(){
-            onlyNfcScannerFeautre()
-        }
-
-       }
+    
+    // MARK: - Setup
+    
     private func commonInit() {
-        contentView = UIView(frame: bounds)
-        contentView.backgroundColor = .white
-        contentView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-        addSubview(contentView)
-       // NFCAndBarcodeFeature()
-        if CompaniesDataManager.shared.hasBarcodeReportsFeature() && CompaniesDataManager.shared.hasNFCReportsFeature(){
-            NFCAndBarcodeFeature()
-        }else  if CompaniesDataManager.shared.hasBarcodeReportsFeature() {
-            onlyBarcodeScannerFeautre()
-        }else  if CompaniesDataManager.shared.hasNFCReportsFeature(){
-            onlyNfcScannerFeautre()
-        }
-       
         
+        contentView = UIView(frame: bounds)
+        
+        contentView.backgroundColor = .white
+        
+        contentView.autoresizingMask = [
+            .flexibleWidth,
+            .flexibleHeight
+        ]
+        
+        addSubview(contentView)
+        
+        setupFeatureButtons()
         setupUI()
     }
     
+    // MARK: - Update Feature List
     
-    func NFCAndBarcodeFeature(){
-        scannerButton = UIButton(frame: CGRect(x: (bounds.width - 110) / 2.0, y: 0.0, width: 40.0, height: 40.0))
-        scannerButton.autoresizingMask = [.flexibleLeftMargin, .flexibleRightMargin]
-        scannerButton.setImage(UIImage(named: "barcode_icon"), for: .normal)
-        scannerButton.addTarget(self, action: #selector(startScanningAction), for: .touchUpInside)
-        addSubview(scannerButton)
+    @objc func updateList() {
         
-        nfcButton = UIButton(frame: CGRect(x: (bounds.width + 30.0) / 2.0, y: 0.0, width: 40.0, height: 40.0))
-        //nfcButton.autoresizingMask = [.flexibleLeftMargin, .flexibleRightMargin]
-      
-        nfcButton.setImage(UIImage(named:  "nfc"),for: .normal)
-        nfcButton.imageView?.layer.transform = CATransform3DMakeScale(2, 2, 2)
-      //  nfcButton.imageView?.contentMode = .scaleToFill
-//        nfcButton.setImage(UIImage(named: "nfc", in: nil,  with: UIImage.SymbolConfiguration(weight: .heavy)), for: .normal)
-        nfcButton.addTarget(self, action: #selector(startNFCScanningAction), for: .touchUpInside)
-        addSubview(nfcButton)
+        // Remove existing buttons
+        scannerButton?.removeFromSuperview()
+        nfcButton?.removeFromSuperview()
+        beaconButton?.removeFromSuperview()
         
+        scannerButton = nil
+        nfcButton = nil
+        beaconButton = nil
+        
+        // Create buttons again according to enabled features
+        setupFeatureButtons()
     }
     
-    func onlyBarcodeScannerFeautre(){
-        scannerButton = UIButton(frame: CGRect(x: (bounds.width - 40.0) / 2.0, y: 0.0, width: 40.0, height: 40.0))
-              scannerButton.autoresizingMask = [.flexibleLeftMargin, .flexibleRightMargin]
-              scannerButton.setImage(UIImage(named: "barcode_icon"), for: .normal)
-              scannerButton.addTarget(self, action: #selector(startScanningAction), for: .touchUpInside)
-        addSubview(scannerButton)
+    // MARK: - Feature Buttons
+    
+    private func setupFeatureButtons() {
+        
+        let hasBarcode =
+        CompaniesDataManager.shared.hasBarcodeReportsFeature()
+        
+        let hasNFC =
+        CompaniesDataManager.shared.hasNFCReportsFeature()
+        
+        let hasBeacon =
+        CompaniesDataManager.shared.hasBeaconRportsFeature()
+        
+        var buttons: [UIButton] = []
+        
+        // --------------------------------------------------
+        // Barcode
+        // --------------------------------------------------
+        
+        if hasBarcode {
+            
+            scannerButton = createButton(
+                imageName: "barcode_icon",
+                action: #selector(startScanningAction)
+            )
+            
+            if let scannerButton = scannerButton {
+                buttons.append(scannerButton)
+            }
+        }
+        
+        // --------------------------------------------------
+        // NFC
+        // --------------------------------------------------
+        
+        if hasNFC {
+            
+            nfcButton = createButton(
+                imageName: "nfc",
+                action: #selector(startNFCScanningAction)
+            )
+            nfcButton?.imageView?.layer.transform = CATransform3DMakeScale(2, 2, 2)
+            
+            if let nfcButton = nfcButton {
+                buttons.append(nfcButton)
+            }
+        }
+        
+        // --------------------------------------------------
+        // Beacon / Bluetooth Scan
+        // --------------------------------------------------
+        
+        if hasBeacon {
+            
+            beaconButton = createButton(
+                imageName: "bluetooth_scan",
+                action: #selector(startBeaconScanningAction)
+            )
+//            beaconButton?.imageView?.layer.transform = CATransform3DMakeScale(2, 2, 2)
+            
+            if let beaconButton = beaconButton {
+                buttons.append(beaconButton)
+            }
+        }
+        
+        // Position buttons
+        positionButtons(buttons)
     }
     
-    func onlyNfcScannerFeautre(){
-        nfcButton = UIButton(frame: CGRect(x: (bounds.width - 40.0) / 2.0, y: 0.0, width: 40.0, height: 40.0))
-        nfcButton.autoresizingMask = [.flexibleLeftMargin, .flexibleRightMargin]
-        nfcButton.setImage(UIImage(named: "nfc"), for: .normal)
-        nfcButton.imageView?.layer.transform = CATransform3DMakeScale(2, 2, 2)
-        nfcButton.addTarget(self, action: #selector(startNFCScanningAction), for: .touchUpInside)
-        addSubview(nfcButton)
+    // MARK: - Create Button
+    
+    private func createButton(
+        imageName: String,
+        action: Selector
+    ) -> UIButton {
+        
+        let button = UIButton(type: .custom)
+        
+        button.frame = CGRect(
+            x: 0,
+            y: 0,
+            width: buttonSize,
+            height: buttonSize
+        )
+        
+        button.autoresizingMask = [
+            .flexibleLeftMargin,
+            .flexibleRightMargin
+        ]
+        
+        button.setImage(
+            UIImage(named: imageName),
+            for: .normal
+        )
+        
+        button.imageView?.contentMode = .scaleAspectFit
+        
+        button.addTarget(
+            self,
+            action: action,
+            for: .touchUpInside
+        )
+        
+        addSubview(button)
+        
+        return button
     }
     
+    // MARK: - Position Buttons
     
+    private func positionButtons(_ buttons: [UIButton]) {
+        
+        guard !buttons.isEmpty else {
+            return
+        }
+        
+        let totalWidth =
+        (CGFloat(buttons.count) * buttonSize) +
+        (CGFloat(buttons.count - 1) * buttonSpacing)
+        
+        let startX =
+        (bounds.width - totalWidth) / 2.0
+        
+        for (index, button) in buttons.enumerated() {
+            
+            let x =
+            startX +
+            CGFloat(index) * (buttonSize + buttonSpacing)
+            
+            button.frame = CGRect(
+                x: x,
+                y: 0.0,
+                width: buttonSize,
+                height: buttonSize
+            )
+        }
+    }
+    
+    // MARK: - Layout
+    
+    override func layoutSubviews() {
+        
+        super.layoutSubviews()
+        
+        var buttons: [UIButton] = []
+        
+        if let scannerButton = scannerButton {
+            buttons.append(scannerButton)
+        }
+        
+        if let nfcButton = nfcButton {
+            buttons.append(nfcButton)
+        }
+        
+        if let beaconButton = beaconButton {
+            buttons.append(beaconButton)
+        }
+        
+        positionButtons(buttons)
+    }
+    
+    // MARK: - UI
     
     func setupUI() {
         contentView.roundCorners([.bottomLeft, .bottomRight], radius: 25)
         contentView.shadow(CGSize(width: 0, height: 10), opacity: 0.2, radius: 5, color: #colorLiteral(red: 0.08268459886, green: 0.2809937894, blue: 0.4637595415, alpha: 1))
     }
-
+    
+    // MARK: - Barcode Scan
+    
     @objc private func startScanningAction() {
         guard UserDefaultsManager.connectionServiceCount > 0 else {
             self.showNoInternetPopup()
@@ -122,6 +259,18 @@ class BarcodeScannerView: UIView {
             return
         }
         onNFCScanAction?()
+    }
+    
+    @objc private func startBeaconScanningAction() {
+        
+        guard UserDefaultsManager.connectionServiceCount > 0 else {
+            showNoInternetPopup()
+            return
+        }
+        
+        // IMPORTANT:
+        // This was incorrectly calling onNFCScanAction
+        onBeaconScanAction?()
     }
     
     func showNoInternetPopup() {

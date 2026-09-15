@@ -627,6 +627,11 @@ class DashboardViewController: UIViewController {
         barcodeView.onNFCScanAction = {
             self.showNFCPopup()
         }
+        
+        //Bluetooth Scan Action
+        barcodeView.onBeaconScanAction = {
+            self.showNFCPopup()
+        }
 
         workScheduleView.onSelectItem = { [weak self] index in
             guard let note = self?.viewModel.notForScheduleItem(at: index) else { return }

@@ -274,6 +274,7 @@
 		52FF4C8D23BF7EE700E40308 /* GuideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FF4C8923BF7EE700E40308 /* GuideView.swift */; };
 		5B61C0562FA3258700760A39 /* CheckInSecurityService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B61C0552FA3258700760A39 /* CheckInSecurityService.swift */; };
 		5B6581C72F6141D900194B79 /* NewOfflineRequestEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6581C62F6141D900194B79 /* NewOfflineRequestEndpoint.swift */; };
+		5B6E235030594CC500C085A4 /* EddystoneScanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6E234F30594CC100C085A4 /* EddystoneScanner.swift */; };
 		840A1D902422C204002BFCD7 /* NotificationTypeEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840A1D8F2422C204002BFCD7 /* NotificationTypeEntity.swift */; };
 		840A1D912422C204002BFCD7 /* NotificationTypeEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840A1D8F2422C204002BFCD7 /* NotificationTypeEntity.swift */; };
 		840A1D93242357D2002BFCD7 /* UIBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840A1D92242357D2002BFCD7 /* UIBuilder.swift */; };
@@ -975,6 +976,7 @@
 		52FF4C8923BF7EE700E40308 /* GuideView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuideView.swift; sourceTree = "<group>"; };
 		5B61C0552FA3258700760A39 /* CheckInSecurityService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckInSecurityService.swift; sourceTree = "<group>"; };
 		5B6581C62F6141D900194B79 /* NewOfflineRequestEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewOfflineRequestEndpoint.swift; sourceTree = "<group>"; };
+		5B6E234F30594CC100C085A4 /* EddystoneScanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EddystoneScanner.swift; sourceTree = "<group>"; };
 		5B76EAEC2FD2841400634B80 /* th */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = th; path = th.lproj/Localizable.strings; sourceTree = "<group>"; };
 		5BC1474530401B1A002A9D0F /* hi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = hi; path = hi.lproj/Localizable.strings; sourceTree = "<group>"; };
 		5BC1474730401DA0002A9D0F /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
@@ -2856,6 +2858,7 @@
 		841D7B3B23E1B893004347A5 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				5B6E234F30594CC100C085A4 /* EddystoneScanner.swift */,
 				8401F00624E52E1F00D718D4 /* OfflineMode */,
 				84284369240D06DC005618AC /* BackgroundMode */,
 				840C6E692433B10600748DF2 /* BackgroundLocationTracking */,
@@ -4329,6 +4332,7 @@
 				840C700A243B4EF700748DF2 /* LegalInformationViewController.swift in Sources */,
 				840D842423A0DD7100534966 /* SceneDelegate.swift in Sources */,
 				04FC66572CC0F25C00CFFFD0 /* MapMarkerWindowView.swift in Sources */,
+				5B6E235030594CC500C085A4 /* EddystoneScanner.swift in Sources */,
 				840BECA62446ECA700E26786 /* PasswordInputViewModel.swift in Sources */,
 				84125D1A23EDA3DC0059A4CE /* CAGradientLayer+extensions.swift in Sources */,
 				F733940D2577F693000EDF47 /* GetMgrEmpReportsObj.swift in Sources */,

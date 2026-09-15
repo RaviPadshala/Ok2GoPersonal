@@ -566,6 +566,12 @@ class CompaniesDataManager {
         //        return false
     }
     
+    func hasBeaconRportsFeature() -> Bool {
+//        return  currentCompany()?.settings?.NFCReportAppButton == 1
+        return true
+    }
+    
+    
     func hasNFCReportAppAutomatically() -> Bool {
         return currentCompany()?.NFCReportAppAutomatically == 1
     }
