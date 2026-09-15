@@ -29,6 +29,7 @@ enum NetworkEnvironment {
     case production_app_01_25_15
     case production_app_01_25_16
     case production_app_08_26
+    case production_app_09_26
     case sandbox
 }
 
@@ -39,10 +40,10 @@ class APIManager {
     private var sessionManager: SessionManager
     
     //for developement purpose
-    static let networkEnviroment: NetworkEnvironment = .verotest
+//    static let networkEnviroment: NetworkEnvironment = .verotest
     
     // For live app
-//    static let networkEnviroment: NetworkEnvironment = .production_app_08_26
+    static let networkEnviroment: NetworkEnvironment = .production_app_09_26
     
     private static var sharedApiManager: APIManager = {
         let apiManager = APIManager(sessionManager: SessionManager())

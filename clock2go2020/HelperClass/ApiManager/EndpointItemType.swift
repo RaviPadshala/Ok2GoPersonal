@@ -126,6 +126,7 @@ extension EndpointItemType: EndPointType {
         case .production_app_01_25_15: return "https://clock2go2020.com/app2020/app_01_25_15/"
         case .production_app_01_25_16: return "https://clock2go2020.com/app2020/app_01_25_16/"
         case .production_app_08_26: return "https://clock2go2020.com/app2020/app_08_26/"
+        case .production_app_09_26: return "https://clock2go2020.com/app2020/app_09_26/"
         case .sandbox :      return "https://clock2go2020.com/app2020/sandboxtest/"
         }
     }
