@@ -766,16 +766,39 @@ class DashboardViewModel {
     
     func scanBluetooth(){
 //        EddystoneBeaconHelper.shared.startScanning()
-        
-        EddystoneBeaconHelper.shared.scanForUIDs(duration: 5) { beacons in
+        self.showBluetoothScannigDialog()
+        EddystoneBeaconHelper.shared.scanForUIDs(duration: 8.0) { beacons in
             print("Total UID found: \(beacons.count)")
-            for beacon in beacons {
-                print("UID: \(beacon.uid)")
-                print("Namespace: \(beacon.namespace)")
-                print("Instance: \(beacon.instance)")
-                print("RSSI: \(beacon.rssi)")
+            if beacons.count > 0{
+                
+                if let beacon = beacons.first{
+                    self.delegate?.shouldFoundBeaconUID(taskId: beacon.uid, taskName: beacon.namespace)
+                }
+                
+                for beacon in beacons {
+                    print("UID: \(beacon.uid)")
+                    print("Namespace: \(beacon.namespace)")
+                    print("Instance: \(beacon.instance)")
+                    print("RSSI: \(beacon.rssi)")
+                }
+            }else{
+                print("show error dialog")
+                var error = ErrorObject()
+//                ViewSource.bluetoothScanView().dismissView()
+                error.error_message = "No beacon found nearby. You can try skip."
+                NavigationController.shared?.showErrorView(error: error)
             }
+            
         }
+    }
+    
+    func showBluetoothScannigDialog(){
+        let vc = ViewSource.bluetoothScanView()
+        vc.modalPresentationStyle = .overCurrentContext
+        vc.modalTransitionStyle = .crossDissolve
+        vc.isStartTimer = true
+        vc.viewModel = BluetoothScanViewModel(message: "NFC_scan_successfully".localized)
+        NavigationController.shared?.present(vc, animated: true, completion: nil)
     }
     
     // NFC
@@ -2356,6 +2379,7 @@ protocol DashboardViewModelDelegate: NSObjectProtocol {
     func shouldShowErrorForNFC(_ message : String?, title: String?)
     func shouldUpdateTask()
     func shouldUpdateTimer()
+    func shouldFoundBeaconUID(taskId: String, taskName: String)
     
 }
 

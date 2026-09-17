@@ -96,7 +96,7 @@ final class EddystoneBeaconHelper: NSObject {
     // MARK: Stop Scanning
     
     func stopScanning() {
-        
+        print("Eddystone: Scan stopped")
         guard isScanning else {
             return
         }
@@ -107,7 +107,7 @@ final class EddystoneBeaconHelper: NSObject {
         
         onScanStopped?()
         
-        print("Eddystone: Scan stopped")
+        
     }
     
     func scanForUIDs(
@@ -128,7 +128,6 @@ final class EddystoneBeaconHelper: NSObject {
             }) {
                 results.append(beacon)
             }
-
             previousCallback?(beacon)
         }
 
@@ -240,18 +239,18 @@ final class EddystoneBeaconHelper: NSObject {
             deviceName: deviceName
         )
         
-        print("""
-        ==============================
-        EDDYSTONE UID FOUND
-        ==============================
-        Device   : \(deviceName)
-        Namespace: \(namespace)
-        Instance : \(instance)
-        UID      : \(uid)
-        RSSI     : \(rssi.intValue)
-        UUID     : \(peripheral.identifier.uuidString)
-        ==============================
-        """)
+//        print("""
+//        ==============================
+//        EDDYSTONE UID FOUND
+//        ==============================
+//        Device   : \(deviceName)
+//        Namespace: \(namespace)
+//        Instance : \(instance)
+//        UID      : \(uid)
+//        RSSI     : \(rssi.intValue)
+//        UUID     : \(peripheral.identifier.uuidString)
+//        ==============================
+//        """)
         
         onUIDFound?(result)
     }

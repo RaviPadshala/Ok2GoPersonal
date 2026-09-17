@@ -119,6 +119,10 @@ class ViewSource: NSObject {
     static func successView() -> SuccessView {
         return SuccessView(nibName: "SuccessView", bundle: nil)
     }
+    
+    static func bluetoothScanView() -> BluetoothScanView {
+        return BluetoothScanView(nibName: "BluetoothScanView", bundle: nil)
+    }
 
     static func absenceConfirmView() -> AbsenceConfirmView {
         return AbsenceConfirmView(nibName: "AbsenceConfirmView", bundle: nil)

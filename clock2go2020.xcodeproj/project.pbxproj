@@ -275,6 +275,9 @@
 		5B61C0562FA3258700760A39 /* CheckInSecurityService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B61C0552FA3258700760A39 /* CheckInSecurityService.swift */; };
 		5B6581C72F6141D900194B79 /* NewOfflineRequestEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6581C62F6141D900194B79 /* NewOfflineRequestEndpoint.swift */; };
 		5B6E235030594CC500C085A4 /* EddystoneScanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6E234F30594CC100C085A4 /* EddystoneScanner.swift */; };
+		5B8C092F305B9F3F0035B8A5 /* BluetoothScanView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B8C092C305B9F3F0035B8A5 /* BluetoothScanView.xib */; };
+		5B8C0930305B9F3F0035B8A5 /* BluetoothScanViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8C092D305B9F3F0035B8A5 /* BluetoothScanViewModel.swift */; };
+		5B8C0931305B9F3F0035B8A5 /* BluetoothScanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8C092B305B9F3F0035B8A5 /* BluetoothScanView.swift */; };
 		840A1D902422C204002BFCD7 /* NotificationTypeEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840A1D8F2422C204002BFCD7 /* NotificationTypeEntity.swift */; };
 		840A1D912422C204002BFCD7 /* NotificationTypeEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840A1D8F2422C204002BFCD7 /* NotificationTypeEntity.swift */; };
 		840A1D93242357D2002BFCD7 /* UIBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840A1D92242357D2002BFCD7 /* UIBuilder.swift */; };
@@ -978,6 +981,9 @@
 		5B6581C62F6141D900194B79 /* NewOfflineRequestEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewOfflineRequestEndpoint.swift; sourceTree = "<group>"; };
 		5B6E234F30594CC100C085A4 /* EddystoneScanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EddystoneScanner.swift; sourceTree = "<group>"; };
 		5B76EAEC2FD2841400634B80 /* th */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = th; path = th.lproj/Localizable.strings; sourceTree = "<group>"; };
+		5B8C092B305B9F3F0035B8A5 /* BluetoothScanView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothScanView.swift; sourceTree = "<group>"; };
+		5B8C092C305B9F3F0035B8A5 /* BluetoothScanView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BluetoothScanView.xib; sourceTree = "<group>"; };
+		5B8C092D305B9F3F0035B8A5 /* BluetoothScanViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothScanViewModel.swift; sourceTree = "<group>"; };
 		5BC1474530401B1A002A9D0F /* hi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = hi; path = hi.lproj/Localizable.strings; sourceTree = "<group>"; };
 		5BC1474730401DA0002A9D0F /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		784701BEDC8F22BEE8E2A6EC /* Pods_clock2go2020.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_clock2go2020.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -2184,6 +2190,16 @@
 			path = SecurityCheckClass;
 			sourceTree = "<group>";
 		};
+		5B8C092E305B9F3F0035B8A5 /* BluetoothScanView */ = {
+			isa = PBXGroup;
+			children = (
+				5B8C092B305B9F3F0035B8A5 /* BluetoothScanView.swift */,
+				5B8C092C305B9F3F0035B8A5 /* BluetoothScanView.xib */,
+				5B8C092D305B9F3F0035B8A5 /* BluetoothScanViewModel.swift */,
+			);
+			path = BluetoothScanView;
+			sourceTree = "<group>";
+		};
 		695DE0F41A8FF0A47576C182 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -2518,6 +2534,7 @@
 		840D5CB923F1C33400300D79 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				5B8C092E305B9F3F0035B8A5 /* BluetoothScanView */,
 				04FC66382CC0F25B00CFFFD0 /* MapView */,
 				04DF5E7C2BA801600070D201 /* ApproveHours */,
 				841A374923E9B90700EF960B /* Loading */,
@@ -3767,6 +3784,7 @@
 				842AF55A23BF668200B5022D /* DashboardViewController.storyboard in Resources */,
 				048D2F562D782B0A002A947D /* CityListTableViewCell.xib in Resources */,
 				8413490823D8870E00849C19 /* AbsenceView.xib in Resources */,
+				5B8C092F305B9F3F0035B8A5 /* BluetoothScanView.xib in Resources */,
 				52ECF90C23C0D10400D3E09F /* ConfirmTaskView.xib in Resources */,
 				04561ED32CA574E700B6A6CF /* FormView.xib in Resources */,
 				844C4E0323AFC4A1001D91FE /* LanguageListViewController.xib in Resources */,
@@ -4144,6 +4162,8 @@
 				04482C8F2BA5705C00C44250 /* DashboardViewModel+NFC.swift in Sources */,
 				841D7B2623E199DA004347A5 /* AddTaskResult.swift in Sources */,
 				0094E0F626616BF6003AD85E /* GetRevachaEventTypesEndpoint.swift in Sources */,
+				5B8C0930305B9F3F0035B8A5 /* BluetoothScanViewModel.swift in Sources */,
+				5B8C0931305B9F3F0035B8A5 /* BluetoothScanView.swift in Sources */,
 				845D171224697C3E00F7E28E /* MultiReportViewModel.swift in Sources */,
 				840BEC652440D7D200E26786 /* SideBarCellViewModel.swift in Sources */,
 				048C7DC22BA2FCD500C80CFF /* DashboardViewController+NFC.swift in Sources */,
@@ -4724,7 +4744,7 @@
 				CODE_SIGN_ENTITLEMENTS = clock2go2020/clock2go2020.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEVELOPMENT_TEAM = 9PG4W33667;
 				EXCLUDED_ARCHS = "";
@@ -4734,7 +4754,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 9.26;
+				MARKETING_VERSION = 10.26;
 				PRODUCT_BUNDLE_IDENTIFIER = com.ok2go.ok2go;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -4756,7 +4776,7 @@
 				CODE_SIGN_ENTITLEMENTS = clock2go2020/clock2go2020.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = 9PG4W33667;
 				EXCLUDED_ARCHS = "";
@@ -4766,7 +4786,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 9.26;
+				MARKETING_VERSION = 10.26;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.ok2go.ok2go;
 				PRODUCT_NAME = "$(TARGET_NAME)";

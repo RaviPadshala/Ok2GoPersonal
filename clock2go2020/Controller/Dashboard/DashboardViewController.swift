@@ -630,7 +630,7 @@ class DashboardViewController: UIViewController {
         
         //Bluetooth Scan Action
         barcodeView.onBeaconScanAction = {
-            self.showNFCPopup()
+            self.viewModel.scanBluetooth()
         }
 
         workScheduleView.onSelectItem = { [weak self] index in
@@ -2130,6 +2130,14 @@ extension DashboardViewController: MapViewDelegate {
 }
 // MARK: - DashboardViewModelDelegate
 extension DashboardViewController: DashboardViewModelDelegate {
+    func shouldFoundBeaconUID(taskId: String, taskName: String) {
+        if let task = viewModel.taskWithId(taskId) {
+            didFindTask(task)
+        } else {
+            let task = TaskObj(taskId: taskId, taskName: taskName, projectId: nil, projectName: nil, remark: nil, hoursLimit: nil, hoursCompleted: nil, distanceSettings: nil, fromTime: nil, toTime: nil)
+            didNotFindTask(task)
+        }
+    }
     
     func shouldUpdateTimer() {
         self.cancelTimer()
